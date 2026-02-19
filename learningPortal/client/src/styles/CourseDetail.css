@@ -1,0 +1,1599 @@
+/* Course Detail Page - Premium Design */
+
+.course-detail-wrapper {
+    background: linear-gradient(135deg, #f5ebe0 0%, #e8d5c4 100%);
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.course-header-bar {
+    background: linear-gradient(135deg, #8B0000 0%, #5a0000 100%);
+    color: white;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.course-header-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-back-to-dashboard {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-back-to-dashboard:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-3px);
+}
+
+.course-title-section h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.course-meta-info {
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.meta-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Tab Navigation */
+.course-tabs-nav {
+    background: white;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 2rem;
+}
+
+.tabs-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #666;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-button:hover {
+    color: #8B0000;
+    background: rgba(139, 0, 0, 0.05);
+}
+
+.tab-button.active {
+    color: white;
+    background: #8B0000;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Main Content Layout */
+/* Main Content Layout */
+.course-content-layout {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.video-layout-container {
+    display: flex;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* Resources Split Layout */
+.resources-split-layout {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+
+.resources-list-section {
+    flex: 0 0 30%;
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+}
+
+.resource-viewer-section {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px dashed #ccc;
+}
+
+@media (max-width: 1024px) {
+    .video-layout-container {
+        flex-direction: column;
+    }
+
+    .video-main-section {
+        flex: auto !important;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .playlist-sidebar {
+        flex: auto !important;
+        width: 100%;
+        max-height: 500px;
+        position: static !important;
+    }
+
+    .resources-split-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .resources-list-section {
+        flex: auto;
+        width: 100%;
+        max-height: 400px;
+    }
+
+    .resource-viewer-section {
+        flex: auto;
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .course-header-bar {
+        padding: 1.5rem;
+    }
+
+    .tabs-container {
+        padding: 0.5rem 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        gap: 0.75rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tabs-container::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari/Opera */
+    }
+
+    .tab-button {
+        flex-shrink: 0;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .back-btn-floating {
+        bottom: 1rem !important;
+        right: 1rem !important;
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-detail-wrapper {
+        padding: 0.5rem !important;
+    }
+
+    .course-header-bar {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .course-title-section h1 {
+        font-size: 1.25rem;
+    }
+
+    .course-meta-info {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .meta-badge {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Move Header below Video visually if desired, or just make it compact */
+    .course-header-bar {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 12px;
+    }
+
+    .course-tabs-nav {
+        margin-bottom: 1rem;
+        top: 0;
+    }
+}
+
+/* Video Player Section */
+.video-main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 0 0 65%;
+    max-width: 65%;
+}
+
+@media (max-width: 1024px) {
+    .video-main-section {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .video-player-wrapper {
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-player-wrapper {
+        border-radius: 12px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .video-placeholder-content {
+        padding: 1rem;
+    }
+
+    .play-icon-large {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .video-main-section {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-controls-bar {
+        padding: 0.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .video-controls-row {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .controls-left {
+        gap: 0.25rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .controls-right {
+        /* Hide fullscreen on very small screens if needed, or keep it */
+        /* display: none; */
+        gap: 0.25rem;
+    }
+
+    .play-icon-large-overlay {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        border-width: 2px;
+    }
+
+    .control-btn {
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    /* Hide volume slider on mobile to save space */
+    .volume-slider {
+        display: none;
+    }
+
+    .control-pill {
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.1rem;
+        gap: 0.25rem;
+    }
+
+    .volume-pill {
+        background: transparent !important;
+        padding: 0;
+        /* Align tightly */
+        margin: 0;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Restore slider for mobile but keep it small */
+    .volume-slider {
+        display: block !important;
+        width: 40px !important;
+        margin-left: 5px;
+    }
+
+    .seek-btn {
+        background: transparent !important;
+        font-size: 0.65rem;
+        /* Reduced size */
+        padding: 0.1rem;
+        width: auto;
+        line-height: 1;
+    }
+
+    /* Hide volume text on mobile if space is tight, or make it small */
+    .volume-percent-text {
+        display: none !important;
+    }
+
+    .time-display {
+        font-size: 0.75rem;
+    }
+
+    .time-pill {
+        /* Make time pill transparent or smaller too if needed, or keep for contrast */
+        padding: 0.2rem 0.5rem;
+    }
+
+    .control-pill {
+        /* General reset for pills on mobile inside controls-left */
+        gap: 0.2rem;
+    }
+
+    .video-progress-thumb {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+.video-player-wrapper {
+    background: #000;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+}
+
+/* Custom Video Player Styles */
+/* Custom Video Player Styles */
+.course-video-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: black;
+}
+
+
+
+.video-controls-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-controls-overlay.visible {
+    opacity: 1;
+}
+
+/* Center Play Button for Pause State */
+.center-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 5;
+}
+
+.play-icon-large-overlay {
+    font-size: 3rem;
+    color: white;
+    background: transparent;
+    /* Total Transparent */
+    width: 80px;
+    height: 80px;
+    /* border-radius: 50%; kept for layout but invisible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgba(255, 255, 255, 0.3); Removed border */
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); Removed shadow */
+    transition: all 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Center Controls Wrapper to hold Seek Buttons and Play Button */
+.center-controls-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    /* Takes up most of the screen width */
+    max-width: 600px;
+    /* Limit on huge screens */
+    gap: 0;
+    /* We will use justify-content: space-between effectively */
+    justify-content: space-between;
+    /* Pushes buttons to edges of this wrapper */
+    z-index: 5;
+    pointer-events: none;
+    /* Let clicks pass through if not on buttons */
+}
+
+/* Enable pointer events on proper buttons */
+.seek-center-btn,
+.center-play-button {
+    pointer-events: auto;
+}
+
+/* Center Seek Buttons (Mobile + PC) */
+.seek-center-btn {
+    background: transparent;
+    /* Total Transparent */
+    color: white;
+    border: none;
+    /* border-radius: 50%; */
+    width: 60px;
+    /* Slightly larger for easier clicking */
+    height: 60px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* backdrop-filter: blur(4px); Removed */
+    transition: transform 0.1s, background 0.2s;
+}
+
+.seek-center-btn:hover {
+    background: transparent;
+    /* Keep transparent on hover too, maybe just scale */
+    transform: scale(1.1);
+}
+
+.seek-center-btn:active {
+    transform: scale(0.95);
+}
+
+/* Override center play button position for flex container */
+.center-play-button {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 auto;
+    /* centering fallback */
+}
+
+/* Hide bottom bar seek buttons globally since we have center ones now */
+.video-controls-bar .seek-btn {
+    display: none !important;
+}
+
+/* Responsive visibility adjustments */
+@media (max-width: 480px) {
+
+    /* Adjust center layout for mobile */
+    .center-controls-wrapper {
+        width: 100%;
+        padding: 0 1rem;
+        /* On small screens, keep them closer but still separated */
+        justify-content: space-evenly;
+    }
+
+    .seek-center-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+}
+
+.center-play-button:hover .play-icon-large-overlay {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Bottom Controls Bar */
+.video-controls-bar {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 1rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.video-progress-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    /* Needed for thumb positioning */
+    /* overflow: hidden; REMOVED to allow thumb to extend */
+}
+
+.video-progress-filled {
+    height: 100%;
+    background: #8B0000;
+    width: 0%;
+    border-radius: 5px;
+    /* Rounded ends */
+}
+
+/* Scrubber Thumb (The Red Dot) */
+.video-progress-thumb {
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #ff0000;
+    /* Bright red like YouTube */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* Hidden by default */
+    transition: transform 0.1s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Show thumb on hover or when dragging */
+.video-progress-bar:hover .video-progress-thumb,
+.video-progress-bar.dragging .video-progress-thumb {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.video-progress-thumb:hover {
+    transform: translate(-50%, -50%) scale(1.2) !important;
+}
+
+.video-controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.controls-left,
+.controls-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    background: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: transform 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+    color: #ffcccc;
+}
+
+/* Custom Seek Button Style */
+/* Custom Seek Button Style - Transparent Text */
+.seek-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    gap: 0.4rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.seek-btn:hover {
+    background: transparent !important;
+    color: white;
+    opacity: 1;
+    transform: scale(1.05);
+    /* subtle scale instead of background change */
+}
+
+/* Volume Tooltip */
+.volume-tooltip {
+    position: absolute;
+    top: -35px;
+    /* Moved up slightly */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 1000;
+    /* High z-index */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Control Pills (Time, Volume) */
+.control-pill {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 0.35rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0.5rem;
+}
+
+.time-display {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Volume Slider Styling */
+.volume-slider {
+    -webkit-appearance: none;
+    width: 60px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: none;
+}
+
+.volume-btn {
+    padding: 0;
+    font-size: 1rem;
+}
+
+
+
+
+/* Volume Percentage Text (Inline) */
+.volume-percent-text {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.volume-percent-text.visible {
+    width: 35px;
+    /* Enough for "100%" */
+    opacity: 1;
+    margin-left: 0.5rem;
+}
+
+/* Progress Bar Thumb */
+.video-progress-bar {
+    overflow: visible;
+    /* Allow thumb to show */
+    height: 4px;
+    /* Thinner line */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.video-progress-filled {
+    position: relative;
+    border-radius: 2px;
+}
+
+.video-progress-filled::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    /* Center thumb on end */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    /* Red thumb */
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .video-controls-overlay {
+        opacity: 1;
+        /* Always show controls on mobile on tap, or manage via state */
+    }
+
+    .video-controls-overlay:not(.visible) {
+        opacity: 0;
+        /* But hide if playing and not interacted */
+    }
+}
+
+
+
+/* Video Details Card */
+.video-details-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.video-details-card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.video-description {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Playlist Sidebar */
+.playlist-sidebar {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 250px);
+    position: sticky;
+    top: 120px;
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+
+.playlist-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.playlist-header h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.playlist-count {
+    margin: 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.playlist-scroll-area {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.playlist-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.playlist-scroll-area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.playlist-scroll-area::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+}
+
+.playlist-scroll-area::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+/* Playlist Item */
+.playlist-item {
+    padding: 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.playlist-item:hover {
+    background: #f9f9f9;
+}
+
+.playlist-item.active {
+    background: linear-gradient(to right, #fff5f5 0%, #ffe8e8 100%);
+    border-left: 3px solid #8B0000;
+}
+
+.playlist-thumbnail {
+    width: 100px;
+    height: 56px;
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist-thumbnail.completed {
+    background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%);
+}
+
+.playlist-thumbnail.completed::after {
+    content: '✓';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.playlist-video-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.playlist-video-title {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.playlist-item.active .playlist-video-title {
+    color: #8B0000;
+    font-weight: 600;
+}
+
+.playlist-video-duration {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Resources Grid */
+.resources-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: #8B0000;
+}
+
+.resource-icon-large {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.resource-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.resource-author {
+    margin: 0 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.resource-meta-tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #888;
+    flex-wrap: wrap;
+}
+
+.meta-tag {
+    background: #f5f5f5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+}
+
+.btn-download {
+    width: 100%;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, #8B0000 0%, #6a0000 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #6a0000 0%, #4a0000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+}
+
+/* PDF List Style */
+.resources-list-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.resource-list-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-list-item:hover {
+    border-color: #8B0000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-list-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex: 1;
+}
+
+.resource-icon-medium {
+    font-size: 3rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.resource-info-text h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.resource-description {
+    margin: 0 0 0.75rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.resource-details-tags {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Notes Section */
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.note-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.note-card h3 {
+    margin: 0 0 1.5rem;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.note-content-box {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #8B0000;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* Loading States */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #8B0000;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #888;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .video-layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .playlist-sidebar {
+        max-height: 500px;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .course-header-bar,
+    .tabs-container,
+    .course-header-bar,
+    .tabs-container,
+    .course-content-layout {
+        padding-left: 0.5rem;
+        /* Reduced from 1.5rem to cover space */
+        padding-right: 0.5rem;
+    }
+
+    .course-title-section h1 {
+        font-size: 1.35rem;
+    }
+
+    .tabs-container {
+        gap: 1.5rem;
+    }
+
+    .resources-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.back-btn-floating {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    padding: 0.8rem 1.5rem;
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-btn-floating:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Fix for Playlist Sidebar width on mobile (overriding global max-width: 33%) */
+@media (max-width: 1024px) {
+    .playlist-sidebar {
+        max-width: 100% !important;
+        flex: auto !important;
+    }
+}
+
+/* YouTube Style Mobile Fixes */
+@media (max-width: 768px) {
+    .video-player-wrapper {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        border-radius: 0 !important;
+        /* Force square corners */
+        box-shadow: none;
+        /* YouTube player is flat */
+    }
+
+    /* .video-main-section overflow hidden removed to allow edge-to-edge video */
+
+    .course-content-layout {
+        overflow-x: hidden;
+    }
+
+    /* Fix Mobile Video Controls */
+    .video-controls-bar {
+        padding: 0.5rem 0.5rem;
+        padding-top: 2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .video-controls-row {
+        gap: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .controls-left {
+        gap: 0.75rem;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .controls-right {
+        flex: 0 0 auto;
+    }
+
+    .control-btn {
+        font-size: 1.1rem;
+        /* Readable icon size */
+        padding: 0.5rem;
+        /* Better touch target */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hide 5s text on mobile to save space, only show icons if possible, or make extremely compact */
+    /* Assuming the button content is "⏪ 5s" or similar, we might need JS to change content or just accept tight spacing */
+    /* Since we can't easily change text via CSS content replacement for buttons with existing text nodes efficiently without spans, 
+       we will ensure they fit by reducing margins and font size strictly */
+
+    .control-btn {
+        font-size: 0.9rem;
+    }
+
+    .time-display {
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+        white-space: nowrap;
+    }
+
+    /* Hide 5s text on mobile, just icons */
+    .control-text {
+        display: none;
+    }
+
+    .control-btn {
+        font-size: 1.2rem;
+    }
+
+    /* Mobile Reader Navigation & Card Layout */
+
+    /* Default: Show List, Hide Viewer on Mobile */
+    .resources-split-layout {
+        flex-direction: column !important;
+        height: auto !important;
+        /* Allow natural height for list */
+        gap: 1.5rem !important;
+        display: block !important;
+    }
+
+    .resources-list-section {
+        flex: auto !important;
+        width: 100% !important;
+        max-height: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        display: block;
+        /* Visible by default */
+    }
+
+    /* When Reader is Active: Hide List */
+    .resources-split-layout.mobile-reader-active .resources-list-section {
+        display: none !important;
+    }
+
+    /* Viewer Section */
+    .resource-viewer-section {
+        flex: auto !important;
+        width: 100% !important;
+        min-height: 80vh !important;
+        padding: 1rem !important;
+        border-radius: 12px;
+        border: none !important;
+        background: white;
+        display: none !important;
+        /* Hidden by default */
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000;
+        overflow-y: auto;
+        border-radius: 0;
+    }
+
+    /* When Reader is Active: Show Viewer (Full Screen) */
+    .resources-split-layout.mobile-reader-active .resource-viewer-section {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    /* Mobile Back Button */
+    .mobile-back-btn {
+        display: flex !important;
+    }
+
+    /* Mobile Grid for eBook Cards */
+    .resources-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 Column Grid */
+        gap: 0.75rem !important;
+    }
+
+    /* Card Styling Updates for Grid */
+    .resource-card-compact {
+        padding: 1rem !important;
+        margin-bottom: 0 !important;
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        justify-content: space-between;
+        background: white !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eee !important;
+    }
+
+    .resource-card-compact>div {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .resource-card-compact h4 {
+        font-size: 0.85rem !important;
+        line-height: 1.3;
+        font-weight: 600;
+        color: #333;
+        margin: 0 !important;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Icon size adjustments */
+    .resource-card-compact>div>div:first-child {
+        font-size: 2.5rem !important;
+        margin-bottom: 0.25rem;
+    }
+
+    .btn-view {
+        width: 100% !important;
+        padding: 0.5rem !important;
+        font-size: 0.8rem !important;
+        margin-top: 0.75rem !important;
+        border-radius: 6px !important;
+        background: #8B0000 !important;
+        color: white !important;
+    }
+
+    /* Header Styling */
+    .resources-list-section h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 1rem !important;
+        padding: 0 0.5rem;
+    }
+
+    /* Hide floating back btn when reader is open to avoid confusion */
+    .mobile-reader-active~.back-btn-floating {
+        display: none !important;
+    }
+}
+
+
+/* --- Up Next Overlay --- */
+.up-next-overlay {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    /* Pure black background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    /* ensuring clean font */
+}
+
+.up-next-content {
+    width: 600px;
+    /* Fixed max width for the center content */
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.up-next-header {
+    text-align: left;
+    width: 100%;
+}
+
+.up-next-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.up-next-header span {
+    font-size: 1.1rem;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.next-video-card-preview {
+    display: flex;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.next-video-card-preview:hover {
+    transform: scale(1.02);
+}
+
+.preview-thumbnail {
+    width: 220px;
+    height: 124px;
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.preview-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0.5rem;
+}
+
+.preview-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.preview-author {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.up-next-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-action-cancel {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 30px;
+    background: #222;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.btn-action-cancel:hover {
+    background: #333;
+}
+
+.btn-action-play {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 30px;
+    background: #fff;
+    color: black;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.btn-action-play:hover {
+    background: #ddd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

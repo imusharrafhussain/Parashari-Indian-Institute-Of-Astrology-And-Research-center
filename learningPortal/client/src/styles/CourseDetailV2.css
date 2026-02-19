@@ -1,0 +1,243 @@
+/* CourseDetailV2.css - Light Theme */
+
+.classroom-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: #f8f9fa;
+    /* Light BG */
+    color: #333;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar */
+.classroom-sidebar {
+    width: 300px;
+    /* Slightly narrower for modern look */
+    background: #fff;
+    border-right: 1px solid #e2e8f0;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+.module-item {
+    border-bottom: 1px solid #f7fafc;
+}
+
+.module-header {
+    width: 100%;
+    padding: 15px 20px;
+    background: #fff;
+    border: none;
+    color: #4a5568;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.module-header:hover {
+    background: #f7fafc;
+    color: #8B0000;
+}
+
+.module-content {
+    background: #f8f9fa;
+}
+
+.section-item {
+    padding: 5px 0;
+}
+
+.section-title {
+    padding: 5px 20px 5px 30px;
+    font-size: 0.75em;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.content-item-row {
+    padding: 10px 20px 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9em;
+    color: #4a5568;
+    border-left: 3px solid transparent;
+}
+
+.content-item-row:hover {
+    background: #edf2f7;
+    color: #2d3748;
+}
+
+.content-item-row.selected {
+    background: #fff5f5;
+    color: #8B0000;
+    border-left: 3px solid #8B0000;
+    font-weight: 500;
+}
+
+.content-item-row .item-icon {
+    font-size: 1.1em;
+    opacity: 0.7;
+}
+
+.content-item-row .item-status {
+    margin-left: auto;
+    font-size: 0.8em;
+}
+
+/* Main Content */
+.classroom-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    background: #fff;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    /* Add padding around content */
+}
+
+/* Containers */
+.video-player-container,
+.pdf-viewer-container,
+.note-container {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    /* Optional: Card look for content */
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.05); */
+    /* border-radius: 8px; */
+    /* overflow: hidden; */
+}
+
+.note-container {
+    padding: 40px;
+    max-width: 800px;
+    color: #2d3748;
+}
+
+.note-container h2 {
+    color: #1a202c;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.note-content {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Buttons */
+.mark-complete-btn {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.mark-complete-btn:hover {
+    transform: translateY(-2px);
+    background: #a50000;
+}
+
+/* Mobile Responsive */
+.mobile-header {
+    display: none;
+}
+
+.sidebar-close-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .classroom-layout {
+        flex-direction: column;
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background: #fff;
+        border-bottom: 1px solid #e2e8f0;
+        top: 0;
+        z-index: 200;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: #2d3748;
+        font-size: 1.4em;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .course-title-mobile {
+        margin-left: 15px;
+        font-weight: 600;
+        color: #2d3748;
+        font-size: 1rem;
+    }
+
+    .classroom-sidebar {
+        background: #fff;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar-header {
+        background: #f8f9fa;
+    }
+
+    .content-wrapper {
+        padding: 0;
+    }
+
+    .video-player-container {
+        padding: 0;
+    }
+}

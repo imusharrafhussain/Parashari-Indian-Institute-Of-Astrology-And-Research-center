@@ -1,0 +1,233 @@
+/* AI Guide Bot Container */
+.ai-guide-bot {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 300ms ease, transform 300ms ease;
+    pointer-events: none;
+}
+
+.ai-guide-bot.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Bot Avatar */
+.bot-avatar {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bot-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 4px 12px rgba(139, 26, 26, 0.3));
+}
+
+/* Brain Pattern Animation */
+.brain-pattern circle {
+    animation: brainPulse 3s ease-in-out infinite;
+}
+
+.brain-pattern circle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.brain-pattern circle:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.brain-pattern circle:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.brain-pattern circle:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.brain-pattern circle:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.brain-pattern circle:nth-child(6) {
+    animation-delay: 1s;
+}
+
+@keyframes brainPulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+/* Bot Glow Animation */
+.bot-glow {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Idle Pulse Indicator */
+.bot-pulse {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: #8B1A1A;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(139, 26, 26, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Speech Bubble */
+.speech-bubble {
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    width: 340px;
+    background: white;
+    border: 2px solid #8B1A1A;
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: bubbleFadeIn 300ms ease forwards;
+}
+
+@keyframes bubbleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Speech Arrow */
+.speech-arrow {
+    position: absolute;
+    bottom: -12px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #8B1A1A;
+}
+
+.speech-arrow::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+/* Speech Content */
+.speech-content {
+    color: #2d3748;
+}
+
+.speech-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #8B1A1A;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.3px;
+}
+
+.speech-text {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+    color: #4a5568;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-guide-bot {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .bot-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .speech-bubble {
+        width: calc(100vw - 120px);
+        max-width: 300px;
+        bottom: 80px;
+        padding: 16px 20px;
+    }
+
+    .speech-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .speech-text {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .speech-arrow {
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .speech-bubble {
+        width: calc(100vw - 100px);
+        right: -20px;
+    }
+
+    .speech-arrow {
+        right: 40px;
+    }
+}

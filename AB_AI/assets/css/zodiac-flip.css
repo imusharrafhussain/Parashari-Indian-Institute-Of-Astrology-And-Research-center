@@ -1,0 +1,136 @@
+/* ============ ZODIAC SLIDE CARD STYLES ============ */
+
+/* Zodiac card container */
+.zodiac-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Fix for blur: Force hardware acceleration but without sub-pixel rendering issues */
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.zodiac-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.zodiac-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Fix for blur: Ensure no 3D transform is active on inner container */
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+}
+
+.zodiac-card-front,
+.zodiac-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* FRONT STATE */
+.zodiac-card-front {
+    z-index: 2;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zodiac-card-front img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.zodiac-card-front h3 {
+    margin: 0;
+    color: #1A1A1A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* Clean text rendering */
+    text-shadow: none;
+}
+
+/* BACK STATE (Hidden initially) */
+.zodiac-card-back {
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(100%);
+    /* Start from bottom */
+    background: linear-gradient(135deg, #FFFBF5 0%, #FFFFFF 100%);
+}
+
+/* HOVER EFFECTS */
+.zodiac-card:hover .zodiac-card-front {
+    opacity: 0.5;
+    /* Fade out slightly */
+    transform: scale(0.95);
+    /* Shrink slightly */
+}
+
+.zodiac-card:hover .zodiac-card-back {
+    opacity: 1;
+    transform: translateY(0);
+    /* Slide up to fill */
+}
+
+/* Back Content Styling */
+.zodiac-card-back h3 {
+    color: #591C21;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    /* Clean text rendering */
+    text-shadow: none;
+}
+
+.zodiac-card-back p {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1rem;
+    /* Clean text rendering */
+    text-shadow: none;
+}
+
+.btn-zodiac {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: #591C21;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(89, 28, 33, 0.2);
+}
+
+.btn-zodiac:hover {
+    background-color: #F0A500;
+    color: #591C21;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(240, 165, 0, 0.3);
+}

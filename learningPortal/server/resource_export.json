@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-02-09T13:47:42.162Z",
+  "count": 9,
+  "videos": [
+    {
+      "videoId": "6985dbc8fc56f06755572404",
+      "videoTitle": "Lesson 1 - Introduction & Basics",
+      "videoR2Path": "resources/vedic-astrology/introduction/lesson-1-videos/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "6986e4fe57339da1f2eb3fc3",
+          "title": "Lesson Notes",
+          "type": "pdf",
+          "r2Path": "resources/vedic-astrology/introduction/lesson-1-notes/lesson1Notes.pdf"
+        },
+        {
+          "resourceId": "6986ec7db072be920f0aa90f",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "resources/vedic-astrology/introduction/lesson-1-ebooks/ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f0675557240a",
+      "videoTitle": "Lesson 2 - Introduction & Basics",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f7400f3",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f7400f4",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f06755572410",
+      "videoTitle": "Lesson 3 - Introduction & Basics",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f7400f7",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f7400f8",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f06755572418",
+      "videoTitle": "Lesson 1 - Core Concepts",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f7400fb",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f7400fc",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f0675557241d",
+      "videoTitle": "Lesson 2 - Core Concepts",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f7400ff",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f740100",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f06755572422",
+      "videoTitle": "Lesson 3 - Core Concepts",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f740103",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f740104",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f06755572429",
+      "videoTitle": "Lesson 1 - Advanced Application",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f740106",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f740107",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f0675557242e",
+      "videoTitle": "Lesson 2 - Advanced Application",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f74010b",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f74010c",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    },
+    {
+      "videoId": "6985dbc8fc56f06755572433",
+      "videoTitle": "Lesson 3 - Advanced Application",
+      "videoR2Path": "courses/test-course/test-module/test-video/hls/index.m3u8",
+      "resources": [
+        {
+          "resourceId": "69871287876fb4422f74010e",
+          "title": "Lecture Notes",
+          "type": "pdf",
+          "r2Path": "courses/sample/notes.pdf"
+        },
+        {
+          "resourceId": "69871287876fb4422f74010f",
+          "title": "Lesson eBook",
+          "type": "ebook",
+          "r2Path": "courses/sample-ebook.pdf"
+        }
+      ]
+    }
+  ]
+}

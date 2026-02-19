@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Parashari Indian Institute</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/loader.css">
+  <link rel="stylesheet" href="assets/css/search.css">
+  <link rel="stylesheet" href="assets/css/chatbot.css">
+</head>
+
+<body>
+
+  <div class="header-top">
+    <div class="header-top-content">
+      <div class="header-top-left">
+        <div class="header-top-item"><span class="header-top-icon">📞</span><a href="tel:+919999999999">+91
+            9999-999-999</a></div>
+        <div class="header-top-item"><span class="header-top-icon">✉️</span><a
+            href="mailto:info@parashari.com">info@parashari.com</a></div>
+      </div>
+      <div class="header-top-right">Online Classes | ISO Certified</div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <!-- Logo removed from navbar as requested -->
+
+      <ul class="nav-menu">
+
+        <li class="nav-item search-nav-item">
+          <!-- Search Bar Injected -->
+          <div class="search-container">
+            <div class="container-input">
+              <input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
+              <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </li>
+
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="profile.html" class="active">About Us</a></li>
+
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)">Courses <i class="fas fa-chevron-down"
+              style="font-size: 0.8em; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="astrology.html">Vedic Astrology</a></li>
+            <li class="dropdown-item"><a href="nadi-jyotish.html">Nadi Jyotish</a></li>
+            <li class="dropdown-item"><a href="lal-kitab.html">Lal Kitab Remedies</a></li>
+            <li class="dropdown-item"><a href="remedy-course.html">Remedy Course (Upaay Gyaan)</a></li>
+            <li class="dropdown-item"><a href="kp-astrology.html">KP Astrology</a></li>
+            <li class="dropdown-item"><a href="bnn-astrology.html">BNN (Advanced Techniques)</a></li>
+            <li class="dropdown-item"><a href="crystal-healing.html">Crystal Healing</a></li>
+            <li class="dropdown-item"><a href="medical-astrology.html">Medical Astrology</a></li>
+            <li class="dropdown-item"><a href="complete-astrology.html">Complete Astrology Course</a></li>
+            <li class="dropdown-item"><a href="rudraksha.html">Rudraksha Remedies</a></li>
+            <li class="dropdown-item"><a href="vastu.html">Vastu Shastra</a></li>
+            <li class="dropdown-item"><a href="palmistry.html">Palmistry</a></li>
+            <li class="dropdown-item"><a href="face-reading.html">Face Reading</a></li>
+            <li class="dropdown-item"><a href="tarot.html">Tarot Reading</a></li>
+            <li class="dropdown-item"><a href="numerology.html">Numerology</a></li>
+            <li class="dropdown-item"><a href="mentorship.html">1-on-1 Mentorship</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a href="courses.html">Explore</a></li>
+        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+
+
+
+      <div class="navbar-cta">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+
+      <button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu">
+      <ul class="nav-menu mobile-menu-nav">
+
+        <li class="nav-item search-nav-item">
+          <!-- Search Bar Injected -->
+          <div class="search-container">
+            <div class="container-input">
+              <input type="text" placeholder="Search all courses" name="text" class="input"
+                id="courseSearchInputMobile">
+              <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </li>
+
+        <li class="nav-item w-full"><a href="index.html">Home</a></li>
+        <li class="nav-item w-full"><a href="profile.html">About Us</a></li>
+        <li class="nav-item w-full"><a href="courses.html">Courses</a></li>
+        <li class="nav-item w-full"><a href="courses.html">Explore</a></li>
+        <li class="nav-item w-full"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item w-full"><a href="contact.html">Contact</a></li>
+      </ul>
+
+
+      <div class="navbar-cta">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </div>
+
+    <!-- Tablet Search Bar (Visible < 900px) -->
+
+    <div class="tablet-search-container">
+      <div class="search-container">
+        <div class="container-input">
+          <input type="text" placeholder="Search all courses" name="text" class="input">
+          <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="search-results"></div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Linked Profile CSS -->
+  <link rel="stylesheet" href="assets/css/profile.css">
+
+  <!-- Cosmic Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <p class="about-hero-subtitle">The Gold Standard in Vedic Education Since 1998</p>
+    </div>
+  </section>
+
+  <!-- Legacy Section (Broken Grid Refined) -->
+  <section class="story-section">
+    <div class="container">
+      <div class="broken-grid">
+        <div class="story-image-wrapper" data-animate>
+          <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1000&auto=format&fit=crop"
+            alt="Ancient Manuscripts" class="story-image">
+        </div>
+        <div class="story-content-box" data-animate>
+          <h2 class="card-section-title text-left mb-1-5">Our Legacy</h2>
+          <h3 class="mb-1-5 font-serif italic">More Than Just an Institute</h3>
+          <p class="mb-1">Parashari Institute stands as India's leading educational institution in Vedic sciences.
+            Founded in 1998, we have submitted ourselves to the preservation of the sacred oral traditions of Vedic
+            Astrology, Palmistry, and Vastu Shastra.</p>
+          <p>Named after the Maharishi Parashara, the father of Vedic Astrology, we blend ancient sutras with modern
+            analytical techniques to create practitioners who are both intuitive and scientific.</p>
+          <p class="mb-0"><strong>Our Vision:</strong> To empower a new generation of ethical astrologers who guide
+            society with wisdom, empathy, and precision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section class="core-values-section">
+    <div class="container">
+      <h2 class="card-section-title text-center text-maroon">Our Core Values</h2>
+      <div class="values-grid">
+        <!-- Authenticity -->
+        <div class="value-card-item" data-animate>
+          <div class="value-emoji">🔎</div>
+          <h4 class="value-title-text">Authenticity</h4>
+          <p class="value-description">Preserving the original teachings without dilution or distortion.</p>
+        </div>
+        <!-- Excellence -->
+        <div class="value-card-item" data-animate>
+          <div class="value-emoji">🏆</div>
+          <h4 class="value-title-text">Excellence</h4>
+          <p class="value-description">Striving for the highest standards in every aspect of our work.</p>
+        </div>
+        <!-- Integrity -->
+        <div class="value-card-item" data-animate>
+          <div class="value-emoji">🤝</div>
+          <h4 class="value-title-text">Integrity</h4>
+          <p class="value-description">Acting with honesty and ethical principles in all dealings.</p>
+        </div>
+        <!-- Growth -->
+        <div class="value-card-item" data-animate>
+          <div class="value-emoji">🌱</div>
+          <h4 class="value-title-text">Growth</h4>
+          <p class="value-description">Continuous learning and development for students and faculty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dean's Message (Wax Seal Style) -->
+  <section class="dean-section">
+    <div class="container">
+      <div class="grid grid-2 grid-gap-3 grid-align-center">
+        <div class="dean-message-box" data-animate>
+          <div class="wax-seal"></div>
+          <h2 class="card-section-title text-left mb-1-5">Message from the Dean</h2>
+          <h3 class="mb-1-5 font-serif italic">"Astrology is the Science of Light"</h3>
+          <p class="mb-1"><strong>Namaste,</strong></p>
+          <p class="mb-1">At Parashari, we don't just teach you how to read a chart; we teach you how to read a soul.
+            Our curriculum is rigorously structured to take you from the ABCs of zodiacs to the complex predictive
+            algorithms of Nadi and KP systems.</p>
+          <p class="mb-1">Whether you are a seeker looking for answers or a professional looking for a career, you are
+            welcome here.</p>
+          <div class="mt-2 signature-block">
+            <h4 class="mb-0 signature-text">Dr. Rajesh Sharma</h4>
+            <p class="color-primary font-serif">Dean & Head of Vedic Sciences</p>
+            <p class="card-small-text">PhD in Vedic Astrology | 25+ Years Experience</p>
+          </div>
+        </div>
+        <div class="dean-image-container" data-animate>
+          <div class="dean-image-border"></div>
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+            alt="Dr. Rajesh Sharma" class="dean-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cosmic Timeline Section (Zig Zag Fixed) -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="card-section-title text-gold">Your Path to Mastery</h2>
+        <p class="subtitle-text" style="color: rgba(255,255,255,0.7);">A proven step-by-step roadmap to
+          becoming a certified Vedic Astrologer</p>
+      </div>
+
+      <div class="timeline-container">
+
+        <!-- Step 1 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-content">
+            <div class="timeline-number">01</div>
+            <h3 class="timeline-title">Beginner Module</h3>
+            <img src="assets/images/beginners-module.png" alt="Beginner Module" class="timeline-img mb-1"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            <p class="timeline-text">Start your journey with the fundamental building blocks: Planets, Rashis, Houses,
+              and the science behind the birth chart.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-content">
+            <div class="timeline-number">02</div>
+            <h3 class="timeline-title">Scientific Methodology</h3>
+            <img src="assets/images/scientific-methodology-module.png" alt="Scientific Methodology"
+              class="timeline-img mb-1" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            <p class="timeline-text">Learn the mathematical precision of casting charts, Shadbala (planetary strength),
+              and the logic of planetary aspects.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-content">
+            <div class="timeline-number">03</div>
+            <h3 class="timeline-title">Predictive Mastery</h3>
+            <img src="assets/images/predictive-mastery-module.png" alt="Predictive Mastery" class="timeline-img mb-1"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            <p class="timeline-text">Dive deep into the Vimshottari Dasha system and Gochar (Transits) to accurately
+              time events in life.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-content">
+            <div class="timeline-number">04</div>
+            <h3 class="timeline-title">Advanced Applications</h3>
+            <img src="assets/images/advanced-applications-module.png" alt="Advanced Applications"
+              class="timeline-img mb-1" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            <p class="timeline-text">Specialize in Medical Astrology, Mundane Astrology, and Relationship Compatibility
+              (Matchmaking).</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-content">
+            <div class="timeline-number">05</div>
+            <h3 class="timeline-title">Remedial Expertise</h3>
+            <img src="assets/images/remedial-expertise-module.png" alt="Remedial Expertise" class="timeline-img mb-1"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            <p class="timeline-text">Master the art of effective remedies: Gemstones, Mantras, Yantras, and practical
+              lifestyle adjustments.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-content">
+            <div class="timeline-number">06</div>
+            <h3 class="timeline-title">Professional Certification</h3>
+            <img src="assets/images/professional-certification-module.png" alt="Professional Certification"
+              class="timeline-img mb-1" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            <p class="timeline-text">Complete your final assessment, earn your ISO certification, and launch your
+              professional consultancy.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="courses.html" class="btn btn-primary btn-lg" style="background: #D4AF37; color: #000;">Start Your
+          Journey Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section Dark -->
+  <section class="stats-section-dark">
+    <div class="container">
+      <div class="text-center mb-3">
+        <h2 class="card-section-title text-gold">Our Achievements</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item" data-animate>
+          <span class="stat-number count-up" data-target="10000">0</span>
+          <span class="stat-label">Graduates Trained</span>
+        </div>
+        <div class="stat-item" data-animate>
+          <span class="stat-number count-up" data-target="25">0</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-item" data-animate>
+          <span class="stat-number count-up" data-target="150">0</span>
+          <span class="stat-label">Global Presence</span>
+        </div>
+        <div class="stat-item" data-animate>
+          <span class="stat-number count-up" data-target="98">0</span>
+          <span class="stat-label">Student Success %</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Section Polished -->
+  <section class="faculty-section">
+    <div class="container">
+      <div class="container-fluid" style="padding: 0;">
+        <h2 class="card-section-title text-center">Meet Our Expert Faculty</h2>
+      </div>
+    </div>
+
+    <!-- Full width marquee outside container -->
+    <div class="faculty-3d-scene">
+      <div class="faculty-3d-scroll-track">
+
+        <!-- Faculty 1 -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&fit=crop"
+              alt="Prof. Anjali Patel" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Prof. Anjali Patel</h4>
+            <p class="faculty-role">Palmistry & Vastu Expert</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">M.Sc in Vedic Sciences (BHU) | PhD Scholar</span>
+              <p>With 18 years of dedicated practice, Prof. Anjali serves as a consultant to top real estate firms
+                for Vastu compliance.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop" alt="Mrs. Sunita Verma"
+              class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Mrs. Sunita Verma</h4>
+            <p class="faculty-role">Tarot & Psychic Expert</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">Certified Grand Master (Tarot Guild)</span>
+              <p>A gifted intuitive with a decade of accuracy. Mrs. Sunita creates a unique blend of Raider-Waite
+                symbolism and Vedic intuition.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop"
+              alt="Mr. Vikram Singh" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Mr. Vikram Singh</h4>
+            <p class="faculty-role">Numerology Specialist</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">Chaldean & Pythagorean Expert</span>
+              <p>With 15 years experience, Vikram specializes in name correction and business numerology for
+                startups.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 4 (New) -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop" alt="Dr. Alok Nath"
+              class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Dr. Alok Nath</h4>
+            <p class="faculty-role">Nadi Jyotish Expert</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">PhD in Astrology | Gold Medalist</span>
+              <p>Specialist in precise timing of events using Nadi principles. A revered teacher with over 20 years
+                of academic experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 5 (New) -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&fit=crop"
+              alt="Ms. Priya Sharma" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Ms. Priya Sharma</h4>
+            <p class="faculty-role">Medical Astrology</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">Ayurveda Acharya | Astro-Healer</span>
+              <p>Combining Ayurveda with Astrology to diagnose root causes of ailments. She teaches holistic healing
+                methodologies.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET FOR INFINITE LOOP -->
+
+        <!-- Faculty 1 -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&fit=crop"
+              alt="Prof. Anjali Patel" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Prof. Anjali Patel</h4>
+            <p class="faculty-role">Palmistry & Vastu Expert</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">M.Sc in Vedic Sciences (BHU) | PhD Scholar</span>
+              <p>With 18 years of dedicated practice, Prof. Anjali serves as a consultant to top real estate firms
+                for Vastu compliance.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop" alt="Mrs. Sunita Verma"
+              class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Mrs. Sunita Verma</h4>
+            <p class="faculty-role">Tarot & Psychic Expert</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">Certified Grand Master (Tarot Guild)</span>
+              <p>A gifted intuitive with a decade of accuracy. Mrs. Sunita creates a unique blend of Raider-Waite
+                symbolism and Vedic intuition.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop"
+              alt="Mr. Vikram Singh" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Mr. Vikram Singh</h4>
+            <p class="faculty-role">Numerology Specialist</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">Chaldean & Pythagorean Expert</span>
+              <p>With 15 years experience, Vikram specializes in name correction and business numerology for
+                startups.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 4 (New) -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop" alt="Dr. Alok Nath"
+              class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Dr. Alok Nath</h4>
+            <p class="faculty-role">Nadi Jyotish Expert</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">PhD in Astrology | Gold Medalist</span>
+              <p>Specialist in precise timing of events using Nadi principles. A revered teacher with over 20 years
+                of academic experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 5 (New) -->
+        <div class="faculty-card">
+          <div class="faculty-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&fit=crop"
+              alt="Ms. Priya Sharma" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h4 class="faculty-name">Ms. Priya Sharma</h4>
+            <p class="faculty-role">Medical Astrology</p>
+            <div class="faculty-bio">
+              <span class="faculty-education">Ayurveda Acharya | Astro-Healer</span>
+              <p>Combining Ayurveda with Astrology to diagnose root causes of ailments. She teaches holistic healing
+                methodologies.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Accreditation Section (Simplified) -->
+  <section class="accreditation-section">
+    <div class="container">
+      <h2 class="card-section-title">Recognition & Accreditations</h2>
+      <div class="grid grid-3 grid-gap-2">
+        <div class="card text-center card-auto" data-animate>
+          <div class="font-3xl mb-1">🏆</div>
+          <h4 class="color-primary">ISO 9001:2015 Certified</h4>
+          <p class="card-small-text">Quality Management System certification for excellence in education and service
+            delivery.</p>
+        </div>
+        <div class="card text-center card-auto" data-animate>
+          <div class="font-3xl mb-1">🎓</div>
+          <h4 class="color-primary">Government Recognized</h4>
+          <p class="card-small-text">Registered with Ministry of Education and government educational bodies.</p>
+        </div>
+        <div class="card text-center card-auto" data-animate>
+          <div class="font-3xl mb-1">🌟</div>
+          <h4 class="color-primary">Industry Awards</h4>
+          <p class="card-small-text">Multiple awards for educational excellence and innovation in learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Parashari</h4>
+        <p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Visit our Facebook" aria-label="Visit our Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" title="Visit our Twitter" aria-label="Visit our Twitter"><i
+              class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" title="Visit our Instagram" aria-label="Visit our Instagram"><i
+              class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" title="Visit our YouTube" aria-label="Visit our YouTube"><i
+              class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Programs</h4>
+        <ul class="footer-links">
+          <li><a href="astrology.html">Astrology</a></li>
+          <li><a href="palmistry.html">Palmistry</a></li>
+          <li><a href="vastu.html">Vastu</a></li>
+          <li><a href="fee-structure.html">Fee Structure</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <div class="contact-info">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <p class="p-reset">123 Vedic Street, Delhi</p>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <p class="p-reset"><a href="tel:+919999999999">+91 9999-999-999</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="copyright">
+          <p class="p-reset">&copy; 2024 Parashari Institute.</p>
+        </div>
+        <div class="developer-credit">Designed by <a href="#">Our Team</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+DATABASE STRUCTURE CHECK
+======================================================================
+
+Vedic Astrology:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Nadi Jyotish:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Lal Kitab Remedies:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+KP Astrology:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+BNN (Advanced Techniques):
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Medical Astrology:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Complete Astrology Course:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Rudraksha Remedies:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Crystal Healing:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Vastu Shastra:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Remedy Course (Upaay Gyaan):
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Palmistry:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Face Reading:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Tarot Reading:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+Numerology:
+  Modules: 3
+  Videos: 9
+  First Video: "Lesson 1 - Introduction & Basics"
+  Resources: 2
+    - Lesson Notes
+    - Lesson eBook
+
+======================================================================

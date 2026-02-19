@@ -1,0 +1,107 @@
+Connected to MongoDB
+
+Course: Vedic Astrology
+Course ID: 6985dbc8fc56f067555723ff
+
+=== VEDIC ASTROLOGY COURSE STRUCTURE ===
+
+Module: Introduction & Basics
+
+  Video 1: "Lesson 1 - Introduction & Basics"
+  Video ID: 6985dbc8fc56f06755572404
+  R2 Path: resources/vedic-astrology/introduction/lesson-1-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 6986e4fe57339da1f2eb3fc3
+       R2 Path: resources/vedic-astrology/introduction/lesson-1-notes/lesson1Notes.pdf
+    2. "Lesson eBook" (ebook) - ID: 6986ec7db072be920f0aa90f
+       R2 Path: resources/vedic-astrology/introduction/lesson-1-ebooks/ebook.pdf
+
+  Video 2: "Lesson 2 - Introduction & Basics"
+  Video ID: 6985dbc8fc56f0675557240a
+  R2 Path: resources/vedic-astrology/introduction-and-basics/lesson-3-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c79863951
+       R2 Path: courses/VedicAstrology/Introduction&Basics/LessonNotes/lesson3Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f11
+       R2 Path: resources/vedic-astrology/introduction-and-basics/lesson-3-ebooks/ebook.pdf
+
+  Video 3: "Lesson 3 - Introduction & Basics"
+  Video ID: 6985dbc8fc56f06755572410
+  R2 Path: resources/vedic-astrology/introduction-and-basics/lesson-4-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c79863954
+       R2 Path: courses/VedicAstrology/Introduction&Basics/LessonNotes/lesson4Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f14
+       R2 Path: resources/vedic-astrology/introduction-and-basics/lesson-4-ebooks/ebook.pdf
+
+------------------------------------------------------------
+Module: Core Concepts
+
+  Video 1: "Lesson 1 - Core Concepts"
+  Video ID: 6985dbc8fc56f06755572418
+  R2 Path: resources/vedic-astrology/core-concepts/lesson-2-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c79863968
+       R2 Path: courses/VedicAstrology/CoreConcepts/LessonNotes/lesson2Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f25
+       R2 Path: resources/vedic-astrology/core-concepts/lesson-2-ebooks/ebook.pdf
+
+  Video 2: "Lesson 2 - Core Concepts"
+  Video ID: 6985dbc8fc56f0675557241d
+  R2 Path: resources/vedic-astrology/core-concepts/lesson-3-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c7986396b
+       R2 Path: courses/VedicAstrology/CoreConcepts/LessonNotes/lesson3Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f28
+       R2 Path: resources/vedic-astrology/core-concepts/lesson-3-ebooks/ebook.pdf
+
+  Video 3: "Lesson 3 - Core Concepts"
+  Video ID: 6985dbc8fc56f06755572422
+  R2 Path: resources/vedic-astrology/core-concepts/lesson-4-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c7986396d
+       R2 Path: courses/VedicAstrology/CoreConcepts/LessonNotes/lesson4Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f2a
+       R2 Path: resources/vedic-astrology/core-concepts/lesson-4-ebooks/ebook.pdf
+
+------------------------------------------------------------
+Module: Advanced Application
+
+  Video 1: "Lesson 1 - Advanced Application"
+  Video ID: 6985dbc8fc56f06755572429
+  R2 Path: resources/vedic-astrology/advanced-application/lesson-2-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c79863980
+       R2 Path: courses/VedicAstrology/AdvancedApplication/LessonNotes/lesson2Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f3a
+       R2 Path: resources/vedic-astrology/advanced-application/lesson-2-ebooks/ebook.pdf
+
+  Video 2: "Lesson 2 - Advanced Application"
+  Video ID: 6985dbc8fc56f0675557242e
+  R2 Path: resources/vedic-astrology/advanced-application/lesson-3-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c79863983
+       R2 Path: courses/VedicAstrology/AdvancedApplication/LessonNotes/lesson3Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f3d
+       R2 Path: resources/vedic-astrology/advanced-application/lesson-3-ebooks/ebook.pdf
+
+  Video 3: "Lesson 3 - Advanced Application"
+  Video ID: 6985dbc8fc56f06755572433
+  R2 Path: resources/vedic-astrology/advanced-application/lesson-4-videos/index.m3u8
+  Resources: 2
+    1. "Lesson Notes" (pdf) - ID: 698acf258db9b44c79863985
+       R2 Path: courses/VedicAstrology/AdvancedApplication/LessonNotes/lesson4Notes.pdf
+    2. "Lesson eBook" (pdf) - ID: 698ad220a3b5cc675b5c7f3f
+       R2 Path: resources/vedic-astrology/advanced-application/lesson-4-ebooks/ebook.pdf
+
+------------------------------------------------------------
+
+
+=== NADI JYOTISH COURSE (FOR COMPARISON) ===
+
+First Video: "Lesson 1 - Introduction & Basics"
+Video ID: 6985dbc8fc56f0675557243c
+R2 Path: courses/test-course/test-module/test-video/hls/index.m3u8
+Resources: 2
+  1. "Lesson Notes" (pdf)
+  2. "Lesson eBook" (pdf)

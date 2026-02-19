@@ -1,0 +1,414 @@
+/* ============================================
+   RESPONSIVE CSS - Mobile & Tablet
+   ============================================ */
+
+/* ============ TABLETS (768px and below) ============ */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xxl: 2.5rem;
+    --spacing-xl: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Grid Adjustments */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  /* Flex Adjustments */
+  .flex-wrap {
+    flex-direction: column;
+  }
+
+  /* Buttons */
+  .btn-lg {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1rem;
+  }
+}
+
+/* ============ SMALL TABLETS (600px and below) ============ */
+@media (max-width: 600px) {
+  :root {
+    --spacing-xl: 1.5rem;
+    --spacing-lg: 1.5rem;
+    --spacing-md: 1rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Cards */
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .card-image {
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  /* Forms */
+  .form-control {
+    padding: var(--spacing-sm);
+    font-size: 0.95rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  .btn-lg {
+    padding: var(--spacing-md) var(--spacing-md);
+    font-size: 1rem;
+  }
+
+  /* Grid */
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: var(--spacing-md);
+  }
+
+  /* Features */
+  .feature-box {
+    text-align: center;
+  }
+
+  /* Pricing Cards */
+  .price-card {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Accordion */
+  .accordion-item {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* ============ PHONES (480px and below) ============ */
+@media (max-width: 480px) {
+  :root {
+    --spacing-xl: 1.5rem;
+    --spacing-lg: 1rem;
+    --spacing-md: 0.75rem;
+    --font-size-base: 0.9rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .container,
+  .container-fluid {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 250px;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+    width: 100%;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Forms */
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .form-control {
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+
+  textarea.form-control {
+    min-height: 100px;
+  }
+
+  /* Grid */
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: var(--spacing-md);
+  }
+
+  /* Flex */
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex-between {
+    justify-content: center;
+  }
+
+  /* Badges */
+  .badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8rem;
+  }
+
+  /* Tables */
+  table {
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: var(--spacing-sm);
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Spacing Adjustments */
+  .mt-4,
+  .mb-4 {
+    margin-top: var(--spacing-lg) !important;
+    margin-bottom: var(--spacing-lg) !important;
+  }
+
+  .p-4 {
+    padding: var(--spacing-lg) !important;
+  }
+
+  /* List Items */
+  li {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/* ============ SMALL PHONES (320px and below) ============ */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+}
+
+/* ============ ORIENTATION ADJUSTMENTS ============ */
+@media (max-height: 600px) {
+  .hero {
+    min-height: 250px;
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+/* ============ LANDSCAPE MODE ============ */
+@media (max-width: 768px) and (orientation: landscape) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero {
+    min-height: 280px;
+  }
+}
+
+/* ============ PRINT STYLES ============ */
+@media print {
+
+  header,
+  footer,
+  .no-print {
+    display: none;
+  }
+
+  body {
+    color: #000;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}

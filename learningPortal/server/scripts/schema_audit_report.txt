@@ -1,0 +1,203 @@
+✅ Connected to MongoDB
+
+================================================================================
+STEP 1: MongoDB Schema Audit Report
+================================================================================
+
+📊 Total Courses: 15
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Vedic Astrology
+   ID: 6985dbc8fc56f067555723ff
+   Slug: vedic-astrology
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Nadi Jyotish
+   ID: 6985dbc8fc56f06755572438
+   Slug: nadi-jyotish
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Lal Kitab Remedies
+   ID: 6985dbc9fc56f0675557246d
+   Slug: lal-kitab-remedies
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: KP Astrology
+   ID: 6985dbcafc56f067555724a4
+   Slug: kp-astrology
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: BNN (Advanced Techniques)
+   ID: 6985dbcbfc56f067555724d9
+   Slug: bnn-advanced-techniques-
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Medical Astrology
+   ID: 6985dbccfc56f0675557250e
+   Slug: medical-astrology
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Complete Astrology Course
+   ID: 6985dbccfc56f06755572545
+   Slug: complete-astrology-course
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Rudraksha Remedies
+   ID: 6985dbcdfc56f0675557257a
+   Slug: rudraksha-remedies
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Crystal Healing
+   ID: 6985dbcefc56f067555725b1
+   Slug: crystal-healing
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Vastu Shastra
+   ID: 6985dbcffc56f067555725e6
+   Slug: vastu-shastra
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Remedy Course (Upaay Gyaan)
+   ID: 6985dbd0fc56f0675557261d
+   Slug: remedy-course-upaay-gyaan-
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Palmistry
+   ID: 6985dbd0fc56f06755572652
+   Slug: palmistry
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Face Reading
+   ID: 6985dbd1fc56f06755572687
+   Slug: face-reading
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Tarot Reading
+   ID: 6985dbd2fc56f067555726bc
+   Slug: tarot-reading
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 Course: Numerology
+   ID: 6985dbd3fc56f067555726f1
+   Slug: numerology
+   Modules: 3
+   Module Names: Introduction & Basics, Core Concepts, Advanced Application
+
+   📁 Path Analysis:
+      ✅ resources/ paths: 27
+      ❌ courses/ paths: 0
+      ⚠️  test paths: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Total resources/ paths (CORRECT): 405
+❌ Total courses/ paths (WRONG): 0
+⚠️  Total test paths (NEEDS FIX): 0
+
+✅ All paths correctly use 'resources/' folder
+✅ No test paths detected
+
+================================================================================
+END OF SCHEMA AUDIT
+================================================================================

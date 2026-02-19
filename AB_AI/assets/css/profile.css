@@ -1,0 +1,794 @@
+/* ============================================
+   PROFILE / ABOUT US CSS
+   Theme: Cosmic Journey (Dark/Gold/Glass)
+   ============================================ */
+
+/* --- VARIABLES --- */
+:root {
+    --cosmic-bg: #0f0505;
+    /* Very dark brownish-black */
+    --cosmic-card: #1a0b0d;
+    /* Slightly lighter dark */
+    --gold-primary: #D4AF37;
+    --gold-hover: #F0A500;
+    --maroon-deep: #591C21;
+    --text-cream: #F5F3F0;
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --glass-bg: rgba(26, 11, 13, 0.6);
+    --light-bg: #f9f9f9;
+}
+
+/* --- UTILITIES --- */
+.text-gold {
+    color: var(--gold-primary) !important;
+}
+
+.text-maroon {
+    color: var(--maroon-deep) !important;
+}
+
+.bg-cream {
+    background-color: #FFFCF5;
+}
+
+/* --- COSMIC HERO SECTION --- */
+.about-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    /* background: radial-gradient(circle at center, #2e0a0c 0%, #0f0505 100%); */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('../images/about-hero-bg.jpg') no-repeat center center/cover;
+    background-blend-mode: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-cream);
+    overflow: hidden;
+}
+
+/* Star/Nebula Animation Background */
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: starMove 100s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes starMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+    animation: fadeUp 1.2s ease-out;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--gold-primary);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.3);
+    line-height: 1.1;
+}
+
+.about-hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid var(--gold-primary);
+    border-bottom: 1px solid var(--gold-primary);
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+/* --- LEGACY SECTION (Broken Grid) --- */
+.story-section {
+    padding: 8rem 0;
+    background: var(--light-bg);
+    /* Keeping light for contrast */
+    position: relative;
+    overflow: hidden;
+}
+
+.broken-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.story-image-wrapper {
+    grid-column: 1 / 7;
+    /* Image on Left */
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+    margin-right: -3rem;
+    /* Slight overlap rightwards */
+    margin-bottom: 0;
+}
+
+.story-image {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 20px 20px 0 var(--gold-primary);
+    transition: transform 0.5s ease;
+}
+
+.story-image:hover {
+    transform: scale(1.02);
+}
+
+.story-content-box {
+    grid-column: 6 / 13;
+    /* Text on Right */
+    grid-row: 1;
+    /* Align horizontally */
+    background: #fff;
+    padding: 5rem;
+    z-index: 2;
+    box-shadow: -10px 20px 60px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin-top: 4rem;
+    /* Push down for offset look */
+    margin-left: 0;
+    width: 100%;
+}
+
+.story-content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--maroon-deep), var(--gold-primary));
+}
+
+/* --- DEAN'S MESSAGE (Wax Seal) --- */
+.dean-section {
+    padding: 6rem 0;
+    background: #fff;
+}
+
+.dean-message-box {
+    background: #fafafa;
+    border-left: 5px solid var(--maroon-deep);
+    padding: 4rem;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.wax-seal {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: #8B0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), inset 2px 2px 10px rgba(255, 255, 255, 0.2);
+    transform: rotate(15deg);
+    border: 4px double rgba(255, 255, 255, 0.4);
+    z-index: 10;
+}
+
+.dean-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dean-image-border {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border: 1px dashed var(--gold-primary);
+    border-radius: 50%;
+    animation: spin 40s linear infinite;
+}
+
+.dean-image-border::before {
+    content: '★';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    color: var(--gold-primary);
+    font-size: 20px;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.dean-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+}
+
+/* --- TIMELINE SECTION (Cosmic Path - Zig Zag Fix) --- */
+.timeline-section {
+    padding: 8rem 0;
+    background: var(--cosmic-bg);
+    /* Dark Theme */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Central Vertical Line (for connectors to latch onto conceptually, though we use Zig Zag) */
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Remove gap, handle with margin/padding */
+}
+
+.timeline-item {
+    width: 100%;
+    padding-bottom: 4rem;
+    /* Space for connector */
+    display: flex;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    /* JS Fade In */
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ODD: Content Left */
+.timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+    padding-right: 50%;
+}
+
+/* EVEN: Content Right */
+.timeline-item:nth-child(even) {
+    justify-content: flex-end;
+    padding-left: 50%;
+}
+
+/* CONTENT BOX */
+.timeline-content {
+    background: var(--cosmic-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 90%;
+    /* Relative to the half-width container */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.timeline-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.05);
+    /* Subtle background number */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.timeline-title {
+    color: var(--gold-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.timeline-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- CONNECTORS (The "Snake") --- */
+/* We use a pseudo-element on the timeline-item to draw the line to the next item */
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Start from middle of card */
+    height: 100%;
+    /* Go down to next row */
+    width: 100%;
+    /* Unused, controlled below */
+    border: 2px dashed rgba(212, 175, 55, 0.4);
+    /* Gold dashed line */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Odd Connector: Starts Left(Right Edge) -> Goes Right -> Goes Down -> Goes Left */
+.timeline-item:nth-child(odd):not(:last-child)::before {
+    left: 45%;
+    /* Exit point of left card (approx) */
+    right: auto;
+    width: 10%;
+    /* Gap width */
+    height: 150%;
+    /* Drop distance */
+    border-left: none;
+    border-bottom: 2px dashed rgba(212, 175, 55, 0.4);
+    border-radius: 0 60px 60px 0;
+    /* Curve on right side */
+}
+
+/* Even Connector: Starts Right(Left Edge) -> Goes Left -> Goes Down -> Goes Right */
+.timeline-item:nth-child(even):not(:last-child)::before {
+    right: 45%;
+    /* Exit point of right card */
+    left: auto;
+    width: 10%;
+    height: 150%;
+    border-right: none;
+    border-bottom: 2px dashed rgba(212, 175, 55, 0.4);
+    border-radius: 60px 0 0 60px;
+    /* Curve on left side */
+}
+
+/* DOTS */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--cosmic-bg);
+    border: 3px solid var(--gold-primary);
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 10px var(--gold-primary);
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: 50%;
+    /* Center line */
+    margin-right: -8px;
+    /* Centering */
+    /* Actually with the gap design: */
+    left: 45%;
+    /* At card edge */
+}
+
+.timeline-item:nth-child(even)::after {
+    right: 45%;
+    /* At card edge */
+    /* Re-align */
+    left: auto;
+}
+
+/* Fix dots to be at the connection point */
+.timeline-item:nth-child(odd)::after {
+    left: auto;
+    right: 45%;
+    /* 50 + gap? No, flex basis.. padding right 50% means content ends at 50%. Inner box width is 90% of that 50%. So 45%. Perfect. */
+    margin-right: -8px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: 45%;
+    margin-left: -8px;
+}
+
+/* --- STATS SECTION (Dark/Gold) --- */
+.stats-section-dark {
+    padding: 6rem 0;
+    background: #111;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* --- FACULTY (Glassmorphism) --- */
+.faculty-section {
+    padding: 8rem 0;
+    background: #fff;
+}
+
+/* --- FACULTY MARQUEE (3D Infinite Scroll) --- */
+.faculty-section {
+    padding: 6rem 0;
+    /* Reduced padding for better fit */
+    background: #fff;
+    overflow: hidden;
+}
+
+.faculty-3d-scene {
+    width: 100%;
+    height: 550px;
+    /* Adjusted height for cards */
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+
+
+.faculty-3d-scroll-track {
+    display: flex;
+    flex-direction: row;
+    /* FORCE ROW */
+    flex-wrap: nowrap;
+    /* FORCE NO WRAP */
+    gap: 2rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+    /* Ensure container grows horizontally */
+    padding: 2rem 0;
+    will-change: transform;
+    animation: facultyScroll3D 40s linear infinite;
+}
+
+.faculty-3d-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes facultyScroll3D {
+    0% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
+
+
+.faculty-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    /* Enhanced shadow instead of border */
+    transition: all 0.4s ease;
+    border: none;
+    /* Removed solid border */
+    width: 350px;
+    /* Fixed width */
+    min-width: 350px;
+    height: 450px !important;
+    max-height: 450px !important;
+    /* Fixed height as requested */
+    flex-shrink: 0;
+    display: flex;
+    /* Use flex column to organize content */
+    flex-direction: column;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    /* Deeper shadow on hover */
+    background: linear-gradient(rgba(18, 5, 20, 0.7), rgba(18, 5, 20, 0.7)),
+        url('../images/about-hero-bg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.faculty-img-wrapper {
+    height: 220px;
+    /* Reduced to fit content below */
+    width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.faculty-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.faculty-card:hover .faculty-img {
+    transform: scale(1.05);
+}
+
+.faculty-info {
+    padding: 1.5rem;
+    /* Slightly reduced padding */
+    text-align: center;
+    position: relative;
+    background: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-name {
+    color: var(--maroon-deep);
+    font-size: 1.3rem;
+    /* Slightly smaller */
+    margin-bottom: 0.25rem;
+}
+
+.faculty-role {
+    color: var(--gold-hover);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.faculty-bio {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: auto;
+    /* Push to bottom or justify */
+    line-height: 1.5;
+    border-top: 1px solid #eee;
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.faculty-education {
+    display: block;
+    margin-bottom: 0.5rem;
+    /* Changed from margin-top */
+    font-size: 0.8rem;
+    color: var(--maroon-deep);
+    font-weight: 600;
+}
+
+/* Animation: Slide In From Right */
+
+
+/* --- CORE VALUES SECTION --- */
+.core-values-section {
+    padding: 6rem 0;
+    background: #fff;
+    position: relative;
+    z-index: 5;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--maroon-deep), var(--gold-primary));
+}
+
+.value-card-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
+}
+
+.value-emoji {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.value-title-text {
+    color: #591C21;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- ACCREDITATION SECTION --- */
+.accreditation-section {
+    padding: 6rem 0;
+    background: var(--light-bg);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .about-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .broken-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image-wrapper {
+        grid-column: 1 / -1;
+        margin-bottom: -3rem;
+    }
+
+    .story-content-box {
+        grid-column: 1 / -1;
+        margin: 0 1rem;
+        padding: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .stat-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(4) {
+        border-bottom: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(4) {
+        border-bottom: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Collapse Timeline to Linear */
+    .timeline-container {
+        padding-left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        padding: 0 0 2rem 30px;
+        width: 100%;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    /* Vertical Line */
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: rgba(212, 175, 55, 0.3);
+    }
+
+    .timeline-item::before {
+        display: none;
+        /* Hide S-Curve */
+    }
+
+    .timeline-item::after {
+        left: 20px !important;
+        right: auto !important;
+        margin-left: -9px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

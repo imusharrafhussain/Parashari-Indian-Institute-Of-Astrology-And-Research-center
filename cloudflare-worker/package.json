@@ -1,0 +1,16 @@
+{
+  "name": "cloudflare-worker",
+  "version": "1.0.0",
+  "description": "This Cloudflare Worker generates signed URLs for R2 bucket objects. It's a stateless service that accepts R2 paths and returns time-limited signed URLs.",
+  "main": "video-signer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.978.0",
+    "@aws-sdk/s3-request-presigner": "^3.978.0"
+  }
+}

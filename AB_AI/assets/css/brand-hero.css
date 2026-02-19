@@ -1,0 +1,312 @@
+/* ============================================
+   BRAND HERO SECTION - Prominent Logo Display
+   ============================================ */
+
+.brand-hero {
+    background: #FFFFFF;
+    padding: 1rem 1rem;
+    /* Reduced padding to minimize "width" (height) */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-logo-img {
+    width: 100%;
+    max-width: 1000px;
+    /* Limit to a reasonable maximum for large screens */
+    height: auto;
+    /* Maintain aspect ratio - No distortion */
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.brand-logo-img:hover {
+    transform: scale(1.02);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .brand-hero {
+        padding: 1rem 1rem;
+    }
+
+    .brand-logo-large {
+        width: 350px;
+        height: 260px;
+        /* Reduced height proportionally */
+        background-size: 350px auto;
+    }
+}
+
+.brand-logo-large {
+    width: 280px;
+    height: 210px;
+    /* Reduced height proportionally */
+    background-size: 280px auto;
+}
+
+/* ============ HORIZONTAL SCROLL CONTAINER ============ */
+.hero-with-bg {
+    background: transparent;
+    overflow: hidden;
+}
+
+.hero-3d-scene {
+    margin-top: 2rem;
+    width: 100%;
+    height: 450px;
+    /* Adjusted height for full card visibility */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fade effect at left edge */
+.hero-3d-scene::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Fade effect at right edge */
+.hero-3d-scene::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hero-3d-scroll-track {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+    padding: 2rem 0;
+    will-change: transform;
+    cursor: grab;
+}
+
+.hero-3d-scroll-track:active {
+    cursor: grabbing;
+}
+
+/* ============ MICROSOFT-STYLE CARDS ============ */
+.hero-card {
+    width: 300px;
+    /* Increased from 224px for wider, shorter cards */
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 350px;
+    /* Increased height to show full cards including title */
+    height: auto;
+    margin: 0.5rem;
+    /* Minimal gap for separation */
+}
+
+.hero-card-image-wrapper {
+    width: 100%;
+    /* Image covers full card width */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcfcfc;
+    padding: 0.35rem;
+    /* Proportionally reduced margin */
+}
+
+.hero-card-image {
+    width: 100%;
+    height: auto;
+    /* Auto height to show full image */
+    object-fit: contain;
+    /* Shows full image without cropping */
+    display: block;
+}
+
+.hero-card-content {
+    padding: 0.5rem;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: space-between;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-card:hover .hero-card-content {
+    max-height: 300px;
+    opacity: 1;
+    padding: 0.5rem;
+}
+
+.hero-card h3 {
+    color: #1A1A1A;
+    font-family: 'Poppins', sans-serif;
+    /* Match main site font */
+    font-size: 0.75rem;
+    /* Reduced for compact cards */
+    margin: 0 0 0.4rem 0;
+    /* Reduced margin */
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-card-desc {
+    color: #333 !important;
+    /* Darker for better contrast */
+    font-family: 'Times New Roman', Times, serif;
+    /* User requested font */
+    font-size: 1.05rem;
+    /* Slightly larger for Times New Roman readability */
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    /* Reduce gaps between letters */
+    font-weight: 400 !important;
+    text-shadow: none !important;
+    text-align: center;
+    /* Ensure centered text to avoid justify gaps */
+}
+
+.hero-card-btn {
+    display: inline-block;
+    background-color: #0067B8;
+    /* Keeping brand blue or switch to primary? Keeping blue for now */
+    color: white;
+    padding: 10px 0;
+    /* Slightly taller click area */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    /* Full width button */
+    text-align: center;
+    margin-top: auto;
+    /* Push to bottom if flex container allows */
+}
+
+.hero-card-btn:hover {
+    background-color: #005DA6;
+}
+
+/* Hover Effects */
+.hero-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-card-icon {
+    display: none;
+}
+
+/* ============ RESPONSIVE HERO CARDS ============ */
+@media (max-width: 900px) {
+    .hero-card {
+        width: 240px;
+        height: 320px;
+        padding: 12px;
+    }
+
+    .hero-card-image {
+        height: 200px;
+    }
+
+    .hero-card h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-card {
+        width: 220px;
+        height: 290px;
+        padding: 10px;
+    }
+
+    .hero-card-image {
+        height: 180px;
+        border-radius: 12px;
+    }
+
+    .hero-card h3 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero-card {
+        width: 180px;
+        height: 250px;
+        padding: 8px;
+        border-radius: 15px;
+    }
+
+    .hero-card-image {
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .hero-card h3 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-3d-scroll-track {
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,106 @@
+/* Animated Learn More Button Styles - Ultra Compact Version */
+button.learn-more,
+a.learn-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 9rem;
+    /* Further reduced */
+    height: 2.25rem;
+    /* Fixed height instead of auto */
+    overflow: hidden;
+}
+
+button.learn-more .circle,
+a.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2.25rem;
+    /* Reduced to 36px */
+    height: 2.25rem;
+    /* Reduced to 36px */
+    background: #591C21;
+    /* Maroon theme */
+    border-radius: 1.125rem;
+}
+
+button.learn-more .circle .icon,
+a.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow,
+a.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.5rem;
+    width: 0.875rem;
+    /* Smaller arrow */
+    height: 0.1rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before,
+a.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.22rem;
+    right: 0.05rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-top: 0.1rem solid #fff;
+    border-right: 0.1rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text,
+a.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Center vertically */
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0 0 0 1.5rem;
+    /* Adjusted for smaller circle */
+    color: #591C21;
+    /* Maroon theme */
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    /* Smaller text */
+}
+
+button.learn-more:hover .circle,
+a.learn-more:hover .circle {
+    width: 100%;
+}
+
+button.learn-more:hover .circle .icon.arrow,
+a.learn-more:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(0.7rem, 0);
+}
+
+button.learn-more:hover .button-text,
+a.learn-more:hover .button-text {
+    color: #fff;
+}

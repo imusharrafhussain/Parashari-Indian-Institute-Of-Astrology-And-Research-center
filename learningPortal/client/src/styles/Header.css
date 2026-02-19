@@ -1,0 +1,91 @@
+/* Header.css */
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    /* Space between logo and user */
+    align-items: center;
+    padding: 0.8rem 2rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid #8B0000;
+    /* Visible Brand Color Border */
+    /* STICKY HEADER IMPLEMENTATION */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Large Desktop Centered Logo */
+@media (min-width: 1200px) {
+    .welcome-header {
+        justify-content: flex-end;
+        /* Push user right */
+        min-height: 120px;
+        /* Conserve space for absolute logo */
+    }
+
+    .header-logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Ensure logo is vertically centered if header grows */
+        top: 50%;
+    }
+}
+
+
+.header-user {
+    /* Use static position for flex flow */
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.logout-btn-minimal {
+    background: transparent;
+    border: 1px solid #8B0000;
+    /* Brand color border initially visible */
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #8B0000;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.logout-btn-minimal:hover {
+    background: #8B0000;
+    color: #fff;
+}
+
+.header-logo .logo-image {
+    /* Responsive logo - Controlled by CSS now */
+    max-height: 90px;
+    width: auto;
+    transition: max-height 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header-logo .logo-image {
+        max-height: 60px;
+        /* Smaller on mobile */
+    }
+
+    .welcome-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .header-user {
+        position: static;
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,165 @@
+/* Courses.css */
+.courses-page-container {
+    min-height: 100vh;
+    background: #f8f9fa;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.courses-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    color: #8B0000;
+}
+
+.courses-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #2d3748;
+}
+
+.spacer {
+    width: 60px;
+    /* Balance back button */
+}
+
+/* Content */
+.courses-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+}
+
+.course-card-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #edf2f7;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.course-thumb {
+    height: 160px;
+    background: #eee;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #ccc;
+    background: #f0f0f0;
+}
+
+.course-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-cats {
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    background: #fff5f5;
+    color: #8B0000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.course-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+.duration {
+    color: #718096;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.start-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.75rem;
+    background: #fff;
+    color: #8B0000;
+    border: 1px solid #8B0000;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.start-btn:hover {
+    background: #8B0000;
+    color: white;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem;
+    color: #718096;
+}
+
+.empty-state button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #2d3748;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
