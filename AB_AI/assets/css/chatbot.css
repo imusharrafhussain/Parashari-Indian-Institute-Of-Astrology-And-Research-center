@@ -122,7 +122,7 @@
 /* Main Chat Container */
 .astro-chat-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     right: 88px;
     width: 350px;
     /* Default desktop width */
@@ -426,9 +426,10 @@
 /* Mobile (5" - 7") */
 @media screen and (max-width: 600px) {
     .astro-chat-container {
-        width: 95%;
-        height: 85vh;
-        bottom: 20px;
+        width: 75%;
+        height: 50vh;
+        bottom: 75px;
+        /* Reduced specific spacing */
         right: 2.5%;
         left: 2.5%;
         margin: auto;

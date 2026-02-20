@@ -349,6 +349,16 @@
 
     // --- Floating & Drag Logic ---
     function updateContainerPosition() {
+        // Disable custom positioning on mobile to let CSS handle it
+        if (window.innerWidth <= 600) {
+            container.style.left = '';
+            container.style.top = '';
+            container.style.right = '';
+            container.style.bottom = '';
+            container.style.transform = ''; // Clear JS transform if any
+            return;
+        }
+
         const tRect = toggle.getBoundingClientRect();
         const cRect = container.getBoundingClientRect();
         const gap = 20;
@@ -500,7 +510,21 @@
     }
 
     function restorePositions() {
-        if (window.innerWidth <= 600) return;
+        if (window.innerWidth <= 600) {
+            // Mobile: Clear all inline positioning to let CSS handle it
+            toggle.style.left = '';
+            toggle.style.top = '';
+            toggle.style.right = '';
+            toggle.style.bottom = '';
+            toggle.style.transform = '';
+
+            container.style.left = '';
+            container.style.top = '';
+            container.style.right = '';
+            container.style.bottom = '';
+            container.style.transform = '';
+            return;
+        }
 
         // Disable transitions to prevent layout thrashing and ensure getBoundingClientRect is correct immediately
         toggle.style.transition = 'none';
