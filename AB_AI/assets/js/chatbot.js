@@ -338,7 +338,48 @@
 
     // --- Floating & Drag Logic ---
 
-    function setupDraggable(el, handle, storageKey) {
+    // --- Floating & Drag Logic ---
+    function updateContainerPosition() {
+        const tRect = toggle.getBoundingClientRect();
+        const cRect = container.getBoundingClientRect();
+        const gap = 20;
+        const padding = 20;
+
+        // Default: Bottom aligned, side based on toggle position
+        // If toggle is on right half: Container to left
+        // If toggle is on left half: Container to right
+
+        const isRightConfig = (tRect.left + tRect.width / 2) > window.innerWidth / 2;
+
+        let targetLeft;
+        if (isRightConfig) {
+            targetLeft = tRect.left - cRect.width - gap;
+            // Prevent going off-screen left
+            if (targetLeft < padding) targetLeft = padding;
+        } else {
+            targetLeft = tRect.right + gap;
+            // Prevent going off-screen right
+            if (targetLeft + cRect.width > window.innerWidth - padding) {
+                targetLeft = window.innerWidth - cRect.width - padding;
+            }
+        }
+
+        // Align bottoms
+        let targetTop = tRect.bottom - cRect.height;
+        // Prevent going off-screen top
+        if (targetTop < padding) targetTop = padding;
+        // Prevent going off-screen bottom
+        if (targetTop + cRect.height > window.innerHeight - padding) {
+            targetTop = window.innerHeight - cRect.height - padding;
+        }
+
+        container.style.left = `${targetLeft}px`;
+        container.style.top = `${targetTop}px`;
+        container.style.right = 'auto';
+        container.style.bottom = 'auto';
+    }
+
+    function setupDraggable(el, handle, storageKey, onUpdate) {
         let isDragging = false;
         let startX, startY, initialX, initialY;
 
@@ -353,6 +394,10 @@
             initialX = el.offsetLeft;
             initialY = el.offsetTop;
             el.style.transition = 'none';
+            if (el === toggle) {
+                // When dragging toggle, update container too (smooth)
+                container.style.transition = 'none';
+            }
             el.style.bottom = 'auto';
             el.style.right = 'auto';
             if (!e.type.includes('touch')) e.preventDefault();
@@ -368,14 +413,16 @@
             let y = initialY + dy;
 
             // Strict Vertical Constraints (Below Header, Above Footer)
-            const minTop = 150;
-            const maxTop = window.innerHeight - el.offsetHeight - 100;
+            const minTop = 100;
+            const maxTop = window.innerHeight - el.offsetHeight - 50;
 
             y = Math.max(minTop, Math.min(y, maxTop));
             x = Math.max(0, Math.min(x, window.innerWidth - el.offsetWidth));
 
             el.style.left = x + 'px';
             el.style.top = y + 'px';
+
+            if (onUpdate) onUpdate();
         };
 
         const onEnd = () => {
@@ -384,19 +431,48 @@
 
             const centerX = window.innerWidth / 2;
             const currentX = el.offsetLeft + (el.offsetWidth / 2);
-            const padding = 20;
 
-            let finalSide = currentX < centerX ? 'left' : 'right';
-            // Container (pos) uses 88px (95-7), Icon (toggle_pos) uses 40px
-            let finalPadding = storageKey === 'pos' ? 88 : 40;
-            let finalX = finalSide === 'left' ? finalPadding : window.innerWidth - el.offsetWidth - finalPadding;
+            // Snap logic for Toggle
+            if (el === toggle) {
+                const padding = 40;
+                let finalSide = currentX < centerX ? 'left' : 'right';
+                let finalX = finalSide === 'left' ? padding : window.innerWidth - el.offsetWidth - padding;
 
-            el.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-            el.style.left = finalX + 'px';
+                el.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                container.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)'; /* Sync transition */
 
-            // Save side and y position
-            chatData[storageKey] = { side: finalSide, y: el.offsetTop };
-            sessionStorage.setItem(`astroChat_${storageKey}_v2`, JSON.stringify(chatData[storageKey]));
+                el.style.left = finalX + 'px';
+
+                // Save side and y position
+                chatData[storageKey] = { side: finalSide, y: el.offsetTop };
+                sessionStorage.setItem(`astroChat_${storageKey}_v2`, JSON.stringify(chatData[storageKey]));
+
+                // Update container final pos after snap
+                // We need to wait for transition or just set it?
+                // Setting it here might conflict with transition unless we calc target.
+                // Let's use a timeout or requestAnimationFrame to keep updating?
+                // Or simple: Set it once. 
+
+                // Re-calibrating container position based on SNAP target
+                // But updateContainerPosition uses getBoundingClientRect which is current.
+                // So we need to wait for the snap to finish? 
+                // Actually, if we set transition on both, and set target left/top on both, they animate together.
+
+                // Let's manually invoke updateContainerPosition() but we need to know the FUTURE rect of toggle?
+                // That's hard. 
+                // Simpler: Just save, and let the loop handle it? 
+                // Or: The updateContainerPosition relies on current toggle pos.
+                // If toggle animates, container should animate to its target.
+
+                // Hack: Trigger updateContainerPosition repeatedly during transition?
+                // Better: Just let them be independent for the snap? 
+                // No, they must move together.
+
+                // If I set `container.style.left` NOW based on `finalX`, it will animate to it.
+                // We can simulate the toggle rect.
+                setTimeout(updateContainerPosition, 50); // Initial 
+                setTimeout(updateContainerPosition, 500); // After transition
+            }
         };
 
         handle.addEventListener('mousedown', onStart);
@@ -410,32 +486,43 @@
     function restorePositions() {
         if (window.innerWidth <= 600) return;
 
-        // Helper to position based on saved data
-        const applyPos = (el, storageKey) => {
-            const data = JSON.parse(sessionStorage.getItem(`astroChat_${storageKey}_v2`));
-            // Side-specific padding: Container=88px (95-7), Toggle=40px
-            const sidePadding = storageKey === 'pos' ? 88 : 40;
+        // Restore Toggle Position
+        const data = JSON.parse(sessionStorage.getItem('astroChat_toggle_pos_v2'));
+        if (data) {
+            const sidePadding = 40;
+            const x = data.side === 'left' ? sidePadding : window.innerWidth - toggle.offsetWidth - sidePadding;
+            const y = Math.max(150, Math.min(data.y, window.innerHeight - toggle.offsetHeight - 100));
 
-            if (data) {
-                const x = data.side === 'left' ? sidePadding : window.innerWidth - el.offsetWidth - sidePadding;
-                const y = Math.max(150, Math.min(data.y, window.innerHeight - el.offsetHeight - 100));
+            toggle.style.left = x + 'px';
+            toggle.style.top = y + 'px';
+            toggle.style.right = 'auto';
+            toggle.style.bottom = 'auto';
+        }
 
-                el.style.left = x + 'px';
-                el.style.top = y + 'px';
-                el.style.right = 'auto';
-                el.style.bottom = 'auto';
-            }
-        };
-
-        applyPos(toggle, 'toggle_pos');
-        applyPos(container, 'pos');
+        // Update Container Position based on restored toggle
+        updateContainerPosition();
     }
 
-    // Setup dragging for both
-    setupDraggable(toggle, toggle, 'toggle_pos');
-    setupDraggable(container, header, 'pos');
+    // Setup dragging for Toggle Only -> moving it updates container
+    setupDraggable(toggle, toggle, 'toggle_pos', updateContainerPosition);
 
-    window.addEventListener('resize', restorePositions);
+    // Listen for window resize
+    window.addEventListener('resize', () => {
+        restorePositions();
+        updateContainerPosition();
+    });
+
+    // Initial positioning
+    // We need to wait for layout? 
+    // updateContainerPosition uses offsetWidth/Height which might be 0 if hidden?
+    // Container is display:flex but opacity:0 and scale:0.8. Dimensions should be correct.
+    // If display:none (mobile?), dimensions are 0.
+    // But this script runs on load.
+
+    // Ensure container has dimensions before calculating
+    // It has fixed width/height in CSS.
+
+    restorePositions();
 
     // --- Interactions ---
 

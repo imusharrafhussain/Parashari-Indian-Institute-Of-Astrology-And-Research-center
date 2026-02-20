@@ -120,9 +120,9 @@
     position: fixed;
     bottom: 30px;
     right: 88px;
-    width: 400px;
+    width: 350px;
     /* Default desktop width */
-    height: 600px;
+    height: 500px;
     max-height: 80vh;
     background: var(--chat-bg);
     border-radius: var(--chat-radius);
@@ -144,7 +144,7 @@
     pointer-events: all;
 }
 
-/* Header - Draggable */
+/* Header - non-draggable */
 .astro-chat-header {
     background: var(--chat-primary-gradient);
     color: white;
@@ -152,14 +152,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: grab;
+    cursor: default;
     user-select: none;
     flex-shrink: 0;
 }
 
-.astro-chat-header:active {
-    cursor: grabbing;
-}
+/* Removed active state for grabbing */
 
 .astro-chat-header-info {
     display: flex;
@@ -403,17 +401,17 @@
 /* Desktop (13" - 17") */
 @media screen and (min-width: 1025px) {
     .astro-chat-container {
-        width: 400px;
-        max-width: 420px;
+        width: 350px;
+        max-width: 380px;
     }
 }
 
 /* Tablet (6" - 12") */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .astro-chat-container {
-        width: 70%;
-        max-width: 450px;
-        height: 70vh;
+        width: 60%;
+        max-width: 400px;
+        height: 60vh;
     }
 }
 
