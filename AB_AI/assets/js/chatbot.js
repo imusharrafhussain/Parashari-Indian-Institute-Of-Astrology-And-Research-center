@@ -344,6 +344,7 @@
         const cRect = container.getBoundingClientRect();
         const gap = 20;
         const padding = 20;
+        const headerClearance = 130;
 
         // Default: Bottom aligned, side based on toggle position
         // If toggle is on right half: Container to left
@@ -367,7 +368,7 @@
         // Align bottoms
         let targetTop = tRect.bottom - cRect.height;
         // Prevent going off-screen top
-        if (targetTop < padding) targetTop = padding;
+        if (targetTop < headerClearance) targetTop = headerClearance;
         // Prevent going off-screen bottom
         if (targetTop + cRect.height > window.innerHeight - padding) {
             targetTop = window.innerHeight - cRect.height - padding;
