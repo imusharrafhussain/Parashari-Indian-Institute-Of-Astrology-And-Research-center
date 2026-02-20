@@ -443,7 +443,88 @@
         width: 75px;
         height: 75px;
     }
+}
 
+/* Form Styles */
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 8px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 0.9rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--chat-primary);
+    box-shadow: 0 0 0 2px rgba(var(--chat-primary-rgb), 0.1);
+}
+
+.form-select {
+    width: 35%;
+    /* Fixed width for country code */
+    min-width: 90px;
+    background: white;
+    cursor: pointer;
+}
+
+.form-btn {
+    background: var(--chat-primary-gradient);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.form-btn:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-btn:active {
+    transform: translateY(0);
+}
+
+.form-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mobile specific open state */
+@media screen and (max-width: 600px) {
     .astro-chat-container.open {
         transform: translateY(-80px) scale(1);
     }

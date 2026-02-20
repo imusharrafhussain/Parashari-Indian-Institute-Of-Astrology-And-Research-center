@@ -249,7 +249,16 @@
         inputWrapper.classList.remove('active');
         const options = [
             { label: chatData.lang === 'hinglish' ? 'Platform Samasya' : 'Platform Issue', action: startIssueForm },
-            { label: chatData.lang === 'hinglish' ? 'Course Khojein' : 'Course Search', action: () => { chatData.state = STATES.COURSE_SEARCH; save(); inputWrapper.classList.add('active'); inputField.focus(); } },
+            {
+                label: chatData.lang === 'hinglish' ? 'Course Khojein' : 'Course Search',
+                action: async () => {
+                    chatData.state = STATES.COURSE_SEARCH;
+                    save();
+                    await botSay(chatData.lang === 'hinglish' ? "Kripya course ka naam type karein..." : "Please type the course name...");
+                    inputWrapper.classList.add('active');
+                    inputField.focus();
+                }
+            },
             { label: chatData.lang === 'hinglish' ? 'Sabhi Courses' : 'Show All Courses', action: () => window.location.href = 'courses.html' },
             {
                 label: chatData.lang === 'hinglish' ? 'Support Karein' : 'Contact Support', action: () => {
@@ -287,16 +296,16 @@
         formDiv.className = 'chat-bubble bot-bubble';
         formDiv.style.width = '100%';
         formDiv.innerHTML = `
-            <form id="astroIssueForm" class="chat-form" style="display:flex;flex-direction:column;gap:10px;">
-                <textarea name="description" placeholder="Describe issue (Max 200 chars)" maxlength="200" required style="padding:10px;border-radius:8px;border:1px solid #ddd;"></textarea>
-                <div style="display:flex;gap:5px;">
-                    <select name="code" style="padding:10px;border-radius:8px;border:1px solid #ddd; width: 130px; font-size: 0.8rem;">
+            <form id="astroIssueForm" class="chat-form">
+                <textarea name="description" class="form-textarea" placeholder="Describe issue (Max 200 chars)" maxlength="200" required></textarea>
+                <div class="form-row">
+                    <select name="code" class="form-select">
                         ${optionsHtml}
                     </select>
-                    <input type="tel" name="phone" placeholder="Phone" required style="padding:10px;border-radius:8px;border:1px solid #ddd; flex:1;">
+                    <input type="tel" name="phone" class="form-input" placeholder="Phone" required>
                 </div>
-                <input type="email" name="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #ddd;">
-                <button type="submit" id="issueSubmitBtn" style="background:var(--chat-primary-gradient);color:white;border:none;padding:12px;border-radius:8px;cursor:pointer;">Submit Issue</button>
+                <input type="email" name="email" class="form-input" placeholder="Email" required>
+                <button type="submit" id="issueSubmitBtn" class="form-btn">Submit Issue</button>
             </form>
         `;
         messages.appendChild(formDiv);
