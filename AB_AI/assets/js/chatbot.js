@@ -413,7 +413,7 @@
             let y = initialY + dy;
 
             // Strict Vertical Constraints (Below Header, Above Footer)
-            const minTop = 100;
+            const minTop = 180;
             const maxTop = window.innerHeight - el.offsetHeight - 50;
 
             y = Math.max(minTop, Math.min(y, maxTop));
@@ -446,6 +446,12 @@
                 // Save side and y position
                 chatData[storageKey] = { side: finalSide, y: el.offsetTop };
                 sessionStorage.setItem(`astroChat_${storageKey}_v2`, JSON.stringify(chatData[storageKey]));
+
+                if (finalSide === 'left') {
+                    toggle.classList.add('left-side');
+                } else {
+                    toggle.classList.remove('left-side');
+                }
 
                 // Update container final pos after snap
                 // We need to wait for transition or just set it?
@@ -486,21 +492,47 @@
     function restorePositions() {
         if (window.innerWidth <= 600) return;
 
+        // Disable transitions to prevent layout thrashing and ensure getBoundingClientRect is correct immediately
+        toggle.style.transition = 'none';
+        container.style.transition = 'none';
+
         // Restore Toggle Position
         const data = JSON.parse(sessionStorage.getItem('astroChat_toggle_pos_v2'));
         if (data) {
             const sidePadding = 40;
             const x = data.side === 'left' ? sidePadding : window.innerWidth - toggle.offsetWidth - sidePadding;
-            const y = Math.max(150, Math.min(data.y, window.innerHeight - toggle.offsetHeight - 100));
+            const y = Math.max(180, Math.min(data.y, window.innerHeight - toggle.offsetHeight - 100));
 
             toggle.style.left = x + 'px';
             toggle.style.top = y + 'px';
             toggle.style.right = 'auto';
             toggle.style.bottom = 'auto';
+
+            if (data.side === 'left') {
+                toggle.classList.add('left-side');
+            } else {
+                toggle.classList.remove('left-side');
+            }
         }
+
+
+        // Force reflow to ensure toggle position is applied before calculating container
+        toggle.offsetHeight;
 
         // Update Container Position based on restored toggle
         updateContainerPosition();
+
+        // Re-enable transitions after a short delay (optional, or let CSS handle subsequent interactions)
+        // We don't necessarily need to re-enable inline transitions because CSS has default transitions.
+        // However, if we drag again, setupDraggable handles transitions.
+        // If we want smooth resize updates later, we might want them back.
+        // But resize event fires continuously.
+
+        // Let's clear the inline transition property so it reverts to CSS stylesheet (if any)
+        setTimeout(() => {
+            toggle.style.transition = '';
+            container.style.transition = '';
+        }, 50);
     }
 
     // Setup dragging for Toggle Only -> moving it updates container

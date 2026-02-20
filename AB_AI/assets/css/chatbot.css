@@ -100,7 +100,11 @@
     height: 100%;
     object-fit: contain;
     position: absolute;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.astro-chat-toggle.left-side img {
+    transform: scaleX(-1);
 }
 
 .astro-chat-toggle .bot-img-active {
