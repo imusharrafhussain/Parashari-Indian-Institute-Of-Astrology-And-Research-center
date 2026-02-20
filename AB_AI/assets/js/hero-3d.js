@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!track) return;
 
     // --- Configuration ---
-    const AUTO_SPEED = 0.4; // Slowed down for smoother motion
+    const AUTO_SPEED = 0.5; // Adjusted speed
     let isPaused = false;
 
     // --- State ---
@@ -13,38 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let animationID;
 
-    // --- Setup Clones for Infinite Scroll ---
-    // Ensure we have enough cards to verify the "edge-to-edge" look and smooth loop.
-    // If the window is 1920px wide, we need ~10 cards visible.
-    // Current HTML has 2 sets (Total ~12 cards). 
-    // We will clone them until we have at least 4x the window width to be safe for "infinite" feeling.
+    // Store original children count for reset calculation
+    const originalChildrenCount = track.children.length;
 
-    const originalChildren = Array.from(track.children);
-    const cardWidthWithGap = 220 + 32; // Card width + margin/gap (approx)
-    const requiredWidth = window.innerWidth * 3; // buffer
-    let currentScrollWidth = track.scrollWidth;
+    // --- Cloning Logic ---
+    // We need enough duplicates to fill the screen multiple times for smooth infinite scroll.
+    // Calculate how many sets we need.
 
-    // Clone untill we have enough buffer
-    while (currentScrollWidth < requiredWidth) {
-        originalChildren.forEach(child => {
-            const clone = child.cloneNode(true);
-            track.appendChild(clone);
-        });
-        currentScrollWidth = track.scrollWidth;
+    function setupClones() {
+        const requiredWidth = window.innerWidth * 3; // 3x screen width buffer
+        let currentScrollWidth = track.scrollWidth;
+
+        // Clone sets until we have enough buffer
+        while (currentScrollWidth < requiredWidth) {
+            for (let i = 0; i < originalChildrenCount; i++) {
+                const child = track.children[i];
+                const clone = child.cloneNode(true);
+                track.appendChild(clone);
+            }
+            currentScrollWidth = track.scrollWidth;
+        }
     }
 
-    // Recalculate dimensions
-    let totalWidth = track.scrollWidth;
-    // We treat the "reset point" as the point where we have scrolled past a significant chunk.
-    // A simple approach for infinite scroll without "sets" logic:
-    // When we scroll past -totalWidth/2, we jump back to 0 (or vice versa).
-    let resetPoint = totalWidth / 2;
+    setupClones();
+
+    // --- Metrics ---
+    let singleSetWidth = 0;
+
+    function updateMetrics() {
+        if (track.children.length < 2) return;
+
+        // Calculate the width of a single item including gap/margin
+        const item0 = track.children[0].getBoundingClientRect();
+        const item1 = track.children[1].getBoundingClientRect();
+        const itemWidth = item1.left - item0.left;
+
+        // Total width of one original set
+        singleSetWidth = itemWidth * originalChildrenCount;
+    }
+
+    // Initial calculation
+    // We need to wait for layout? RequestAnimationFrame or setTimeout usually safer for strict measurements
+    // but synchronous should work if styles are applied.
+    updateMetrics();
 
     window.addEventListener('resize', () => {
-        // Re-calculate on resize
-        totalWidth = track.scrollWidth;
-        resetPoint = totalWidth / 2;
-        // If track is now too small, we might need more clones, but for now let's assume initial setup covers it.
+        updateMetrics();
     });
 
     // --- Animation Loop ---
@@ -54,15 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Infinite Scroll Logic
-        // The track moves left (negative TranslateX).
-        // When we have moved LEFT by 'resetPoint' pixels (e.g. -2000px),
-        // we snap back to 0 (or adding resetPoint).
-        // Conversely, if we drag RIGHT (positive), and go > 0, we snap to -resetPoint.
+        // When we have scrolled past `singleSetWidth` (one full set of original cards),
+        // we snap back to 0. This creates the seamless loop.
 
-        if (currentTranslate <= -resetPoint) {
-            currentTranslate += resetPoint;
-        } else if (currentTranslate > 0) {
-            currentTranslate -= resetPoint;
+        if (singleSetWidth > 0) {
+            if (currentTranslate <= -singleSetWidth) {
+                currentTranslate += singleSetWidth;
+            } else if (currentTranslate > 0) {
+                currentTranslate -= singleSetWidth;
+            }
         }
 
         setSliderPosition();
@@ -75,12 +89,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Interaction ---
 
-    // Hover to Pause
-    const cards = document.querySelectorAll('.hero-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => { isPaused = true; });
-        card.addEventListener('mouseleave', () => { isPaused = false; });
-    });
+    // Hover to Pause (Desktop)
+    try {
+        const itemSelector = '.hero-card, .zodiac-card';
+        // Delegate event for performance and to handle clones
+        track.addEventListener('mouseenter', (e) => {
+            if (e.target.closest(itemSelector)) isPaused = true;
+        }, true);
+
+        track.addEventListener('mouseleave', (e) => {
+            if (e.target.closest(itemSelector)) isPaused = false;
+        }, true);
+    } catch (e) {
+        console.log("Hover interaction setup error", e);
+    }
 
     // Touch / Drag events
     track.addEventListener('touchstart', touchStart, { passive: true });
@@ -90,8 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
     track.addEventListener('mousedown', touchStart);
     track.addEventListener('mouseup', touchEnd);
     track.addEventListener('mouseleave', () => {
-        isDragging = false;
-        track.style.cursor = 'grab';
+        if (isDragging) {
+            isDragging = false;
+            track.style.cursor = 'grab';
+        }
     });
     track.addEventListener('mousemove', touchMove);
 
@@ -100,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
         startPos = getPositionX(event);
         prevTranslate = currentTranslate;
         track.style.cursor = 'grabbing';
+        // Pause animation during drag
+        isPaused = true;
     }
 
     function touchMove(event) {
@@ -113,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function touchEnd() {
         isDragging = false;
         track.style.cursor = 'grab';
+        isPaused = false;
     }
 
     function getPositionX(event) {

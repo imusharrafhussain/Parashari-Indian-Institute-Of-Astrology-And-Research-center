@@ -289,24 +289,58 @@
 
 
 @media (max-width: 480px) {
+
+    /* Make card taller so image + name fit comfortably */
     .hero-card {
-        width: 180px;
-        height: 250px;
-        padding: 8px;
-        border-radius: 15px;
+        width: 190px;
+        height: 300px;
+        padding: 0;
+        border-radius: 12px;
+        overflow: hidden;
     }
 
     .hero-card-image {
-        height: 150px;
-        border-radius: 10px;
+        height: 180px;
+        border-radius: 0;
+        object-fit: cover;
+        width: 100%;
     }
 
     .hero-card h3 {
-        font-size: 1rem;
-        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+        padding: 0 0.5rem;
     }
 
     .hero-3d-scroll-track {
         gap: 1rem;
+    }
+}
+
+/* ============ MOBILE: Remove white gaps around cards ============ */
+@media (max-width: 480px) {
+
+    /* Zero out top margin so no white space above cards */
+    .hero-3d-scene {
+        margin-top: 0;
+        height: 330px;
+        /* just enough to show 300px card + a little breathing room */
+    }
+
+    /* Shrink the fade gradients so they don't obscure card content */
+    .hero-3d-scene::before,
+    .hero-3d-scene::after {
+        width: 30px;
+    }
+
+    /* Remove top/bottom padding inside the scroll track */
+    .hero-3d-scroll-track {
+        padding: 0.5rem 0;
+        gap: 0.75rem;
+    }
+
+    /* Remove section padding for the zodiac section on mobile */
+    .hero-with-bg.zodiac-section {
+        padding: 0 !important;
     }
 }
