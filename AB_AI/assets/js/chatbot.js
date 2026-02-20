@@ -344,7 +344,7 @@
         const cRect = container.getBoundingClientRect();
         const gap = 20;
         const padding = 20;
-        const headerClearance = 130;
+        const headerClearance = 280; // Clearance for header + search bar
 
         // Default: Bottom aligned, side based on toggle position
         // If toggle is on right half: Container to left
@@ -414,7 +414,7 @@
             let y = initialY + dy;
 
             // Strict Vertical Constraints (Below Header, Above Footer)
-            const minTop = 180;
+            const minTop = 280;
             const maxTop = window.innerHeight - el.offsetHeight - 50;
 
             y = Math.max(minTop, Math.min(y, maxTop));
@@ -502,7 +502,7 @@
         if (data) {
             const sidePadding = 40;
             const x = data.side === 'left' ? sidePadding : window.innerWidth - toggle.offsetWidth - sidePadding;
-            const y = Math.max(180, Math.min(data.y, window.innerHeight - toggle.offsetHeight - 100));
+            const y = Math.max(280, Math.min(data.y, window.innerHeight - toggle.offsetHeight - 100));
 
             toggle.style.left = x + 'px';
             toggle.style.top = y + 'px';
