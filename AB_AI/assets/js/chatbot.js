@@ -59,7 +59,7 @@
         <div class="astro-chat-container" id="astroChatContainer" role="dialog" aria-labelledby="chatHeaderTitle">
             <div class="astro-chat-header" id="astroChatHeader">
                 <div class="astro-chat-header-info">
-                    <img src="assets/images/parashari-header-logo.png" alt="Parashari Logo">
+                    <img src="assets/images/parashari-header-logo.jpg" alt="Parashari Logo">
                     <h4 id="chatHeaderTitle">Parashari Support Assistant</h4>
                 </div>
                 <div class="astro-chat-header-actions">
