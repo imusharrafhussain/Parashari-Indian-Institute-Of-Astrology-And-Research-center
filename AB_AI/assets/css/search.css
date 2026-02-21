@@ -124,6 +124,32 @@
     justify-content: flex-start;
 }
 
+/* Responsive Tablet Search - 50% fluid width centered */
+@media (min-width: 601px) and (max-width: 900px) {
+    .tablet-search-container {
+        width: 50% !important;
+        margin: 10px 0 10px 20px !important;
+        /* Left aligned with a 20px offset */
+        padding-right: 0 !important;
+    }
+
+    .tablet-search-container .container-input,
+    .tablet-search-container .input {
+        width: 100% !important;
+    }
+
+    /* Disable hover expansion on tablet to prevent breaking out of container */
+    .tablet-search-container .input:hover,
+    .tablet-search-container .input:focus {
+        width: 100% !important;
+    }
+
+    .tablet-search-container .search-results {
+        width: 100% !important;
+        position: absolute !important;
+    }
+}
+
 /* Responsive Mobile Search - Ultra Compact Width */
 @media (max-width: 600px) {
     .tablet-search-container {
