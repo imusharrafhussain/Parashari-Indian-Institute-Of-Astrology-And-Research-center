@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Accordion functionality
   initAccordion();
+
+  // Number Counter Animation
+  initCounterAnimation();
 });
 
 // ============ SMOOTH SCROLLING ============
@@ -137,6 +140,52 @@ function initAccordion() {
       });
     }
   });
+}
+
+// ============ COUNTER ANIMATION ============
+function initCounterAnimation() {
+  const counters = document.querySelectorAll('.count-up');
+
+  if (!counters.length) return;
+
+  const observerOptions = {
+    threshold: 0.5 // Start animation when 50% of the element is visible
+  };
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach(counter => {
+    counterObserver.observe(counter);
+  });
+}
+
+function animateCounter(counter) {
+  const target = +counter.getAttribute('data-target');
+  const duration = 2000; // Total animation time (2 seconds)
+  const steps = 60; // Total frames assuming roughly 30fps
+  const increment = target / steps;
+  let current = 0;
+
+  // Safely extract optional suffix from data attribute
+  const suffix = counter.getAttribute('data-suffix') || '';
+
+  const updateCounter = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      clearInterval(updateCounter);
+      current = target; // Ensure exact final value
+    }
+
+    // Format large numbers with commas and add the suffix
+    counter.innerText = Math.floor(current).toLocaleString('en-US') + suffix;
+  }, duration / steps);
 }
 
 // ============ UTILITY FUNCTIONS ============
