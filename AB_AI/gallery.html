@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/loader.css">
   <link rel="stylesheet" href="assets/css/search.css">
   <link rel="stylesheet" href="assets/css/chatbot.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 
 <body>
@@ -131,211 +132,562 @@
   </header>
 
 
-  <section class="hero-section hero-gradient">
-    <div class="container">
-      <h1 class="color-secondary">📸 Gallery</h1>
-      <p>Moments from Our Institute</p>
+  <section class="gallery-hero">
+    <div class="container text-center">
+      <h1 class="gallery-hero-title">Visual Archives</h1>
+      <p class="gallery-hero-subtitle">Moments of Excellence from Parashari Institute</p>
     </div>
   </section>
 
+  <!-- 1. Campus & Infrastructure (Masonry Layout) -->
   <section>
     <div class="container">
-      <h2 class="card-section-title">Campus & Facilities</h2>
+      <h2 class="card-section-title text-center">Campus & Infrastructure</h2>
+      <p class="text-center mb-3" style="color:var(--light-text)">Explore our modern facilities, lush green spaces, and
+        dedicated learning environments designed for the optimal study of Vedic Sciences.</p>
 
-      <div class="grid grid-3 grid-gap-2">
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop" alt="Classroom"
-            class="rounded-t-lg" style="width: 100%; height: 200px; object-fit: cover;">
-          <div class="p-4">
-            <h4 class="color-primary">State-of-the-art Classrooms</h4>
-            <p class="card-small-text">Modern facilities with audio-visual aids, comfortable seating, and excellent
-              ambiance for learning.</p>
+      <div class="masonry-grid">
+        <div class="masonry-item" data-animate>
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&fit=crop" alt="Campus Building">
+          <div class="masonry-overlay">
+            <h4>Main Academic Block</h4>
+            <p>The heart of Parashari Institute.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=400&h=300&fit=crop" alt="Library"
-            class="rounded-t-lg" style="width: 100%; height: 200px; object-fit: cover;">
-          <div class="p-4">
-            <h4 class="color-primary">Comprehensive Library</h4>
-            <p class="card-small-text">Extensive collection of books, journals, and digital resources on Vedic sciences
-              and astrology.</p>
+        <div class="masonry-item" data-animate>
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&fit=crop" alt="Technology Lab">
+          <div class="masonry-overlay">
+            <h4>Astrology Computing Lab</h4>
+            <p>State-of-the-art charting software and tools.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Meditation"
-            class="rounded-t-lg" style="width: 100%; height: 200px; object-fit: cover;">
-          <div class="p-4">
-            <h4 class="color-primary">Meditation Hall</h4>
-            <p class="card-small-text">Serene meditation space designed for yoga, pranayama, and spiritual practices.
-            </p>
+        <div class="masonry-item" data-animate>
+          <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=600&fit=crop" alt="Library">
+          <div class="masonry-overlay">
+            <h4>Central Library</h4>
+            <p>Over 10,000 ancient manuscripts and modern texts.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=300&fit=crop" alt="Laboratory"
-            class="rounded-t-lg" style="width: 100%; height: 200px; object-fit: cover;">
-          <div class="p-4">
-            <h4 class="color-primary">Research Laboratory</h4>
-            <p class="card-small-text">Equipped with tools and resources for astrological research and calculations.</p>
+        <div class="masonry-item" data-animate>
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&fit=crop" alt="Auditorium">
+          <div class="masonry-overlay">
+            <h4>Maharishi Auditorium</h4>
+            <p>Seating 500+ for guest lectures and convocations.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=400&h=300&fit=crop" alt="Cafeteria"
-            class="rounded-t-lg" style="width: 100%; height: 200px; object-fit: cover;">
-          <div class="p-4">
-            <h4 class="color-primary">Student Cafeteria</h4>
-            <p class="card-small-text">Hygienic food court with vegetarian options and comfortable dining space for
-              students.</p>
+        <div class="masonry-item" data-animate>
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&fit=crop" alt="Meditation Hall">
+          <div class="masonry-overlay">
+            <h4>Dhyana Hall</h4>
+            <p>Serene spaces for meditation and focus.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400&h=300&fit=crop" alt="Reception"
-            class="rounded-t-lg" style="width: 100%; height: 200px; object-fit: cover;">
-          <div class="p-4">
-            <h4 class="color-primary">Reception Area</h4>
-            <p class="card-small-text">Well-trained staff ready to assist students with all administrative and support
-              needs.</p>
+        <div class="masonry-item" data-animate>
+          <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&fit=crop" alt="Cafeteria">
+          <div class="masonry-overlay">
+            <h4>Student Cafeteria</h4>
+            <p>Hygienic, purely vegetarian dining options.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 2. Student Life & Events (Glassmorphism Cards) -->
   <section class="light-bg">
     <div class="container">
-      <h2 class="card-section-title">Student Activities & Events</h2>
+      <h2 class="card-section-title text-center">Student Life & Events</h2>
+      <p class="text-center mb-3" style="color:var(--light-text)">A vibrant community where ancient wisdom meets modern
+        student life through cultural fests, clubs, and graduation ceremonies.</p>
 
-      <div class="grid grid-2 grid-gap-2">
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=300&fit=crop" alt="Workshops"
-            class="rounded-t-lg" style="width: 100%; height: 250px; object-fit: cover;">
-          <div class="p-4 text-center">
-            <h4 class="color-primary">Monthly Workshops</h4>
-            <p class="card-small-text">Special workshops on advanced topics by visiting experts. Interactive sessions
-              with
-              Q&A opportunities.</p>
+      <div class="glass-grid">
+        <div class="glass-card" data-animate>
+          <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&fit=crop" alt="Convocation">
+          <div class="glass-content">
+            <h4>Convocation 2025</h4>
+            <p>Celebrating the hard work and dedication of our graduating scholars.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop" alt="Seminar"
-            class="rounded-t-lg" style="width: 100%; height: 250px; object-fit: cover;">
-          <div class="p-4 text-center">
-            <h4 class="color-primary">Annual Seminar</h4>
-            <p class="card-small-text">Yearly conference with renowned scholars and practitioners. Network with peers
-              and
-              celebrate achievements.</p>
+        <div class="glass-card" data-animate>
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&fit=crop" alt="Cultural Fest">
+          <div class="glass-content">
+            <h4>Nakshatra Utsav</h4>
+            <p>Our annual cultural fest blending arts, music, and astrological themes.</p>
           </div>
         </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&h=300&fit=crop"
-            alt="Study Groups" class="rounded-t-lg" style="width: 100%; height: 250px; object-fit: cover;">
-          <div class="p-4 text-center">
-            <h4 class="color-primary">Study Groups</h4>
-            <p class="card-small-text">Peer learning groups where students collaborate on projects, discuss concepts,
-              and
-              support each other.</p>
-          </div>
-        </div>
-        <div class="card card-auto" data-animate>
-          <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=300&fit=crop" alt="Graduation"
-            class="rounded-t-lg" style="width: 100%; height: 250px; object-fit: cover;">
-          <div class="p-4 text-center">
-            <h4 class="color-primary">Graduation Ceremony</h4>
-            <p class="card-small-text">Formal ceremony recognizing student achievements. Certificate presentation,
-              awards,
-              and celebration.</p>
+        <div class="glass-card" data-animate>
+          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&fit=crop" alt="Study Groups">
+          <div class="glass-content">
+            <h4>Student Clubs</h4>
+            <p>Active peer learning groups discussing Vastu, Tarot, and Numerology.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 3. Academic Activities (3D Flip Cards) -->
   <section>
-    <div class="container-wide">
-      <h2 class="card-section-title">Student Testimonials</h2>
+    <div class="container">
+      <h2 class="card-section-title text-center">Academic Activities</h2>
+      <p class="text-center mb-3" style="color:var(--light-text)">Immersive learning environments from hands-on
+        workshops to focused research presentations. <strong>Hover cards to flip & read details.</strong></p>
 
-      <div class="testimonial-scroll-container">
-        <div class="testimonial-track">
-
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Rahul Sharma</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Best investment I made! The course changed my perspective on life completely."
-            </p>
+      <div class="academic-grid">
+        <!-- Card 1 -->
+        <div class="academic-item" data-animate>
+          <div class="academic-inner">
+            <div class="academic-front">
+              <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&fit=crop" alt="Workshops">
+              <div class="academic-info-front">
+                <h3>Interactive Workshops</h3>
+              </div>
+            </div>
+            <div class="academic-back">
+              <h3>Deep Dive Learning</h3>
+              <p>Participate in hands-on workshops led by renowned astrologers. Master chart reading, precise
+                predictions, and specialized techniques in a dynamic setting.</p>
+            </div>
           </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Priya Verma</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Excellent faculty and comprehensive curriculum. Highly recommended!"</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Amit Patel</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"The practical training was invaluable. I'm now a certified consultant!"</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Anjali Gupta</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Learning Nadi Jyotish here was a revelation. Accuracy is spot on!"</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Rohan Mehta</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"The best vastu course online. Practical and easy to apply."</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Sneha Reddy</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Found clarity in my life through the Tarot reading course."</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Vikram Singh</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Highly professional mentors. KP Astrology module is a must."</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Pooja Malhotra</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Transformed my hobby into a profession. Grateful!"</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1504257432389-5688835520a2?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Arjun Das</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Authentic Vedic knowledge. No gimmicks, pure science."</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Meera Iyer</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Face reading techniques are fascinating and work wonders."</p>
-          </div>
-          <div class="card text-center testimonial-card-slide">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop" alt="Student"
-              class="img-circle">
-            <h4 class="color-primary mt-2">Suresh Nair</h4>
-            <div class="color-secondary stars">⭐⭐⭐⭐⭐</div>
-            <p class="card-small-text">"Great community and support. Loved the Numerology sessions."</p>
-          </div>
-
         </div>
+
+        <!-- Card 2 -->
+        <div class="academic-item" data-animate>
+          <div class="academic-inner">
+            <div class="academic-front">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&fit=crop" alt="Research">
+              <div class="academic-info-front">
+                <h3>Research Publications</h3>
+              </div>
+            </div>
+            <div class="academic-back">
+              <h3>Scholarly Publishing</h3>
+              <p>Our students regularly publish groundbreaking research bridging ancient predictive models with modern
+                statistical analysis in prestigious global journals.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="academic-item" data-animate>
+          <div class="academic-inner">
+            <div class="academic-front">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&fit=crop" alt="Seminars">
+              <div class="academic-info-front">
+                <h3>Expert Seminars</h3>
+              </div>
+            </div>
+            <div class="academic-back">
+              <h3>Global Insights</h3>
+              <p>Attend exclusive seminars featuring international guest speakers. Expand your astrological knowledge
+                with diverse cultural perspectives and methodologies.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="academic-item" data-animate>
+          <div class="academic-inner">
+            <div class="academic-front">
+              <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&fit=crop" alt="Lab Sessions">
+              <div class="academic-info-front">
+                <h3>Practical Labs</h3>
+              </div>
+            </div>
+            <div class="academic-back">
+              <h3>Software Mastery</h3>
+              <p>Gain hands-on experience with industry-standard astrological software. Learn to accurately cast complex
+                charts and generate detailed horoscopes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Achievements & Awards (Trophy Room) -->
+  <section class="trophy-section">
+    <div class="container">
+      <h2 class="card-section-title text-gold text-center">Achievements & Awards</h2>
+      <p class="text-center mb-3" style="color:rgba(255,255,255,0.7)">Recognizing the excellence of our scholars and
+        faculty on national and global stages.</p>
+
+      <div class="trophy-grid">
+        <div class="trophy-card" data-animate>
+          <div class="trophy-icon">🏆</div>
+          <h4>Best Vedic Institute 2024</h4>
+          <p class="card-small-text">Global Astrological Council</p>
+        </div>
+        <div class="trophy-card" data-animate>
+          <div class="trophy-icon">🥇</div>
+          <h4>Gold Medallist 2025</h4>
+          <p class="card-small-text">Student: Priya Sharma (Nadi Jyotish)</p>
+        </div>
+        <div class="trophy-card" data-animate>
+          <div class="trophy-icon">🎖️</div>
+          <h4>Excellence in Vastu</h4>
+          <p class="card-small-text">Awarded to Prof. Anjali Patel</p>
+        </div>
+        <div class="trophy-card" data-animate>
+          <div class="trophy-icon">🎓</div>
+          <h4>10,000+ Alumni</h4>
+          <p class="card-small-text">Successfully placed consultants globally</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Collaborations (Horizontal Marquee) -->
+  <section>
+    <div class="container text-center">
+      <h2 class="card-section-title text-center">Global Collaborations</h2>
+      <p class="mb-2 text-center" style="color:var(--light-text)">Proudly partnering with international universities and
+        research hubs for academic exchange.</p>
+    </div>
+
+    <div class="collab-marquee-container">
+      <div class="collab-marquee">
+        <!-- Duplicated items for infinite scroll -->
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Harvard_University_logo.svg/200px-Harvard_University_logo.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Harvard Seminars</h4>
+        </div>
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Oxford_University_Standard_Logo.svg/200px-Oxford_University_Standard_Logo.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Oxford Exchange</h4>
+        </div>
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Stanford_University_seal_2003.svg/200px-Stanford_University_seal_2003.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Stanford Research</h4>
+        </div>
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_the_University_of_Cambridge.svg/200px-Seal_of_the_University_of_Cambridge.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Cambridge Symposia</h4>
+        </div>
+        <div class="collab-item">
+          <!-- Repeat for smooth scroll -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Harvard_University_logo.svg/200px-Harvard_University_logo.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Harvard Seminars</h4>
+        </div>
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Oxford_University_Standard_Logo.svg/200px-Oxford_University_Standard_Logo.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Oxford Exchange</h4>
+        </div>
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Stanford_University_seal_2003.svg/200px-Stanford_University_seal_2003.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Stanford Research</h4>
+        </div>
+        <div class="collab-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_the_University_of_Cambridge.svg/200px-Seal_of_the_University_of_Cambridge.svg.png"
+            style="opacity:0.7" alt="Partner">
+          <h4 class="color-primary">Cambridge Symposia</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Videos & 360 Experiences -->
+  <section class="light-bg">
+    <div class="container text-center">
+      <h2 class="card-section-title text-center">Experience Parashari</h2>
+      <p class="mb-2 text-center" style="color:var(--light-text)">Take a cinematic tour of our campus and hear real
+        stories from our alumni.</p>
+
+      <div class="video-hero" data-animate>
+        <img src="https://images.unsplash.com/photo-1464047736614-af63643285bf?w=1200&fit=crop" alt="Campus Video Tour">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="card-section-title">Student Testimonials</h2>
+    </div>
+    <div class="testimonial-scroll-container">
+      <div class="testimonial-track">
+
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Rahul Sharma</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Best investment I made! The course changed my perspective on life completely."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Priya Verma</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Excellent faculty and comprehensive curriculum. Highly recommended!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Amit Patel</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"The practical training was invaluable. I'm now a certified consultant!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Anjali Gupta</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Learning Nadi Jyotish here was a revelation. Accuracy is spot on!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Rohan Mehta</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"The best vastu course online. Practical and easy to apply."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Sneha Reddy</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Found clarity in my life through the Tarot reading course."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Vikram Singh</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Highly professional mentors. KP Astrology module is a must."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Pooja Malhotra</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Transformed my hobby into a profession. Grateful!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1504257432389-5688835520a2?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Arjun Das</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Authentic Vedic knowledge. No gimmicks, pure science."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Meera Iyer</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Face reading techniques are fascinating and work wonders."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Suresh Nair</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Great community and support. Loved the Numerology sessions."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATED SET FOR INFINITE SCROLL MARQUEE -->
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Rahul Sharma</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Best investment I made! The course changed my perspective on life completely."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Priya Verma</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Excellent faculty and comprehensive curriculum. Highly recommended!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Amit Patel</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"The practical training was invaluable. I'm now a certified consultant!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Anjali Gupta</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Learning Nadi Jyotish here was a revelation. Accuracy is spot on!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Rohan Mehta</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"The best vastu course online. Practical and easy to apply."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Sneha Reddy</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Found clarity in my life through the Tarot reading course."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Vikram Singh</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Highly professional mentors. KP Astrology module is a must."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Pooja Malhotra</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Transformed my hobby into a profession. Grateful!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1504257432389-5688835520a2?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Arjun Das</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Authentic Vedic knowledge. No gimmicks, pure science."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Meera Iyer</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Face reading techniques are fascinating and work wonders."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-slide">
+          <div class="testimonial-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&fit=crop" alt="Student">
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">Suresh Nair</h4>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-bio">
+              <p>"Great community and support. Loved the Numerology sessions."</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
