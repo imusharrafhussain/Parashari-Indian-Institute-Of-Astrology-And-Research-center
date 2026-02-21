@@ -135,8 +135,7 @@
     user-select: none;
     overflow: hidden;
     flex-shrink: 0;
-    min-height: 350px;
-    /* Increased height to show full cards including title */
+    min-height: 300px;
     height: auto;
     margin: 0.5rem;
     /* Minimal gap for separation */
@@ -256,8 +255,9 @@
 @media (max-width: 900px) {
     .hero-card {
         width: 240px;
-        height: 320px;
-        padding: 12px;
+        min-height: 320px;
+        height: auto;
+        padding: 0;
     }
 
     .hero-card-image {
@@ -272,8 +272,9 @@
 @media (max-width: 768px) {
     .hero-card {
         width: 220px;
-        height: 290px;
-        padding: 10px;
+        min-height: 290px;
+        height: auto;
+        padding: 0;
     }
 
     .hero-card-image {
@@ -293,7 +294,8 @@
     /* Make card taller so image + name fit comfortably */
     .hero-card {
         width: 190px;
-        height: 300px;
+        min-height: 300px;
+        height: auto;
         padding: 0;
         border-radius: 12px;
         overflow: hidden;
