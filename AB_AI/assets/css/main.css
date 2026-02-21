@@ -1197,6 +1197,21 @@ section.primary-bg h4 {
 }
 
 /* ============ FORMS ============ */
+.input-btn-group {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.input-btn-group .form-control {
+  flex: 1;
+}
+
+.input-btn-group .btn {
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+}
+
 .form-group {
   margin-bottom: var(--spacing-lg);
 }
