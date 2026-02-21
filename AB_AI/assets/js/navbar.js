@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Close mobile menu when link is clicked
   navLinks.forEach(link => {
-    link.addEventListener('click', function () {
+    link.addEventListener('click', function (e) {
+      // Don't close if it's the accordion toggle
+      if (this.getAttribute('href') === 'javascript:void(0)') {
+        return;
+      }
       if (hamburger) {
         hamburger.classList.remove('active');
         mobileMenu.classList.remove('active');
