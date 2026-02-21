@@ -651,5 +651,12 @@ header {
 @media (max-width: 1024px) {
   .mega-menu {
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .nav-item.dropdown:hover .mega-menu {
+    display: none !important;
   }
 }
