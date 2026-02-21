@@ -10,7 +10,7 @@
 }
 
 .input {
-    width: 240px;
+    width: 480px;
     padding: 6px 0px 6px 40px;
     border-radius: 9999px;
     border: solid 1px #333;
@@ -34,7 +34,7 @@
 .input:hover,
 .input:focus {
     opacity: 1;
-    width: 340px;
+    width: 580px;
     border-color: #591C21;
     box-shadow: 0 0 15px rgba(89, 28, 33, 0.8);
 }
@@ -53,7 +53,7 @@
     overflow-y: auto;
     z-index: 1001;
     display: none;
-    width: 240px;
+    width: 100%;
 }
 
 .search-results.active {
