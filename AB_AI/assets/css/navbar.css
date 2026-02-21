@@ -222,7 +222,7 @@ header {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mobile-menu {
     display: none;
     position: absolute;
@@ -254,7 +254,7 @@ header {
   }
 
   .mobile-menu.active {
-    display: flex;
+    display: flex !important;
     animation: fadeInSlide 0.3s ease-out;
   }
 
@@ -293,6 +293,58 @@ header {
 
 .mobile-menu .navbar-cta .btn {
   width: 100%;
+}
+
+/* ============ MOBILE ACCORDION STYLES ============ */
+.mobile-courses-accordion {
+  padding-left: 15px;
+  margin-top: 5px;
+  border-left: 2px solid var(--border-color);
+}
+
+.mobile-domain-group {
+  margin-bottom: 5px;
+}
+
+.mobile-domain-header {
+  padding: 10px 0;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.mobile-domain-header.active {
+  color: var(--secondary-color);
+}
+
+.mobile-course-list {
+  padding-left: 20px;
+  background: var(--light-bg);
+  border-radius: 4px;
+}
+
+.mobile-course-link {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px !important;
+  font-size: 0.9rem !important;
+  color: var(--dark-text) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.mobile-course-link:hover {
+  background-color: var(--light-bg);
+  color: var(--primary-color) !important;
+}
+
+.mobile-course-link i {
+  color: var(--secondary-color);
+  width: 15px;
 }
 
 /* ============ HEADER TOP INFO ============ */
@@ -340,7 +392,7 @@ header {
 }
 
 /* ============ RESPONSIVE ============ */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }
@@ -413,5 +465,191 @@ header {
   .header-top-item {
     flex-direction: column;
     gap: 3px;
+  }
+}
+
+/* ============ MEGA MENU ============ */
+.mega-menu {
+  display: flex !important;
+  /* Force flex */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: none;
+  /* Left align relative to nav item as requested */
+  width: 900px;
+  max-width: 90vw;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  /* Offset for animation */
+  border: 1px solid var(--border-color);
+}
+
+.nav-item.dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+}
+
+/* Ensure existing dropdown doesn't conflict if left behind */
+/* But JS will remove it */
+
+/* Sidebar (Domains) */
+.mega-sidebar {
+  width: 280px;
+  background: #f8f9fa;
+  padding: 15px 0;
+  border-right: 1px solid #eee;
+  flex-shrink: 0;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.domain-item {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dark-text);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid transparent;
+}
+
+.domain-item:hover,
+.domain-item.active {
+  background: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  border-left-color: var(--secondary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.domain-item i {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.domain-item:hover i,
+.domain-item.active i {
+  color: var(--secondary-color);
+}
+
+/* Content Area */
+.mega-content {
+  flex-grow: 1;
+  padding: 30px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: white;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+.mega-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mega-content::-webkit-scrollbar-track {
+  background: var(--light-bg);
+}
+
+.mega-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.mega-domain-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.mega-domain-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.mega-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 900px) {
+  .mega-courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mega-course-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-decoration: none;
+  background: white;
+}
+
+.mega-course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.mega-course-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--light-bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.mega-course-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-course-name {
+  font-weight: 600;
+  color: var(--dark-text);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.mega-course-meta {
+  font-size: 0.8rem;
+  color: var(--light-text);
+}
+
+/* Mobile Fallback */
+@media (max-width: 1024px) {
+  .mega-menu {
+    display: none !important;
   }
 }
