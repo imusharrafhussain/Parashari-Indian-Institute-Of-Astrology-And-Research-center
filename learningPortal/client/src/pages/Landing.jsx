@@ -41,6 +41,15 @@ export default function Landing() {
                         <span className="btn-text">Paid Courses</span>
                         <span className="btn-subtitle">Access premium learning paths</span>
                     </button>
+
+                    <button
+                        className="course-btn all-btn"
+                        onClick={() => navigate('/courses')}
+                    >
+                        <span className="btn-icon">📚</span>
+                        <span className="btn-text">All Courses</span>
+                        <span className="btn-subtitle">Browse complete catalog</span>
+                    </button>
                 </div>
             </div>
 

@@ -106,6 +106,8 @@ class ErrorBoundary extends React.Component {
 
 
 
+import Footer from './components/Footer';
+
 function App() {
   const token = localStorage.getItem('token');
   const session = sessionStorage.getItem('ab_ai_entry');
@@ -204,6 +206,7 @@ function App() {
               </StrictProtectedRoute>
             } />
           </Routes>
+          <Footer />
         </ErrorBoundary>
       </AuthProvider>
     </Router>

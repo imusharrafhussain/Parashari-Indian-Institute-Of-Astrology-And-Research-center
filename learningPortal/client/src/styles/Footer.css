@@ -1,0 +1,211 @@
+/* ============================================
+   LEARNING PORTAL RESPONSIVE SCALED FOOTER CSS
+   ============================================ */
+:root {
+    --accent-color: #591C21;
+    /* Maroon red footer color */
+    --secondary-color: #d4af37;
+    /* Gold color */
+    --white: #ffffff;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --transition: 0.3s ease;
+}
+
+/* 
+  We use a rigid container that scales down its contents 
+  instead of wrapping them on smaller screens 
+*/
+.footer-scaling-wrapper {
+    background-color: var(--accent-color);
+    width: 100%;
+    overflow: hidden;
+    /* Prevent horizontal scrollbars during scaling */
+}
+
+/* 
+  The inner container remains fixed-width to maintain the desktop layout,
+  and we'll use a responsive container query or transform approach. 
+  Instead of hardcoding media queries with scale, we can just let CSS 
+  Container Queries or VW units handle fluid scaling. 
+  
+  To keep EXACT desktop structure, we assign a forced minimum width, and scale it via JS or CSS.
+  CSS zoom/scale trick:
+*/
+.footer-rigid-container {
+    width: 1200px;
+    /* Fixed desktop width */
+    margin: 0 auto;
+    transform-origin: top left;
+    /* Next rules force it to scale down mathematically to fit any screen */
+    transform: scale(min(1, calc(100vw / 1200)));
+    /* Because we scale from left, we need to center it if screen is > 1200px. 
+     If < 1200, the margin auto doesn't work well with scale. */
+}
+
+/* Center the scaled container perfectly using flex */
+.footer-scaler-outer {
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footer-inner-content {
+    width: 1200px;
+    /* Absolute fixed Desktop Width */
+    flex-shrink: 0;
+    /* Use CSS variables for scaling injected by JS for perfect precision, 
+     or rely on CSS `zoom` (less compatible) vs `transform` */
+}
+
+
+footer.portal-footer {
+    color: var(--white);
+    padding: var(--spacing-xxl, 4rem) 0 var(--spacing-lg);
+    font-family: inherit;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+}
+
+/* ============ FOOTER SECTIONS ============ */
+.footer-section h4 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    color: #DDD;
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+/* ============ FOOTER LINKS ============ */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+    color: #DDD;
+    text-decoration: none;
+    transition: color var(--transition);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-links a::before {
+    content: '▸ ';
+    color: var(--secondary-color);
+    margin-right: 6px;
+}
+
+/* ============ CONTACT INFO ============ */
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-icon {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-top: 2px;
+    min-width: 20px;
+}
+
+.contact-text a {
+    color: #DDD;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.contact-text a:hover {
+    color: var(--secondary-color);
+}
+
+.p-reset {
+    margin: 0;
+}
+
+/* ============ SOCIAL LINKS ============ */
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all var(--transition);
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ============ FOOTER BOTTOM ============ */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Force 1 line */
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    color: #AAA;
+}
+
+.developer-credit {
+    font-size: 0.9rem;
+    color: #AAA;
+}
+
+.developer-credit a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.developer-credit a:hover {
+    color: #FFF;
+}

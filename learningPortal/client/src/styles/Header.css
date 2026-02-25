@@ -2,14 +2,15 @@
 .welcome-header {
     display: flex;
     justify-content: space-between;
-    /* Space between logo and user */
     align-items: center;
     padding: 0.8rem 2rem;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border-bottom: 2px solid #8B0000;
-    /* Visible Brand Color Border */
-    /* STICKY HEADER IMPLEMENTATION */
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: 2px solid rgba(139, 0, 0, 0.6);
+    /* Sticky */
     position: sticky;
     top: 0;
     z-index: 1000;
