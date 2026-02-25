@@ -12,9 +12,34 @@ const ResourceReader = ({ resourceId, resourceTitle, onClose, token }) => {
     const [scale, setScale] = useState(1.0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [fileUrl, setFileUrl] = useState(null);
 
-    // Dynamic Stream URL
-    const fileUrl = `${import.meta.env.VITE_API_BASE_URL}/api/resource/stream/${resourceId}`;
+    // Fetch the signed Cloudflare URL directly from the backend
+    useEffect(() => {
+        const fetchAccessUrl = async () => {
+            try {
+                setLoading(true);
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/resource/access/${resourceId}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+                if (res.ok && data.accessUrl) {
+                    setFileUrl(data.accessUrl);
+                } else {
+                    setError('Failed to get document access.');
+                    setLoading(false);
+                }
+            } catch (err) {
+                console.error("Resource fetch error:", err);
+                setError('Network error while getting document access.');
+                setLoading(false);
+            }
+        };
+
+        if (resourceId && token) {
+            fetchAccessUrl();
+        }
+    }, [resourceId, token]);
 
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
@@ -83,23 +108,23 @@ const ResourceReader = ({ resourceId, resourceTitle, onClose, token }) => {
                     </div>
                 ) : (
                     <div className="pdf-wrapper" style={{ userSelect: 'none' }}>
-                        <Document
-                            file={{
-                                url: fileUrl,
-                                httpHeaders: { 'Authorization': `Bearer ${token}` }
-                            }}
-                            onLoadSuccess={onDocumentLoadSuccess}
-                            onLoadError={onDocumentLoadError}
-                            loading={<div className="reader-loading">Loading...</div>}
-                            error={<div className="reader-error">Failed to load PDF.</div>}
-                        >
-                            <Page
-                                pageNumber={pageNumber}
-                                scale={scale}
-                                renderTextLayer={false}
-                                renderAnnotationLayer={false}
-                            />
-                        </Document>
+                        {fileUrl && (
+                            <Document
+                                file={fileUrl}
+                                onLoadSuccess={onDocumentLoadSuccess}
+                                onLoadError={onDocumentLoadError}
+                                loading={<div className="reader-loading">Loading...</div>}
+                                error={<div className="reader-error">Failed to load PDF.</div>}
+                            >
+                                <Page
+                                    pageNumber={pageNumber}
+                                    scale={scale}
+                                    devicePixelRatio={Math.max(window.devicePixelRatio || 1, 2)}
+                                    renderTextLayer={false}
+                                    renderAnnotationLayer={false}
+                                />
+                            </Document>
+                        )}
                     </div>
                 )}
 
