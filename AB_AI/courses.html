@@ -1,748 +1,812 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courses - Parashari Indian Institute</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/navbar.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/loader.css">
-  <link rel="stylesheet" href="assets/css/search.css">
-  <link rel="stylesheet" href="assets/css/chatbot.css">
-  <link rel="stylesheet" href="assets/css/learn-more-btn.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - Parashari Indian Institute</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/loader.css">
+<link rel="stylesheet" href="assets/css/search.css">
+<link rel="stylesheet" href="assets/css/chatbot.css">
+<link rel="stylesheet" href="assets/css/learn-more-btn.css">
 </head>
-
 <body>
-
-  <div class="header-top">
-    <div class="header-top-content">
-      <div class="header-top-left">
-        <div class="header-top-item"><span class="header-top-icon">📞</span><a href="tel:+919999999999">+91
-            9999-999-999</a></div>
-        <div class="header-top-item"><span class="header-top-icon">✉️</span><a
-            href="mailto:info@parashari.com">info@parashari.com</a></div>
-      </div>
-      <div class="header-top-right">Online Classes | ISO Certified</div>
-    </div>
-  </div>
-
-  <header>
-    <nav class="navbar">
-      <!-- Logo removed from navbar as requested -->
-
-      <ul class="nav-menu">
-
-        <li class="nav-item search-nav-item">
-          <!-- Search Bar Injected -->
-          <div class="search-container">
-            <div class="container-input">
-              <input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
-              <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
-                  fill-rule="evenodd"></path>
-              </svg>
-            </div>
-            <div id="searchResults" class="search-results"></div>
-          </div>
-        </li>
-
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="profile.html">About Us</a></li>
-
-        <li class="nav-item dropdown">
-          <a href="javascript:void(0)">Courses <i class="fas fa-chevron-down"
-              style="font-size: 0.8em; margin-left: 4px;"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="astrology.html">Vedic Astrology</a></li>
-            <li class="dropdown-item"><a href="nadi-jyotish.html">Nadi Jyotish</a></li>
-            <li class="dropdown-item"><a href="lal-kitab.html">Lal Kitab Remedies</a></li>
-            <li class="dropdown-item"><a href="remedy-course.html">Remedy Course (Upaay Gyaan)</a></li>
-            <li class="dropdown-item"><a href="kp-astrology.html">KP Astrology</a></li>
-            <li class="dropdown-item"><a href="bnn-astrology.html">BNN (Advanced Techniques)</a></li>
-            <li class="dropdown-item"><a href="crystal-healing.html">Crystal Healing</a></li>
-            <li class="dropdown-item"><a href="medical-astrology.html">Medical Astrology</a></li>
-            <li class="dropdown-item"><a href="complete-astrology.html">Complete Astrology Course</a></li>
-            <li class="dropdown-item"><a href="rudraksha.html">Rudraksha Remedies</a></li>
-            <li class="dropdown-item"><a href="vastu.html">Vastu Shastra</a></li>
-            <li class="dropdown-item"><a href="palmistry.html">Palmistry</a></li>
-            <li class="dropdown-item"><a href="face-reading.html">Face Reading</a></li>
-            <li class="dropdown-item"><a href="tarot.html">Tarot Reading</a></li>
-            <li class="dropdown-item"><a href="numerology.html">Numerology</a></li>
-            <li class="dropdown-item"><a href="mentorship.html">1-on-1 Mentorship</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a href="courses.html" class="active">Explore</a></li>
-        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a href="contact.html">Contact</a></li>
-      </ul>
-
-
-
-      <div class="navbar-cta">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-      </div>
-
-      <button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-
-    <div class="mobile-menu">
-      <ul class="nav-menu mobile-menu-nav">
-
-        <li class="nav-item w-full"><a href="index.html">Home</a></li>
-        <li class="nav-item w-full"><a href="profile.html">About Us</a></li>
-        <li class="nav-item w-full"><a href="courses.html">Courses</a></li>
-        <li class="nav-item w-full"><a href="courses.html">Explore</a></li>
-        <li class="nav-item w-full"><a href="gallery.html">Gallery</a></li>
-        <li class="nav-item w-full"><a href="contact.html">Contact</a></li>
-      </ul>
-
-
-      <div class="navbar-cta">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-      </div>
-    </div>
-
-    <!-- Tablet Search Bar (Visible < 900px) -->
-
-    <div class="tablet-search-container">
-      <div class="search-container">
-        <div class="container-input">
-          <input type="text" placeholder="Search all courses" name="text" class="input">
-          <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
-              fill-rule="evenodd"></path>
-          </svg>
-        </div>
-        <div class="search-results"></div>
-      </div>
-    </div>
-  </header>
-
-
-  <section class="hero-header">
-    <div class="container">
-      <h1>Our Courses</h1>
-      <p class="hero-header-subtitle">Comprehensive Programs in Vedic Sciences</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container-wide">
-      <div class="text-center mb-3">
-        <h2>Explore Our Programs</h2>
-        <p class="color-light-text">Explore our diverse range of certification programs designed for all levels</p>
-      </div>
-
-      <div class="grid-responsive grid-gap-2">
-        <!-- 1. Vedic Astrology -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/aries-card.png" alt="Vedic Astrology" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">♈</div>
-              <h3 class="card-title">Vedic Astrology</h3>
-            </div>
-            <p>Master the ancient science of Vedic Astrology. Learn natal charts, planetary movements, and predictions.
-            </p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-              <span class="badge">Online Available</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹5,999</h4>
-              <a href="astrology.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Nadi Jyotish -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/taurus-card.png" alt="Nadi Jyotish" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">📜</div>
-              <h3 class="card-title">Nadi Jyotish</h3>
-            </div>
-            <p>Learn precise prediction techniques using Nadi astrology principles and leaf reading concepts.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹5,999</h4>
-              <a href="nadi-jyotish.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Lal Kitab Remedies -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/gemini-card.png" alt="Lal Kitab Remedies" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">📕</div>
-              <h3 class="card-title">Lal Kitab Remedies</h3>
-            </div>
-            <p>Simple yet effective remedies for complex life problems using the wisdom of Lal Kitab.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹18,000</h4>
-              <a href="lal-kitab.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Remedy Course -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/cancer-card.png" alt="Remedy Course" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🕉️</div>
-              <h3 class="card-title">Remedy Course</h3>
-            </div>
-            <p>Comprehensive training on effective astrological remedies for health, wealth, and relationships.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹12,000</h4>
-              <a href="remedy-course.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. KP Astrology -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/leo-card.png" alt="KP Astrology" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">⭐</div>
-              <h3 class="card-title">KP Astrology</h3>
-            </div>
-            <p>Krishnamurti Paddhati system for pinpoint accuracy in timing events and predictions.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹14,000</h4>
-              <a href="kp-astrology.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. BNN (Advanced Techniques) -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/virgo-card.jpg" alt="BNN Advanced" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🔍</div>
-              <h3 class="card-title">BNN Advanced</h3>
-            </div>
-            <p>Bhrigu Nandi Nadi advanced predictive techniques for professional astrologers.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Advanced</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹15,000</h4>
-              <a href="bnn-astrology.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Crystal Healing -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/libra-card.png" alt="Crystal Healing" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">💎</div>
-              <h3 class="card-title">Crystal Healing</h3>
-            </div>
-            <p>Harness the power of crystals for healing, balancing chakras, and manifesting positive energy.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹16,000</h4>
-              <a href="crystal-healing.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Medical Astrology -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/scorpio-card.png" alt="Medical Astrology" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">⚕️</div>
-              <h3 class="card-title">Medical Astrology</h3>
-            </div>
-            <p>Diagnose potential health issues and find ayurvedic remedies through planetary positions.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹9,000</h4>
-              <a href="medical-astrology.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. Complete Astrology Course -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/sagittarius-card.png" alt="Complete Astrology" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🎓</div>
-              <h3 class="card-title">Complete Astrology</h3>
-            </div>
-            <p>From beginner to professional level - comprehensive diploma in Vedic sciences.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Diploma</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹13,000</h4>
-              <a href="complete-astrology.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10. Rudraksha Remedies -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/capricorn-card.png" alt="Rudraksha Remedies" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">📿</div>
-              <h3 class="card-title">Rudraksha Remedies</h3>
-            </div>
-            <p>Understand the power of different Mukhi Rudrakshas and their therapeutic benefits.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹35,000</h4>
-              <a href="rudraksha.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 11. Vastu Shastra -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/aquarius-card.png" alt="Vastu Shastra" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🏠</div>
-              <h3 class="card-title">Vastu Shastra</h3>
-            </div>
-            <p>Transform your space. Learn the principles of Vastu for prosperity, health, and harmony.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-              <span class="badge">Projects Included</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹2,999</h4>
-              <a href="vastu.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 12. Palmistry -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/pisces-card.png" alt="Palmistry" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">✋</div>
-              <h3 class="card-title">Palmistry</h3>
-            </div>
-            <p>Decode destiny through palm lines and understand personality traits.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹3,999</h4>
-              <a href="palmistry.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 13. Face Reading -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/aries-card.png" alt="Face Reading" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">👤</div>
-              <h3 class="card-title">Face Reading</h3>
-            </div>
-            <p>Master the art of physiognomy to read character and fortune from facial features.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹8,000</h4>
-              <a href="face-reading.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 14. Tarot Reading -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/gemini-card.png" alt="Tarot Reading" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🃏</div>
-              <h3 class="card-title">Tarot Reading</h3>
-            </div>
-            <p>Unlock intuitive guidance and future predictions using Tarot cards.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹2,999</h4>
-              <a href="tarot.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 15. Numerology -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/virgo-card.jpg" alt="Numerology" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🔢</div>
-              <h3 class="card-title">Numerology</h3>
-            </div>
-            <p>Discover the mystical relationship between numbers and life events.</p>
-            <div class="mb-1">
-              <span class="certification-badge">✓ Certification</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">₹3,999</h4>
-              <a href="numerology.html" class="learn-more">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 14. 1-on-1 Mentorship -->
-        <div class="card" data-animate>
-          <div class="card-image-container">
-            <img src="assets/images/libra-card.png" alt="1-on-1 Mentorship" class="card-image">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <div class="card-header-icon">🤝</div>
-              <h3 class="card-title">1-on-1 Mentorship</h3>
-            </div>
-            <p>Personalized guidance and advanced training with expert gurus for serious learners.</p>
-            <div class="mb-1">
-              <span class="badge">Personalized</span>
-            </div>
-            <div class="course-footer">
-              <h4 class="color-secondary mb-0">Contact Us</h4>
-              <a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="light-bg">
-    <div class="container">
-      <h2 class="card-section-title">Why Our Courses Stand Out</h2>
-      <div class="grid grid-3 grid-gap-2">
-        <div class="card card-auto p-4 text-center" data-animate>
-          <div class="mb-1">
-            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=100&h=100&fit=crop"
-              alt="Curriculum" class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
-          </div>
-          <h4 class="color-primary">Comprehensive Curriculum</h4>
-          <p class="card-small-text">Covering fundamentals to advanced topics with practical applications and case
-            studies.</p>
-        </div>
-        <div class="card card-auto p-4 text-center" data-animate>
-          <div class="mb-1">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=100&h=100&fit=crop" alt="Faculty"
-              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
-          </div>
-          <h4 class="color-primary">Expert Faculty</h4>
-          <p class="card-small-text">Learn from practitioners with 20+ years of experience in their respective fields.
-          </p>
-        </div>
-        <div class="card card-auto p-4 text-center" data-animate>
-          <div class="mb-1">
-            <img src="https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?w=100&h=100&fit=crop"
-              alt="Recognition" class="img-circle"
-              style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
-          </div>
-          <h4 class="color-primary">Industry Recognition</h4>
-          <p class="card-small-text">Certificates valued by employers and recognized by international astrological
-            bodies.</p>
-        </div>
-        <div class="card card-auto p-4 text-center" data-animate>
-          <div class="mb-1">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop" alt="Flexible"
-              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
-          </div>
-          <h4 class="color-primary">Flexible Learning</h4>
-          <p class="card-small-text">Online and offline classes available to suit your schedule and preferences.</p>
-        </div>
-        <div class="card card-auto p-4 text-center" data-animate>
-          <div class="mb-1">
-            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=100&h=100&fit=crop" alt="Career"
-              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
-          </div>
-          <h4 class="color-primary">Career Support</h4>
-          <p class="card-small-text">Placement assistance, mentoring, and professional networking opportunities.</p>
-        </div>
-        <div class="card card-auto p-4 text-center" data-animate>
-          <div class="mb-1">
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&h=100&fit=crop" alt="Lifetime"
-              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
-          </div>
-          <h4 class="color-primary">Lifetime Access</h4>
-          <p class="card-small-text">Access course materials and community for continuous learning after graduation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2 class="card-section-title">Student Categories</h2>
-      <div class="grid grid-2 grid-gap-3">
-        <div class="card card-auto p-4" data-animate>
-          <div class="font-3xl color-secondary mb-1">🇮🇳</div>
-          <h3 class="color-primary">Indian Students</h3>
-          <p class="card-small-text"><strong>Payment Options:</strong> EMI available | Scholarships for merit | Group
-            discounts</p>
-          <p class="card-small-text mt-1rem"><strong>Benefits:</strong> Local language support | Hostel facilities |
-            Local scholarship programs</p>
-          <a href="fee-structure.html" class="btn btn-primary btn-full mt-1rem">View Indian Pricing</a>
-        </div>
-        <div class="card card-auto p-4" data-animate>
-          <div class="font-3xl color-secondary mb-1">🌐</div>
-          <h3 class="color-primary">International Students</h3>
-          <p class="card-small-text"><strong>Payment Options:</strong> Monthly payments | Flexible terms | Currency
-            conversion support</p>
-          <p class="card-small-text mt-1rem"><strong>Benefits:</strong> Visa guidance | Airport pickup | English medium
-            classes</p>
-          <a href="student-section.html" class="btn btn-primary btn-full mt-1rem">View International Pricing</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="light-bg">
-    <div class="container text-center section-heading">
-      <h2>Ready to Start Your Journey?</h2>
-      <p class="subtitle-text">Choose your course, enroll today, and transform your future!</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Get More Information</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>About Parashari</h4>
-        <p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
-        <div class="social-links">
-          <a href="#" class="social-link" title="Visit our Facebook" aria-label="Visit our Facebook"><i
-              class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link" title="Visit our Twitter" aria-label="Visit our Twitter"><i
-              class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link" title="Visit our Instagram" aria-label="Visit our Instagram"><i
-              class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link" title="Visit our YouTube" aria-label="Visit our YouTube"><i
-              class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="profile.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Programs</h4>
-        <ul class="footer-links">
-          <li><a href="astrology.html">Astrology</a></li>
-          <li><a href="palmistry.html">Palmistry</a></li>
-          <li><a href="vastu.html">Vastu</a></li>
-          <li><a href="fee-structure.html">Fee Structure</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <div class="contact-info">
-          <div class="contact-icon">📍</div>
-          <div class="contact-text">
-            <p class="p-reset">123 Vedic Street, Delhi</p>
-          </div>
-        </div>
-        <div class="contact-info">
-          <div class="contact-icon">📞</div>
-          <div class="contact-text">
-            <p class="p-reset"><a href="tel:+919999999999">+91 9999-999-999</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-content">
-        <div class="copyright">
-          <p class="p-reset">&copy; 2024 Parashari Institute.</p>
-        </div>
-        <div class="developer-credit">Designed by <a href="#">Our Team</a></div>
-      </div>
-    </div>
-  </footer>
-
-
-
-  <script src="assets/js/navbar.js"></script>
-  <script src="assets/js/form-validation.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/loader.js"></script>
-  <script src="assets/js/search.js"></script>
-  <script src="assets/js/chatbot.js"></script>
+<div class="header-top">
+<div class="header-top-content">
+<div class="header-top-left">
+<div class="header-top-item">
+<span class="header-top-icon">📞</span>
+<a href="tel:+919999999999">+91            9999-999-999</a>
+</div>
+<div class="header-top-item">
+<span class="header-top-icon">✉️</span>
+<a            href="mailto:info@parashari.com">info@parashari.com</a>
+</div>
+</div>
+<div class="header-top-right">Online Classes | ISO Certified</div>
+</div>
+</div>
+<header>
+<nav class="navbar">
+<!-- Logo removed from navbar as requested -->
+<ul class="nav-menu">
+<li class="nav-item search-nav-item">
+<!-- Search Bar Injected -->
+<div class="search-container">
+<div class="container-input">
+<input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
+<svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+<path                  d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"                  fill-rule="evenodd">
+</path>
+</svg>
+</div>
+<div id="searchResults" class="search-results">
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a href="index.html">Home</a>
+</li>
+<li class="nav-item">
+<a href="profile.html">About Us</a>
+</li>
+<li class="nav-item dropdown">
+<a href="javascript:void(0)">Courses <i class="fas fa-chevron-down"              style="font-size: 0.8em; margin-left: 4px;">
+</i>
+</a>
+<ul class="dropdown-menu">
+<li class="dropdown-item">
+<a href="astrology.html">Vedic Astrology</a>
+</li>
+<li class="dropdown-item">
+<a href="nadi-jyotish.html">Nadi Jyotish</a>
+</li>
+<li class="dropdown-item">
+<a href="lal-kitab.html">Lal Kitab Remedies</a>
+</li>
+<li class="dropdown-item">
+<a href="remedy-course.html">Remedy Course (Upaay Gyaan)</a>
+</li>
+<li class="dropdown-item">
+<a href="kp-astrology.html">KP Astrology</a>
+</li>
+<li class="dropdown-item">
+<a href="bnn-astrology.html">BNN (Advanced Techniques)</a>
+</li>
+<li class="dropdown-item">
+<a href="crystal-healing.html">Crystal Healing</a>
+</li>
+<li class="dropdown-item">
+<a href="medical-astrology.html">Medical Astrology</a>
+</li>
+<li class="dropdown-item">
+<a href="complete-astrology.html">Complete Astrology Course</a>
+</li>
+<li class="dropdown-item">
+<a href="rudraksha.html">Rudraksha Remedies</a>
+</li>
+<li class="dropdown-item">
+<a href="vastu.html">Vastu Shastra</a>
+</li>
+<li class="dropdown-item">
+<a href="palmistry.html">Palmistry</a>
+</li>
+<li class="dropdown-item">
+<a href="face-reading.html">Face Reading</a>
+</li>
+<li class="dropdown-item">
+<a href="tarot.html">Tarot Reading</a>
+</li>
+<li class="dropdown-item">
+<a href="numerology.html">Numerology</a>
+</li>
+<li class="dropdown-item">
+<a href="mentorship.html">1-on-1 Mentorship</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="fee-structure.html">Fee Structure</a>
+</li>
+<li class="nav-item">
+<a href="courses.html" class="active">Explore</a>
+</li>
+<li class="nav-item">
+<a href="gallery.html">Gallery</a>
+</li>
+<li class="nav-item">
+<a href="contact.html">Contact</a>
+</li>
+</ul>
+<div class="navbar-cta">
+<a href="login.html" class="btn btn-outline btn-sm">Login</a>
+<a href="register.html" class="btn btn-primary btn-sm">Register</a>
+</div>
+<button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</button>
+</nav>
+<div class="mobile-menu">
+<ul class="nav-menu mobile-menu-nav">
+<li class="nav-item w-full">
+<a href="index.html">Home</a>
+</li>
+<li class="nav-item w-full">
+<a href="profile.html">About Us</a>
+</li>
+<li class="nav-item w-full">
+<a href="courses.html">Courses</a>
+</li>
+<li class="nav-item w-full">
+<a href="fee-structure.html">Fee Structure</a>
+</li>
+<li class="nav-item w-full">
+<a href="courses.html">Explore</a>
+</li>
+<li class="nav-item w-full">
+<a href="gallery.html">Gallery</a>
+</li>
+<li class="nav-item w-full">
+<a href="contact.html">Contact</a>
+</li>
+</ul>
+<div class="navbar-cta">
+<a href="login.html" class="btn btn-outline btn-sm">Login</a>
+<a href="register.html" class="btn btn-primary btn-sm">Register</a>
+</div>
+</div>
+<!-- Tablet Search Bar (Visible < 900px) -->
+<div class="tablet-search-container">
+<div class="search-container">
+<div class="container-input">
+<input type="text" placeholder="Search all courses" name="text" class="input">
+<svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+<path              d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"              fill-rule="evenodd">
+</path>
+</svg>
+</div>
+<div class="search-results">
+</div>
+</div>
+</div>
+</header>
+<section class="hero-header">
+<div class="container">
+<h1>Our Courses</h1>
+<p class="hero-header-subtitle">Comprehensive Programs in Vedic Sciences</p>
+</div>
+</section>
+<section>
+<div class="container-wide">
+<div class="text-center mb-3">
+<h2>Explore Our Programs</h2>
+<p class="color-light-text">Explore our diverse range of certification programs designed for all levels</p>
+</div>
+<div class="grid-responsive grid-gap-2">
+<!-- 1. Vedic Astrology | isCategory: "Intro Course" (Beginner) -->
+<div class="card" data-animate data-category="Intro Course">
+<div class="card-image-container">
+<img src="assets/images/aries-card.png" alt="Vedic Astrology" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">♈</div>
+<h3 class="card-title">Vedic Astrology</h3>
+</div>
+<p>Master the ancient science of Vedic Astrology. Learn natal charts, planetary movements, and predictions.            </p>
+<div class="mb-1">
+<span class="category-badge" style="background:#4CAF50">📚 Intro Course · Beginner</span>
+<span class="certification-badge">✓ Certification</span>
+<span class="badge">Online Available</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹5,999</h4>
+<a href="astrology.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 2. Nadi Jyotish | isCategory: "Intro Course" (Beginner) -->
+<div class="card" data-animate data-category="Intro Course">
+<div class="card-image-container">
+<img src="assets/images/taurus-card.png" alt="Nadi Jyotish" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">📜</div>
+<h3 class="card-title">Nadi Jyotish</h3>
+</div>
+<p>Learn precise prediction techniques using Nadi astrology principles and leaf reading concepts.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#4CAF50">📚 Intro Course · Beginner</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹5,999</h4>
+<a href="nadi-jyotish.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 3. Palmistry | isCategory: "Intro Course" (Beginner) -->
+<div class="card" data-animate data-category="Intro Course">
+<div class="card-image-container">
+<img src="assets/images/pisces-card.png" alt="Palmistry" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">✋</div>
+<h3 class="card-title">Palmistry</h3>
+</div>
+<p>Decode destiny through palm lines and understand personality traits.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#4CAF50">📚 Intro Course · Beginner</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹3,999</h4>
+<a href="palmistry.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 4. Lal Kitab Remedies | isCategory: "Diploma" (Popular) -->
+<div class="card" data-animate data-category="Diploma">
+<div class="card-image-container">
+<img src="assets/images/gemini-card.png" alt="Lal Kitab Remedies" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">📕</div>
+<h3 class="card-title">Lal Kitab Remedies</h3>
+</div>
+<p>Simple yet effective remedies for complex life problems using the wisdom of Lal Kitab.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#2196F3">🎓 Diploma · Popular</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹18,000</h4>
+<a href="lal-kitab.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 5. Complete Astrology | isCategory: "Diploma" (Popular) -->
+<div class="card" data-animate data-category="Diploma">
+<div class="card-image-container">
+<img src="assets/images/sagittarius-card.png" alt="Complete Astrology" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">🎓</div>
+<h3 class="card-title">Complete Astrology</h3>
+</div>
+<p>From beginner to professional level - comprehensive diploma in Vedic sciences.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#2196F3">🎓 Diploma · Popular</span>
+<span class="certification-badge">✓ Diploma</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹13,000</h4>
+<a href="complete-astrology.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 6. Crystal Healing | isCategory: "Diploma" (Popular) -->
+<div class="card" data-animate data-category="Diploma">
+<div class="card-image-container">
+<img src="assets/images/libra-card.png" alt="Crystal Healing" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">💎</div>
+<h3 class="card-title">Crystal Healing</h3>
+</div>
+<p>Harness the power of crystals for healing, balancing chakras, and manifesting positive energy.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#2196F3">🎓 Diploma · Popular</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹16,000</h4>
+<a href="crystal-healing.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 7. KP Astrology | isCategory: "Bachelor" (Pro) -->
+<div class="card" data-animate data-category="Bachelor">
+<div class="card-image-container">
+<img src="assets/images/leo-card.png" alt="KP Astrology" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">⭐</div>
+<h3 class="card-title">KP Astrology</h3>
+</div>
+<p>Krishnamurti Paddhati system for pinpoint accuracy in timing events and predictions.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#9C27B0">🎯 Bachelor · Pro</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹14,000</h4>
+<a href="kp-astrology.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 8. Vastu Shastra | isCategory: "Bachelor" (Pro) -->
+<div class="card" data-animate data-category="Bachelor">
+<div class="card-image-container">
+<img src="assets/images/aquarius-card.png" alt="Vastu Shastra" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">🏠</div>
+<h3 class="card-title">Vastu Shastra</h3>
+</div>
+<p>Transform your space. Learn the principles of Vastu for prosperity, health, and harmony.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#9C27B0">🎯 Bachelor · Pro</span>
+<span class="certification-badge">✓ Certification</span>
+<span class="badge">Projects Included</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹2,999</h4>
+<a href="vastu.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 9. Numerology | isCategory: "Bachelor" (Pro) -->
+<div class="card" data-animate data-category="Bachelor">
+<div class="card-image-container">
+<img src="assets/images/virgo-card.jpg" alt="Numerology" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">🔢</div>
+<h3 class="card-title">Numerology</h3>
+</div>
+<p>Discover the mystical relationship between numbers and life events.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#9C27B0">🎯 Bachelor · Pro</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹3,999</h4>
+<a href="numerology.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 10. Remedy Course | isCategory: "Master" (Advanced) -->
+<div class="card" data-animate data-category="Master">
+<div class="card-image-container">
+<img src="assets/images/cancer-card.png" alt="Remedy Course" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">🕉️</div>
+<h3 class="card-title">Remedy Course</h3>
+</div>
+<p>Comprehensive training on effective astrological remedies for health, wealth, and relationships.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#FF9800">🌟 Master · Advanced</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹12,000</h4>
+<a href="remedy-course.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 11. Medical Astrology | isCategory: "Master" (Advanced) -->
+<div class="card" data-animate data-category="Master">
+<div class="card-image-container">
+<img src="assets/images/scorpio-card.png" alt="Medical Astrology" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">⚕️</div>
+<h3 class="card-title">Medical Astrology</h3>
+</div>
+<p>Diagnose potential health issues and find ayurvedic remedies through planetary positions.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#FF9800">🌟 Master · Advanced</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹9,000</h4>
+<a href="medical-astrology.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 12. Face Reading | isCategory: "Master" (Advanced) -->
+<div class="card" data-animate data-category="Master">
+<div class="card-image-container">
+<img src="assets/images/aries-card.png" alt="Face Reading" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">👤</div>
+<h3 class="card-title">Face Reading</h3>
+</div>
+<p>Master the art of physiognomy to read character and fortune from facial features.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#FF9800">🌟 Master · Advanced</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹8,000</h4>
+<a href="face-reading.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 13. BNN Advanced | isCategory: "Grand Master" (Elite) -->
+<div class="card" data-animate data-category="Grand Master">
+<div class="card-image-container">
+<img src="assets/images/virgo-card.jpg" alt="BNN Advanced" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">🔍</div>
+<h3 class="card-title">BNN Advanced</h3>
+</div>
+<p>Bhrigu Nandi Nadi advanced predictive techniques for professional astrologers.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#c8960c">👑 Grand Master · Elite</span>
+<span class="certification-badge">✓ Advanced</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹15,000</h4>
+<a href="bnn-astrology.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 14. Rudraksha Remedies | isCategory: "Grand Master" (Elite) -->
+<div class="card" data-animate data-category="Grand Master">
+<div class="card-image-container">
+<img src="assets/images/capricorn-card.png" alt="Rudraksha Remedies" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">📿</div>
+<h3 class="card-title">Rudraksha Remedies</h3>
+</div>
+<p>Understand the power of different Mukhi Rudrakshas and their therapeutic benefits.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#c8960c">👑 Grand Master · Elite</span>
+<span class="certification-badge">✓ Certification</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">₹35,000</h4>
+<a href="rudraksha.html" class="learn-more">
+<span class="circle" aria-hidden="true">
+<span class="icon arrow">
+</span>
+</span>
+<span class="button-text">Learn More</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 15. 1-on-1 Mentorship | isCategory: "Grand Master" (Elite) -->
+<div class="card" data-animate data-category="Grand Master">
+<div class="card-image-container">
+<img src="assets/images/libra-card.png" alt="1-on-1 Mentorship" class="card-image">
+<div class="card-image-overlay">
+</div>
+</div>
+<div class="card-body">
+<div class="card-header">
+<div class="card-header-icon">🤝</div>
+<h3 class="card-title">1-on-1 Mentorship</h3>
+</div>
+<p>Personalized guidance and advanced training with expert gurus for serious learners.</p>
+<div class="mb-1">
+<span class="category-badge" style="background:#c8960c">👑 Grand Master · Elite</span>
+<span class="badge">Personalized</span>
+</div>
+<div class="course-footer">
+<h4 class="color-secondary mb-0">Contact Us</h4>
+<a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="light-bg">
+<div class="container">
+<h2 class="card-section-title">Why Our Courses Stand Out</h2>
+<div class="grid grid-3 grid-gap-2">
+<div class="card card-auto p-4 text-center" data-animate>
+<div class="mb-1">
+<img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=100&h=100&fit=crop"              alt="Curriculum" class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
+</div>
+<h4 class="color-primary">Comprehensive Curriculum</h4>
+<p class="card-small-text">Covering fundamentals to advanced topics with practical applications and case            studies.</p>
+</div>
+<div class="card card-auto p-4 text-center" data-animate>
+<div class="mb-1">
+<img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=100&h=100&fit=crop" alt="Faculty"              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
+</div>
+<h4 class="color-primary">Expert Faculty</h4>
+<p class="card-small-text">Learn from practitioners with 20+ years of experience in their respective fields.          </p>
+</div>
+<div class="card card-auto p-4 text-center" data-animate>
+<div class="mb-1">
+<img src="https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?w=100&h=100&fit=crop"              alt="Recognition" class="img-circle"              style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
+</div>
+<h4 class="color-primary">Industry Recognition</h4>
+<p class="card-small-text">Certificates valued by employers and recognized by international astrological            bodies.</p>
+</div>
+<div class="card card-auto p-4 text-center" data-animate>
+<div class="mb-1">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop" alt="Flexible"              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
+</div>
+<h4 class="color-primary">Flexible Learning</h4>
+<p class="card-small-text">Online and offline classes available to suit your schedule and preferences.</p>
+</div>
+<div class="card card-auto p-4 text-center" data-animate>
+<div class="mb-1">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=100&h=100&fit=crop" alt="Career"              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
+</div>
+<h4 class="color-primary">Career Support</h4>
+<p class="card-small-text">Placement assistance, mentoring, and professional networking opportunities.</p>
+</div>
+<div class="card card-auto p-4 text-center" data-animate>
+<div class="mb-1">
+<img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&h=100&fit=crop" alt="Lifetime"              class="img-circle" style="width: 80px; height: 80px; margin: 0 auto; object-fit: cover;">
+</div>
+<h4 class="color-primary">Lifetime Access</h4>
+<p class="card-small-text">Access course materials and community for continuous learning after graduation.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="card-section-title">Student Categories</h2>
+<div class="grid grid-2 grid-gap-3">
+<div class="card card-auto p-4" data-animate>
+<div class="font-3xl color-secondary mb-1">🇮🇳</div>
+<h3 class="color-primary">Indian Students</h3>
+<p class="card-small-text">
+<strong>Payment Options:</strong> EMI available | Scholarships for merit | Group            discounts</p>
+<p class="card-small-text mt-1rem">
+<strong>Benefits:</strong> Local language support | Hostel facilities |            Local scholarship programs</p>
+<a href="fee-structure.html" class="btn btn-primary btn-full mt-1rem">View Indian Pricing</a>
+</div>
+<div class="card card-auto p-4" data-animate>
+<div class="font-3xl color-secondary mb-1">🌐</div>
+<h3 class="color-primary">International Students</h3>
+<p class="card-small-text">
+<strong>Payment Options:</strong> Monthly payments | Flexible terms | Currency            conversion support</p>
+<p class="card-small-text mt-1rem">
+<strong>Benefits:</strong> Visa guidance | Airport pickup | English medium            classes</p>
+<a href="student-section.html" class="btn btn-primary btn-full mt-1rem">View International Pricing</a>
+</div>
+</div>
+</div>
+</section>
+<section class="light-bg">
+<div class="container text-center section-heading">
+<h2>Ready to Start Your Journey?</h2>
+<p class="subtitle-text">Choose your course, enroll today, and transform your future!</p>
+<a href="contact.html" class="btn btn-primary btn-lg">Get More Information</a>
+</div>
+</section>
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>About Parashari</h4>
+<p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
+<div class="social-links">
+<a href="#" class="social-link" title="Visit our Facebook" aria-label="Visit our Facebook">
+<i              class="fab fa-facebook-f">
+</i>
+</a>
+<a href="#" class="social-link" title="Visit our Twitter" aria-label="Visit our Twitter">
+<i              class="fab fa-twitter">
+</i>
+</a>
+<a href="#" class="social-link" title="Visit our Instagram" aria-label="Visit our Instagram">
+<i              class="fab fa-instagram">
+</i>
+</a>
+<a href="#" class="social-link" title="Visit our YouTube" aria-label="Visit our YouTube">
+<i              class="fab fa-youtube">
+</i>
+</a>
+</div>
+</div>
+<div class="footer-section">
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li>
+<a href="index.html">Home</a>
+</li>
+<li>
+<a href="profile.html">About</a>
+</li>
+<li>
+<a href="courses.html">Courses</a>
+</li>
+<li>
+<a href="contact.html">Contact</a>
+</li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Programs</h4>
+<ul class="footer-links">
+<li>
+<a href="astrology.html">Astrology</a>
+</li>
+<li>
+<a href="palmistry.html">Palmistry</a>
+</li>
+<li>
+<a href="vastu.html">Vastu</a>
+</li>
+<li>
+<a href="fee-structure.html">Fee Structure</a>
+</li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Contact</h4>
+<div class="contact-info">
+<div class="contact-icon">📍</div>
+<div class="contact-text">
+<p class="p-reset">123 Vedic Street, Delhi</p>
+</div>
+</div>
+<div class="contact-info">
+<div class="contact-icon">📞</div>
+<div class="contact-text">
+<p class="p-reset">
+<a href="tel:+919999999999">+91 9999-999-999</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-content">
+<div class="copyright">
+<p class="p-reset">&copy; 2024 Parashari Institute.</p>
+</div>
+<div class="developer-credit">Designed by <a href="#">Our Team</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/courses-data.js">
+</script>
+<script src="assets/js/navbar.js">
+</script>
+<script src="assets/js/form-validation.js">
+</script>
+<script src="assets/js/main.js">
+</script>
+<script src="assets/js/loader.js">
+</script>
+<script src="assets/js/search.js">
+</script>
+<script src="assets/js/chatbot.js">
+</script>
 </body>
-
 </html>
+

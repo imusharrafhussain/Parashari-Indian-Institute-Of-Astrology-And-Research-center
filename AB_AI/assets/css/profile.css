@@ -39,6 +39,7 @@
     /* background: radial-gradient(circle at center, #2e0a0c 0%, #0f0505 100%); */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('../images/about-hero-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     background-blend-mode: normal;
     display: flex;
     align-items: center;

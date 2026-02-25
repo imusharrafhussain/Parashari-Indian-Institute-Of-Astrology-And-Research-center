@@ -90,17 +90,29 @@ a.learn-more .button-text {
 }
 
 button.learn-more:hover .circle,
-a.learn-more:hover .circle {
+button.learn-more:active .circle,
+button.learn-more:focus .circle,
+a.learn-more:hover .circle,
+a.learn-more:active .circle,
+a.learn-more:focus .circle {
     width: 100%;
 }
 
 button.learn-more:hover .circle .icon.arrow,
-a.learn-more:hover .circle .icon.arrow {
+button.learn-more:active .circle .icon.arrow,
+button.learn-more:focus .circle .icon.arrow,
+a.learn-more:hover .circle .icon.arrow,
+a.learn-more:active .circle .icon.arrow,
+a.learn-more:focus .circle .icon.arrow {
     background: #fff;
     transform: translate(0.7rem, 0);
 }
 
 button.learn-more:hover .button-text,
-a.learn-more:hover .button-text {
+button.learn-more:active .button-text,
+button.learn-more:focus .button-text,
+a.learn-more:hover .button-text,
+a.learn-more:active .button-text,
+a.learn-more:focus .button-text {
     color: #fff;
 }

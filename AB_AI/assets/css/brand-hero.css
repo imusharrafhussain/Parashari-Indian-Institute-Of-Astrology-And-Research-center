@@ -16,7 +16,8 @@
 
 .brand-hero-content {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3.5rem auto 0;
+    /* Changed from 2rem auto to push logo further down from search bar */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,6 +65,12 @@
 .hero-with-bg {
     background: transparent;
     overflow: hidden;
+}
+
+.hero-with-bg.zodiac-section {
+    display: block;
+    /* Overrides display: flex from main.css */
+    min-height: auto;
 }
 
 .hero-3d-scene {

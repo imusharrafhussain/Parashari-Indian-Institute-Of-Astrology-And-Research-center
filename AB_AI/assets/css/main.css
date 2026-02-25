@@ -408,8 +408,10 @@ body {
 }
 
 .contact-grid-item-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
+  opacity: 0.8;
 }
 
 .contact-grid-item h4 {
@@ -437,6 +439,29 @@ body {
 .contact-form button {
   width: 100%;
   text-align: center;
+}
+
+.contact-profile-box {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #D4AF37;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.hero-profile {
+  margin-bottom: 1.5rem;
 }
 
 .social-icon-link {
@@ -1477,6 +1502,29 @@ textarea.form-control {
   color: #27AE60;
 }
 
+/* Badge row: aligns category badge + certification on the same line */
+.card-body .mb-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+  min-height: 3.6rem;
+}
+
+/* Category badge: shows which level/tier the course belongs to */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
 .mt-1rem {
   margin-top: 1rem;
 }
@@ -1525,6 +1573,131 @@ textarea.form-control {
 .hero-section {
   padding: 3rem 0;
   color: white;
+}
+
+/* ============ CELESTIAL ELEGANCE STYLES ============ */
+.celestial-hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.95) 0%, rgba(89, 28, 33, 0.92) 100%);
+  padding: 6rem 0;
+  text-align: center;
+  color: #fff;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.celestial-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, #fff 40%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.celestial-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.celestial-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D4AF37, transparent);
+}
+
+.celestial-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: var(--dark-text);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.celestial-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.celestial-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+  color: var(--dark-text);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.celestial-input::placeholder {
+  color: #999;
+}
+
+.celestial-input:focus {
+  border-color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.celestial-btn {
+  background: var(--secondary-color);
+  color: var(--dark-text) !important;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(240, 165, 0, 0.15);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.celestial-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+  filter: brightness(1.1);
+}
+
+.celestial-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.mystical-text {
+  color: var(--primary-color);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 
 .hero-gradient {
@@ -1643,18 +1816,16 @@ textarea.form-control {
   flex: 0 0 50%;
   width: 50%;
   position: relative;
-  padding-top: 4rem;
-  /* Match content padding top */
+  min-height: 500px;
+  /* Ensure height for background */
+  background-image: url('../images/institute-building-modern.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.about-split-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 0;
-  margin: 0;
-}
+
 
 .about-split-content {
   flex: 0 0 50%;

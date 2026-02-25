@@ -14,7 +14,8 @@
     transform: translateZ(0);
 }
 
-.zodiac-card:hover {
+.zodiac-card:hover,
+.zodiac-card:active {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -91,14 +92,16 @@
 }
 
 /* HOVER EFFECTS */
-.zodiac-card:hover .zodiac-card-front {
+.zodiac-card:hover .zodiac-card-front,
+.zodiac-card:active .zodiac-card-front {
     opacity: 0.5;
     /* Fade out slightly */
     transform: scale(0.95);
     /* Shrink slightly */
 }
 
-.zodiac-card:hover .zodiac-card-back {
+.zodiac-card:hover .zodiac-card-back,
+.zodiac-card:active .zodiac-card-back {
     opacity: 1;
     transform: translateY(0);
     /* Slide up to fill */
