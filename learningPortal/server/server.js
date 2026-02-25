@@ -105,7 +105,9 @@ app.use((err, req, res, next) => {
     });
 });
 
-// MongoDB Connection
+// MongoDB Connection - Start server ONLY after connection is established
+const PORT = process.env.PORT || 5000;
+
 mongoose.connect(process.env.MONGODB_URI)
     .then(async () => {
         console.log('✅ MongoDB connected successfully');
@@ -114,11 +116,12 @@ mongoose.connect(process.env.MONGODB_URI)
         // const { default: seedCourses } = await import('./seedCourses.js');
         // await seedCourses();
 
+        app.listen(PORT, () => {
+            console.log(`🚀 Server running on port ${PORT}`);
+            console.log(`📍 Environment: ${process.env.NODE_ENV}`);
+        });
     })
-    .catch((err) => console.error('❌ MongoDB connection error:', err));
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-    console.log(`📍 Environment: ${process.env.NODE_ENV}`);
-});
+    .catch((err) => {
+        console.error('❌ MongoDB connection error:', err);
+        process.exit(1);
+    });

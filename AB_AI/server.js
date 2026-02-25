@@ -22,10 +22,17 @@ app.use('/api/auth', authRoutes);
 app.use('/api/video', videoRoutes);
 
 
-// Database Connection
-mongoose.connect(process.env.MONGODB_URI)
-    .then(() => console.log('✅ MongoDB Connected'))
-    .catch(err => console.error('❌ MongoDB Connection Error:', err));
-
+// Database Connection — start server ONLY after MongoDB is ready
+// This prevents the race condition where the first login request hits
+// before the DB connection is established, causing a 500 error.
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => {
+        console.log('✅ MongoDB Connected');
+        app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    })
+    .catch(err => {
+        console.error('❌ MongoDB Connection Error:', err);
+        process.exit(1); // Exit if DB fails — don't serve broken requests
+    });

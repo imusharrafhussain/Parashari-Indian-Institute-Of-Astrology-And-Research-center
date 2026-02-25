@@ -271,7 +271,17 @@ async function loginUser(event) {
 }
 
 // Bind events if elements exist
+// Listen for 'validSubmit' dispatched by form-validation.js after validation passes
+// This avoids the double-handler conflict where the native submit causes a page reload
 const loginForm = document.querySelector(".auth-form-wrapper form") || document.querySelector(".auth-container form");
 if (loginForm) {
-    loginForm.addEventListener("submit", loginUser);
+    loginForm.addEventListener("validSubmit", loginUser);
+    // Fallback: also handle direct submit in case form-validation.js is not loaded
+    loginForm.addEventListener("submit", function (e) {
+        // Only handle if validSubmit hasn't already been dispatched
+        if (!loginForm._validating) {
+            e.preventDefault();
+            loginUser(e);
+        }
+    });
 }
