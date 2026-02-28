@@ -84,7 +84,7 @@ export default function DashboardAdvancedView() {
                 {/* 1. Hero Banner */}
                 <section className="user-hero-banner">
                     <div className="hero-text">
-                        <h1>Jai {summary.user?.name?.split(' ')[0] || 'User'}!</h1>
+                        <h1>Welcome {summary.user?.name?.split(' ')[0] || 'User'}!</h1>
                         <p>Welcome back to your personalized learning dashboard.</p>
                     </div>
                     {summary.user && !summary.user.isPremium && (
