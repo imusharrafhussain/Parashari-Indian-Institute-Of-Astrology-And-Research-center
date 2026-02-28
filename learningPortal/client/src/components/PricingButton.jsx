@@ -1,9 +1,11 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/PricingButton.css';
 
 const PricingButton = () => {
+    const navigate = useNavigate();
+
     const handlePricingClick = () => {
-        alert('Pricing plans coming soon!');
+        navigate('/pricing');
     };
 
     return (

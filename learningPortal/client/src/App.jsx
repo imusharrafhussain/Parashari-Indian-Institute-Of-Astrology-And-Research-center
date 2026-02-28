@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Categories from './pages/Categories';
 import CourseModules from './pages/CourseModules';
 import Courses from './pages/Courses';
+import Pricing from './pages/Pricing';
 import './App.css';
 
 import Header from './components/Header';
@@ -138,6 +139,11 @@ function App() {
             <Route path="/course/:id" element={
               <StrictProtectedRoute>
                 <CourseModules />
+              </StrictProtectedRoute>
+            } />
+            <Route path="/pricing" element={
+              <StrictProtectedRoute>
+                <Pricing />
               </StrictProtectedRoute>
             } />
             <Route path="/" element={

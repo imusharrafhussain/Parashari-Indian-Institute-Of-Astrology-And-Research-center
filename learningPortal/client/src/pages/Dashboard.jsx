@@ -1,12 +1,47 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import IntroVideoPlayer from '../components/IntroVideoPlayer';
 import PricingButton from '../components/PricingButton';
+import TopInstructorsButton from '../components/TopInstructorsButton';
+import AstrologerCard from '../components/AstrologerCard';
 import DashboardAdvancedView from '../components/DashboardAdvancedView';
 import '../styles/Dashboard.css';
 import '../styles/Landing.css';
+import '../styles/TopInstructors.css';
+
+// Import instructor images
+import arjunImg from '../assets/instructors/arjun.png';
+import priyaImg from '../assets/instructors/priya.png';
+import vikramImg from '../assets/instructors/vikram.png';
 
 export default function Dashboard() {
     const navigate = useNavigate();
+    const [showInstructors, setShowInstructors] = useState(false);
+
+    const instructors = [
+        {
+            name: "Pandit Arjun",
+            about: "Expert in Vedic Astrology and Vastu Shastra with 20+ years of experience.",
+            image: arjunImg,
+            email: "arjun@astro.ai"
+        },
+        {
+            name: "Dr. Priya",
+            about: "Renowned Palmist and Astrologer specializing in relationship and career growth.",
+            image: priyaImg,
+            email: "priya@astro.ai"
+        },
+        {
+            name: "Acharya Vikram",
+            about: "Young Vedic scholar and author, providing modern insights into ancient astrology.",
+            image: vikramImg,
+            email: "vikram@astro.ai"
+        }
+    ];
+
+    const toggleInstructors = () => {
+        setShowInstructors(!showInstructors);
+    };
 
     const handlePaidCoursesClick = () => {
         navigate('/categories');
@@ -31,14 +66,28 @@ export default function Dashboard() {
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         flexWrap: 'wrap',
-                        gap: '1rem'
+                        gap: '1.5rem'
                     }}>
                         <div style={{ textAlign: 'left' }}>
                             <h2 style={{ fontSize: '2rem', color: '#2d3748', fontWeight: '800', margin: 0 }}>Choose Your Learning Path</h2>
                             <div style={{ height: '4px', width: '50px', background: '#8B0000', marginTop: '0.75rem', borderRadius: '2px' }}></div>
                         </div>
+
+                        <TopInstructorsButton
+                            onClick={toggleInstructors}
+                            isActive={showInstructors}
+                        />
+
                         <PricingButton />
                     </div>
+
+                    {showInstructors && (
+                        <div className="instructors-grid">
+                            {instructors.map((inst, idx) => (
+                                <AstrologerCard key={idx} {...inst} />
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className="course-type-buttons" style={{ maxWidth: '1146px', margin: '0 auto' }}>

@@ -223,7 +223,7 @@ export default function CourseModules() {
         <div className="error-container">
             <h3>Error Loading Course</h3>
             <p>{error}</p>
-            <button onClick={() => navigate('/courses')}>Back to Courses</button>
+            <button onClick={() => navigate('/dashboard')}>Home</button>
         </div>
     );
 
@@ -282,9 +282,6 @@ export default function CourseModules() {
             <div className="course-modules-container">
                 {/* Header */}
                 <div className="modules-header">
-                    <button className="back-btn" onClick={() => navigate('/courses')}>
-                        ← Back to Courses
-                    </button>
                     <h1>{course.title}</h1>
                     <p className="course-description">{course.description}</p>
                     <div className="progress-indicator">

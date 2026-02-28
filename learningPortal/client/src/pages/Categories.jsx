@@ -43,21 +43,10 @@ export default function Categories() {
 
     return (
         <div className="welcome-page-container" onClick={handleCategoryLeave}>
-            {/* Header / Nav */}
-            <div className="categories-header">
-                <button className="back-btn" onClick={() => navigate('/dashboard')}>
-                    ← Dashboard
-                </button>
-                <div className="spacer"></div>
-            </div>
 
             {/* Main Content */}
             <main className="welcome-content" style={{ paddingTop: '1rem' }}>
                 <section className="path-selection-section">
-                    <div className="intro-text">
-                        <h2>Choose Your Learning Path</h2>
-                        <p>Select a category to explore our curated courses</p>
-                    </div>
 
                     <div className="category-grid">
                         {categories.map((cat) => (

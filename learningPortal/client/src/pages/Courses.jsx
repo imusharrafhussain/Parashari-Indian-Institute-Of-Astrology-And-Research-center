@@ -54,24 +54,18 @@ export default function Courses() {
 
     return (
         <div className="courses-page-container">
-            {/* Header / Nav */}
-            <div className="courses-header">
-                <button className="back-btn" onClick={() => navigate('/categories')}>
-                    ← Categories
-                </button>
-                <h2>{selectedCategory === 'All' ? 'All Courses' : `${selectedCategory} Courses`}</h2>
-                <div className="spacer"></div>
-            </div>
-
-            {/* Content */}
             <div className="courses-content">
+                <h2 style={{ marginBottom: '2rem', color: '#2d3748' }}>
+                    {selectedCategory === 'All' ? 'All Courses' : `${selectedCategory} Courses`}
+                </h2>
+
                 {loading ? (
                     <Loader />
                 ) : filteredCourses.length > 0 ? (
                     <div className="course-grid">
                         {filteredCourses.map(course => (
                             <div key={course._id} className="course-card-item">
-                                <span className="premium-ribbon"></span>
+                                <span className="premium-ribbon" data-label={course.price > 0 || !course.isFree ? "PREMIUM" : "FREE"}></span>
                                 <div className="course-thumb">
                                     {course.thumbnail ? (
                                         <img src={course.thumbnail} alt={course.title} />
@@ -84,7 +78,7 @@ export default function Courses() {
                                         <span className="badge">{course.level}</span>
                                     </div>
                                     <h3>{course.title}</h3>
-                                    <p className="duration">⏱ {course.duration}</p>
+                                    <p className="duration">⏱ {course.duration || 'Flexible'}</p>
                                     <button
                                         className="start-btn"
                                         onClick={() => navigate(`/course/${course._id}`)}

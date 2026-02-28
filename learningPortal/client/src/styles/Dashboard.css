@@ -88,10 +88,8 @@
 }
 
 .category-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(139, 0, 0, 0.15);
     border-color: #8B0000;
-    /* Solid brand color on hover */
 }
 
 .cat-icon {

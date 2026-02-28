@@ -1,11 +1,36 @@
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/Header.css';
 
 export default function Header() {
     const { user, logout } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    // Check if we are on a sub-page (anywhere EXCEPT Dashboard or Landing) to show back button
+    const isSubPage = location.pathname !== '/dashboard' &&
+        location.pathname !== '/landing' &&
+        location.pathname !== '/';
+
+    const handleBack = () => {
+        navigate(-1); // True "back" functionality
+    };
 
     return (
         <header className="welcome-header">
+            <div className="header-left">
+                {isSubPage && (
+                    <button className="back-btn" onClick={handleBack} title="Back to Home">
+                        <div className="sign-back">
+                            <svg viewBox="0 0 512 512">
+                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"></path>
+                            </svg>
+                        </div>
+                        <div className="text-back">Back</div>
+                    </button>
+                )}
+            </div>
+
             <div className="header-logo">
                 <img
                     src="/parashari-header-logo.png"

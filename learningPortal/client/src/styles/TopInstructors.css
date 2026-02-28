@@ -1,0 +1,241 @@
+/* Profile Card Styles with Theme Colors */
+.instructors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.astrologer-card {
+    width: 280px;
+    height: 280px;
+    background: white;
+    border-radius: 32px;
+    padding: 3px;
+    position: relative;
+    box-shadow: #2d1a1a30 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+    cursor: default;
+}
+
+.astrologer-card .mail {
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+    background: transparent;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.astrologer-card .mail svg {
+    stroke: #8B0000;
+    stroke-width: 3px;
+}
+
+.astrologer-card .mail svg:hover {
+    stroke: #5d1717;
+}
+
+.astrologer-card .profile-pic {
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #8B0000;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.astrologer-card .profile-pic img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.astrologer-card .bottom {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #8B0000;
+    top: 80%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(45, 26, 26, 0.1882352941) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.astrologer-card .bottom .content {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 160px;
+}
+
+.astrologer-card .bottom .content .name {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.astrologer-card .bottom .content .about-me {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.astrologer-card .bottom .bottom-bottom {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.astrologer-card .bottom .bottom-bottom .social-links-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.astrologer-card .bottom .bottom-bottom .social-links-container svg {
+    height: 20px;
+    fill: white;
+    filter: drop-shadow(0 5px 5px rgba(45, 26, 26, 0.1333333333));
+}
+
+.astrologer-card .bottom .bottom-bottom .social-links-container svg:hover {
+    fill: #ffcece;
+    transform: scale(1.2);
+}
+
+.astrologer-card .bottom .bottom-bottom .card-btn {
+    background: white;
+    color: #8B0000;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    box-shadow: rgba(45, 26, 26, 0.1333333333) 0px 5px 5px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.astrologer-card .bottom .bottom-bottom .card-btn:hover {
+    background: #5d1717;
+    color: white;
+}
+
+.astrologer-card:hover {
+    border-top-left-radius: 55px;
+}
+
+.astrologer-card:hover .bottom {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.astrologer-card:hover .profile-pic {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #8B0000;
+    box-shadow: rgba(45, 26, 26, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.astrologer-card:hover .profile-pic img {
+    transform: scale(2.5);
+    -o-object-position: 0px 25px;
+    object-position: 0px 25px;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
+/* Updated Button Style for Top Instructors with Theme Color */
+.top-instructors-btn {
+    padding: 10px 25px;
+    border: unset;
+    border-radius: 50px;
+    color: #212121;
+    z-index: 1;
+    background: #f8f8f8;
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.top-instructors-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #8B0000;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.top-instructors-btn:hover {
+    color: white;
+}
+
+.top-instructors-btn:hover::before {
+    width: 100%;
+}
+
+.top-instructors-btn.active {
+    background: #8B0000;
+    color: white;
+}
+
+.top-instructors-btn.active::before {
+    width: 100%;
+    background-color: #8B0000;
+}

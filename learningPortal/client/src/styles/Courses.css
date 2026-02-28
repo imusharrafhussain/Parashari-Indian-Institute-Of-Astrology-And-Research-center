@@ -71,8 +71,8 @@
 }
 
 .course-card-item:hover {
-    transform: translateY(-4px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    /* Stable hover shadow */
 }
 
 .course-thumb {
