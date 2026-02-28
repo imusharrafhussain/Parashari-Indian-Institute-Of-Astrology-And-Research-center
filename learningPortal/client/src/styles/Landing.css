@@ -40,17 +40,21 @@
 /* Course Type Buttons Container */
 .course-type-buttons {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
     justify-content: center;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* Force horizontal row globally */
+    overflow-x: hidden;
+    /* Prevent scrolls, we will shrink items instead */
 }
 
 /* Course Button Base */
 .course-btn {
     flex: 1;
-    min-width: 180px;
-    max-width: 230px;
+    min-width: 0;
+    /* Allow shrinking below min-content */
+    max-width: 210px;
     padding: 1.75rem 1.25rem;
     border: none;
     border-radius: 16px;
@@ -142,11 +146,83 @@
     transform: translateY(-4px);
 }
 
+/* Active Courses Button */
+.active-btn {
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+}
+
+.active-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(58, 123, 213, 0.5);
+}
+
+/* Completed Courses Button (Locked State) */
+.completed-btn {
+    background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+    cursor: default;
+    filter: grayscale(0.5);
+}
+
+.completed-btn.locked {
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.completed-btn.locked:hover {
+    transform: none;
+    /* No lift for locked */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    /* Keep original shadow */
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Premium Ribbon Badge */
+.premium-ribbon {
+    position: absolute;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.premium-ribbon::before {
+    content: attr(data-label);
+    position: absolute;
+    width: 160%;
+    height: 24px;
+    background: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+    transform: rotate(-45deg) translateY(-22px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Introduction Video Section - Glassmorphism */
 .intro-video-section {
     width: 100%;
     max-width: 1200px;
     margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 20px;
     padding: 3rem 2rem;
     /* Glassmorphism */
@@ -155,37 +231,68 @@
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    display: block;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .landing-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .landing-subtitle {
         font-size: 1.1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
 
     .course-type-buttons {
-        gap: 2rem;
-        flex-direction: column;
+        gap: 0.75rem;
     }
 
     .course-btn {
-        min-width: 100%;
-        padding: 2.5rem 1.5rem;
+        padding: 1.25rem 0.75rem;
+        border-radius: 14px;
     }
 
     .btn-icon {
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
 
     .btn-text {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
 
+    .btn-subtitle {
+        font-size: 0.7rem;
+    }
+}
+
+/* Specific Mobile Overrides */
+@media (max-width: 480px) {
+    .course-type-buttons {
+        gap: 0.5rem;
+    }
+
+    .course-btn {
+        padding: 0.75rem 0.4rem;
+        border-radius: 10px;
+    }
+
+    .btn-icon {
+        font-size: 1.3rem;
+    }
+
+    .btn-text {
+        font-size: 0.7rem;
+    }
+
+    .btn-subtitle {
+        display: none;
+        /* Hide subtitle on very small screens to maintain structure */
+    }
+}
+
+@media (max-width: 768px) {
     .intro-video-section {
         margin-top: 3rem;
         padding: 2rem 1rem;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Loader from '../components/Loader';
 import { useAuth } from '../context/AuthContext';
 import HLSPlayer from '../components/HLSPlayer';
 import '../styles/CoursePlayer.css';
@@ -56,7 +57,7 @@ export default function CoursePlayer() {
     };
 
     if (loading) {
-        return <div className="loading-container">Loading course...</div>;
+        return <Loader />;
     }
 
     if (error) {

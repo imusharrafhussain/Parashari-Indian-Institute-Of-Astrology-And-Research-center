@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Loader from '../components/Loader';
 import { useAuth } from '../context/AuthContext';
 import HLSPlayer from '../components/HLSPlayer';
 import SimpleErrorBoundary from '../components/SimpleErrorBoundary';
@@ -216,7 +217,7 @@ export default function CourseModules() {
         };
     }, [token]);
 
-    if (loading) return <div className="loading-container">Loading course...</div>;
+    if (loading) return <Loader />;
 
     if (error) return (
         <div className="error-container">

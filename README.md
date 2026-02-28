@@ -1,248 +1,147 @@
-# Parashari Web Application System
+# Parashari Web Application System - Complete Technical Documentation
 
-This repository contains the complete source code for the Parashari Institute platform, consisting of two major integrated applications.
-
-## Project Overview
-
-The system is split into two distinct but connected applications:
-
-1.  **AB_AI (Marketing Website)**: The public-facing educational website. It handles course listings, informational pages, student registration, and serves as the entry point for users. It uses a lightweight Node.js/Express server with Vanilla JS frontend for maximum SEO and performance.
-2.  **learningPortal (Learning Management System)**: The authenticated student portal. It handles course delivery, video playback, progress tracking, and secure resource access. It is built as a Single Page Application (SPA) using React (Vite) and a robust Express/Node.js REST API.
-
-**Why two websites?**
-- **AB_AI** focuses on **SEO, speed, and conversion** (marketing).
-- **learningPortal** focuses on **interactivity, state management, and security** (application).
-
-**Connection**:
-- Both apps share the same **MongoDB database** (Users, Courses).
-- Authentication handoff occurs via token exchange; users login on `AB_AI` (or AutoLogin via `learningPortal`) and are seamlessly authenticated.
+This document provides a comprehensive overview of the Parashari Institute platform, detailing its architecture, technology stack integration, and core functional flows.
 
 ---
 
-## System Architecture
+## 1. System Philosophy & Architecture
 
+The system is a **Integrated Monorepo** containing two distinct applications that share a common data layer and security infrastructure.
+
+### The "Dual-Website" Strategy
+1.  **AB_AI (The Marketing Hub)**:
+    *   **Tech Stack**: Node.js/Express (Server) + Vanilla HTML/CSS/JS (Frontend).
+    *   **Focus**: SEO optimization, fast landing page loads, and user acquisition (Auth entry).
+2.  **Learning Portal (The LMS Application)**:
+    *   **Tech Stack**: Node.js/Express (API) + React/Vite (Frontend).
+    *   **Focus**: Interactive learning, state management, progress tracking, and secure content delivery.
+
+### High-Level System Map
 ```mermaid
 graph TD
-    subgraph Client_Side
-        A[User Browser]
-        B[AB_AI Frontend<br/>(HTML/Vanilla JS)]
-        C[learningPortal Frontend<br/>(React/Vite)]
+    subgraph "Frontend Layer"
+        User[User Browser]
+        VanillaJS[AB_AI: Vanilla JS]
+        ReactApp[Learning Portal: React]
     end
 
-    subgraph Cloudflare_Infra
-        D[Cloudflare Worker<br/>(Video Signer/Proxy)]
-        E[R2 Bucket<br/>(Video Storage)]
-        F[Cloudflare Stream<br/>(Video Delivery)]
+    subgraph "Logic Layer (Express/Node)"
+        MarketingServer[AB_AI Server :3000]
+        portalServer[Portal Server :5002]
     end
 
-    subgraph Backend_Services
-        G[AB_AI Server<br/>(Node/Express)]
-        H[learningPortal Server<br/>(Node/Express)]
+    subgraph "Data & Security Layer"
+        MongoDB[(MongoDB Atlas)]
+        JWT[Shared JWT Secret]
     end
 
-    subgraph Database
-        I[(MongoDB Atlas)]
+    subgraph "Media Infrastructure"
+        Worker[Cloudflare Worker]
+        R2[Cloudflare R2 Storage]
+        Stream[Cloudflare Stream]
     end
 
-    A --> B
-    A --> C
-    B -- Login/Register --> G
-    C -- API Requests --> H
-    C -- Video Request --> H
-    H -- Auth/Enrollment Check --> I
-    H -- Get Signed URL --> D
-    D -- Fetch Content --> E
-    D -- Return Media --> C
-    G -- Auth/Data --> I
-    G -- Stream URL --> F
+    User --> VanillaJS
+    User --> ReactApp
+    
+    VanillaJS -- Login --> MarketingServer
+    ReactApp -- API --> portalServer
+    
+    MarketingServer -- Shared Secret --> JWT
+    portalServer -- Shared Secret --> JWT
+    
+    MarketingServer -- Shared Data --> MongoDB
+    portalServer -- Shared Data --> MongoDB
+    
+    portalServer -- Media Token --> Worker
+    Worker -- Fetch --> R2
+    Worker -- Stream --> User
 ```
 
-**Flow Overview**:
-1.  **Frontend**: Users land on `AB_AI`. Login/Signup creates a session/token.
-2.  **Transition**: Authenticated users are redirected to `learningPortal`.
-3.  **Backend**: Separate servers handle distinct logic but read from the same `User` and `Course` collections.
-4.  **Media**: Videos and PDFs are stored in Cloudflare R2 or Stream. Access is gated by the backend which generates signed URLs or proxies via Cloudflare Workers.
+---
+
+## 2. Core Technology Integration ("The Linking")
+
+### A. MongoDB: The Shared Data Backbone
+Both servers connect to the same **MongoDB Atlas Cluster**.
+*   **Linking**: By using the same `MONGODB_URI` (or pointing to the same database name), accounts created in `AB_AI` are immediately available in the `learningPortal`.
+*   **Collections**:
+    *   `users`: Shared registry for authentication.
+    *   `courses`: Shared metadata for display (Marketing) and enrollment (Portal).
+    *   `enrollments`: Links `users` to `courses`, checked by both servers to gate access.
+
+### B. Express & Node: The Logic Split
+*   **AB_AI Server**: Handles "Public" logic (OTP generation, Account Creation, Landing Page SEO).
+*   **Learning Portal Server**: Handles "Private" logic (Course Hierarchy, Progress Tracking, Media Signing).
+*   **Linking**: Shared models and utility patterns ensure consistency.
+
+### C. Cloudflare & R2: Secure Media Pipeline
+The project uses the **"Broker Pattern"** to prevent unauthorized video downloads and link sharing.
+1.  **Storage**: Videos are split into HLS chunks (`.m3u8` and Many `.ts` files) and stored in **Cloudflare R2**.
+2.  **The Portal Server (The Broker)**:
+    *   Generates a time-limited **HMAC-SHA256 Signature** using a `VIDEO_SIGNING_SECRET`.
+    *   This signature encodes the user ID, course ID, and expiry timestamp.
+3.  **Cloudflare Worker (The Gatekeeper)**:
+    *   Located at `cloudflare-worker/video-signer.js`.
+    *   Intercepts media requests.
+    *   Validates the HMAC signature.
+    *   **Dynamic Rewriting**: It parses the `.m3u8` playlist on the fly and appends the auth tokens to every `.ts` chunk link within the file.
 
 ---
 
-## Folder Structure & Responsibilities
+## 3. Critical Functional Flows
 
-### Root Folder
-| Path | Purpose |
-| :--- | :--- |
-| `AB_AI/` | Source code for the marketing website (Server + Client). |
-| `learningPortal/` | Source code for the LMS (Client + Server). |
-| `cloudflare-worker/` | Worker scripts for signing and serving secure video content from R2. |
-| `package.json` | Root configuration (may define workspaces). |
+### Flow 1: Authentication & Seamless Handoff
+1.  **Login**: User logs in at `AB_AI/login.html`.
+2.  **Token Generation**: `AB_AI` server validates credentials and signs a **JWT** using a `JWT_SECRET`.
+3.  **Redirect**: The server redirects the user to `learningPortal/login?token=jwt_here`.
+4.  **AutoLogin**: The React component `AutoLogin.jsx` extracts the token, saves it to `sessionStorage`, and redirects to `Dashboard.jsx`.
+5.  **Validation**: Since BOTH servers share the same `JWT_SECRET`, the `learningPortal` server can verify the token without re-querying the `AB_AI` server.
 
-### AB_AI (Advertisement Website)
-A Multi-Page Application (MPA) serving static HTML files via Express.
-
-| Folder/File | Purpose |
-| :--- | :--- |
-| **`server.js`** | Main entry point. Serves static files and API routes. |
-| **`routes/`** | API route definitions (`auth.js`, `video.js`). |
-| **`models/`** | Mongoose models (`User`, `OTP`, `Course`). |
-| **`utils/`** | Helper functions (OTP generation, Email service). |
-| **`assets/`** | Static images, icons, and public resources. |
-| **`scripts/`** | Client-side JavaScript logic. |
-| `index.html` | **Home Page**. Landing page with hero section and course highlights. |
-| `courses.html` | **Course Listing**. Shows available courses. |
-| `login.html` | **Login Page**. Handles user authentication and redirects to portal. |
-| `register.html` | **Registration**. OTP-based signup flow. |
-| `profile.html` | User profile management. |
-| `contact.html` | Contact form. |
-| `*.html` | Various static content pages (astrology, vastu, etc.). |
-
-### learningPortal (Learning Platform)
-A MERN stack application organized into Client and Server.
-
-#### `learningPortal/server`
-| Folder | Purpose |
-| :--- | :--- |
-| **`server.js`** | API entry point. Configures Middleware, CORS, and Routes. |
-| **`routes/`** | REST API endpoints (`auth`, `courses`, `video`, `resource`). Has `v2/` for newer internal APIs. |
-| **`models/`** | Rich Mongoose schemas (`Category`, `Module`, `ContentItem`, `ProgressV2`, `User`). |
-| **`middleware/`** | Auth verification and request handling middleware. |
-| **`utils/`** | Wrapper for Worker client interactions. |
-
-#### `learningPortal/client`
-| Folder | Purpose | Data Source |
-| :--- | :--- | :--- |
-| **`src/pages/`** | Application screens. | |
-| `Dashboard.jsx` | **Home Screen**. User's enrolled courses. | `/api/courses/my-courses` |
-| `Courses.jsx` | **Catalog**. All available courses. | `/api/courses` |
-| `CourseModules.jsx` | **Course Player**. Video player + Module list. | `/api/courses/:id`, `/api/video` |
-| **`src/components/`** | Reusable UI widgets. | |
-| `HLSPlayer.jsx` | Video player using `hls.js`. | Cloudflare Worker (via API) |
-| `HeaderLogo.jsx` | Consistent branding header. | Static |
+### Flow 2: Secure Video Playback
+1.  **Request**: User clicks "Play Video" in React.
+2.  **Access Grant**: React calls `GET /api/video/access/:id`.
+3.  **Security Check**: Server verifies user is enrolled and the video exists.
+4.  **Signing**: Server generates a Signed URL pointing to the **Cloudflare Worker**.
+5.  **Playback**: `HLSPlayer.jsx` (hls.js) loads the Signed URL. The Worker streams encrypted chunks from R2 only if the signature is valid.
 
 ---
 
-## Frontend Documentation
+## 4. Folder Structure & Responsibilities
 
-### Routing & Navigation
-- **AB_AI**: Uses standard HTML `<a>` links. Each page is a separate file load.
-- **learningPortal**: Uses `react-router-dom`.
-    - **Guard**: `StrictProtectedRoute` (in `App.jsx`).
-    - **Logic**: Checks `sessionStorage` for `ab_ai_entry` flag AND valid JWT. Redirects to `AB_AI/login.html` if missing.
-
-### Key Components
-- **Auth Guard (`StrictProtectedRoute`)**: Ensures users cannot deep-link into the portal without passing through the main authentication flow.
-- **Video Player (`HLSPlayer.jsx`)**: Handles HLS stream playback. Manages authentication headers and error states for media playback.
-- **AutoLogin (`AutoLogin.jsx`)**: Handles the token handoff from `AB_AI` URL parameters to local storage.
-
----
-
-## Backend & API Documentation
-
-### API Inventory
-
-| Method | Endpoint | App (Source) | Purpose | Auth |
-| :--- | :--- | :--- | :--- | :--- |
-| **Auth** | | | | |
-| `POST` | `/api/auth/send-otp` | AB_AI | Generate and email OTP for signup/reset. | No |
-| `POST` | `/api/auth/verify-otp` | AB_AI | Verify OTP code. | No |
-| `POST` | `/api/auth/signup-with-otp` | AB_AI | Complete registration with verified token. | No |
-| `POST` | `/api/auth/login` | AB_AI | Authenticate user & issue JWT. | No |
-| **Content** | | | | |
-| `GET` | `/api/courses` | Both | List all available courses. | No |
-| `GET` | `/api/courses/:id` | learningPortal | Get full course hierarchy (Modules, videos). | Yes |
-| `GET` | `/api/video/access/:videoId` | learningPortal | Get **Signed URL** for video playback. | Yes |
-| `GET` | `/api/resource/access/:resourceId`| learningPortal | Get secure URL for PDF/Files. | Yes |
-| **User** | | | | |
-| `GET` | `/api/courses/my-courses` | learningPortal | Get list of purchased courses. | Yes |
-| `POST` | `/api/v2/progress/update` | learningPortal | Update video completion status. | Yes |
+```text
+Parashari_webapp/
+├── AB_AI/                          # Marketing Website (Node + Vanilla JS)
+│   ├── server.js                   # Entry point (Port 3000)
+│   ├── routes/                     # Auth, registration, and marketing APIs
+│   ├── models/                     # Shared Mongoose Models (User, Course)
+│   └── scripts/                    # Client-side form logic & UI
+│
+├── learningPortal/
+│   ├── server/                     # LMS Backend (Node/Express API)
+│   │   ├── server.js               # Entry point (Port 5002)
+│   │   ├── routes/v2/              # High-performance hierarchical APIs
+│   │   └── middleware/             # Role-based & Auth Gatekeepers
+│   │
+│   └── client/                     # LMS Frontend (React + Vite)
+│       ├── src/pages/              # Dashboard, CoursePlayer, Catalog
+│       └── src/components/         # HLSPlayer, Sidebar, ProtectedRoutes
+│
+├── cloudflare-worker/              # Media Security Layer
+│   └── video-signer.js             # Edge logic for R2 content protection
+│
+└── package.json                    # Root manifest
+```
 
 ---
 
-## Database (MongoDB)
+## 5. Maintenance & Safety Rules
 
-**Database Name**: Shared `webinar_parashari` (or configured via ENV).
+> [!IMPORTANT]
+> **JWT Sync**: If you change `JWT_SECRET` in `AB_AI`, you **MUST** update it in `learningPortal/server` or logins will fail.
 
-### Collections
+> [!WARNING]
+> **Worker Deployment**: Never modify `video-signer.js` without local testing, as it can block media access for all students instantly.
 
-| Collection | Purpose | Key Fields |
-| :--- | :--- | :--- |
-| **users** | Central user registry. | `email`, `password` (hashed), `role`, `purchasedCourses` |
-| **courses** | Course metadata. | `title`, `price`, `videoKey`, `isSubscriptionBased` |
-| **otps** | Temporary OTP storage. | `email`, `code`, `expiresAt`, `purpose` |
-| **modules** | Course sections. | `title`, `courseId`, `order` |
-| **videos** | Video metadata. | `title`, `r2Path`, `duration`, `moduleId` |
-| **enrollments**| User access tracking. | `userId`, `courseId`, `status`, `validUntil` |
-| **progressv2**| User progress. | `userId`, `videoId`, `percentComplete`, `completed` |
-
----
-
-## Cloudflare Media Delivery
-
-The system uses a **Broker Pattern** for media security.
-
-1.  **Storage**:
-    - Videos are converted to HLS (`.m3u8` + `.ts`) and stored in a **Cloudflare R2 Bucket**.
-    - Original files or Stream-ready inputs are backed by Cloudflare Stream (in `AB_AI` context).
-2.  **Worker (`cloudflare-worker/video-signer.js`)**:
-    - Acts as a gateway to R2.
-    - Validates **Signed Tokens** (HMAC/JWT).
-    - Serves content with correct MIME types (`application/vnd.apple.mpegurl`).
-3.  **Playback Flow**:
-    - User requests video on Frontend.
-    - Backend (`/api/video/access/:id`) validates User/Enrollment.
-    - Backend generates a **Signed URL** pointing to the Cloudflare Worker.
-    - Frontend (`HLSPlayer`) loads this URL.
-    - Worker stays in the loop to stream chunks from R2.
-
----
-
-## Authentication & User Flow
-
-1.  **Registration**:
-    - User enters Email on `AB_AI`.
-    - System emails OTP (`/send-otp`).
-    - User enters OTP -> Verification Token issued.
-    - User submits Password + Details -> Account created in `users` collection.
-2.  **Login**:
-    - User enters Credentials on `AB_AI`.
-    - Server verifies hash, issues **JWT**.
-    - Frontend redirects to `learningPortal/login?token=xyz`.
-3.  **Session**:
-    - `learningPortal` validates token.
-    - Sets `sessionStorage` flag.
-    - JWT sent in `Authorization: Bearer` header for all API calls.
-
----
-
-## Deployment & Environment
-
-### Environment Variables (.env)
-**Server (AB_AI & learningPortal)**:
-- `MONGODB_URI`: Connection string.
-- `JWT_SECRET`: Shared secret for token generation/validation.
-- `CF_STREAM_SECRET`: Cloudflare signing key.
-- `VIDEO_BUCKET_URL`: Public/Worker URL for R2.
-- `CLIENT_URL`: CORS allowed origin.
-
-### Build & Run
-- **AB_AI**:
-    - Run: `node server.js`
-    - Port: `3000` (Default)
-- **learningPortal Server**:
-    - Run: `node server.js`
-    - Port: `5000` (Default)
-- **learningPortal Client**:
-    - Build: `npm run build` (Vite build)
-    - Serve: `npm run preview` or serve `dist/` folder via Nginx/Node.
-
----
-
-## Maintenance Notes
-
-- **Safe to Modify**:
-    - `AB_AI` HTML/CSS files for content updates.
-    - `learningPortal/client` UI components.
-- **Critical / Dangerous**:
-    - `AB_AI/routes/auth.js`: Core auth logic. Changes here break login for BOTH apps.
-    - `cloudflare-worker/`: Modifying signing logic will break ALL video playback immediately.
-- **Technical Debt**:
-    - User model in `AB_AI` is a subset of `learningPortal`. Always use `learningPortal` schemas as the source of truth.
-    - Auth token handoff via URL query parameter is functional but should be short-lived (currently implemented).
+> [!TIP]
+> **Database Sync**: If adding a field to the `User` model, update it in BOTH `AB_AI/models/User.js` and `learningPortal/server/models/User.js` to avoid schema mismatches.

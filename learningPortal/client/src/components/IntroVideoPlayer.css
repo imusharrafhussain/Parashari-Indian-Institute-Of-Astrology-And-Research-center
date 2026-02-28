@@ -3,10 +3,11 @@
 .intro-video-container {
     width: 100%;
     max-width: 1300px;
-    /* Wider for cinematic feel */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 2rem;
     animation: fadeIn 0.8s ease-out;
 }

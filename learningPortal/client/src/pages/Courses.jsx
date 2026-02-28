@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Loader from '../components/Loader';
 import '../styles/Courses.css'; // New CSS file
 
 export default function Courses() {
@@ -55,7 +56,7 @@ export default function Courses() {
         <div className="courses-page-container">
             {/* Header / Nav */}
             <div className="courses-header">
-                <button className="back-btn" onClick={() => navigate('/dashboard')}>
+                <button className="back-btn" onClick={() => navigate('/categories')}>
                     ← Categories
                 </button>
                 <h2>{selectedCategory === 'All' ? 'All Courses' : `${selectedCategory} Courses`}</h2>
@@ -65,11 +66,12 @@ export default function Courses() {
             {/* Content */}
             <div className="courses-content">
                 {loading ? (
-                    <div className="loading">Loading courses...</div>
+                    <Loader />
                 ) : filteredCourses.length > 0 ? (
                     <div className="course-grid">
                         {filteredCourses.map(course => (
                             <div key={course._id} className="course-card-item">
+                                <span className="premium-ribbon"></span>
                                 <div className="course-thumb">
                                     {course.thumbnail ? (
                                         <img src={course.thumbnail} alt={course.title} />

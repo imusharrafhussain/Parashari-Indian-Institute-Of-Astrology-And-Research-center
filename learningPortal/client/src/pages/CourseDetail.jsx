@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import Loader from '../components/Loader';
 import { useAuth } from '../context/AuthContext';
 import ContentRenderer from '../components/ContentRenderer';
 import '../styles/CourseDetailV2.css';
@@ -116,7 +117,7 @@ export default function CourseDetail() {
         }
     };
 
-    if (loading) return <div className="loading-screen">Loading Classroom...</div>;
+    if (loading) return <Loader />;
     if (error) return <div className="error-screen">Error: {error}</div>;
 
     return (

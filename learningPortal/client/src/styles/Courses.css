@@ -66,6 +66,8 @@
     transition: transform 0.2s;
     display: flex;
     flex-direction: column;
+    position: relative;
+    /* Required for ribbon */
 }
 
 .course-card-item:hover {

@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
-import Landing from './pages/Landing';
+import Dashboard from './pages/Dashboard';
 import Categories from './pages/Categories';
 import CourseModules from './pages/CourseModules';
 import Courses from './pages/Courses';
 import './App.css';
 
 import Header from './components/Header';
+import PricingButton from './components/PricingButton';
 
 // Strict Protected Route - requires session flag from auto-login
 function StrictProtectedRoute({ children }) {
@@ -64,7 +65,11 @@ function StrictProtectedRoute({ children }) {
   return (
     <>
       <Header />
-      {children}
+      <div className="portal-content-wrapper" style={{ position: 'relative' }}>
+        <PricingButton />
+        {children}
+      </div>
+      <Footer />
     </>
   );
 }
@@ -159,10 +164,16 @@ function App() {
             {/* ONLY public route - auto-login from AB_AI */}
             <Route path="/login" element={<Login />} />
 
-            {/* Landing page - shows Free/Paid course buttons */}
+            {/* Main Portal Entry - Unified Dashboard */}
+            <Route path="/dashboard" element={
+              <StrictProtectedRoute>
+                <Dashboard />
+              </StrictProtectedRoute>
+            } />
+
             <Route path="/landing" element={
               <StrictProtectedRoute>
-                <Landing />
+                <Navigate to="/dashboard" replace />
               </StrictProtectedRoute>
             } />
 
@@ -187,15 +198,9 @@ function App() {
               </StrictProtectedRoute>
             } />
 
-            {/* Redirect root and dashboard to landing page */}
             <Route path="/" element={
               <StrictProtectedRoute>
-                <Navigate to="/landing" replace />
-              </StrictProtectedRoute>
-            } />
-            <Route path="/dashboard" element={
-              <StrictProtectedRoute>
-                <Navigate to="/landing" replace />
+                <Navigate to="/dashboard" replace />
               </StrictProtectedRoute>
             } />
 
@@ -206,7 +211,6 @@ function App() {
               </StrictProtectedRoute>
             } />
           </Routes>
-          <Footer />
         </ErrorBoundary>
       </AuthProvider>
     </Router>

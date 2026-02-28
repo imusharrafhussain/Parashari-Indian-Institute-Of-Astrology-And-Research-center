@@ -12,10 +12,12 @@ export default function IntroVideoPlayer({ className = '' }) {
     const videoUrl = import.meta.env.VITE_R2_INTRO_VIDEO_URL;
 
     return (
-        <div className={`intro-video-container ${className}`}>
-            <div className="intro-header">
-                <h2>Introduction to Parashari Learning Portal</h2>
-                <div className="intro-subtitle">Begin your journey into Vedic Wisdom</div>
+        <div className={`intro-video-container ${className}`} style={{ textAlign: 'center' }}>
+            <div className="intro-header" style={{ marginBottom: '2rem' }}>
+                <h2 style={{ fontSize: '2.2rem', color: '#1a202c', fontWeight: '800' }}>Introduction to Parashari Learning Portal</h2>
+                <div className="intro-subtitle" style={{ color: '#718096', letterSpacing: '2px', fontSize: '1rem', marginTop: '0.5rem', textTransform: 'uppercase' }}>
+                    Begin your journey into Vedic Wisdom
+                </div>
             </div>
 
             <div className="intro-player-wrapper">

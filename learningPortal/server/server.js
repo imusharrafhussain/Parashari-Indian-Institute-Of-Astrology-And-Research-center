@@ -33,18 +33,22 @@ import authRoutes from './routes/auth.js';
 import courseRoutes from './routes/courses.js';
 import videoRoutes from './routes/video.js';
 import resourceRoutes from './routes/resource.js';
+import paymentRoutes from './routes/payment.js';
 
 app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/video', videoRoutes);
 app.use('/api/resource', resourceRoutes);
+app.use('/api/payment', paymentRoutes);
 
 // V2 API Routes
 import coursesV2Routes from './routes/v2/courses.js';
 import contentV2Routes from './routes/v2/content.js';
+import dashboardRoutes from './routes/dashboard.js';
 
 app.use('/api/v2/courses', coursesV2Routes);
 app.use('/api/v2/content', contentV2Routes);
+app.use('/api/dashboard', dashboardRoutes);
 
 import progressV2Routes from './routes/v2/progress.js';
 app.use('/api/v2/progress', progressV2Routes);

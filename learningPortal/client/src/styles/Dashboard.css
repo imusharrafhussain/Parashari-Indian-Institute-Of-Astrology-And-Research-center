@@ -9,7 +9,31 @@
 }
 
 /* Header */
-/* Header styles moved to Header.css */
+.categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    color: #8B0000;
+}
+
+.spacer {
+    width: 60px;
+}
 
 
 

@@ -4,6 +4,7 @@ import User from '../models/User.js';
 import Module from '../models/Module.js';
 import Video from '../models/Video.js';
 import { authMiddleware } from '../middleware/auth.js';
+import { getAccessibleCourses } from '../utils/accessControl.js';
 
 const router = express.Router();
 
@@ -24,25 +25,16 @@ router.get('/', async (req, res) => {
 // Get user's enrolled courses
 router.get('/my-courses', authMiddleware, async (req, res) => {
     try {
-        // GLOBAL OPEN ACCESS MODE: Return ALL courses
-        const ACCESS_MODE = process.env.ACCESS_MODE || 'OPEN';
+        const user = await User.findById(req.userId);
+        if (!user) return res.status(404).json({ error: 'User not found' });
 
-        if (ACCESS_MODE === 'OPEN') {
-            const allCourses = await Course.find({ active: true }).populate('categoryId');
-            return res.json({
-                courses: allCourses,
-                subscriptionStatus: 'active'
-            });
-        }
+        const courses = await getAccessibleCourses(user);
 
-        // Logic for filtered courses (Legacy/Future)
-        // const user = await User.findById(req.userId).populate('enrolledCourses');
-        const allCourses = await Course.find({ active: true }).populate('categoryId');
         res.json({
-            courses: allCourses,
-            subscriptionStatus: 'active'
+            courses,
+            isPremium: user.isPremium,
+            subscriptionStatus: user.isPremium ? 'active' : 'inactive'
         });
-
     } catch (error) {
         console.error('Fetch my courses error:', error);
         res.status(500).json({ error: 'Failed to fetch enrolled courses' });

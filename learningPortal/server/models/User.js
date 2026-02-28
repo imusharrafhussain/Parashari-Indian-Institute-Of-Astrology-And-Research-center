@@ -24,6 +24,13 @@ const userSchema = new mongoose.Schema({
     default: 'student',
     index: true
   },
+  isPremium: {
+    type: Boolean,
+    default: false
+  },
+  premiumActivatedAt: {
+    type: Date
+  },
   active: {
     type: Boolean,
     default: true

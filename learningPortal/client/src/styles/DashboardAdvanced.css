@@ -1,0 +1,332 @@
+/* DashboardAdvanced.css - Fluid & Ultra-Responsive Dashboard */
+
+:root {
+    --premium-gold: #FFD700;
+    --brand-red: #8B0000;
+    --text-dark: #2D3748;
+    --text-muted: #718096;
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+    --accent-blue: #3182CE;
+}
+
+.dashboard-layout-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: clamp(0.5rem, 3vw, 2rem);
+    box-sizing: border-box;
+}
+
+.dashboard-advanced-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* User Greeting Banner */
+.user-hero-banner {
+    background: linear-gradient(135deg, #1A1A1A 0%, #4A5568 100%);
+    border-radius: clamp(12px, 2vw, 20px);
+    padding: clamp(1.25rem, 5vw, 3rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h1 {
+    font-size: clamp(1.2rem, 4vw, 2.8rem);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.hero-text p {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    opacity: 0.9;
+}
+
+/* Grids */
+.dashboard-main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .dashboard-main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Stats Section */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(130px, 45%, 220px), 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    border: 1px solid #edf2f7;
+    transition: transform 0.2s;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+}
+
+.stat-value {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--brand-red);
+}
+
+/* Continue Watching */
+.continue-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #edf2f7;
+}
+
+.continue-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+    .continue-content {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.continue-thumb {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.continue-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.continue-details {
+    flex: 1;
+}
+
+/* Course Grid */
+.course-catalog-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enrolled-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 100%, 320px), 1fr));
+    gap: 2rem;
+}
+
+.course-item-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+    position: relative;
+    /* Required for ribbon */
+}
+
+/* Premium Ribbon Badge Logic */
+.premium-ribbon {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.premium-ribbon::before {
+    content: 'Premium';
+    position: absolute;
+    width: 150%;
+    height: 34px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+}
+
+.premium-ribbon::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+}
+
+.course-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.course-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.course-progress-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Progress Bars */
+.progress-container {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-red) 0%, #C53030 100%);
+    border-radius: 10px;
+}
+
+/* Buttons */
+.resume-btn,
+.card-resume-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--brand-red);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.resume-btn:hover,
+.card-resume-btn:hover {
+    background: #700000;
+}
+
+/* Announcements */
+.announcement-list-container {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #edf2f7;
+}
+
+.ann-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.ann-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f7fafc;
+}
+
+.ann-item:last-child {
+    border-bottom: none;
+}
+
+.ann-type {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #ebf8ff;
+    color: #2b6cb0;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* Skeleton Loaders */
+.skeleton {
+    background: #edf2f7;
+    animation: pulse 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Extreme Width Handling */
+@media (max-width: 320px) {
+    .dashboard-layout-wrapper {
+        padding: 0.75rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+}
