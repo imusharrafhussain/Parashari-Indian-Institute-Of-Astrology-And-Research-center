@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import IntroVideoPlayer from '../components/IntroVideoPlayer';
+import PricingButton from '../components/PricingButton';
 import DashboardAdvancedView from '../components/DashboardAdvancedView';
 import '../styles/Dashboard.css';
 import '../styles/Landing.css';
@@ -24,12 +25,23 @@ export default function Dashboard() {
 
             {/* Middle Section: Path Selection (Free, Paid, All) */}
             <section className="path-selection-section" style={{ marginTop: '4rem', padding: '0 2rem' }}>
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h2 style={{ fontSize: '2rem', color: '#2d3748', fontWeight: '800' }}>Choose Your Learning Path</h2>
-                    <div style={{ height: '4px', width: '50px', background: '#8B0000', margin: '0.75rem auto', borderRadius: '2px' }}></div>
+                <div style={{ maxWidth: '1146px', margin: '0 auto 3rem auto' }}>
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        flexWrap: 'wrap',
+                        gap: '1rem'
+                    }}>
+                        <div style={{ textAlign: 'left' }}>
+                            <h2 style={{ fontSize: '2rem', color: '#2d3748', fontWeight: '800', margin: 0 }}>Choose Your Learning Path</h2>
+                            <div style={{ height: '4px', width: '50px', background: '#8B0000', marginTop: '0.75rem', borderRadius: '2px' }}></div>
+                        </div>
+                        <PricingButton />
+                    </div>
                 </div>
 
-                <div className="course-type-buttons">
+                <div className="course-type-buttons" style={{ maxWidth: '1146px', margin: '0 auto' }}>
                     <div className="course-btn all-btn" onClick={handlePaidCoursesClick}>
                         <span className="premium-ribbon" data-label="FREE + PREMIUM"></span>
                         <span className="btn-icon">📚</span>

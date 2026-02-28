@@ -16,6 +16,8 @@
     margin: 0 auto;
     padding: clamp(0.5rem, 3vw, 2rem);
     box-sizing: border-box;
+    position: relative;
+    /* Context for PricingButton absolute placement */
 }
 
 .dashboard-advanced-container {
