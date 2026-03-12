@@ -68,3 +68,7 @@ dist-ssr/
 
 # Local development
 *.local
+
+# Large files over 100MB
+AB_AI/assets/images/12.mp4
+AB_AI/assets/images/Copy of Modern Healthcare Instagram Reel_20250820_211924_0001.mp4

@@ -39,22 +39,6 @@ export default function CoursePlayer() {
         }
     };
 
-    const handleSubscribe = async () => {
-        try {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/create-subscription-session`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ userId: user.id })
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                window.location.href = data.url;
-            }
-        } catch (error) {
-            console.error('Subscription error:', error);
-        }
-    };
 
     if (loading) {
         return <Loader />;
@@ -65,9 +49,6 @@ export default function CoursePlayer() {
             <div className="error-container">
                 <h2>Access Denied</h2>
                 <p>{error}</p>
-                <button onClick={handleSubscribe} className="btn-subscribe">
-                    Subscribe to Watch This Course
-                </button>
                 <button onClick={() => navigate('/dashboard')} className="btn-back">
                     Back to Dashboard
                 </button>
