@@ -33,6 +33,14 @@
     {
       "source": "/jobs",
       "destination": "https://jobs-app.vercel.app"
+    },
+    {
+      "source": "/learning-portal/:path*",
+      "destination": "https://parashariindian-learning.vercel.app/:path*"
+    },
+    {
+      "source": "/learning-portal",
+      "destination": "https://parashariindian-learning.vercel.app"
     }
   ]
 }

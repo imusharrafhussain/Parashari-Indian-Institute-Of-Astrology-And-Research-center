@@ -189,7 +189,7 @@ async function handleRegistration(event) {
             alert("Account created successfully! Redirecting to dashboard...");
             // Redirect to learning portal with auto-login token
             const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-            const targetUrl = isLocal ? 'http://localhost:5173' : 'https://parashariindian-learning.vercel.app';
+            const targetUrl = isLocal ? 'http://localhost:5173' : 'https://www.parashariindia.com/learning-portal';
             window.location.href = `${targetUrl}/login#token=${result.token}`;
         } else {
             alert(result.message || "Signup failed");
@@ -247,7 +247,7 @@ async function loginUser(event) {
             // Redirect to Learning Portal with JWT token
             setTimeout(() => {
                 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-                const targetUrl = isLocal ? 'http://localhost:5173' : 'https://parashariindian-learning.vercel.app';
+                const targetUrl = isLocal ? 'http://localhost:5173' : 'https://www.parashariindia.com/learning-portal';
                 window.location.href = `${targetUrl}/login#token=${encodeURIComponent(result.token)}`;
             }, 800);
         } else {

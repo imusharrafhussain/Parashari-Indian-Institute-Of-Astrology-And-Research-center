@@ -80,7 +80,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/learning-portal">
       <AuthProvider>
         <ErrorBoundary>
           <Routes>
