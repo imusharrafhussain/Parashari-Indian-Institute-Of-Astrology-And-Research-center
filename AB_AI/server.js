@@ -12,7 +12,15 @@ const videoRoutes = require('./routes/video');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:3000',
+        'http://localhost:5173',
+        'https://parashariindia.vercel.app',
+        'https://parashariindian-learning.vercel.app'
+    ],
+    credentials: true
+}));
 
 // Proxy routes (MUST be before express.json and express.static)
 app.use(

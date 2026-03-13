@@ -17,7 +17,13 @@ const app = express();
 // Middleware
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000', process.env.CLIENT_URL],
+    origin: [
+        'http://localhost:5173', 
+        'http://localhost:3000', 
+        process.env.CLIENT_URL,
+        'https://parashariindian-learning.vercel.app',
+        'https://parashariindia.vercel.app'
+    ],
     credentials: true
 }));
 
@@ -80,7 +86,7 @@ app.use((req, res, next) => {
         return next();
     }
 
-    const targetUrl = process.env.AB_AI_PRODUCTION_URL;
+    const targetUrl = process.env.AB_AI_PRODUCTION_URL || 'https://parashariindia.vercel.app';
     if (!targetUrl) return next();
 
     // 3. LOOP PROTECTION
