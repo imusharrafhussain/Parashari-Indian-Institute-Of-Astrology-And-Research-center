@@ -6,7 +6,8 @@ export default function Login() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const token = params.get("token");
+        const hashMatch = window.location.hash.match(/token=([^&]+)/);
+        const token = params.get("token") || (hashMatch ? hashMatch[1] : null);
 
         if (!token) {
             navigate("/", { replace: true });
