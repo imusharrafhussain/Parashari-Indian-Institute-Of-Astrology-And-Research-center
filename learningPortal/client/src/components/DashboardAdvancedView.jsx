@@ -17,7 +17,7 @@ export default function DashboardAdvancedView() {
             try {
                 // Single network request logic
                 const token = localStorage.getItem('token');
-                const res = await axios.get('/api/dashboard/summary', {
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/dashboard/summary`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 console.log('Dashboard Data Received:', res.data);
@@ -38,11 +38,11 @@ export default function DashboardAdvancedView() {
     const handleUpgrade = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.post('/api/payment/create-order', {}, {
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/payment/create-order`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             // Simulate direct verify for dummy
-            await axios.post('/api/payment/verify', { orderId: res.data.id }, {
+            await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/payment/verify`, { orderId: res.data.id }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             window.location.reload();
