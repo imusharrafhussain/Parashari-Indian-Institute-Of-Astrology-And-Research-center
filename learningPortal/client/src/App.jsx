@@ -11,6 +11,7 @@ import Courses from './pages/Courses';
 import Pricing from './pages/Pricing';
 import AboutUs from './pages/AboutUs';
 import MainLayout from './layout/MainLayout';
+import Profile from './pages/Profile';
 import './App.css';
 
 // Strict Protected Route - requires session flag from auto-login
@@ -128,6 +129,11 @@ function App() {
             <Route path="/about-us" element={
               <StrictProtectedRoute>
                 <AboutUs />
+              </StrictProtectedRoute>
+            } />
+            <Route path="/profile" element={
+              <StrictProtectedRoute>
+                <Profile />
               </StrictProtectedRoute>
             } />
             <Route path="/" element={
