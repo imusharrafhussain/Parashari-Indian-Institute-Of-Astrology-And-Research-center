@@ -28,7 +28,7 @@ router.get('/summary', authMiddleware, async (req, res) => {
         // 2. Fetch all published/active courses (one query)
         let allCourses = [];
         try {
-            allCourses = await Course.find({ active: true }).select('title thumbnail price isPublished');
+            allCourses = await Course.find({ active: true, isPublished: true }).select('title thumbnail price isPublished');
             console.log('[Dashboard] Courses found:', allCourses.length);
         } catch (courseErr) {
             console.error('[Dashboard] Course fetch error:', courseErr.message);
