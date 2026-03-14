@@ -177,7 +177,7 @@
     font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: var(--spacing-16);
-    color: var(--text-main);
+    color: #8B0000;
 }
 
 .ann-item {
