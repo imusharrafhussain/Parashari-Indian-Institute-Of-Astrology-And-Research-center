@@ -19,6 +19,7 @@ export default {
         const corsHeaders = {
             "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type, Authorization, Range",
+            "Access-Control-Expose-Headers": "Content-Length, Content-Range, Accept-Ranges",
             "Access-Control-Max-Age": "86400",
         };
 
