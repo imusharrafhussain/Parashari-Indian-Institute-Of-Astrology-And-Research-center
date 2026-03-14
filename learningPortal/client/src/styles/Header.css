@@ -107,6 +107,8 @@
 .logout-btn svg {
     stroke: none;
     fill: currentColor;
+    width: 20px;
+    height: 20px;
 }
 
 .logout-btn:hover {
