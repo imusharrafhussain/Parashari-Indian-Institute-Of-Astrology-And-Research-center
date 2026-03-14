@@ -9,9 +9,10 @@
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
     padding: 0 var(--spacing-8);
     z-index: 1200;
+    border-radius: 20px 20px 0 0;
 }
 
 .bottom-nav .nav-item {
@@ -47,3 +48,36 @@
     transform: translateY(-2px);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+/* Floating AI Assistance button above the bottom nav */
+.ai-assist-fab {
+    position: fixed;
+    bottom: calc(var(--bottom-nav-height) + 12px);
+    right: 16px;
+    z-index: 1201;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #8B0000, #c0392b);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.ai-assist-fab:hover,
+.ai-assist-fab.active {
+    background: linear-gradient(135deg, #6b0000, #8B0000);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    transform: translateY(-2px);
+}
+
+.ai-assist-fab svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
