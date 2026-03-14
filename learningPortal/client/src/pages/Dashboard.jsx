@@ -90,7 +90,7 @@ const Dashboard = () => {
                         <div className="path-badge glass">Premium</div>
                     </div>
 
-                    <div className="path-card enrolled" onClick={handlePaidCoursesClick}>
+                    <div id="my-courses-section" className="path-card enrolled" onClick={handlePaidCoursesClick}>
                         <div className="path-icon">⚡</div>
                         <div className="path-info">
                             <h3 className="path-title">My Courses</h3>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../styles/BottomNav.css';
 
 const BottomNav = () => {
@@ -31,6 +31,16 @@ const BottomNav = () => {
         }
     ];
 
+    const navigate = useNavigate();
+
+    const handleMyCourses = () => {
+        navigate('/dashboard');
+        setTimeout(() => {
+            const el = document.getElementById('my-courses-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 150);
+    };
+
     return (
         <>
             {/* Floating AI Assistance button — sits above the navbar on the right */}
@@ -51,14 +61,25 @@ const BottomNav = () => {
 
             <nav className="bottom-nav">
                 {navItems.map((item) => (
-                    <NavLink
-                        key={item.name}
-                        to={item.path}
-                        className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}
-                    >
-                        <span className="icon">{item.icon}</span>
-                        <span className="label">{item.name}</span>
-                    </NavLink>
+                    item.name === 'My Courses' ? (
+                        <button
+                            key={item.name}
+                            className="nav-item"
+                            onClick={handleMyCourses}
+                        >
+                            <span className="icon">{item.icon}</span>
+                            <span className="label">{item.name}</span>
+                        </button>
+                    ) : (
+                        <NavLink
+                            key={item.name}
+                            to={item.path}
+                            className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}
+                        >
+                            <span className="icon">{item.icon}</span>
+                            <span className="label">{item.name}</span>
+                        </NavLink>
+                    )
                 ))}
             </nav>
         </>
