@@ -188,7 +188,7 @@ async function handleRegistration(event) {
         if (res.ok) {
             alert("Account created successfully! Redirecting to dashboard...");
             // Redirect to learning portal with auto-login token
-            window.location.href = `https://parashariindia.com/login?token=${result.token}`;
+            window.location.href = `https://parashariindia.com/learning-portal/login?token=${result.token}`;
         } else {
             alert(result.message || "Signup failed");
             submitBtn.disabled = false;
@@ -244,7 +244,7 @@ async function loginUser(event) {
 
             // Redirect to Learning Portal with JWT token
             setTimeout(() => {
-                window.location.href = `https://parashariindia.com/login?token=${encodeURIComponent(result.token)}`;
+                window.location.href = `https://parashariindia.com/learning-portal/login?token=${encodeURIComponent(result.token)}`;
             }, 800);
         } else {
             // Show error message

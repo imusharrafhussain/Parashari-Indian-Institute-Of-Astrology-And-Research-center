@@ -15,7 +15,7 @@ export default function AutoLogin() {
         if (!urlToken) {
             setStatus('No authentication token found');
             setTimeout(() => {
-                window.location.href = 'http://localhost:3000/login.html';
+                window.location.href = 'https://parashariindia.com/login.html';
             }, 1500);
             return;
         }
@@ -54,7 +54,7 @@ export default function AutoLogin() {
             console.error('Auto-login failed:', error);
             setStatus('Authentication failed. Redirecting to login...');
             setTimeout(() => {
-                window.location.href = 'http://localhost:3000/login.html';
+                window.location.href = 'https://parashariindia.com/login.html';
             }, 1500);
         }
     };

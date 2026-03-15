@@ -23,7 +23,7 @@ export default function ProtectedRoute({ children }) {
     // If not authenticated, redirect to AB_AI login
     if (!user) {
         // Redirect to AB_AI login page
-        window.location.href = 'http://localhost:3000/login.html';
+        window.location.href = 'https://parashariindia.com/login.html';
         return null;
     }
 

@@ -13,7 +13,7 @@ const checkAuthBeforeMount = () => {
   console.log('[AUTH CHECK]', { token: !!token, urlToken: !!urlToken, currentPath });
 
   // Allow /login route ONLY if it has a token parameter
-  if (currentPath === '/login' && urlToken) {
+  if ((currentPath === '/login' || currentPath === '/learning-portal/login') && urlToken) {
     console.log('[AUTH CHECK] Allowing /login with token');
     return true; // Let AutoLogin component handle this
   }
@@ -21,7 +21,7 @@ const checkAuthBeforeMount = () => {
   // For ALL other cases - redirect if no token
   if (!token) {
     console.log('[AUTH CHECK] No token found - redirecting to AB_AI');
-    window.location.replace('http://localhost:3000/login.html');
+    window.location.replace('https://parashariindia.com/login.html');
     return false;
   }
 
