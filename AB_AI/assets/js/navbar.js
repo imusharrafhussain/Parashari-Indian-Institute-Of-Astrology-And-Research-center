@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* ============ MEGA MENU LOGIC ============ */
 const crashCourseList = [
-  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'plrt.html', icon: 'fas fa-hourglass-half' },
+  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'plrt-6-stairs.html', icon: 'fas fa-hourglass-half' },
   { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'vastu.html', icon: 'fas fa-home' },
   { name: 'Modern Western Palmistry', meta: 'Modern', url: 'palmistry.html', icon: 'fas fa-hand-paper' },
   { name: 'Mobile Numerology', meta: 'Mobile', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
@@ -273,13 +273,14 @@ const courseDomains = [
       { name: 'Tantra', meta: 'Esoteric Practices', url: 'tantra.html', icon: 'fas fa-pray' },
       { name: 'Chakra Balancing', meta: 'Energy Centers', url: 'chakra-balancing.html', icon: 'fas fa-yin-yang' },
       { name: 'Remedies', meta: 'Astrological Solutions', url: '6-stairs-remedies.html', icon: 'fas fa-leaf' },
-      { name: 'PLRT', meta: 'Past Life Regression', url: 'plrt.html', icon: 'fas fa-hourglass-half' }
+      { name: 'PLRT', meta: 'Past Life Regression', url: 'plrt-6-stairs.html', icon: 'fas fa-hourglass-half' }
     ]
   }
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
   initMegaMenu();
+  initMobileBottomNav();
 });
 
 function initMegaMenu() {
@@ -538,3 +539,193 @@ function initMobileMegaMenu() {
     }
   });
 }
+
+/* ============ MOBILE BOTTOM NAVIGATION BAR ============ */
+function initMobileBottomNav() {
+  // Bottom nav items: Home, Fee Structure, Explore, 6 Stairs, Contact
+  const bottomNavItems = [
+    { label: 'Home', icon: 'fas fa-home', href: 'index.html' },
+    { label: 'Fee Structure', icon: 'fas fa-indian-rupee-sign', href: 'fee-structure.html' },
+    { label: 'Explore', icon: 'fas fa-compass', href: 'courses.html' },
+    { label: '6 Stairs', icon: 'fas fa-stairs', href: '6-stairs.html' },
+    { label: 'Contact', icon: 'fas fa-envelope', href: 'contact.html' }
+  ];
+
+  // Compact top nav items (remaining from hamburger menu)
+  const compactNavItems = [
+    { label: 'About Us', href: 'profile.html' },
+    { label: 'All Courses', href: 'courses.html' },
+    { label: 'Blog', href: 'blog.html' },
+    { label: 'Gallery', href: 'gallery.html' }
+  ];
+
+  // Detect current page
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  // === 1. Create bottom nav bar ===
+  const bottomNav = document.createElement('nav');
+  bottomNav.className = 'mobile-bottom-nav';
+  bottomNav.setAttribute('aria-label', 'Mobile bottom navigation');
+
+  bottomNavItems.forEach(item => {
+    const link = document.createElement('a');
+    link.href = item.href;
+    link.className = 'mobile-bottom-nav-item';
+
+    // Mark active based on current page
+    if (currentPage === item.href || (currentPage === '' && item.href === 'index.html')) {
+      link.classList.add('active');
+    }
+
+    link.innerHTML = `<i class="${item.icon}"></i><span>${item.label}</span>`;
+    bottomNav.appendChild(link);
+  });
+
+  document.body.appendChild(bottomNav);
+
+  // === 2. Create compact top nav row (replaces hamburger) ===
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const compactNav = document.createElement('div');
+    compactNav.className = 'mobile-compact-nav';
+
+    // Links section
+    const linksDiv = document.createElement('div');
+    linksDiv.className = 'mobile-compact-links';
+
+    compactNavItems.forEach(item => {
+      const link = document.createElement('a');
+
+      if (item.label === 'All Courses') {
+        // Make "All Courses" toggle the courses dropdown panel
+        link.href = 'javascript:void(0)';
+        link.textContent = item.label;
+        link.innerHTML += ' <i class="fas fa-chevron-down" style="font-size:0.6em; margin-left:2px; transition:transform 0.3s;"></i>';
+
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const panel = document.querySelector('.mobile-courses-panel');
+          const icon = link.querySelector('i');
+          if (panel) {
+            const isOpen = panel.classList.contains('open');
+            panel.classList.toggle('open');
+            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+          }
+        });
+      } else {
+        link.href = item.href;
+        link.textContent = item.label;
+      }
+
+      // Mark active
+      if (currentPage === item.href) {
+        link.classList.add('active');
+      }
+
+      linksDiv.appendChild(link);
+    });
+
+    compactNav.appendChild(linksDiv);
+
+    // CTA buttons section
+    const ctaDiv = document.createElement('div');
+    ctaDiv.className = 'mobile-compact-cta';
+    ctaDiv.innerHTML = `
+      <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+    `;
+    compactNav.appendChild(ctaDiv);
+
+    navbar.appendChild(compactNav);
+
+    // === 3. Create courses dropdown panel ===
+    const coursesPanel = document.createElement('div');
+    coursesPanel.className = 'mobile-courses-panel';
+
+    courseDomains.forEach(domain => {
+      const domainGroup = document.createElement('div');
+      domainGroup.className = 'mcp-domain-group';
+
+      // Domain header
+      const domainHeader = document.createElement('div');
+      domainHeader.className = 'mcp-domain-header';
+      domainHeader.innerHTML = `<i class="${domain.icon}"></i> <span>${domain.label}</span> <i class="fas fa-chevron-right mcp-arrow"></i>`;
+
+      // Domain courses list
+      const courseList = document.createElement('div');
+      courseList.className = 'mcp-course-list';
+
+      // Add category description if available
+      if (domain.specialContent) {
+        const descDiv = document.createElement('div');
+        descDiv.className = 'mcp-category-desc';
+        descDiv.innerHTML = `
+          <div class="mcp-desc-title">${domain.specialContent.title}</div>
+          <p class="mcp-desc-meta"><strong>Who it's for:</strong> ${domain.specialContent.whoItIsFor}</p>
+          <p class="mcp-desc-meta"><strong>Objective:</strong> ${domain.specialContent.objective}</p>
+        `;
+        courseList.appendChild(descDiv);
+      }
+
+      if (domain.courses && domain.courses.length > 0) {
+        domain.courses.forEach(course => {
+          const courseLink = document.createElement('a');
+          courseLink.href = course.url;
+          courseLink.className = 'mcp-course-link';
+          courseLink.innerHTML = `<i class="${course.icon || domain.icon}"></i> <span>${course.name}</span>`;
+          courseList.appendChild(courseLink);
+        });
+      } else {
+        const emptyMsg = document.createElement('p');
+        emptyMsg.style.cssText = 'padding:8px 15px; color:#999; font-size:0.8rem; font-style:italic;';
+        emptyMsg.textContent = 'Coming soon';
+        courseList.appendChild(emptyMsg);
+      }
+
+      // Toggle accordion
+      domainHeader.addEventListener('click', () => {
+        const isOpen = courseList.classList.contains('open');
+        // Close all others
+        coursesPanel.querySelectorAll('.mcp-course-list').forEach(cl => cl.classList.remove('open'));
+        coursesPanel.querySelectorAll('.mcp-domain-header').forEach(hdr => hdr.classList.remove('active'));
+
+        if (!isOpen) {
+          courseList.classList.add('open');
+          domainHeader.classList.add('active');
+        }
+      });
+
+      domainGroup.appendChild(domainHeader);
+      domainGroup.appendChild(courseList);
+      coursesPanel.appendChild(domainGroup);
+    });
+
+    // Insert panel right after the header element
+    const headerEl = document.querySelector('header');
+    if (headerEl) {
+      headerEl.appendChild(coursesPanel);
+    }
+
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+      const panel = document.querySelector('.mobile-courses-panel');
+      const allCoursesLink = document.querySelector('.mobile-compact-links a[href="javascript:void(0)"]');
+      if (panel && panel.classList.contains('open')) {
+        if (!panel.contains(e.target) && !allCoursesLink.contains(e.target)) {
+          panel.classList.remove('open');
+          const icon = allCoursesLink.querySelector('i');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        }
+      }
+    });
+  }
+
+  // === 4. Clean up: hide hamburger menu items (no longer needed) ===
+  const mobileMenuNav = document.querySelector('.mobile-menu-nav');
+  if (mobileMenuNav) {
+    // Remove all items since we've moved everything
+    const allNavItems = mobileMenuNav.querySelectorAll('.nav-item');
+    allNavItems.forEach(navItem => navItem.remove());
+  }
+}
+
