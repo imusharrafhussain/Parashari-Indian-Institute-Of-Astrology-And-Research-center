@@ -1,0 +1,30 @@
+JS:
+[
+  {
+    "n": "index-I05WIAAE.js",
+    "mb": 1.2244701385498047
+  }
+]
+IMG:
+[
+  {
+    "n": "12.mp4",
+    "mb": 303.7214546203613
+  },
+  {
+    "n": "Copy of Modern Healthcare Instagram Reel_20250820_211924_0001.mp4",
+    "mb": 287.8134288787842
+  },
+  {
+    "n": "6-stairs-hero-image.png",
+    "mb": 10.113482475280762
+  },
+  {
+    "n": "6-Stairs.png",
+    "mb": 10.113482475280762
+  },
+  {
+    "n": "parashari image.png",
+    "mb": 10.090198516845703
+  }
+]

@@ -10,9 +10,14 @@ mongoose.connect(uri)
     const userSchema = new mongoose.Schema({}, { strict: false });
     const User = mongoose.model('User', userSchema, 'users');
 
-    const allUsers = await User.find({});
-    console.log("Total users in this DB:", allUsers.length);
-    allUsers.forEach(u => console.log("- " + u.get('email')));
+    const email = "perveznaik01@gmail.com";
+    const user = await User.findOne({ email });
+
+    if (user) {
+      console.log("User found:", user.toObject());
+    } else {
+      console.log("User NOT found in the database. Email:", email);
+    }
     
     process.exit(0);
   })
