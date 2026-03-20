@@ -3,6 +3,7 @@ services:
   - type: web
     name: parashari-parent-app
     env: node
+    region: singapore
     plan: free
     rootDir: AB_AI
     buildCommand: npm install
@@ -19,6 +20,7 @@ services:
   - type: web
     name: parashari-learning-api
     env: node
+    region: singapore
     plan: free
     rootDir: learningPortal/server
     buildCommand: npm install
