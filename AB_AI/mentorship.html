@@ -2,282 +2,614 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-on-1 Mentorship - Parashari Indian Institute</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/loader.css">
-    <link rel="stylesheet" href="assets/css/search.css">
-    <link rel="stylesheet" href="assets/css/chatbot.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-on-1 Mentorship - Parashari Indian Institute</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/loader.css">
+  <link rel="stylesheet" href="assets/css/search.css">
+  <link rel="stylesheet" href="assets/css/chatbot.css">
+  <link rel="stylesheet" href="assets/css/learn-more-btn.css">
   <link rel="stylesheet" href="assets/css/urgency.css">
+  <style>
+    /* Make the 'Why Our Courses Stand Out' cards always visible for courses.html */
+    .highlights-overlay {
+      opacity: 1 !important;
+    }
+
+    .highlights-card img {
+      filter: brightness(0.4) saturate(0.5) !important;
+    }
+
+    .highlights-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .courses-hero-bg {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('assets/images/explore-hero-image.png') center/cover no-repeat fixed;
+    }
+
+    /* Category Filter Styles */
+    .category-filter-container {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      color: #6c757d;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .filter-tab:hover {
+      border-color: #8b0000;
+      color: #8b0000;
+    }
+
+    .filter-tab.active {
+      background: #8b0000;
+      border-color: #8b0000;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(139, 0, 0, 0.4);
+    }
+
+    /* Animation for cards when filtering */
+    .premium-gold-card {
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .premium-gold-card.hidden {
+      display: none;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    @media (max-width: 768px) {
+      .category-filter-container {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0 10px 10px;
+      }
+
+      .filter-tab {
+        padding: 6px 14px;
+        font-size: 0.82rem;
+      }
+    }
+
+    #courseGrid.all-courses-active .category-badge {
+      display: none !important;
+    }
+
+
+    /* Guarantee structured alignment for all course cards */
+    .course-desc-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 60px;
+      /* Aligns textual height across varying card lengths */
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    /* Filter Badges */
+    .filter-badge {
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 6px;
+      font-weight: 800;
+      color: #fff;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .filter-badge.beginner {
+      background-color: #4CAF50;
+    }
+
+    .filter-badge.popular {
+      background-color: #2196F3;
+    }
+
+    .filter-badge.pro {
+      background-color: #9C27B0;
+    }
+
+    .filter-badge.advanced {
+      background-color: #FF9800;
+    }
+
+    .filter-badge.elite {
+      background-color: #D4AF37;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="header-top">
-        <div class="header-top-content">
-            <div class="header-top-left">
-                <div class="header-top-item"><span class="header-top-icon">📞</span><a href="tel:+919621051159">+91 962 105 1159</a></div>
-                <div class="header-top-item"><span class="header-top-icon">✉️</span><a
-                        href="mailto:info@astrobharatai.com">info@astrobharatai.com</a></div>
-            </div>
-            <div class="header-top-right">Online Classes | ISO Certified</div>
+  <div class="header-top">
+    <div class="header-top-content">
+      <div class="header-top-left">
+        <div class="header-top-item">
+          <span class="header-top-icon">📞</span>
+          <a href="tel:+919621051159">+91 962 105 1159</a>
         </div>
+        <div class="header-top-item">
+          <span class="header-top-icon">✉️</span>
+          <a href="mailto:info@astrobharatai.com">info@astrobharatai.com</a>
+        </div>
+      </div>
+      <div class="header-top-right">Online Classes | ISO Certified</div>
     </div>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-menu">
-
-                <li class="nav-item search-nav-item">
-                    <!-- Search Bar Injected -->
-                    <div class="search-container">
-                        <div class="container-input">
-                            <input type="text" placeholder="Search all courses" name="text" class="input"
-                                id="courseSearchInput">
-                            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                        <div id="searchResults" class="search-results"></div>
-                    </div>
-                </li>
-
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="profile.html">About Us</a></li>
-                <li class="nav-item dropdown">
-                    <a href="javascript:void(0)" class="active">Courses <i class="fas fa-chevron-down"
-                            style="font-size: 0.8em; margin-left: 4px;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a href="astrology.html">Vedic Astrology</a></li>
-                        <li class="dropdown-item"><a href="nadi-jyotish.html">Nadi Jyotish</a></li>
-                        <li class="dropdown-item"><a href="lal-kitab.html">Lal Kitab Remedies</a></li>
-                        <li class="dropdown-item"><a href="remedy-course.html">Remedy Course (Upaay Gyaan)</a></li>
-                        <li class="dropdown-item"><a href="kp-astrology.html">KP Astrology</a></li>
-                        <li class="dropdown-item"><a href="bnn-astrology.html">BNN (Advanced Techniques)</a></li>
-                        <li class="dropdown-item"><a href="crystal-healing.html">Crystal Healing</a></li>
-                        <li class="dropdown-item"><a href="medical-astrology.html">Medical Astrology</a></li>
-                        <li class="dropdown-item"><a href="complete-astrology.html">Complete Astrology Course</a></li>
-                        <li class="dropdown-item"><a href="rudraksha.html">Rudraksha Remedies</a></li>
-                        <li class="dropdown-item"><a href="vastu.html">Vastu Shastra</a></li>
-                        <li class="dropdown-item"><a href="palmistry.html">Palmistry</a></li>
-                        <li class="dropdown-item"><a href="face-reading.html">Face Reading</a></li>
-                        <li class="dropdown-item"><a href="tarot.html">Tarot Reading</a></li>
-                        <li class="dropdown-item"><a href="numerology.html">Numerology</a></li>
-                        <li class="dropdown-item"><a href="mentorship.html">1-on-1 Mentorship</a></li>
-            <li class="dropdown-item"><a href="gemini-jyotish.html">Gemini Jyotish</a></li>
-                    </ul>
-                </li>
-        <li class="nav-item"><a href="fee-structure.html">Fee Structure</a></li>
-                <li class="nav-item"><a href="courses.html">Explore</a></li>
-        <li class="nav-item"><a href="blog.html">Blog</a></li>
+  </div>
+  <header>
+    <nav class="navbar">
+      <!-- Logo removed from navbar as requested -->
+      <ul class="nav-menu">
+        <li class="nav-item search-nav-item">
+          <!-- Search Bar Injected -->
+          <div class="search-container">
+            <div class="container-input">
+              <input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
+              <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                  fill-rule="evenodd">
+                </path>
+              </svg>
+            </div>
+            <div id="searchResults" class="search-results">
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="profile.html">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)">Courses <i class="fas fa-chevron-down"
+              style="font-size: 0.8em; margin-left: 4px;">
+            </i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="astrology.html">Vedic Astrology</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="nadi-jyotish.html">Nadi Jyotish</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="lal-kitab.html">Lal Kitab Remedies</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="remedy-course.html">Remedy Course (Upaay Gyaan)</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="kp-astrology.html">KP Astrology</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="bnn-astrology.html">BNN (Advanced Techniques)</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="crystal-healing.html">Crystal Healing</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="medical-astrology.html">Medical Astrology</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="complete-astrology.html">Complete Astrology Course</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="rudraksha.html">Rudraksha Remedies</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="vastu.html">Vastu Shastra</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="palmistry.html">Palmistry</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="face-reading.html">Face Reading</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="tarot.html">Tarot Reading</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="numerology.html">Numerology</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="mentorship.html" style="color: #D4AF37; font-weight: 800; background: rgba(212,175,55,0.05); border-left: 3px solid #D4AF37; padding-left: 12px; display: flex; align-items: center; justify-content: space-between;">1-on-1 Mentorship <i class="fa-solid fa-star" style="font-size: 0.75rem; color: #D4AF37;"></i></a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="fee-structure.html">Fee Structure</a>
+        </li>
+        <li class="nav-item">
+          <a href="courses.html" class="active">Explore</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html">Blog</a>
+        </li>
         <li class="nav-item"><a href="6-stairs.html">6 Stairs</a></li>
-                <li class="nav-item"><a href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="contact.html">Contact</a></li>
-            </ul>
+        <li class="nav-item">
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
 
+      <button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+      </button>
+    </nav>
 
-            <div class="navbar-cta">
-                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-            </div>
-            
-<button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-        <div class="mobile-menu">
-            <ul class="nav-menu mobile-menu-nav">
+    <div class="search-results">
+    </div>
+    </div>
+    <div class="mobile-menu">
+      <ul class="nav-menu mobile-menu-nav">
+        <li class="nav-item w-full">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item w-full">
+          <a href="profile.html">About Us</a>
+        </li>
+        <li class="nav-item w-full">
+          <a href="courses.html">Courses</a>
+        </li>
+        <li class="nav-item w-full">
+          <a href="fee-structure.html">Fee Structure</a>
+        </li>
+        <li class="nav-item w-full">
+          <a href="courses.html">Explore</a>
+        </li>
+        <li class="nav-item w-full">
+          <a href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item w-full"><a href="6-stairs.html">6 Stairs</a></li>
+        <li class="nav-item w-full">
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item w-full">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </div>
 
-                <li class="nav-item w-full"><a href="index.html">Home</a></li>
-                <li class="nav-item w-full"><a href="profile.html">About Us</a></li>
-                <li class="nav-item w-full"><a href="courses.html">Courses</a></li>
-        <li class="nav-item w-full"><a href="fee-structure.html">Fee Structure</a></li>
-                <li class="nav-item w-full"><a href="courses.html">Explore</a></li>
-        <li class="nav-item w-full"><a href="blog.html">Blog</a></li>
-<li class="nav-item w-full"><a href="6-stairs.html">6 Stairs</a></li>
-                <li class="nav-item w-full"><a href="gallery.html">Gallery</a></li>
-                <li class="nav-item w-full"><a href="contact.html">Contact</a></li>
-            </ul>
+    </div>
 
-
-            <div class="navbar-cta">
-                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-            </div>
+    <div class="tablet-search-container">
+      <div class="search-container">
+        <div class="container-input">
+          <input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
+          <svg fill="#666" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+              fill-rule="evenodd"></path>
+          </svg>
         </div>
-
         <div class="search-results"></div>
-        </div>
-        </div>
-        <div class="tablet-search-container">
-            <div class="search-container">
-                <div class="container-input">
-                    <input type="text" placeholder="Search all courses" name="text" class="input">
-                    <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
-                            fill-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <div class="search-results"></div>
-            </div>
-        </div>
-    </header>
+      </div>
+    </div>
+  </header>
   
-
-
+  <main id="mentorship-content">
     
+    <!-- HERO SECTION -->
+    <section class="mentorship-hero" style="position: relative; overflow: hidden; padding: 120px 20px 80px; text-align: center; border-bottom: 2px solid #D4AF37; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('assets/images/hero image of 1-1 mentorship.png') center/cover no-repeat fixed;">
+      <div class="container" style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
+        <div style="display: inline-block; border: 1px solid rgba(212,175,55,0.5); border-radius: 30px; padding: 6px 16px; margin-bottom: 25px; color: #D4AF37; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,0.4); text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+          <i class="fa-solid fa-star" style="margin-right: 6px;"></i> PARASHARI INSTITUTE
+        </div>
+        <h1 style="font-family: 'Cinzel', serif; font-size: 3.5rem; color: #fff; margin-bottom: 20px; line-height: 1.1; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">
+          1-ON-1 <span style="color: #D4AF37;">VEDIC</span><br>
+          <span style="color: #D4AF37;">ASTROLOGY</span> <span style="color: #eab308;">MENTORSHIP</span>
+        </h1>
+        <p style="color: #e5e7eb; font-size: 1.25rem; margin: 0 auto 35px; max-width: 700px; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+          Personalized guidance from India's most revered Vedic scholars. Unlock the ancient wisdom of Jyotish Shastra with dedicated 24×7 mentorship support.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px;">
+          <a href="contact.html" class="btn" style="background: #eab308; color: #1f2937; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1.1rem; border: none; transition: 0.3s; box-shadow: 0 4px 14px rgba(234,179,8,0.3);">Book Your Mentor</a>
+          <a href="courses.html" class="btn" style="background: transparent; color: #d1d5db; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1.1rem; border: 1px solid rgba(255,255,255,0.3); transition: 0.3s;">Explore Programs</a>
+        </div>
+        
+        <!-- Stats Row -->
+        <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
+          <div style="text-align: center;">
+            <i class="fa-solid fa-user-group" style="color: #eab308; font-size: 1.5rem; margin-bottom: 15px;"></i>
+            <h3 style="font-size: 1.8rem; margin: 0 0 5px; color: #fff;">5,000+</h3>
+            <p style="font-size: 0.75rem; color: #9ca3af; margin: 0; text-transform: uppercase; letter-spacing: 1px;">Active Students</p>
+          </div>
+          <div style="text-align: center;">
+            <i class="fa-solid fa-star" style="color: #eab308; font-size: 1.5rem; margin-bottom: 15px;"></i>
+            <h3 style="font-size: 1.8rem; margin: 0 0 5px; color: #fff;">50+</h3>
+            <p style="font-size: 0.75rem; color: #9ca3af; margin: 0; text-transform: uppercase; letter-spacing: 1px;">Expert Mentors</p>
+          </div>
+          <div style="text-align: center;">
+            <i class="fa-solid fa-clock" style="color: #eab308; font-size: 1.5rem; margin-bottom: 15px;"></i>
+            <h3 style="font-size: 1.8rem; margin: 0 0 5px; color: #fff;">24×7</h3>
+            <p style="font-size: 0.75rem; color: #9ca3af; margin: 0; text-transform: uppercase; letter-spacing: 1px;">Support</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section style="padding-top: 60px;">
-    <div class="container text-center">
-      <h1 class="color-primary" style="font-size: 2.5rem; margin-bottom: 0.5rem;">👨‍🏫 1-on-1 Mentorship</h1>
-      <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; font-weight: 500;">Personalized Guidance from Expert Astrologers</p>
-    </div>
-    <div class="container" data-animate>
-      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=400&fit=crop" alt="Mentorship" class="rounded-lg" style="width: 85%; max-width: 1000px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; display: block; margin-bottom: 2rem;">
-    </div>
-    <div class="container" data-animate>
-      <h2>What is 1-on-1 Mentorship?</h2>
-                    <p>Our exclusive 1-on-1 Mentorship program provides personalized guidance from experienced
-                        astrologers tailored to your specific learning goals, pace, and interests. Whether you're
-                        starting fresh or advancing existing skills, receive dedicated attention to accelerate your
-                        astrological journey.</p>
-                    <p>Choose your focus area, schedule flexible sessions, get customized curriculum, practice with real
-                        charts, and receive ongoing support to become a confident, skilled astrologer.</p>
-                    <ul class="list-reset">
-                        <li class="mb-0-75">✓ Personalized curriculum</li>
-                        <li class="mb-0-75">✓ Flexible scheduling</li>
-                        <li class="mb-0-75">✓ Expert guidance</li>
-                        <li>✓ Real-world practice</li>
-                    </ul>
-    </div>
-  </section>
+    <!-- WHY CHOOSE US -->
+    <section style="padding: 100px 20px; background: #fafaf9;">
+      <div class="container text-center" style="max-width: 1200px;">
+        <span style="color: #D4AF37; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">WHY CHOOSE US</span>
+        <h2 style="font-family: 'Cinzel', serif; font-size: 3rem; color: #591C21; margin: 10px 0 20px;">YOUR PATH TO MASTERY</h2>
+        <p style="color: #6b7280; font-size: 1.1rem; max-width: 600px; margin: 0 auto 60px;">
+          Experience the most comprehensive 1-on-1 Vedic astrology mentorship program in India
+        </p>
 
-    <section class="light-bg">
-        <div class="container">
-            <h2 class="card-section-title">Our Mentorship Program</h2>
-            <div class="grid grid-2 grid-gap-3">
-                <div class="card card-auto p-4" data-animate>
-                    <h3 class="color-primary mb-1 text-center">Program Details</h3>
-                    <table class="program-table">
-                        <tr class="table-row">
-                            <td class="table-cell-bold">Duration</td>
-                            <td class="table-cell-right">Flexible</td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-cell-bold">Mode</td>
-                            <td class="table-cell-right">Online (Video Calls)</td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-cell-bold">Sessions</td>
-                            <td class="table-cell-right">Customized</td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-cell-bold">Fee</td>
-                            <td class="table-cell-right">Contact for Pricing</td>
-                        </tr>
-                        <tr>
-                            <td class="table-cell-bold">Certificate</td>
-                            <td class="table-cell-right">Upon Completion</td>
-                        </tr>
-                    </table>
-                    <a href="register.html" class="btn btn-primary btn-full mt-1-5">Enroll Now</a>
-                </div>
-                <div class="card card-auto p-4" data-animate>
-                    <h3 class="color-primary mb-1 text-center">What You'll Get</h3>
-                    <ul class="list-reset">
-                        <li class="mb-0-75"><strong>Benefit 1:</strong> Customized learning path based on your goals
-                        </li>
-                        <li class="mb-0-75"><strong>Benefit 2:</strong> Direct access to experienced mentors</li>
-                        <li class="mb-0-75"><strong>Benefit 3:</strong> Flexible session scheduling</li>
-                        <li class="mb-0-75"><strong>Benefit 4:</strong> Doubt clearing & concept reinforcement</li>
-                        <li class="mb-0-75"><strong>Benefit 5:</strong> Case study practice with feedback</li>
-                        <li class="mb-0-75"><strong>Benefit 6:</strong> Career guidance & business setup</li>
-                    </ul>
-                </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; text-align: left;">
+          <!-- Card 1 -->
+          <div style="background: #fff; padding: 40px 30px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <div style="width: 50px; height: 50px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+              <i class="fa-solid fa-video" style="color: #fff; font-size: 1.2rem;"></i>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2 class="card-section-title">Why Choose Mentorship?</h2>
-            <div class="grid grid-3 grid-gap-2">
-                <div class="card text-center card-auto p-3" data-animate>
-                    <div class="font-3xl mb-1"><i class="fa-solid fa-briefcase"></i></div>
-                    <h4>Career Advancement</h4>
-                    <p>Fast-track your professional astrology career with expert guidance.</p>
-                </div>
-                <div class="card text-center card-auto p-3" data-animate>
-                    <div class="font-3xl mb-1"><i class="fa-solid fa-person-praying"></i></div>
-                    <h4>Personal Growth</h4>
-                    <p>Learn at your own pace with personalized attention and support.</p>
-                </div>
-                <div class="card text-center card-auto p-3" data-animate>
-                    <div class="font-3xl mb-1"><i class="fa-solid fa-star-half-stroke"></i></div>
-                    <h4>Mastery & Confidence</h4>
-                    <p>Gain deep mastery and confidence through individualized training.</p>
-                </div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: #111827; margin-bottom: 12px; font-weight: 600;">LIVE 1-ON-1 SESSIONS</h3>
+            <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Private video sessions with your dedicated Vedic astrology mentor, tailored to your learning pace and goals.</p>
+          </div>
+          <!-- Card 2 -->
+          <div style="background: #fff; padding: 40px 30px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <div style="width: 50px; height: 50px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+              <i class="fa-solid fa-clock" style="color: #fff; font-size: 1.2rem;"></i>
             </div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: #111827; margin-bottom: 12px; font-weight: 600;">24×7 SUPPORT</h3>
+            <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Round-the-clock assistance via chat and email. Your doubts never have to wait for the next session.</p>
+          </div>
+          <!-- Card 3 -->
+          <div style="background: #fff; padding: 40px 30px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <div style="width: 50px; height: 50px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+              <i class="fa-solid fa-book-open" style="color: #fff; font-size: 1.2rem;"></i>
+            </div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: #111827; margin-bottom: 12px; font-weight: 600;">PERSONALIZED CURRICULUM</h3>
+            <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Custom study plans covering Parashari, Jaimini, Nadi, and KP systems based on your interests.</p>
+          </div>
+          <!-- Card 4 -->
+          <div style="background: #fff; padding: 40px 30px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <div style="width: 50px; height: 50px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+              <i class="fa-solid fa-bullseye" style="color: #fff; font-size: 1.2rem;"></i>
+            </div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: #111827; margin-bottom: 12px; font-weight: 600;">CHART READING PRACTICE</h3>
+            <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Hands-on practice analyzing real horoscopes with expert feedback on every prediction.</p>
+          </div>
+          <!-- Card 5 -->
+          <div style="background: #fff; padding: 40px 30px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <div style="width: 50px; height: 50px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+              <i class="fa-solid fa-headphones" style="color: #fff; font-size: 1.2rem;"></i>
+            </div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: #111827; margin-bottom: 12px; font-weight: 600;">DEDICATED MENTOR</h3>
+            <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">A single mentor assigned to you for continuity, deep understanding, and consistent progress tracking.</p>
+          </div>
+          <!-- Card 6 -->
+          <div style="background: #fff; padding: 40px 30px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)';">
+            <div style="width: 50px; height: 50px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+              <i class="fa-solid fa-shield-halved" style="color: #fff; font-size: 1.2rem;"></i>
+            </div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: #111827; margin-bottom: 12px; font-weight: 600;">CERTIFICATION & PLACEMENT</h3>
+            <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Earn Parashari Institute certification with 100% placement support as a professional astrologer.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="light-bg">
-        <div class="container text-center">
-            <h2 class="mb-1-5">Ready for Personalized Mentorship?</h2>
-            <p class="mb-2">Join our 1-on-1 Mentorship program and accelerate your astrological journey.</p>
-            <a href="register.html" class="btn btn-primary btn-lg">Start Learning Today</a>
+    <!-- HOW IT WORKS -->
+    <section style="padding: 100px 20px; background: #F3EFE9;">
+      <div class="container text-center" style="max-width: 1000px;">
+        <span style="color: #D4AF37; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">SIMPLE PROCESS</span>
+        <h2 style="font-family: 'Cinzel', serif; font-size: 3rem; color: #591C21; margin: 10px 0 60px;">HOW IT WORKS</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; text-align: left;">
+          
+          <div style="background: #fff; padding: 35px 30px; border-radius: 12px; display: flex; gap: 25px; align-items: flex-start; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <div style="width: 65px; height: 60px; min-width: 60px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.4rem; font-family: 'Cinzel', serif; font-weight: 600;">
+              01
+            </div>
+            <div>
+              <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #111827; margin: 0 0 10px;">CHOOSE YOUR PATH</h3>
+              <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Select your area of interest — Parashari, Jaimini, KP, Nadi, or comprehensive Vedic astrology.</p>
+            </div>
+          </div>
+          
+          <div style="background: #fff; padding: 35px 30px; border-radius: 12px; display: flex; gap: 25px; align-items: flex-start; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <div style="width: 65px; height: 60px; min-width: 60px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.4rem; font-family: 'Cinzel', serif; font-weight: 600;">
+              02
+            </div>
+            <div>
+              <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #111827; margin: 0 0 10px;">GET MATCHED</h3>
+              <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">We pair you with the perfect mentor based on your goals, level, and preferred learning style.</p>
+            </div>
+          </div>
+          
+          <div style="background: #fff; padding: 35px 30px; border-radius: 12px; display: flex; gap: 25px; align-items: flex-start; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <div style="width: 65px; height: 60px; min-width: 60px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.4rem; font-family: 'Cinzel', serif; font-weight: 600;">
+              03
+            </div>
+            <div>
+              <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #111827; margin: 0 0 10px;">START LEARNING</h3>
+              <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Begin live 1-on-1 sessions with personalized curriculum, chart practice, and 24×7 doubt support.</p>
+            </div>
+          </div>
+          
+          <div style="background: #fff; padding: 35px 30px; border-radius: 12px; display: flex; gap: 25px; align-items: flex-start; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <div style="width: 65px; height: 60px; min-width: 60px; background: #591C21; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.4rem; font-family: 'Cinzel', serif; font-weight: 600;">
+              04
+            </div>
+            <div>
+              <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #111827; margin: 0 0 10px;">GET CERTIFIED</h3>
+              <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0;">Complete assessments, earn your Parashari Institute certification, and get placement support.</p>
+            </div>
+          </div>
+          
         </div>
+      </div>
     </section>
+
+    <!-- TESTIMONIALS / STUDENT STORIES -->
+    <section style="padding: 100px 20px; background: #fafaf9;">
+      <div class="container text-center" style="max-width: 1200px;">
+        <span style="color: #D4AF37; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">TESTIMONIALS</span>
+        <h2 style="font-family: 'Cinzel', serif; font-size: 3rem; color: #591C21; margin: 10px 0 60px;">STUDENT STORIES</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; text-align: left;">
+          
+          <div style="background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; position: relative;">
+            <i class="fa-solid fa-quote-right" style="position: absolute; right: 30px; top: 30px; font-size: 2.5rem; color: #f3f4f6;"></i>
+            <div style="color: #eab308; font-size: 1rem; margin-bottom: 20px; display: flex; gap: 3px;">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p style="color: #4b5563; font-style: italic; font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; min-height: 100px;">
+              "The 1-on-1 mentorship at Parashari Institute transformed my understanding of Jyotish. My mentor was available even at odd hours to clear my doubts. Truly 24×7 support!"
+            </p>
+            <div>
+              <h4 style="color: #111827; font-size: 1.05rem; margin: 0 0 4px; font-family: 'Cinzel', serif; font-weight: 700;">Priya Nair</h4>
+              <p style="color: #9ca3af; font-size: 0.9rem; margin: 0;">Lucknow</p>
+            </div>
+          </div>
+
+          <div style="background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; position: relative;">
+            <i class="fa-solid fa-quote-right" style="position: absolute; right: 30px; top: 30px; font-size: 2.5rem; color: #f3f4f6;"></i>
+            <div style="color: #eab308; font-size: 1rem; margin-bottom: 20px; display: flex; gap: 3px;">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p style="color: #4b5563; font-style: italic; font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; min-height: 100px;">
+              "After trying multiple online courses, the personalized mentorship here was a game-changer. The chart reading practice with real-time feedback accelerated my learning tenfold."
+            </p>
+            <div>
+              <h4 style="color: #111827; font-size: 1.05rem; margin: 0 0 4px; font-family: 'Cinzel', serif; font-weight: 700;">Rajesh Gupta</h4>
+              <p style="color: #9ca3af; font-size: 0.9rem; margin: 0;">Kanpur</p>
+            </div>
+          </div>
+
+          <div style="background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; position: relative;">
+            <i class="fa-solid fa-quote-right" style="position: absolute; right: 30px; top: 30px; font-size: 2.5rem; color: #f3f4f6;"></i>
+            <div style="color: #eab308; font-size: 1rem; margin-bottom: 20px; display: flex; gap: 3px;">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p style="color: #4b5563; font-style: italic; font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; min-height: 100px;">
+              "From complete beginner to certified astrologer in 8 months. The dedication of my mentor and the structured curriculum made all the difference."
+            </p>
+            <div>
+              <h4 style="color: #111827; font-size: 1.05rem; margin: 0 0 4px; font-family: 'Cinzel', serif; font-weight: 700;">Ananya Sharma</h4>
+              <p style="color: #9ca3af; font-size: 0.9rem; margin: 0;">Hardoi</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- FINAL CTA -->
+    <section style="padding: 100px 20px; background: #271010; text-align: center; border-top: 1px solid rgba(212,175,55,0.2);">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-family: 'Cinzel', serif; font-size: 3rem; color: #fff; margin: 0 0 20px; line-height: 1.2;">
+          BEGIN YOUR <span style="color: #D4AF37;">VEDIC</span><br>
+          <span style="color: #D4AF37;">JOURNEY</span> TODAY
+        </h2>
+        <p style="color: #9ca3af; font-size: 1.1rem; line-height: 1.6; margin: 0 auto 40px; max-width: 600px;">
+          Join thousands of students who have transformed their lives through the ancient wisdom of Vedic astrology.
+        </p>
+        <a href="contact.html" class="btn" style="display: inline-flex; align-items: center; gap: 10px; background: #eab308; color: #111827; padding: 15px 35px; border-radius: 8px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(234,179,8,0.2);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+          Start Your Mentorship <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- TOP URGENCY MARQUEE -->
   <div class="urgency-marquee-container">
     <div class="urgency-marquee-content">
       <div class="marquee-item">
-        <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats Available! <div class="marquee-timer timer-pulse">Ends in: <span class="marquee-timer-val">47:59:59</span></div> <a href="register.html" class="marquee-btn">Register Now</a>
+        <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
+        Available! <div class="marquee-timer timer-pulse">Ends in: <span class="marquee-timer-val">47:59:59</span></div>
+        <a href="register.html" class="marquee-btn">Register Now</a>
       </div>
       <div class="marquee-item">
-        <span class="marquee-icon">🔥</span> Fast Track Your Career with 100% Placement Assistance 
+        <span class="marquee-icon">🔥</span> Fast Track Your Career with 100% Placement Assistance
         <a href="courses.html" class="marquee-btn">View Courses</a>
       </div>
       <div class="marquee-item">
-        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top Performers! 
+        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship
+        Available for Top Performers!
         <a href="register.html" class="marquee-btn">Apply Now</a>
       </div>
       <!-- Duplicate for seamless scrolling -->
       <div class="marquee-item">
-        <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats Available! <div class="marquee-timer timer-pulse">Ends in: <span class="marquee-timer-val">47:59:59</span></div> <a href="register.html" class="marquee-btn">Register Now</a>
+        <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
+        Available! <div class="marquee-timer timer-pulse">Ends in: <span class="marquee-timer-val">47:59:59</span></div>
+        <a href="register.html" class="marquee-btn">Register Now</a>
       </div>
       <div class="marquee-item">
-        <span class="marquee-icon">🔥</span> Fast Track Your Career with 100% Placement Assistance 
+        <span class="marquee-icon">🔥</span> Fast Track Your Career with 100% Placement Assistance
         <a href="courses.html" class="marquee-btn">View Courses</a>
       </div>
       <div class="marquee-item">
-        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top Performers! 
+        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship
+        Available for Top Performers!
         <a href="register.html" class="marquee-btn">Apply Now</a>
       </div>
     </div>
   </div>
 
   <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Parashari</h4>
-                <p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
-                <div class="social-wrapper">
-          <a href="https://www.instagram.com/astrobharatai?igsh=Z2M2ZW82OXBxaGNr" target="_blank" rel="noopener noreferrer" class="icon instagram">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Parashari</h4>
+        <p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
+        <div class="social-wrapper">
+          <a href="https://www.instagram.com/astrobharatai?igsh=Z2M2ZW82OXBxaGNr" target="_blank"
+            rel="noopener noreferrer" class="icon instagram">
             <span class="tooltip">Instagram</span>
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.youtube.com/@astrobharatai" target="_blank" rel="noopener noreferrer" class="icon youtube">
+          <a href="https://www.youtube.com/@astrobharatai" target="_blank" rel="noopener noreferrer"
+            class="icon youtube">
             <span class="tooltip">YouTube</span>
             <i class="fab fa-youtube"></i>
           </a>
@@ -285,14 +617,15 @@
             <span class="tooltip">Twitter</span>
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://www.linkedin.com/company/astrobharatai/" target="_blank" rel="noopener noreferrer" class="icon linkedin">
+          <a href="https://www.linkedin.com/company/astrobharatai/" target="_blank" rel="noopener noreferrer"
+            class="icon linkedin">
             <span class="tooltip">LinkedIn</span>
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="profile.html">About Us</a></li>
@@ -303,9 +636,9 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Programs</h4>
+      </div>
+      <div class="footer-section">
+        <h4>Programs</h4>
         <ul class="footer-links">
           <li><a href="courses.html">Crash Course</a></li>
           <li><a href="courses.html">Diploma</a></li>
@@ -314,85 +647,248 @@
           <!-- <li><a href="courses.html">Grand Master</a></li> -->
           <li><a href="6-stairs.html">6 Stairs</a></li>
         </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <div class="contact-info">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-text">
-                        <p class="p-reset">123 Vedic Street, Delhi - 110001</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-text">
-                        <p class="p-reset"><a href="tel:+919621051159">+91 962 105 1159</a></p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <div class="contact-info">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <p class="p-reset">1/344, near Kathauta Chauraha Road, Vinamra Khand, Gomti Nagar, Lucknow, Uttar Pradesh
+              226010</p>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <div class="copyright">
-                    <p class="p-reset">&copy; 2024 Parashari Institute. All rights reserved.</p>
-                </div>
-                <div class="developer-credit">Designed by <a href="#">Our Team</a></div>
-            </div>
+        <div class="contact-info">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <p class="p-reset">
+              <a href="tel:+919621051159">+91 962 105 1159</a>
+            </p>
+          </div>
         </div>
-    </footer>
-
-
-
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/form-validation.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/loader.js"></script>
-    <script src="assets/js/search.js"></script>
-    <script src="assets/js/chatbot.js"></script>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="copyright">
+          <p class="p-reset">&copy; 2024 Parashari Institute.</p>
+        </div>
+        <div class="developer-credit">Designed by <a href="#">Our Team</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/courses-data.js">
+  </script>
+  <script src="assets/js/navbar.js">
+  </script>
+  <script src="assets/js/form-validation.js">
+  </script>
+  <script src="assets/js/main.js">
+  </script>
+  <script src="assets/js/loader.js">
+  </script>
+  <script src="assets/js/search.js">
+  </script>
+  <script src="assets/js/chatbot.js">
+  </script>
 
 
 
 
   <!-- URGENCY TIMER JS -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Set end date to 2 days from now for consistent urgency
       let endDate = new Date();
       endDate.setDate(endDate.getDate() + 2);
       endDate.setHours(23, 59, 59);
 
       const timerElements = document.querySelectorAll('.marquee-timer-val');
-      
-      if(timerElements.length > 0) {
-        setInterval(function() {
+
+      if (timerElements.length > 0) {
+        setInterval(function () {
           const now = new Date().getTime();
           const distance = endDate.getTime() - now;
 
           if (distance < 0) {
-             // Reset timer to 2 days if it expires
-             endDate = new Date();
-             endDate.setDate(endDate.getDate() + 2);
-             return;
+            // Reset timer to 2 days if it expires
+            endDate = new Date();
+            endDate.setDate(endDate.getDate() + 2);
+            return;
           }
 
           const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
           const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          const timeString = 
-            (hours < 10 ? "0" + hours : hours) + ":" + 
-            (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+          const timeString =
+            (hours < 10 ? "0" + hours : hours) + ":" +
+            (minutes < 10 ? "0" + minutes : minutes) + ":" +
             (seconds < 10 ? "0" + seconds : seconds);
 
           timerElements.forEach(el => {
-              el.innerText = timeString;
+            el.innerText = timeString;
           });
         }, 250);
       }
     });
   </script>
 
-  
+
+
+  <!-- FILTER LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-tab');
+      const courseCards = document.querySelectorAll('.premium-gold-card, .grand-master-mega-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+
+          const filterValue = button.getAttribute('data-filter');
+          const grid = document.getElementById('courseGrid');
+
+          if (filterValue === 'all') {
+            grid.classList.add('all-courses-active');
+          } else {
+            grid.classList.remove('all-courses-active');
+          }
+
+          const shownIds = new Set();
+          courseCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            const courseId = card.getAttribute('data-course-id');
+
+            if (filterValue === 'all') {
+              // De-duplication logic for "All Courses"
+              if (cardCategory === 'Grand Master') {
+                card.classList.add('hidden');
+              } else if (courseId && shownIds.has(courseId)) {
+                card.classList.add('hidden');
+              } else {
+                card.classList.remove('hidden');
+                if (courseId) shownIds.add(courseId);
+              }
+            } else if (filterValue === cardCategory) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+
+          // Optional: Smooth scroll to grid top if user is far down
+          /*
+          const grid = document.getElementById('courseGrid');
+          if (window.scrollY > grid.offsetTop) {
+            window.scrollTo({
+              top: grid.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+          */
+        });
+      });
+
+
+      // Handle direct hash links to specific filters
+      if (window.location.hash === '#grand-master-section') {
+        const gmFilter = document.querySelector('.filter-tab[data-filter="Grand Master"]');
+        if (gmFilter) {
+          gmFilter.click();
+          // Scroll slightly above the grid to show the filters and the card
+          setTimeout(() => {
+            const grid = document.getElementById('courseGrid');
+            if (grid) {
+              window.scrollTo({
+                top: grid.offsetTop - 100,
+                behavior: 'smooth'
+              });
+            }
+          }, 100);
+        }
+      }
+    });
+  </script>
+
+  <!-- QUICK VIEW MODAL STRUCTURE -->
+  <div id="quickViewOverlay" class="quick-view-overlay">
+    <div class="quick-view-modal">
+      <div class="qv-close" id="qvClose"><i class="fa-solid fa-xmark"></i></div>
+      <img src="" id="qvImage" class="qv-image" alt="Course Image">
+      <div class="qv-body">
+        <h3 id="qvTitle" class="qv-title">Course Title</h3>
+        <p id="qvDesc" class="qv-desc">Course Description</p>
+      </div>
+      <div class="qv-landscape-bar">
+        <div class="qv-prices">
+          <span id="qvOldPrice" class="qv-old-price">₹3,499</span>
+          <span id="qvNewPrice" class="qv-new-price">₹2,499</span>
+        </div>
+        <a href="#" id="qvEnrollBtn" class="qv-enroll-btn">Enroll Now</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const overlay = document.getElementById('quickViewOverlay');
+      if (!overlay) return;
+
+      const closeBtn = document.getElementById('qvClose');
+      const qvImage = document.getElementById('qvImage');
+      const qvTitle = document.getElementById('qvTitle');
+      const qvDesc = document.getElementById('qvDesc');
+      const qvOldPrice = document.getElementById('qvOldPrice');
+      const qvNewPrice = document.getElementById('qvNewPrice');
+      const qvEnrollBtn = document.getElementById('qvEnrollBtn');
+
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('show');
+      });
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.remove('show');
+      });
+
+      document.body.addEventListener('click', function (e) {
+        const btn = e.target.closest('.learn-more');
+        if (!btn) return;
+
+        // Try standard card first
+        let card = btn.closest('.premium-gold-card');
+        if (!card) card = btn.closest('.card'); // For index.html
+        if (!card) return;
+
+        const category = card.getAttribute('data-category');
+        if (category === 'Crash Course') {
+          e.preventDefault();
+
+          let imgEl = card.querySelector('.card-image');
+          let titleEl = card.querySelector('.card-title');
+          let descEl = card.querySelector('p'); // Fallback to 'p' tag if '.course-desc-text' not found
+          let descElSpecific = card.querySelector('.course-desc-text');
+          let delEl = card.querySelector('del');
+          let strongEl = card.querySelector('strong');
+
+          if (imgEl && titleEl && (descElSpecific || descEl) && delEl && strongEl) {
+            qvImage.src = imgEl.src;
+            qvTitle.innerText = titleEl.innerText;
+            qvDesc.innerText = descElSpecific ? descElSpecific.innerText : descEl.innerText;
+            qvOldPrice.innerText = delEl.innerText;
+            qvNewPrice.innerText = strongEl.innerText;
+
+            qvEnrollBtn.href = btn.getAttribute('href');
+            overlay.classList.add('show');
+          }
+        }
+      });
+    });
+  </script>
+
 
 </body>
 

@@ -48,6 +48,18 @@
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
                 url('assets/images/blog-hero-image.png') center/cover no-repeat fixed;
         }
+        .go-to-top-btn {
+            position: fixed;
+            left: 30px;
+            bottom: 30px;
+            z-index: 1000;
+        }
+        @media screen and (max-width: 768px) {
+            .go-to-top-btn {
+                bottom: 90px;
+                left: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -106,7 +118,7 @@
                         <li class="dropdown-item"><a href="face-reading.html">Face Reading</a></li>
                         <li class="dropdown-item"><a href="tarot.html">Tarot Reading</a></li>
                         <li class="dropdown-item"><a href="numerology.html">Numerology</a></li>
-                        <li class="dropdown-item"><a href="mentorship.html">1-on-1 Mentorship</a></li>
+                        <li class="dropdown-item"><a href="mentorship.html" style="color: #D4AF37; font-weight: 800; background: rgba(212,175,55,0.05); border-left: 3px solid #D4AF37; padding-left: 12px; display: flex; align-items: center; justify-content: space-between;">1-on-1 Mentorship <i class="fa-solid fa-star" style="font-size: 0.75rem; color: #D4AF37;"></i></a></li>
             <li class="dropdown-item"><a href="gemini-jyotish.html">Gemini Jyotish</a></li>
                     </ul>
                 </li>
@@ -186,7 +198,7 @@
                 <div class="blog-carousel-track">
 
                     <!-- Slide 1 -->
-                    <article class="blog-featured carousel-slide active">
+                    <article class="blog-featured carousel-slide active glass-locked">
                         <div class="blog-featured-img">
                             <img src="assets/images/gemini-card.png" alt="Featured Article">
                         </div>
@@ -220,7 +232,7 @@
                     </article>
 
                     <!-- Slide 2 -->
-                    <article class="blog-featured carousel-slide">
+                    <article class="blog-featured carousel-slide glass-locked">
                         <div class="blog-featured-img">
                             <img src="assets/images/taurus-card.png" alt="Featured Article 2">
                         </div>
@@ -253,7 +265,7 @@
                     </article>
 
                     <!-- Slide 3 -->
-                    <article class="blog-featured carousel-slide">
+                    <article class="blog-featured carousel-slide glass-locked">
                         <div class="blog-featured-img">
                             <img src="assets/images/vedic-astrology.jpeg" alt="Featured Article 3">
                         </div>
@@ -287,7 +299,7 @@
                     </article>
 
                     <!-- Slide 4 -->
-                    <article class="blog-featured carousel-slide">
+                    <article class="blog-featured carousel-slide glass-locked">
                         <div class="blog-featured-img">
                             <img src="assets/images/cancer-card.png" alt="Featured Article 4">
                         </div>
@@ -319,7 +331,7 @@
                     </article>
 
                     <!-- Slide 5 -->
-                    <article class="blog-featured carousel-slide">
+                    <article class="blog-featured carousel-slide glass-locked">
                         <div class="blog-featured-img">
                             <img src="assets/images/leo-card.png" alt="Featured Article 5">
                         </div>
@@ -351,7 +363,7 @@
                     </article>
 
                     <!-- Slide 6 -->
-                    <article class="blog-featured carousel-slide">
+                    <article class="blog-featured carousel-slide glass-locked">
                         <div class="blog-featured-img">
                             <img src="assets/images/virgo-card.jpg" alt="Featured Article 6">
                         </div>
@@ -504,8 +516,8 @@
                 <!-- Blog Grid -->
                 <div class="blog-grid">
                     <!-- Card 1 -->
-                    <article class="blog-card" data-category="Vedic Astrology"
-                        onclick="location.href='blog-mangal-dosha.html'" style="cursor:pointer;">
+                    <article class="blog-card glass-locked" data-category="Vedic Astrology"
+                        >
                         <div class="blog-card-img-wrapper">
                             <img src="assets/images/vedic-astrology.jpeg"
                                 alt="Fiery Aries Zodiac Sign representing Mangal Dosha" class="blog-card-img">
@@ -524,8 +536,8 @@
                     </article>
 
                     <!-- Card 2 -->
-                    <article class="blog-card" data-category="Vastu Shastra"
-                        onclick="location.href='blog-vastu-tips.html'" style="cursor:pointer;">
+                    <article class="blog-card glass-locked" data-category="Vastu Shastra"
+                        >
                         <div class="blog-card-img-wrapper">
                             <img src="assets/images/taurus-card.png"
                                 alt="Earthy Taurus Zodiac Sign representing stability and Vastu" class="blog-card-img">
@@ -544,8 +556,8 @@
                     </article>
 
                     <!-- Card 3 -->
-                    <article class="blog-card" data-category="Lal Kitab"
-                        onclick="location.href='blog-lal-kitab-financial.html'" style="cursor:pointer;">
+                    <article class="blog-card glass-locked" data-category="Lal Kitab"
+                        >
                         <div class="blog-card-img-wrapper">
                             <img src="assets/images/gemini-card.png"
                                 alt="Gemini Zodiac Symbol for Lal Kitab Financial Remedies" class="blog-card-img">
@@ -565,8 +577,8 @@
                     </article>
 
                     <!-- Card 4 -->
-                    <article class="blog-card" data-category="Numerology"
-                        onclick="location.href='blog-numerology-life-path.html'" style="cursor:pointer;">
+                    <article class="blog-card glass-locked" data-category="Numerology"
+                        >
                         <div class="blog-card-img-wrapper">
                             <img src="assets/images/cancer-card.png"
                                 alt="Cancer Zodiac Sign representing Numerology Life Path Numbers"
@@ -586,8 +598,8 @@
                     </article>
 
                     <!-- Card 5 -->
-                    <article class="blog-card" data-category="KP Astrology"
-                        onclick="location.href='blog-kp-astrology.html'" style="cursor:pointer;">
+                    <article class="blog-card glass-locked" data-category="KP Astrology"
+                        >
                         <div class="blog-card-img-wrapper">
                             <img src="assets/images/leo-card.png"
                                 alt="Leo Zodiac Sign representing Introduction to KP Astrology" class="blog-card-img">
@@ -606,8 +618,8 @@
                     </article>
 
                     <!-- Card 6 -->
-                    <article class="blog-card" data-category="Student Success Stories"
-                        onclick="location.href='blog-student-success.html'" style="cursor:pointer;">
+                    <article class="blog-card glass-locked" data-category="Student Success Stories"
+                        >
                         <div class="blog-card-img-wrapper">
                             <img src="assets/images/virgo-card.jpg"
                                 alt="Virgo Zodiac Sign for Student Success Story at Parashari Institute"
@@ -649,7 +661,7 @@
 
             <div class="free-course-grid">
                 <!-- Course 1 -->
-                <div class="free-course-card" data-category="Vedic Astrology">
+                <div class="free-course-card glass-locked" data-category="Vedic Astrology">
                     <img src="assets/images/leo-card.png" alt="Course" class="free-course-img">
                     <div class="free-course-content">
                         <h3 class="free-course-title">Introduction to Ascendants and Planets</h3>
@@ -699,7 +711,7 @@
                 </div>
 
                 <!-- Course 2 -->
-                <div class="free-course-card" data-category="Remedies">
+                <div class="free-course-card glass-locked" data-category="Remedies">
                     <img src="assets/images/virgo-card.jpg" alt="Course" class="free-course-img">
                     <div class="free-course-content">
                         <h3 class="free-course-title">Learn the Basics of Lal Kitab Grammar</h3>
@@ -749,7 +761,7 @@
                 </div>
 
                 <!-- Course 3 -->
-                <div class="free-course-card" data-category="Divination">
+                <div class="free-course-card glass-locked" data-category="Divination">
                     <img src="assets/images/vedic-astrology.jpeg" alt="Course" class="free-course-img">
                     <div class="free-course-content">
                         <h3 class="free-course-title">Understanding Elements in Tarot Reading</h3>
@@ -808,7 +820,7 @@
             </div>
 
             <!-- Go to top circle -->
-            <div style="position: fixed; right: 30px; bottom: 30px; z-index: 1000;">
+            <div class="go-to-top-btn">
                 <div onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
                     style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--primary-color); display: flex; justify-content: center; align-items: center; cursor: pointer; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s ease;"
                     onmouseover="this.style.transform='translateY(-5px)'"
@@ -1119,6 +1131,6 @@
 
 
 
+    <script src="assets/js/chatbot.js"></script>
 </body>
-
 </html>

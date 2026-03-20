@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,17 +16,18 @@
     <link rel="stylesheet" href="assets/css/urgency.css">
     <style>
         .category-filter-container { margin: 20px 0 40px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .filter-tab { padding: 12px 24px; border-radius: 50px; background: #fff; border: 2px solid #e0d5c8; color: #5a1e1e; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.95rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; z-index: 1; }
-        .filter-tab::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #c8960c, #8b4513); opacity: 0; transition: opacity 0.3s ease; z-index: -1; }
-        .filter-tab:hover { border-color: #c8960c; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(200, 150, 12, 0.2); }
-        .filter-tab.active { background: linear-gradient(135deg, #c8960c, #8b4513); border-color: transparent; color: #fff; transform: scale(1.05); box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3); }
-        .filter-tab.active::before { opacity: 1; }
+        .filter-tab { padding: 6px 16px; border-radius: 50px; background: #fff; border: 1px solid #d0d0d0; color: #6c757d; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.9rem; position: relative; overflow: hidden; z-index: 1; display: flex; align-items: center; justify-content: center; }
+        
+        .filter-tab:hover { border-color: #8b0000; color: #8b0000; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2); }
+        .filter-tab.active { background: #8b0000; border-color: #8b0000; color: #fff; transform: scale(1.05); box-shadow: 0 4px 10px rgba(139, 0, 0, 0.4); }
+      .filter-badge { font-size: 0.65rem; padding: 2px 8px; border-radius: 12px; margin-left: 6px; font-weight: 800; color: #fff; vertical-align: middle; text-transform: uppercase; letter-spacing: 0.5px; } .filter-badge.popular { background-color: #2196F3; } .filter-badge.pro { background-color: #9C27B0; } .filter-badge.advanced { background-color: #FF9800; } .filter-badge.elite { background-color: #D4AF37; }
+        
         .program-tab-content { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
-            .category-filter-container { justify-content: center; overflow-x: auto; padding-bottom: 10px; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; gap: 10px; scrollbar-width: none; }
-            .category-filter-container::-webkit-scrollbar { display: none; }
-            .filter-tab { flex: 0 0 auto; padding: 10px 20px; font-size: 0.85rem; }
+            .category-filter-container { justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0 10px 10px; }
+            
+            .filter-tab { padding: 6px 14px; font-size: 0.82rem; }
         }
         
         .landscape-pricing-card { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #ffffff, #fdfbf7); border: 1px solid rgba(200, 150, 12, 0.3); border-left: 6px solid #c8960c; border-radius: 12px; padding: 25px 40px; margin-top: 40px; margin-bottom: 20px; flex-wrap: nowrap; gap: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
@@ -53,6 +54,7 @@
         .comparison-table th.tier-diploma { background: #fdfbf7; }
         .comparison-table th.tier-bachelors { background: #f5eedc; }
         .comparison-table th.tier-masters { background: #e0d5c8; }
+        .comparison-table th.tier-grand-master { background: #d4a991; }
         
         .tier-title { display: block; font-size: 1.3rem; color: #5a1e1e; margin-bottom: 5px; }
         .tier-price { display: block; font-size: 1.1rem; color: #c8960c; font-weight: 700; }
@@ -61,9 +63,33 @@
         .col-diploma { background: #fdfbf7 !important; }
         .col-bachelors { background: #f5eedc !important; }
         .col-masters { background: #e0d5c8 !important; }
+        .col-grand-master { background: #d4a991 !important; }
         
         .c-icon.check { color: #4CAF50; font-size: 1.2rem; }
         .c-icon.cross { color: #f44336; font-size: 1.1rem; opacity: 0.6; }
+    
+        .gm-premium-badge {
+            background: linear-gradient(135deg, #d4af37 0%, #ffdf70 50%, #d4af37 100%);
+            color: #5a1e1e;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.70em;
+            font-weight: 800;
+            margin-left: 8px;
+            border: 1px solid #ffd700;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+            text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+            animation: pulse-glow 2s infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.8), inset 0 0 8px rgba(255, 255, 255, 0.8); }
+        }
+
     </style>
 </head>
 
@@ -229,9 +255,10 @@
             <h2 class="card-section-title">Our Lal Kitab Program</h2>
 
             <div class="category-filter-container">
-                <button class="filter-tab active" data-program="diploma">Diploma</button>
-                <button class="filter-tab" data-program="bachelors">Bachelors</button>
-                <button class="filter-tab" data-program="masters">Masters</button>
+                <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
+                <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
+                <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
+                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
             </div>
 
             <div id="diploma" class="program-tab-content" style="display: block;">
@@ -246,7 +273,7 @@
                     <div class="card card-auto p-4" data-animate>
                         <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Debts &amp; Remedies (Part 2)</h3>
                         <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Debts &amp; Kayam Planets</strong><br>Analyzes ancestral curses through Pitra Rin (karmic debts) and identifies "Kayam" planets — those standing firm and unaffected by malefic influences.</li>
+                            <li class="mb-2"><strong>Module 3: Debts &amp; Kayam Planets</strong><br>Analyzes ancestral curses through Pitra Rin (karmic debts) and identifies "Kayam" planets ”” those standing firm and unaffected by malefic influences.</li>
                             <li class="mb-0-75"><strong>Module 4: The Art of Remedies</strong><br>Focuses on Upay (remedies) using logic and precautions, emphasizing practical actions like donations or flow of items in water.</li>
                         </ul>
                     </div>
@@ -363,6 +390,60 @@
                 </div>
             </div>
 
+
+
+            <!-- GRAND MASTER TAB -->
+
+            <div id="grand-master" class="program-tab-content" style="display: none;">
+                <div class="grid grid-2 grid-gap-3">
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 1: Grammar of Lal Kitab <span class="gm-premium-badge">Advanced</span></strong><br>Introduces unique terminology like Dharmi Teva (pious chart) and Andha Teva (blind chart), defining how planets behave in specific houses.</li>
+                            <li class="mb-0-75"><strong>Module 2: House Swaps &amp; Aspects <span class="gm-premium-badge">Advanced</span></strong><br>Mastering Lal Kitab's unique planetary aspects and house swaps, where planets exchange influences differently than in traditional Vedic astrology.</li>
+                        </ul>
+                    </div>
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Karmic Analysis (Part 2)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 3: Analysing Pitra Rin <span class="gm-premium-badge">Advanced</span></strong><br>Identifying Pitra Rin (ancestral curses) through specific planetary combinations and applying targeted remedies to clear deep-seated family karmic debts.</li>
+                            <li class="mb-0-75"><strong>Module 4: Annual Charts (Varshphal) <span class="gm-premium-badge">Advanced</span></strong><br>Learning to construct and interpret the Lal Kitab Varshphal, predicting year-by-year events by rotating planets within the annual chart.</li>
+                        </ul>
+                    </div>
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Advanced Remedies (Part 3)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 5: The Logic of Remedies <span class="gm-premium-badge">Advanced</span></strong><br>Explaining the symbolic logic of Upay, such as why specific objects are submerged in water or buried in earth.</li>
+                            <li class="mb-0-75"><strong>Module 6: Debt &amp; Sacrifice (Bali) <span class="gm-premium-badge">Advanced</span></strong><br>Studying the concept of sacrificial planets (Bali ka Bakra), where one planet's negative influence is transferred to another for protection.</li>
+                        </ul>
+                    </div>
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery (Part 4)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 7: Blind &amp; Half-Blind Charts <span class="gm-premium-badge">Advanced</span></strong><br>Advanced analysis of Andha and Dharmi Tevas, focusing on how to "awaken" dormant houses and planets through specific rituals.</li>
+                            <li class="mb-0-75"><strong>Module 8: Professional Integration <span class="gm-premium-badge">Advanced</span></strong><br>Combining ancient Lal Kitab wisdom with modern lifestyle adjustments, ensuring remedies remain practical and effective in today's urban environments.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="landscape-pricing-card" data-animate>
+                   <div class="pricing-info-left">
+                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
+                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Lal Kitab</h3>
+                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
+                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
+                        </p>
+                    </div>
+                    <div class="pricing-block">
+                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
+                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
+                    </div>
+                    <div class="enroll-block">
+                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -389,6 +470,10 @@
                                 <span class="tier-title">Masters</span>
                                 <span class="tier-price">₹18,699</span>
                             </th>
+                            <th class="tier-grand-master">
+                                <span class="tier-title">Grand Master</span>
+                                <span class="tier-price">₹24,999</span>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -397,50 +482,100 @@
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 2: Aspects &amp; Planetary States</td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 3: Debts / Pitra Rin &amp; Kayam Planets</td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 4: The Art of Remedies / Varshphal</td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 5: Logic of Remedies</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 6: Modern Integration / Debt &amp; Sacrifice</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 7: Blind &amp; Half-Blind Charts</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Module 8: Professional Integration</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
-                    </tbody>
+                                            <tr>
+
+                            <td>Ultimate 48 Weeks of Access</td>
+
+                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+
+                            <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+
+                            <td class="col-masters"><i class="fas fa-times c-icon cross"></i></td>
+
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Free 6 Spiritual Stairs Pathway</td>
+
+                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+
+                            <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+
+                            <td class="col-masters"><i class="fas fa-times c-icon cross"></i></td>
+
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>Digital Badge / E-Certificate</strong></td>
+
+                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+
+                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+
+                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+
+                        </tr>
+
+</tbody>
                 </table>
             </div>
         </div>
@@ -450,7 +585,7 @@
     <div class="urgency-marquee-container">
         <div class="urgency-marquee-content">
             <div class="marquee-item">
-                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
+                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats
                 Available! <div class="marquee-timer timer-pulse">Ends in: <span
                         class="marquee-timer-val">47:59:59</span></div> <a href="register.html" class="marquee-btn">Fast
                     Register</a>
@@ -460,13 +595,13 @@
                 <a href="courses.html" class="marquee-btn">View Courses</a>
             </div>
             <div class="marquee-item">
-                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top
+                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today ”” Scholarship Available for Top
                 Performers!
                 <a href="register.html" class="marquee-btn">Apply Now</a>
             </div>
             <!-- Duplicate for seamless scrolling -->
             <div class="marquee-item">
-                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
+                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats
                 Available! <div class="marquee-timer timer-pulse">Ends in: <span
                         class="marquee-timer-val">47:59:59</span></div> <a href="register.html" class="marquee-btn">Fast
                     Register</a>
@@ -476,7 +611,7 @@
                 <a href="courses.html" class="marquee-btn">View Courses</a>
             </div>
             <div class="marquee-item">
-                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top
+                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today ”” Scholarship Available for Top
                 Performers!
                 <a href="register.html" class="marquee-btn">Apply Now</a>
             </div>
@@ -645,3 +780,5 @@
 </body>
 
 </html>
+
+

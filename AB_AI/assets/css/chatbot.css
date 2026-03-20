@@ -446,7 +446,7 @@
     }
 
     .astro-chat-toggle {
-        bottom: 20px;
+        bottom: 90px;
         /* Keep above navigation bars/floating buttons */
         right: 15px;
         width: 55px;

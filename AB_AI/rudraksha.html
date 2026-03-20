@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,7 +59,7 @@
             transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
         }
-        .filter-tab.active::before { opacity: 1; }
+        
         .program-tab-content {
             animation: fadeIn 0.4s ease-in-out;
         }
@@ -77,7 +77,7 @@
                 gap: 10px;
                 scrollbar-width: none;
             }
-            .category-filter-container::-webkit-scrollbar { display: none; }
+            
             .filter-tab {
                 flex: 0 0 auto;
                 padding: 10px 20px;
@@ -187,6 +187,7 @@
         .comparison-table th.tier-diploma { background: #fdfbf7; }
         .comparison-table th.tier-bachelors { background: #f5eedc; }
         .comparison-table th.tier-masters { background: #e0d5c8; }
+        .comparison-table th.tier-grand-master { background: #d4a991; }
         .tier-title { display: block; font-size: 1.3rem; color: #5a1e1e; margin-bottom: 5px; }
         .tier-price { display: block; font-size: 1.1rem; color: #c8960c; font-weight: 700; }
         .comparison-table tbody tr:nth-child(even) td { background: #fafafa; }
@@ -194,8 +195,32 @@
         .col-diploma { background: #fdfbf7 !important; }
         .col-bachelors { background: #f5eedc !important; }
         .col-masters { background: #e0d5c8 !important; }
+        .col-grand-master { background: #d4a991 !important; }
         .c-icon.check { color: #4CAF50; font-size: 1.2rem; }
         .c-icon.cross { color: #f44336; font-size: 1.1rem; opacity: 0.6; }
+    
+        .gm-premium-badge {
+            background: linear-gradient(135deg, #d4af37 0%, #ffdf70 50%, #d4af37 100%);
+            color: #5a1e1e;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.70em;
+            font-weight: 800;
+            margin-left: 8px;
+            border: 1px solid #ffd700;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+            text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+            animation: pulse-glow 2s infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.8), inset 0 0 8px rgba(255, 255, 255, 0.8); }
+        }
+
     </style>
 </head>
 
@@ -358,11 +383,11 @@
 
       <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Five Key Reasons to Study Rudraksha</h3>
       <ul class="list-reset">
-        <li class="mb-0-75">✓ Learn about sacred spiritual beads — Rudraksha beads have long been associated with meditation and spiritual practices</li>
-        <li class="mb-0-75">✓ Understand the different types of Rudraksha — learn how beads are classified according to the number of natural faces (mukhis)</li>
-        <li class="mb-0-75">✓ Gain knowledge of authentic Rudraksha identification — recognize genuine beads and understand their natural features</li>
-        <li class="mb-0-75">✓ Expand knowledge of traditional spiritual practices — explore traditions connected with meditation, prayer, and personal discipline</li>
-        <li>✓ Develop expertise in a specialized field — with proper study, knowledge of Rudraksha can lead to opportunities in consultation, teaching, or research</li>
+        <li class="mb-0-75">✓ Learn about sacred spiritual beads ”” Rudraksha beads have long been associated with meditation and spiritual practices</li>
+        <li class="mb-0-75">✓ Understand the different types of Rudraksha ”” learn how beads are classified according to the number of natural faces (mukhis)</li>
+        <li class="mb-0-75">✓ Gain knowledge of authentic Rudraksha identification ”” recognize genuine beads and understand their natural features</li>
+        <li class="mb-0-75">✓ Expand knowledge of traditional spiritual practices ”” explore traditions connected with meditation, prayer, and personal discipline</li>
+        <li>✓ Develop expertise in a specialized field ”” with proper study, knowledge of Rudraksha can lead to opportunities in consultation, teaching, or research</li>
       </ul>
     </div>
   </section>
@@ -373,9 +398,10 @@
             <h2 class="card-section-title">Our Rudraksha Program</h2>
 
             <div class="category-filter-container">
-                <button class="filter-tab active" data-program="diploma">Diploma</button>
-                <button class="filter-tab" data-program="bachelors">Bachelors</button>
-                <button class="filter-tab" data-program="masters">Masters</button>
+                <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
+                <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
+                <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
+                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
             </div>
 
             <!-- DIPLOMA TAB -->
@@ -510,6 +536,60 @@
                 </div>
             </div>
 
+
+
+            <!-- GRAND MASTER TAB -->
+
+            <div id="grand-master" class="program-tab-content" style="display: none;">
+                <div class="grid grid-2 grid-gap-3">
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 1: Advanced Fundamentals (Week 1-2) <span class="gm-premium-badge">Advanced</span></strong><br>Origin and evolution of Rudraksha, detailed botanical and spiritual structure, scriptures references (Shiva Purana, Padma Purana), global varieties and characteristics, energetic properties.</li>
+                            <li class="mb-0-75"><strong>Module 2: Complete Mukhi Research (Week 3-4) <span class="gm-premium-badge">Advanced</span></strong><br>1 to 21 Mukhi deep analysis, rare Rudraksha types and their powers, deity connection and symbolism, planetary correlations, advanced benefits analysis.</li>
+                        </ul>
+                    </div>
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Rare &amp; Testing (Part 2)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 3: Rare &amp; Special Rudraksha (Week 5-6) <span class="gm-premium-badge">Advanced</span></strong><br>Gauri Shankar Rudraksha, Ganesh Rudraksha, Trijuti Rudraksha, Garbh Gauri Rudraksha, collector category Rudraksha.</li>
+                            <li class="mb-0-75"><strong>Module 4: Scientific Testing &amp; Certification (Week 7-8) <span class="gm-premium-badge">Advanced</span></strong><br>Advanced authenticity testing, X-ray testing concepts, density and structure testing, certification process understanding, international grading standards.</li>
+                        </ul>
+                    </div>
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Rituals &amp; Integration (Part 3)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 5: Advanced Energization &amp; Ritual Science (Week 9-10) <span class="gm-premium-badge">Advanced</span></strong><br>Advanced Pran Pratishtha rituals, tantra and mantra activation, special Siddhi processes, Muhurat selection principles, maintenance rituals.</li>
+                            <li class="mb-0-75"><strong>Module 6: Astrology, Numerology &amp; Chakra Integration (Week 11-12) <span class="gm-premium-badge">Advanced</span></strong><br>Horoscope based Rudraksha selection, numerology based recommendations, chakra balancing methods, combination therapy, problem specific prescriptions.</li>
+                        </ul>
+                    </div>
+                    <div class="card card-auto p-4" data-animate>
+                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery &amp; Research (Part 4)</h3>
+                        <ul class="list-reset" style="text-align: left;">
+                            <li class="mb-2"><strong>Module 7: Rudraksha Therapy &amp; Case Studies (Week 13-14) <span class="gm-premium-badge">Advanced</span></strong><br>Rudraksha healing techniques, stress, health and energy balancing, practical case studies, client problem analysis, result tracking methods.</li>
+                            <li class="mb-0-75"><strong>Module 8: Research, Teaching &amp; Professional Mastery (Week 15-16) <span class="gm-premium-badge">Advanced</span></strong><br>How to become a Rudraksha expert, teaching methodology, research documentation, building consultation systems, premium client handling, final thesis/research project.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="landscape-pricing-card" data-animate>
+                    <div class="pricing-info-left">
+                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
+                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Rudraksha</h3>
+                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
+                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
+                        </p>
+                    </div>
+                    <div class="pricing-block">
+                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
+                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
+                    </div>
+                    <div class="enroll-block">
+                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -536,6 +616,10 @@
                                 <span class="tier-title">Masters</span>
                                 <span class="tier-price">₹18,699</span>
                             </th>
+                            <th class="tier-grand-master">
+                                <span class="tier-title">Grand Master</span>
+                                <span class="tier-price">₹24,999</span>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -544,54 +628,77 @@
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Mukhi Classification &amp; Benefits</td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Testing &amp; Authentication</td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Energization &amp; Ritual Processes</td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Astrological &amp; Healing Applications</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Professional Consultation Practice</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Rare &amp; Special Rudraksha Study</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                         <tr>
                             <td>Research, Teaching &amp; Professional Mastery</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+                        </tr>                        <tr>
+                            <td>Ultimate 48 Weeks of Access</td>
+                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+                            <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+                            <td class="col-masters"><i class="fas fa-times c-icon cross"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
+                        <tr>
+                            <td>Free 6 Spiritual Stairs Pathway</td>
+                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+                            <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+                            <td class="col-masters"><i class="fas fa-times c-icon cross"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+                        </tr>
+
                         <tr>
                             <td><strong>Digital Badge / E-Certificate</strong></td>
                             <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
                     </tbody>
                 </table>
@@ -611,7 +718,7 @@
     <div class="urgency-marquee-container">
         <div class="urgency-marquee-content">
             <div class="marquee-item">
-                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
+                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats
                 Available! <div class="marquee-timer timer-pulse">Ends in: <span
                         class="marquee-timer-val">47:59:59</span></div> <a href="register.html" class="marquee-btn">Fast
                     Register</a>
@@ -621,13 +728,13 @@
                 <a href="courses.html" class="marquee-btn">View Courses</a>
             </div>
             <div class="marquee-item">
-                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top
+                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today ”” Scholarship Available for Top
                 Performers!
                 <a href="register.html" class="marquee-btn">Apply Now</a>
             </div>
             <!-- Duplicate for seamless scrolling -->
             <div class="marquee-item">
-                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
+                <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats
                 Available! <div class="marquee-timer timer-pulse">Ends in: <span
                         class="marquee-timer-val">47:59:59</span></div> <a href="register.html" class="marquee-btn">Fast
                     Register</a>
@@ -637,7 +744,7 @@
                 <a href="courses.html" class="marquee-btn">View Courses</a>
             </div>
             <div class="marquee-item">
-                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top
+                <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today ”” Scholarship Available for Top
                 Performers!
                 <a href="register.html" class="marquee-btn">Apply Now</a>
             </div>
@@ -796,3 +903,7 @@
 </body>
 
 </html>
+
+
+
+

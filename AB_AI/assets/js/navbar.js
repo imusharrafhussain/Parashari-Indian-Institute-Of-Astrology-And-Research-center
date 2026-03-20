@@ -123,7 +123,9 @@ const masterList = [
   { name: 'Rudraksha', meta: 'Rudraksha', url: 'rudraksha.html', icon: 'fas fa-seedling' },
   { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'palmistry.html', icon: 'fas fa-hand-paper' }
 ];
-const grandMasterList = [];
+const grandMasterList = [
+  { name: 'Grand Master Program', meta: 'Lifetime Mastery', url: 'courses.html#grand-master-section', icon: 'fas fa-crown' }
+];
 
 const courseDomains = [
   {
@@ -222,11 +224,11 @@ const courseDomains = [
     id: 'level-grandmaster',
     label: 'Grand Master',
     icon: 'fas fa-crown',
-    description: 'Elite visionary training establishing you as a global authority in astrology.',
+    description: 'The ultimate 48-week mastery journey covering all 12 core disciplines plus the exclusive 6 Spiritual Stairs pathway.',
     specialContent: {
-      title: "ASTROBHARATAI Grand Master Pass – Complete Syllabus",
-      whoItIsFor: "Dedicated individuals seeking an All-in-One Lifetime Mastery Program",
-      objective: "Includes ✅ All 10 Diploma Programs | ✅ All Mastery Bundles | ✅ All future courses & upgrades",
+      title: "ASTROBHARATAI Grand Master Pass",
+      whoItIsFor: "Dedicated individuals seeking the Ultimate 48 Weeks of Access",
+      objective: "Includes ✅ All 12 Core Disciplines | ✅ Ultimate 48 Weeks of Access | ✅ Free 6 Spiritual Stairs",
       whatYouWillLearn: [
         "<b>Comprehensive Knowledge:</b> Vedic & KP Astrology, Lal Kitab, Numerology, Vastu",
         "<b>Specialized Sciences:</b> Gemstones, Face Reading, Palmistry, Tarot, Reiki",
@@ -236,10 +238,10 @@ const courseDomains = [
         "<b>Leadership:</b> Research-driven models, teaching methodology & mentoring"
       ],
       learningOutcome: [
-        "Expert-level authority as a Modern Occult Scientist",
-        "Faculty eligibility (post evaluation)",
+        "Expert-level authority across 12 disciplines",
+        "Mastery of the 6 Spiritual Stairs",
         "Priority Live Q&A (\"First-Row Access\")",
-        "Lifetime alumni & professional network"
+        "Elite Certification & 1-on-1 Mentorship support"
       ]
     },
     courses: grandMasterList
@@ -274,6 +276,31 @@ const courseDomains = [
       { name: 'Chakra Balancing', meta: 'Energy Centers', url: 'chakra-balancing.html', icon: 'fas fa-yin-yang' },
       { name: 'Remedies', meta: 'Astrological Solutions', url: '6-stairs-remedies.html', icon: 'fas fa-leaf' },
       { name: 'PLRT', meta: 'Past Life Regression', url: 'plrt-6-stairs.html', icon: 'fas fa-hourglass-half' }
+    ]
+  },
+  {
+    id: 'level-mentorship',
+    label: '<span style="color: #D4AF37; font-weight: 800;">1-on-1 Mentorship <i class="fas fa-star" style="color: #D4AF37; font-size: 0.85em; margin-left: 4px;"></i></span>',
+    icon: 'fas fa-star',
+    description: 'Accelerate your mastery with personalized, dedicated guidance from our top experts.',
+    specialContent: {
+      title: "1-on-1 Vedic Mentorship",
+      whoItIsFor: "Dedicated learners seeking a personalized pace and deep insights",
+      objective: "Provide exclusive, tailored guidance with direct expert Q&A",
+      whatYouWillLearn: [
+        "<b>Personalized Syllabus:</b> Adapted to your specific astrological goals",
+        "<b>Direct Q&A:</b> Live doubt clearing and practical chart-reading sessions",
+        "<b>Advanced Techniques:</b> Predictive secrets from top mentors",
+        "<b>Consultation Practice:</b> Real-time career and case study guidance"
+      ],
+      learningOutcome: [
+        "Accelerated learning curve and practical confidence",
+        "Direct access to 24x7 expert support",
+        "Priority guidance for professional consulting"
+      ]
+    },
+    courses: [
+      { name: 'Discover Mentorship Program', meta: 'Exclusive 1-on-1 Access', url: 'mentorship.html', icon: 'fas fa-arrow-right' }
     ]
   }
 ];
@@ -728,4 +755,4 @@ function initMobileBottomNav() {
     allNavItems.forEach(navItem => navItem.remove());
   }
 }
-
+

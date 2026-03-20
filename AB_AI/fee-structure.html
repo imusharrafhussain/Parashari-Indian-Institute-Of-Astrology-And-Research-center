@@ -1,65 +1,71 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Fee Structure - Parashari Indian Institute</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/navbar.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/loader.css">
-  <link rel="stylesheet" href="assets/css/search.css">
-  <link rel="stylesheet" href="assets/css/chatbot.css">
-  <link rel="stylesheet" href="assets/css/urgency.css">
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/navbar.css" rel="stylesheet" />
+  <link href="assets/css/footer.css" rel="stylesheet" />
+  <link href="assets/css/responsive.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="assets/css/loader.css" rel="stylesheet" />
+  <link href="assets/css/search.css" rel="stylesheet" />
+  <link href="assets/css/chatbot.css" rel="stylesheet" />
+  <link href="assets/css/urgency.css" rel="stylesheet" />
   <style>
     .fee-hero-bg {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
         url('assets/images/fee-structure-image.png') center/cover no-repeat fixed;
     }
   </style>
+  <style>
+    /* Fix Mobile Courses Dropdown Hide/Show */
+    .mobile-fee-cards .courses-scroll {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .mobile-fee-cards .courses-scroll.open {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
-
-
   <div class="header-top">
     <div class="header-top-content">
       <div class="header-top-left">
-        <div class="header-top-item"><span class="header-top-icon">📞</span><a href="tel:+919621051159">+91 962 105 1159</a></div>
+        <div class="header-top-item"><span class="header-top-icon">📞</span><a href="tel:+919621051159">+91 962 105
+            1159</a></div>
         <div class="header-top-item"><span class="header-top-icon">✉️</span><a
             href="mailto:info@astrobharatai.com">info@astrobharatai.com</a></div>
       </div>
       <div class="header-top-right">Online Classes | ISO Certified</div>
     </div>
   </div>
-
   <header>
     <nav class="navbar">
       <!-- Logo removed from navbar as requested -->
-
       <ul class="nav-menu">
-
         <li class="nav-item search-nav-item">
           <!-- Search Bar Injected -->
           <div class="search-container">
             <div class="container-input">
-              <input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
-              <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+              <input class="input" id="courseSearchInput" name="text" placeholder="Search all courses" type="text" />
+              <svg fill="#000000" height="20px" viewbox="0 0 1920 1920" width="20px" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
                   fill-rule="evenodd"></path>
               </svg>
             </div>
-            <div id="searchResults" class="search-results"></div>
+            <div class="search-results" id="searchResults"></div>
           </div>
         </li>
-
         <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="profile.html">About Us</a></li>
-
         <li class="nav-item dropdown">
           <a href="javascript:void(0)">Courses <i class="fas fa-chevron-down"
               style="font-size: 0.8em; margin-left: 4px;"></i></a>
@@ -79,60 +85,48 @@
             <li class="dropdown-item"><a href="face-reading.html">Face Reading</a></li>
             <li class="dropdown-item"><a href="tarot.html">Tarot Reading</a></li>
             <li class="dropdown-item"><a href="numerology.html">Numerology</a></li>
-            <li class="dropdown-item"><a href="mentorship.html">1-on-1 Mentorship</a></li>
+            <li class="dropdown-item"><a href="mentorship.html" style="color: #D4AF37; font-weight: 800; background: rgba(212,175,55,0.05); border-left: 3px solid #D4AF37; padding-left: 12px; display: flex; align-items: center; justify-content: space-between;">1-on-1 Mentorship <i class="fa-solid fa-star" style="font-size: 0.75rem; color: #D4AF37;"></i></a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="fee-structure.html" class="active">Fee Structure</a></li>
-
+        <li class="nav-item"><a class="active" href="fee-structure.html">Fee Structure</a></li>
         <li class="nav-item"><a href="courses.html">Explore</a></li>
         <li class="nav-item"><a href="blog.html">Blog</a></li>
         <li class="nav-item"><a href="6-stairs.html">6 Stairs</a></li>
         <li class="nav-item"><a href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
       </ul>
-
-
-
       <div class="navbar-cta">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        <a class="btn btn-outline btn-sm" href="login.html">Login</a>
+        <a class="btn btn-primary btn-sm" href="register.html">Register</a>
       </div>
-
-      
-<button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+      <button aria-label="Toggle navigation menu" class="hamburger" title="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </nav>
-
     <div class="mobile-menu">
       <ul class="nav-menu mobile-menu-nav">
-
         <li class="nav-item w-full"><a href="index.html">Home</a></li>
         <li class="nav-item w-full"><a href="profile.html">About Us</a></li>
         <li class="nav-item w-full"><a href="courses.html">Courses</a></li>
-        <li class="nav-item w-full"><a href="fee-structure.html" class="active">Fee Structure</a></li>
+        <li class="nav-item w-full"><a class="active" href="fee-structure.html">Fee Structure</a></li>
         <li class="nav-item w-full"><a href="courses.html">Explore</a></li>
         <li class="nav-item w-full"><a href="blog.html">Blog</a></li>
         <li class="nav-item w-full"><a href="6-stairs.html">6 Stairs</a></li>
         <li class="nav-item w-full"><a href="gallery.html">Gallery</a></li>
         <li class="nav-item w-full"><a href="contact.html">Contact</a></li>
       </ul>
-
-
       <div class="navbar-cta">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        <a class="btn btn-outline btn-sm" href="login.html">Login</a>
+        <a class="btn btn-primary btn-sm" href="register.html">Register</a>
       </div>
     </div>
-
-
     <div class="tablet-search-container">
       <div class="search-container">
         <div class="container-input">
-          <input type="text" placeholder="Search all courses" name="text" class="input" id="courseSearchInput">
-          <svg fill="#666" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+          <input class="input" id="courseSearchInput" name="text" placeholder="Search all courses" type="text" />
+          <svg fill="#666" height="20px" viewbox="0 0 1920 1920" width="20px" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
               fill-rule="evenodd"></path>
@@ -142,25 +136,20 @@
       </div>
     </div>
   </header>
-
-
-
   <section class="shared-page-hero fee-hero-bg">
     <div class="container">
       <h1 class="shared-page-hero-title">Fee Structure</h1>
-      <p class="shared-page-hero-subtitle">Transparent Pricing & Flexible Payment Options</p>
+      <p class="shared-page-hero-subtitle">Transparent Pricing &amp; Flexible Payment Options</p>
     </div>
   </section>
-
   <section>
     <div class="container">
-      <h2 class="card-section-title">All Programs & Fees</h2>
-
+      <h2 class="card-section-title">All Programs &amp; Fees</h2>
       <!-- One-Time Registration Fee Banner -->
       <div class="registration-banner"
         style="background: linear-gradient(135deg, #8b4513, #5a1e1e); color: #fff; padding: 20px; border-radius: 12px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; gap: 15px; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3); border: 2px solid #c89b3c;">
         <div class="reg-icon"
-          style="font-size: 2rem; background: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #fff;">
+          style="font-size: 2rem; background: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #fff;; flex-shrink: 0;">
           🎓
         </div>
         <div class="reg-text">
@@ -170,8 +159,6 @@
             course category anytime.</p>
         </div>
       </div>
-
-
       <div class="table-wrapper"
         style="background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.08);">
         <style>
@@ -345,11 +332,11 @@
             align-items: center;
           }
 
-          .course-box:hover .course-details {
+          .course-box.active .course-details {
             display: flex;
           }
 
-          .course-box:hover .course-arrow {
+          .course-box.active .course-arrow {
             transform: rotate(180deg);
           }
 
@@ -368,6 +355,17 @@
             to {
               opacity: 1;
               transform: translateY(0);
+            }
+          }
+
+
+          @media (min-width: 769px) {
+            .course-box:hover .course-details {
+              display: flex;
+            }
+
+            .course-box:hover .course-arrow {
+              transform: rotate(180deg);
             }
           }
 
@@ -548,223 +546,161 @@
               <td class="table-data-cell table-data-center">1</td>
               <td class="table-data-cell">
                 <div class="category-box">
-                  <div class="cat-title">🎓 Crash Course</div>
+                  <div class="cat-title">🎓 Crash Course<span class="popular-badge"
+                      style="background: #4caf50; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Beginner</span>
+                  </div>
                   <div class="cat-sub">Beginner Program</div>
                 </div>
               </td>
-              <td class="table-data-cell table-data-center"><span class="duration-badge"><i class="fa-solid fa-hourglass-half"></i> 4 Weeks</span></td>
-              <td class="table-data-cell">Foundations & Awareness</td>
+              <td class="table-data-cell table-data-center"><span class="duration-badge"><i
+                    class="fa-solid fa-hourglass-half"></i> 4 Weeks</span></td>
+              <td class="table-data-cell">Foundations &amp; Awareness</td>
               <!-- Crash Course courses: Past Life, Palmistry, Face Reading, Numerology, Rudraksha, Vedic Astrology, Tarot Reading -->
               <td class="table-data-cell">
                 <div class="courses-scroll">
-
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">1. Past Life Regression Theory (PLRT)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="plrt.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">1. Past Life Regression Theory (PLRT)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="plrt.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">2. Bhoomi Vastu & Prasada Vastu</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="vastu.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">2. Bhoomi Vastu (Site Energetics) &amp; Prasada
+                        Vastu (Architectural Integration)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">3. Modern Western Palmistry</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="palmistry.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">3. Modern Western Palmistry.</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">4. Mobile Numerology</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="numerology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">4. Mobile Numerology</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">5. (Face Reading) Western Physiognomy</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="face-reading.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">5. (Face Reading) Western Physiognomy
+                        (Character Analysis)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">6. Financial Astrology (Artha)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">6. Financial Astrology (Artha)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">7. Lal Kitab Basics</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="lal-kitab.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">7. Lal Kitab Basics</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">8. Medical Astrology</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="medical-astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">8. Medical Astrology</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn"
+                        href="medical-astrology.html" style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">9. The BNN Intensive: A 14-Day Mastery</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="bnn-astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">9. The BNN Intensive: A 14-Day Mastery of
+                        Bhrigu Nandi Nadi.</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="bnn-astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">10. Modern Career Astrology</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">10. Modern Career Astrology</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">11. Business Numerology</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="numerology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">11. Business Numerology</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">12. Vedic Numerology</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="numerology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">12. Vedic Numerology</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">13. Nadi Jyotish</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="nadi-jyotish.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">13. Nadi Jyotish</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nadi-jyotish.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">14. Healing</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="reiki.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">14. Healing</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">15. Feng Shui</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="feng-shui.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">15. Feng Shui</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="feng-shui.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">16. Gemini Jyotish</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="gemini-jyotish.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">16. Gemini Jyotishi</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                          style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="feng-shui.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                 </div>
               </td>
@@ -773,184 +709,134 @@
               <td class="table-data-cell table-data-center">2</td>
               <td class="table-data-cell">
                 <div class="category-box">
-                  <div class="cat-title">🎓 Diploma</div>
+                  <div class="cat-title">🎓 Diploma<span class="popular-badge"
+                      style="background: #e91e63; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Popular</span>
+                  </div>
                   <div class="cat-sub">Popular Program</div>
                 </div>
               </td>
-              <td class="table-data-cell table-data-center"><span class="duration-badge"><i class="fa-solid fa-hourglass-half"></i> 8 Weeks</span></td>
+              <td class="table-data-cell table-data-center"><span class="duration-badge"><i
+                    class="fa-solid fa-hourglass-half"></i> 8 Weeks</span></td>
               <td class="table-data-cell">Professional Entry-Level</td>
               <!-- Diploma courses: Lal Kitab Remedies, Complete Astrology, Crystal Healing -->
               <td class="table-data-cell">
                 <div class="courses-scroll">
-
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">1. Vedic Astrology (Jyotish)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">1. Numerology (Pythagorean &amp;
+                        Chaldean)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">2. Numerology (Pythagorean & Chaldean)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="numerology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">2. Vedic Astrology (Jyotish)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">3. KP Astrology (Krishnamurti Padhdhati)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="kp-astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">3. KP Astrology (Krishnamurti
+                        Padhdhati)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="kp-astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">4. Gemstone Science (Ratna Vigyan)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="gemstone.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">4. Gemstone Science (Ratna Vigyan)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="gemstone.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">5. Vastu Shastra</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="vastu.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">5. Vastu Shastra</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">6. Lal Kitab</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="lal-kitab.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">6. Lal Kitab</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">7. Face Reading (Physiognomy)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="face-reading.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">7. Face Reading (Physiognomy)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">8. Reiki Healing</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="reiki.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">8. Reiki Healing</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">9. Tarot Reading</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="tarot.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">9. Tarot Reading</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="tarot.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">10. Nakshatra (Lunar Mansions)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="nakshatra.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">10. Nakshatra (Lunar Mansions) 1</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nakshatra.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">11. Crystal Healing</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="crystal-healing.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">11. Crystal</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn"
+                        href="crystal-healing.html" style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">12. Rudraksha</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="rudraksha.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">12. Rudraksha</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="rudraksha.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">13. Palmistry (Chirognomy &amp; Chiromancy)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del>
-                        <strong style="color:#d32f2f;">₹4,199</strong> <span class="discount-text">(with 24%
-                          discount)</span></span>
-                      <a href="palmistry.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">13. Palmistry (Chirognomy &amp;
+                        Chiromancy)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                          style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                 </div>
               </td>
@@ -959,197 +845,134 @@
               <td class="table-data-cell table-data-center">3</td>
               <td class="table-data-cell">
                 <div class="category-box">
-                  <div class="cat-title">🎓 Bachelor</div>
+                  <div class="cat-title">🎓 Bachelor<span class="popular-badge"
+                      style="background: #2196f3; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Pro</span>
+                  </div>
                   <div class="cat-sub">Pro Level Program</div>
                 </div>
               </td>
-              <td class="table-data-cell table-data-center"><span class="duration-badge"><i class="fa-solid fa-hourglass-half"></i> 12 Weeks</span></td>
+              <td class="table-data-cell table-data-center"><span class="duration-badge"><i
+                    class="fa-solid fa-hourglass-half"></i> 12 Weeks</span></td>
               <td class="table-data-cell">Career Specialist</td>
               <!-- Bachelor courses: KP Astrology, Vastu Shastra, Numerology -->
               <td class="table-data-cell">
                 <div class="courses-scroll">
-
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">1. Vedic Astrology (Jyotish)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">1. Numerology (Pythagorean &amp;
+                        Chaldean)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">2. Numerology (Pythagorean & Chaldean)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="numerology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">2. Vedic Astrology (Jyotish)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">3. KP Astrology (Krishnamurti Padhdhati)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="kp-astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">3. KP Astrology (Krishnamurti
+                        Padhdhati)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="kp-astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">4. Gemstone Science (Ratna Vigyan)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="gemstone.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">4. Gemstone Science (Ratna Vigyan)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="gemstone.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">5. Vastu Shastra</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="vastu.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">5. Vastu Shastra</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">6. Lal Kitab</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="lal-kitab.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">6. Lal Kitab</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">7. Face Reading (Physiognomy)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="face-reading.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">7. Face Reading (Physiognomy)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">8. Reiki Healing</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="reiki.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">8. Reiki Healing</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">9. Tarot Reading</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="tarot.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">9. Tarot Reading</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="tarot.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">10. Nakshatra (Lunar Mansions) 1</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="nakshatra.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">10. Nakshatra (Lunar Mansions) 1</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nakshatra.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">11. Crystal Healing</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="crystal-healing.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">11. Crystal</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn"
+                        href="crystal-healing.html" style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">12. Rudraksha</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="rudraksha.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">12. Rudraksha</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="rudraksha.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                   <div class="course-box">
-                    <div class="course-header">
-                      <span class="course-name">13. Palmistry (Chirognomy &amp; Chiromancy)</span>
-                      <i class="fas fa-chevron-down course-arrow"></i>
-                    </div>
-                    <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del>
-                        <strong style="color:#d32f2f;">₹8,999</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="palmistry.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
-                    </div>
+                    <div class="course-header"><span class="course-name">13. Palmistry (Chirognomy &amp;
+                        Chiromancy)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                          style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
                   </div>
                 </div>
               </td>
@@ -1158,28 +981,164 @@
               <td class="table-data-cell table-data-center">4</td>
               <td class="table-data-cell">
                 <div class="category-box">
-                  <div class="cat-title">🎓 Master</div>
+                  <div class="cat-title">🎓 Master<span class="popular-badge"
+                      style="background: #ff9800; color: #fff; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Advance</span>
+                  </div>
                   <div class="cat-sub">Advanced Program</div>
                 </div>
               </td>
-              <td class="table-data-cell table-data-center"><span class="duration-badge"><i class="fa-solid fa-hourglass-half"></i> 16 Weeks</span></td>
-              <td class="table-data-cell">Expert & Teacher</td>
+              <td class="table-data-cell table-data-center"><span class="duration-badge"><i
+                    class="fa-solid fa-hourglass-half"></i> 16 Weeks</span></td>
+              <td class="table-data-cell">Expert &amp; Teacher</td>
               <!-- Master courses: Remedy Course, Medical Astrology, Face Reading -->
               <td class="table-data-cell">
                 <div class="courses-scroll">
-
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">1. Numerology (Pythagorean &amp;
+                        Chaldean)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">2. Vedic Astrology (Jyotish)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">3. KP Astrology (Krishnamurti
+                        Padhdhati)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="kp-astrology.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">4. Gemstone Science (Ratna Vigyan)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="gemstone.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">5. Vastu Shastra</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">6. Lal Kitab</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">7. Face Reading (Physiognomy)</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">8. Reiki Healing</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">9. Tarot Reading</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="tarot.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">10. Nakshatra (Lunar Mansions) 1</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nakshatra.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">11. Crystal</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn"
+                        href="crystal-healing.html" style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">12. Rudraksha</span><i
+                        class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="rudraksha.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header"><span class="course-name">13. Palmistry (Chirognomy &amp;
+                        Chiromancy)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+                    <div class="course-details"><span class="course-price"><del
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                          style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                          discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="table-data-cell table-data-center">5</td>
+              <td class="table-data-cell">
+                <div class="category-box">
+                  <div class="cat-title">🎓 Grand Master<span class="popular-badge"
+                      style="background: #673ab7; color: #fff; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Elite</span>
+                  </div>
+                  <div class="cat-sub">Elite Program</div>
+                </div>
+              </td>
+              <td class="table-data-cell table-data-center"><span class="duration-badge"><i
+                    class="fa-solid fa-hourglass-half"></i> 48 Weeks</span></td>
+              <td class="table-data-cell">Global Authority &amp; Visionary</td>
+              <!-- Grand Master courses: 1 Chosen Course + 6 Spiritual Stairs -->
+              <td class="table-data-cell">
+                <div class="courses-scroll">
                   <div class="course-box">
                     <div class="course-header">
-                      <span class="course-name">1. Numerology (Pythagorean & Chaldean)</span>
+                      <span class="course-name">1. Numerology (Pythagorean &amp; Chaldean)</span>
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="numerology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1189,11 +1148,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1203,11 +1160,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="kp-astrology.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1217,11 +1172,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="gemstone.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1231,11 +1184,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="vastu.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1245,11 +1196,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="lal-kitab.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1259,11 +1208,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="face-reading.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1273,11 +1220,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="reiki.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1287,11 +1232,9 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="tarot.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1301,86 +1244,107 @@
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="nakshatra.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
                     <div class="course-header">
-                      <span class="course-name">11. Crystal Healing</span>
+                      <span class="course-name">11. Crystal Rudraksha</span>
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="crystal-healing.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
                     <div class="course-header">
-                      <span class="course-name">12. Rudraksha</span>
+                      <span class="course-name">12. Palmistry (Chirognomy &amp; Chiromancy)</span>
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
                       <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
+                          style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del> <strong
+                          style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
                           discount)</span></span>
-                      <a href="rudraksha.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+                    </div>
+                  </div>
+                  <div
+                    style="text-align:center; margin: 10px 0; color: #D4AF37; font-weight: bold; font-size: 0.9em; border-top: 1px dashed #e0d5c8; padding-top: 5px;">
+                    --- Plus 6 Spiritual Stairs FREE ---</div>
+                  <div class="course-box">
+                    <div class="course-header">
+                      <span class="course-name">1. Yantra</span>
+                      <i class="fas fa-chevron-down course-arrow"></i>
+                    </div>
+                    <div class="course-details">
+                      <span class="course-price">Included</span>
                     </div>
                   </div>
                   <div class="course-box">
                     <div class="course-header">
-                      <span class="course-name">13. Palmistry (Chirognomy &amp; Chiromancy)</span>
+                      <span class="course-name">2. Mantra</span>
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del
-                          style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del>
-                        <strong style="color:#d32f2f;">₹18,699</strong> <span class="discount-text">(with 25%
-                          discount)</span></span>
-                      <a href="palmistry.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+                      <span class="course-price">Included</span>
                     </div>
                   </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="table-data-cell table-data-center">5</td>
-              <td class="table-data-cell">
-                <div class="category-box">
-                  <div class="cat-title">🎓 Grand Master</div>
-                  <div class="cat-sub">Elite Program</div>
-                </div>
-              </td>
-              <td class="table-data-cell table-data-center"><span class="duration-badge"><i class="fa-solid fa-hourglass-half"></i> 24 Weeks</span></td>
-              <td class="table-data-cell">Global Authority & Visionary</td>
-              <!-- Grand Master courses: BNN Advanced, Rudraksha Remedies, 1-on-1 Mentorship -->
-              <td class="table-data-cell">
-                <div class="courses-scroll">
+                  <div class="course-box">
+                    <div class="course-header">
+                      <span class="course-name">3. Tantra</span>
+                      <i class="fas fa-chevron-down course-arrow"></i>
+                    </div>
+                    <div class="course-details">
+                      <span class="course-price">Included</span>
+                    </div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header">
+                      <span class="course-name">4. Chakra Balancing</span>
+                      <i class="fas fa-chevron-down course-arrow"></i>
+                    </div>
+                    <div class="course-details">
+                      <span class="course-price">Included</span>
+                    </div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header">
+                      <span class="course-name">5. Remedy Course</span>
+                      <i class="fas fa-chevron-down course-arrow"></i>
+                    </div>
+                    <div class="course-details">
+                      <span class="course-price">Included</span>
+                    </div>
+                  </div>
+                  <div class="course-box">
+                    <div class="course-header">
+                      <span class="course-name">6. PLRT</span>
+                      <i class="fas fa-chevron-down course-arrow"></i>
+                    </div>
+                    <div class="course-details">
+                      <span class="course-price">Included</span>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-
       <!-- MOBILE FEE CARDS (shown only on mobile, hidden on desktop) -->
       <div class="mobile-fee-cards">
-
         <!-- Card 1: Crash Course -->
         <div class="fee-card">
           <div class="fee-card-header">
             <div>
-              <div class="fee-card-title">🎓 Crash Course</div>
+              <div class="fee-card-title">🎓 Crash Course<span class="popular-badge"
+                  style="background: #4caf50; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Beginner</span>
+              </div>
               <div class="fee-card-sub">Beginner Program</div>
             </div>
             <span class="fee-card-reg"><i class="fa-solid fa-hourglass-half"></i> 4 Weeks Duration</span>
@@ -1388,34 +1352,171 @@
           <div class="fee-card-meta">
             <div class="fee-meta-item">
               <div class="fee-meta-label">📘 Learning Focus</div>
-              <div class="fee-meta-value">Foundations & Awareness</div>
+              <div class="fee-meta-value">Foundations &amp; Awareness</div>
             </div>
             <div class="fee-meta-item">
-              <div class="fee-meta-label">📚 Modules</div>
-              <div class="fee-meta-value">8 Courses</div>
+              <div class="fee-meta-label">📚 COURSES</div>
+              <div class="fee-meta-value">16 Individual Courses</div>
             </div>
           </div>
           <button class="fee-courses-toggle"
-            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-            📚 View 8 Courses <span class="toggle-icon">▼</span>
+            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');"> 📚 View 16
+            Courses <span class="toggle-icon">▼</span>
           </button>
-          <ul class="fee-course-list">
-            <li>Past Life Regression Theory</li>
-            <li>Palmistry</li>
-            <li>Face Reading</li>
-            <li>Numerology</li>
-            <li>Rudraksha Remedies</li>
-            <li>Vedic Astrology</li>
-            <li>Tarot Reading</li>
-            <li>Gemini Jyotish</li>
-          </ul>
+          <div class="courses-scroll">
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">1. Past Life Regression Theory (PLRT)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="plrt.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">2. Bhoomi Vastu (Site Energetics) &amp; Prasada Vastu
+                  (Architectural Integration)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">3. Modern Western Palmistry.</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">4. Mobile Numerology</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">5. (Face Reading) Western Physiognomy (Character
+                  Analysis)</span><i class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">6. Financial Astrology (Artha)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">7. Lal Kitab Basics</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">8. Medical Astrology</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="medical-astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">9. The BNN Intensive: A 14-Day Mastery of Bhrigu
+                  Nandi Nadi.</span><i class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="bnn-astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">10. Modern Career Astrology</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">11. Business Numerology</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">12. Vedic Numerology</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">13. Nadi Jyotish</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nadi-jyotish.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">14. Healing</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">15. Feng Shui</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="feng-shui.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">16. Gemini Jyotishi</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del> <strong
+                    style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="feng-shui.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+          </div>
         </div>
-
         <!-- Card 2: Diploma (Most Popular) -->
         <div class="fee-card" style="border-left-color:#E91E63;">
           <div class="fee-card-header">
             <div>
-              <div class="fee-card-title">🎓 Diploma <span class="fee-card-popular-badge"><i class="fa-solid fa-star"></i> Most Popular</span></div>
+              <div class="fee-card-title">🎓 Diploma <span class="popular-badge"
+                  style="background: #e91e63; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Popular</span>
+              </div>
               <div class="fee-card-sub">Popular Program</div>
             </div>
             <span class="fee-card-reg"><i class="fa-solid fa-hourglass-half"></i> 8 Weeks Duration</span>
@@ -1427,25 +1528,140 @@
             </div>
             <div class="fee-meta-item">
               <div class="fee-meta-label">📚 Modules</div>
-              <div class="fee-meta-value">3 Courses</div>
+              <div class="fee-meta-value">4 Modules</div>
             </div>
           </div>
           <button class="fee-courses-toggle"
-            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-            📚 View 3 Courses <span class="toggle-icon">▼</span>
+            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');"> 📚 View 13
+            Courses <span class="toggle-icon">▼</span>
           </button>
-          <ul class="fee-course-list">
-            <li>Lal Kitab Remedies</li>
-            <li>Complete Astrology</li>
-            <li>Crystal Healing</li>
-          </ul>
+          <div class="courses-scroll">
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">1. Numerology (Pythagorean &amp; Chaldean)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">2. Vedic Astrology (Jyotish)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">3. KP Astrology (Krishnamurti Padhdhati)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="kp-astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">4. Gemstone Science (Ratna Vigyan)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="gemstone.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">5. Vastu Shastra</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">6. Lal Kitab</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">7. Face Reading (Physiognomy)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">8. Reiki Healing</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">9. Tarot Reading</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="tarot.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">10. Nakshatra (Lunar Mansions) 1</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nakshatra.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">11. Crystal</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="crystal-healing.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">12. Rudraksha</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="rudraksha.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">13. Palmistry (Chirognomy &amp; Chiromancy)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹5,499</del> <strong
+                    style="color:#d32f2f;">₹4,199</strong> <span class="discount-text"> (with 24%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+          </div>
         </div>
-
         <!-- Card 3: Bachelor -->
         <div class="fee-card">
           <div class="fee-card-header">
             <div>
-              <div class="fee-card-title">🎓 Bachelor</div>
+              <div class="fee-card-title">🎓 Bachelor<span class="popular-badge"
+                  style="background: #2196f3; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Pro</span>
+              </div>
               <div class="fee-card-sub">Pro Level Program</div>
             </div>
             <span class="fee-card-reg"><i class="fa-solid fa-hourglass-half"></i> 12 Weeks Duration</span>
@@ -1457,25 +1673,140 @@
             </div>
             <div class="fee-meta-item">
               <div class="fee-meta-label">📚 Modules</div>
-              <div class="fee-meta-value">3 Courses</div>
+              <div class="fee-meta-value">6 Modules</div>
             </div>
           </div>
           <button class="fee-courses-toggle"
-            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-            📚 View 3 Courses <span class="toggle-icon">▼</span>
+            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');"> 📚 View 13
+            Courses <span class="toggle-icon">▼</span>
           </button>
-          <ul class="fee-course-list">
-            <li>KP Astrology</li>
-            <li>Vastu Shastra</li>
-            <li>Numerology</li>
-          </ul>
+          <div class="courses-scroll">
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">1. Numerology (Pythagorean &amp; Chaldean)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">2. Vedic Astrology (Jyotish)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">3. KP Astrology (Krishnamurti Padhdhati)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="kp-astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">4. Gemstone Science (Ratna Vigyan)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="gemstone.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">5. Vastu Shastra</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">6. Lal Kitab</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">7. Face Reading (Physiognomy)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">8. Reiki Healing</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">9. Tarot Reading</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="tarot.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">10. Nakshatra (Lunar Mansions) 1</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nakshatra.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">11. Crystal</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="crystal-healing.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">12. Rudraksha</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="rudraksha.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">13. Palmistry (Chirognomy &amp; Chiromancy)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹11,999</del> <strong
+                    style="color:#d32f2f;">₹8,999</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+          </div>
         </div>
-
         <!-- Card 4: Master -->
         <div class="fee-card">
           <div class="fee-card-header">
             <div>
-              <div class="fee-card-title">🎓 Master</div>
+              <div class="fee-card-title">🎓 Master<span class="popular-badge"
+                  style="background: #ff9800; color: #fff; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Advanced</span>
+              </div>
               <div class="fee-card-sub">Advanced Program</div>
             </div>
             <span class="fee-card-reg"><i class="fa-solid fa-hourglass-half"></i> 16 Weeks Duration</span>
@@ -1483,32 +1814,147 @@
           <div class="fee-card-meta">
             <div class="fee-meta-item">
               <div class="fee-meta-label">📘 Learning Focus</div>
-              <div class="fee-meta-value">Expert & Teacher</div>
+              <div class="fee-meta-value">Expert &amp; Teacher</div>
             </div>
             <div class="fee-meta-item">
               <div class="fee-meta-label">📚 Modules</div>
-              <div class="fee-meta-value">3 Courses</div>
+              <div class="fee-meta-value">8 Modules</div>
             </div>
           </div>
           <button class="fee-courses-toggle"
-            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-            📚 View 3 Courses <span class="toggle-icon">▼</span>
+            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');"> 📚 View 13
+            Courses <span class="toggle-icon">▼</span>
           </button>
-          <ul class="fee-course-list">
-            <li>Remedy Course</li>
-            <li>Medical Astrology</li>
-            <li>Face Reading</li>
-          </ul>
+          <div class="courses-scroll">
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">1. Numerology (Pythagorean &amp; Chaldean)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="numerology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">2. Vedic Astrology (Jyotish)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">3. KP Astrology (Krishnamurti Padhdhati)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="kp-astrology.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">4. Gemstone Science (Ratna Vigyan)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="gemstone.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">5. Vastu Shastra</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="vastu.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">6. Lal Kitab</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="lal-kitab.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">7. Face Reading (Physiognomy)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="face-reading.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">8. Reiki Healing</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="reiki.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">9. Tarot Reading</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="tarot.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">10. Nakshatra (Lunar Mansions) 1</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="nakshatra.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">11. Crystal</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="crystal-healing.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">12. Rudraksha</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="rudraksha.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+            <div class="course-box">
+              <div class="course-header"><span class="course-name">13. Palmistry (Chirognomy &amp; Chiromancy)</span><i
+                  class="fas fa-chevron-down course-arrow"></i></div>
+              <div class="course-details"><span class="course-price"><del
+                    style="color:#999;font-size:0.85em;margin-right:5px;">₹24,999</del> <strong
+                    style="color:#d32f2f;">₹18,699</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span><a class="btn btn-primary btn-sm enroll-btn" href="palmistry.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a></div>
+            </div>
+          </div>
         </div>
-
         <!-- Card 5: Grand Master -->
         <div class="fee-card">
           <div class="fee-card-header">
             <div>
-              <div class="fee-card-title">🎓 Grand Master</div>
+              <div class="fee-card-title">🎓 Grand Master<span class="popular-badge"
+                  style="background: #673ab7; color: #fff; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Elite</span>
+              </div>
               <div class="fee-card-sub">Elite Program</div>
             </div>
-            <span class="fee-card-reg"><i class="fa-solid fa-hourglass-half"></i> 24 Weeks Duration</span>
+            <span class="fee-card-reg"><i class="fa-solid fa-hourglass-half"></i> 48 Weeks Duration</span>
           </div>
           <div class="fee-card-meta">
             <div class="fee-meta-item">
@@ -1517,22 +1963,210 @@
             </div>
             <div class="fee-meta-item">
               <div class="fee-meta-label">📚 Modules</div>
-              <div class="fee-meta-value">0 Courses</div>
+              <div class="fee-meta-value">8 Modules <span class="popular-badge"
+                  style="background: #ff9800; color: #fff; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Advanced</span>
+              </div>
             </div>
           </div>
           <button class="fee-courses-toggle"
-            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-            📚 View 0 Courses <span class="toggle-icon">▼</span>
+            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');"> 📚 View 13
+            Courses + 6 Stairs <span class="toggle-icon">▼</span>
           </button>
-          <ul class="fee-course-list">
-          </ul>
+          <div class="courses-scroll">
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">1. Numerology (Pythagorean &amp; Chaldean)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">2. Vedic Astrology (Jyotish)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">3. KP Astrology (Krishnamurti Padhdhati)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">4. Gemstone Science (Ratna Vigyan)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">5. Vastu Shastra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">6. Lal Kitab</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">7. Face Reading (Physiognomy)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">8. Reiki Healing</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">9. Tarot Reading</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">10. Nakshatra (Lunar Mansions)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">11. Crystal Rudraksha</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">12. Palmistry (Chirognomy &amp; Chiromancy)</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹34,999</del>
+                  <strong style="color:#d32f2f;">₹24,999</strong> <span class="discount-text"> (with 29%
+                    discount)</span></span>
+              </div>
+            </div>
+            <div
+              style="text-align:center; margin: 10px 0; color: #D4AF37; font-weight: bold; font-size: 0.9em; border-top: 1px dashed #e0d5c8; padding-top: 5px;">
+              --- Plus 6 Spiritual Stairs FREE ---</div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">1. Yantra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price">Included</span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">2. Mantra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price">Included</span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">3. Tantra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price">Included</span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">4. Chakra Balancing</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price">Included</span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">5. Remedy Course</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price">Included</span>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">6. PLRT</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price">Included</span>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
       <!-- END MOBILE FEE CARDS -->
-
-
-      <h2 class="card-section-title mt-4" style="margin-top: 3rem;">6 Stairs Programs & Fees</h2>
+      <h2 class="card-section-title mt-4" style="margin-top: 3rem;">6 Stairs Programs &amp; Fees</h2>
       <div class="table-wrapper"
         style="background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.08);">
         <table class="table-full">
@@ -1540,7 +2174,8 @@
             <tr>
               <th class="table-header-cell table-header-center" style="width: 5%;">S.No.</th>
               <th class="table-header-cell" style="width: 25%;">🎓 Categories</th>
-              <th class="table-header-cell table-header-center" style="width: 15%;"><i class="fa-solid fa-hourglass-half"></i> Duration</th>
+              <th class="table-header-cell table-header-center" style="width: 15%;"><i
+                  class="fa-solid fa-hourglass-half"></i> Duration</th>
               <th class="table-header-cell" style="width: 20%;">📘 Learning Focus</th>
               <th class="table-header-cell" style="width: 35%;">📚 Courses</th>
             </tr>
@@ -1550,13 +2185,17 @@
               <td class="table-data-cell table-data-center">1</td>
               <td class="table-data-cell">
                 <div class="category-box">
-                  <div class="cat-title"><i class="fa-solid fa-star-half-stroke"></i> 6 Stairs Mastery</div>
+                  <div class="cat-title"><i class="fa-solid fa-star-half-stroke"></i> 6 Stairs Mastery<span
+                      class="popular-badge"
+                      style="background: #ff9800; color: #fff; font-size: 0.6em; margin-left:10px; padding:3px 8px; border-radius:12px;">Advanced</span>
+                  </div>
                   <div class="cat-sub">Premium Spiritual Path</div>
                   <span class="price-tag">Flexible Pricing</span>
                 </div>
               </td>
-              <td class="table-data-cell table-data-center"><span class="duration-badge"><i class="fa-solid fa-hourglass-half"></i> 6 Weeks</span></td>
-              <td class="table-data-cell">Spiritual & Life Mastery</td>
+              <td class="table-data-cell table-data-center"><span class="duration-badge"><i
+                    class="fa-solid fa-hourglass-half"></i> 6 Weeks</span></td>
+              <td class="table-data-cell">Spiritual &amp; Life Mastery</td>
               <td class="table-data-cell">
                 <div class="courses-scroll">
                   <div class="course-box">
@@ -1565,11 +2204,9 @@
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
+                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                        <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
                           discount)</span></span>
-                      <a href="yantra.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1578,11 +2215,9 @@
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
+                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                        <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
                           discount)</span></span>
-                      <a href="mantra.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1591,11 +2226,9 @@
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
+                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                        <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
                           discount)</span></span>
-                      <a href="tantra.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
@@ -1604,37 +2237,31 @@
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
+                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                        <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
                           discount)</span></span>
-                      <a href="chakra-balancing.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
                     <div class="course-header">
-                      <span class="course-name">5. Remedies</span>
+                      <span class="course-name">5. Remedy Course</span>
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
+                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                        <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
                           discount)</span></span>
-                      <a href="6-stairs-remedies.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                   <div class="course-box">
                     <div class="course-header">
-                      <span class="course-name">6. Past Life Regression Theory</span>
+                      <span class="course-name">6. PLRT</span>
                       <i class="fas fa-chevron-down course-arrow"></i>
                     </div>
                     <div class="course-details">
-                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,999</del>
-                        <strong style="color:#d32f2f;">₹2,999</strong> <span class="discount-text">(with 25%
+                      <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                        <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
                           discount)</span></span>
-                      <a href="plrt.html" class="btn btn-primary btn-sm enroll-btn"
-                        style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
                     </div>
                   </div>
                 </div>
@@ -1643,7 +2270,6 @@
           </tbody>
         </table>
       </div>
-
       <!-- MOBILE 6 STAIRS FEE CARDS -->
       <div class="mobile-fee-cards">
         <div class="fee-card" style="border-left-color:#E91E63;">
@@ -1657,55 +2283,126 @@
           <div class="fee-card-meta">
             <div class="fee-meta-item">
               <div class="fee-meta-label">📘 Learning Focus</div>
-              <div class="fee-meta-value">Spiritual & Life Mastery</div>
+              <div class="fee-meta-value">Spiritual &amp; Life Mastery</div>
             </div>
             <div class="fee-meta-item">
               <div class="fee-meta-label">📚 Modules</div>
-              <div class="fee-meta-value">5 Courses</div>
+              <div class="fee-meta-value">6 Stairs</div>
             </div>
           </div>
           <button class="fee-courses-toggle"
             onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-            📚 View 5 Courses <span class="toggle-icon">▼</span>
+            📚 View 6 Stairs <span class="toggle-icon">▼</span>
           </button>
-          <ul class="fee-course-list">
-            <li>Rudraksha</li>
-            <li>BNN Advance</li>
-            <li>Past Life Prediction</li>
-            <li>Remedy Course</li>
-            <li>Gemini Jyotish</li>
-          </ul>
+          <div class="courses-scroll">
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">1. Yantra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                  <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span>
+                <a class="btn btn-primary btn-sm enroll-btn" href="yantra.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">2. Mantra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                  <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span>
+                <a class="btn btn-primary btn-sm enroll-btn" href="mantra.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">3. Tantra</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                  <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span>
+                <a class="btn btn-primary btn-sm enroll-btn" href="tantra.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">4. Chakra Balancing</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                  <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span>
+                <a class="btn btn-primary btn-sm enroll-btn" href="chakra-balancing.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">5. Remedies</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                  <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span>
+                <a class="btn btn-primary btn-sm enroll-btn" href="6-stairs-remedies.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+              </div>
+            </div>
+            <div class="course-box">
+              <div class="course-header">
+                <span class="course-name">6. Past Life Regression Theory</span>
+                <i class="fas fa-chevron-down course-arrow"></i>
+              </div>
+              <div class="course-details">
+                <span class="course-price"><del style="color:#999;font-size:0.85em;margin-right:5px;">₹3,499</del>
+                  <strong style="color:#d32f2f;">₹2,499</strong> <span class="discount-text"> (with 25%
+                    discount)</span></span>
+                <a class="btn btn-primary btn-sm enroll-btn" href="plrt.html"
+                  style="padding: 4px 10px; font-size: 0.8em;">Enroll Now</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- END MOBILE 6 STAIRS FEE CARDS -->
     </div>
   </section>
-
   <section class="light-bg">
     <div class="container-wide">
       <h2 class="card-section-title">Payment Options</h2>
       <div class="grid grid-4 grid-gap-2">
-        <div class="premium-gold-card p-3" data-animate>
+        <div class="premium-gold-card p-3" data-animate="">
           <h4 class="color-primary mb-1">💳 Full Payment</h4>
           <p class="card-small-text">Pay the complete fee upfront and get an additional 5% discount on most programs.
           </p>
         </div>
-        <div class="premium-gold-card p-3" data-animate>
+        <div class="premium-gold-card p-3" data-animate="">
           <h4 class="color-primary mb-1">📊 Installment Plan</h4>
           <p class="card-small-text">If anyone wants to pay fee in installment then they can contact us.</p>
         </div>
-        <div class="premium-gold-card p-3" data-animate>
+        <div class="premium-gold-card p-3" data-animate="">
           <h4 class="color-primary mb-1">🎓 Scholarship</h4>
           <p class="card-small-text">There would be scholarships for the economically weak students.</p>
         </div>
-        <div class="premium-gold-card p-3" data-animate>
+        <div class="premium-gold-card p-3" data-animate="">
           <h4 class="color-primary mb-1">👥 Group Discount</h4>
           <p class="card-small-text">Enroll in more than 1 course and get discount on the total fee.</p>
         </div>
       </div>
     </div>
   </section>
-
   <section>
     <div class="container">
       <h2 class="card-section-title">What's Included</h2>
@@ -1714,8 +2411,8 @@
           <div>
             <h4 class="color-primary mb-1 text-left">✓ Course Materials</h4>
             <ul class="list-reset">
-              <li class="mb-0-75">Complete study materials & notes</li>
-              <li class="mb-0-75">Video lectures & recordings</li>
+              <li class="mb-0-75">Complete study materials &amp; notes</li>
+              <li class="mb-0-75">Video lectures &amp; recordings</li>
               <li class="mb-0-75">Case study documents</li>
               <li class="mb-0-75">Access to all course resources</li>
             </ul>
@@ -1723,85 +2420,81 @@
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; text-align: left;">
           <div>
-            <h4 class="color-primary mb-1 text-left">✓ Support & Mentoring</h4>
+            <h4 class="color-primary mb-1 text-left">✓ Support &amp; Mentoring</h4>
             <ul class="list-reset">
               <li class="mb-0-75">Expert instructor guidance</li>
               <li class="mb-0-75">One-on-one mentoring sessions</li>
-              <li class="mb-0-75">Q&A support forum</li>
-              <li class="mb-0-75">Email & chat support</li>
+              <li class="mb-0-75">Q&amp;A support forum</li>
+              <li class="mb-0-75">Email &amp; chat support</li>
             </ul>
           </div>
         </div>
       </div>
-
-
-
     </div>
   </section>
-
   <section class="light-bg">
     <div class="container text-center">
       <h2 class="mb-1-5">Still Have Questions About Pricing?</h2>
       <p class="mb-2">Contact our admissions team for custom quotes and financing options.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Get More Information</a>
+      <a class="btn btn-primary btn-lg" href="contact.html">Get More Information</a>
     </div>
   </section>
-
   <!-- TOP URGENCY MARQUEE -->
   <div class="urgency-marquee-container">
     <div class="urgency-marquee-content">
       <div class="marquee-item">
         <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
         Available! <div class="marquee-timer timer-pulse">Ends in: <span class="marquee-timer-val">47:59:59</span></div>
-        <a href="register.html" class="marquee-btn">Register Now</a>
+        <a class="marquee-btn" href="register.html">Register Now</a>
       </div>
       <div class="marquee-item">
         <span class="marquee-icon">🔥</span> Fast Track Your Career with 100% Placement Assistance
-        <a href="courses.html" class="marquee-btn">View Courses</a>
+        <a class="marquee-btn" href="courses.html">View Courses</a>
       </div>
       <div class="marquee-item">
-        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top Performers!
-        <a href="register.html" class="marquee-btn">Apply Now</a>
+        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship
+        Available for Top Performers!
+        <a class="marquee-btn" href="register.html">Apply Now</a>
       </div>
       <!-- Duplicate for seamless scrolling -->
       <div class="marquee-item">
         <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches — Limited Seats
         Available! <div class="marquee-timer timer-pulse">Ends in: <span class="marquee-timer-val">47:59:59</span></div>
-        <a href="register.html" class="marquee-btn">Register Now</a>
+        <a class="marquee-btn" href="register.html">Register Now</a>
       </div>
       <div class="marquee-item">
         <span class="marquee-icon">🔥</span> Fast Track Your Career with 100% Placement Assistance
-        <a href="courses.html" class="marquee-btn">View Courses</a>
+        <a class="marquee-btn" href="courses.html">View Courses</a>
       </div>
       <div class="marquee-item">
-        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship Available for Top Performers!
-        <a href="register.html" class="marquee-btn">Apply Now</a>
+        <span class="marquee-icon"><i class="fa-solid fa-star"></i></span> Join Parashari Institute Today — Scholarship
+        Available for Top Performers!
+        <a class="marquee-btn" href="register.html">Apply Now</a>
       </div>
     </div>
   </div>
-
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h4>About Parashari</h4>
         <p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
         <div class="social-wrapper">
-          <a href="https://www.instagram.com/astrobharatai?igsh=Z2M2ZW82OXBxaGNr" target="_blank"
-            rel="noopener noreferrer" class="icon instagram">
+          <a class="icon instagram" href="https://www.instagram.com/astrobharatai?igsh=Z2M2ZW82OXBxaGNr"
+            rel="noopener noreferrer" target="_blank">
             <span class="tooltip">Instagram</span>
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.youtube.com/@astrobharatai" target="_blank" rel="noopener noreferrer"
-            class="icon youtube">
+          <a class="icon youtube" href="https://www.youtube.com/@astrobharatai" rel="noopener noreferrer"
+            target="_blank">
             <span class="tooltip">YouTube</span>
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="https://x.com/AstroBharatAI" target="_blank" rel="noopener noreferrer" class="icon twitter">
+          <a class="icon twitter" href="https://x.com/AstroBharatAI" rel="noopener noreferrer" target="_blank">
             <span class="tooltip">Twitter</span>
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://www.linkedin.com/company/astrobharatai/" target="_blank" rel="noopener noreferrer"
-            class="icon linkedin">
+          <a class="icon linkedin" href="https://www.linkedin.com/company/astrobharatai/" rel="noopener noreferrer"
+            target="_blank">
             <span class="tooltip">LinkedIn</span>
             <i class="fab fa-linkedin-in"></i>
           </a>
@@ -1851,25 +2544,18 @@
     <div class="footer-bottom">
       <div class="footer-bottom-content">
         <div class="copyright">
-          <p class="p-reset">&copy; 2024 Parashari Institute.</p>
+          <p class="p-reset">© 2024 Parashari Institute.</p>
         </div>
         <div class="developer-credit">Designed by <a href="#">Our Team</a></div>
       </div>
     </div>
   </footer>
-
-
-
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/form-validation.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/loader.js"></script>
   <script src="assets/js/search.js"></script>
   <script src="assets/js/chatbot.js"></script>
-
-
-
-
   <!-- URGENCY TIMER JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1908,9 +2594,22 @@
       }
     });
   </script>
-
-
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Accordion toggle logic for the course-boxes (replaces CSS hover to fix mobile taps)
+      const courseBoxes = document.querySelectorAll('.course-box');
+      courseBoxes.forEach(box => {
+        const header = box.querySelector('.course-header');
+        if (header) {
+          header.addEventListener('click', function (e) {
+            // Prevent the click from immediately propagating to links inside
+            if (e.target.tagName.toLowerCase() === 'a') return;
+            box.classList.toggle('active');
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
