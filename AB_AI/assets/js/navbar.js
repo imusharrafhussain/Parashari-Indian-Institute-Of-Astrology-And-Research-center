@@ -61,22 +61,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* ============ MEGA MENU LOGIC ============ */
 const crashCourseList = [
-  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'plrt-6-stairs.html', icon: 'fas fa-hourglass-half' },
-  { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'vastu.html', icon: 'fas fa-home' },
-  { name: 'Modern Western Palmistry', meta: 'Modern', url: 'palmistry.html', icon: 'fas fa-hand-paper' },
-  { name: 'Mobile Numerology', meta: 'Mobile', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: '(Face Reading) Western Physiognomy', meta: '(Face', url: 'face-reading.html', icon: 'fas fa-user' },
-  { name: 'Financial Astrology (Artha)', meta: 'Financial', url: 'astrology.html', icon: 'fas fa-om' },
-  { name: 'Lal Kitab Basics', meta: 'Lal', url: 'lal-kitab.html', icon: 'fas fa-book' },
-  { name: 'Medical Astrology', meta: 'Medical', url: 'medical-astrology.html', icon: 'fas fa-heartbeat' },
-  { name: 'The BNN Intensive: A 14-Day Mastery', meta: 'The', url: 'bnn-astrology.html', icon: 'fas fa-code-branch' },
-  { name: 'Modern Career Astrology', meta: 'Modern', url: 'astrology.html', icon: 'fas fa-om' },
-  { name: 'Business Numerology', meta: 'Business', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Vedic Numerology', meta: 'Vedic', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Nadi Jyotish', meta: 'Nadi', url: 'nadi-jyotish.html', icon: 'fas fa-scroll' },
-  { name: 'Healing', meta: 'Healing', url: 'reiki.html', icon: 'fas fa-hand-holding-medical' },
-  { name: 'Feng Shui', meta: 'Feng', url: 'feng-shui.html', icon: 'fas fa-yin-yang' },
-  { name: 'Gemini Jyotish', meta: 'Gemini', url: 'gemini-jyotish.html', icon: 'fas fa-users' }
+  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'courses.html?quickview=plrt', icon: 'fas fa-hourglass-half' },
+  { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'courses.html?quickview=vastu', icon: 'fas fa-home' },
+  { name: 'Modern Western Palmistry', meta: 'Modern', url: 'courses.html?quickview=palmistry', icon: 'fas fa-hand-paper' },
+  { name: 'Mobile Numerology', meta: 'Mobile', url: 'courses.html?quickview=numerology-mobile', icon: 'fas fa-sort-numeric-up' },
+  { name: '(Face Reading) Western Physiognomy', meta: '(Face', url: 'courses.html?quickview=face-reading', icon: 'fas fa-user' },
+  { name: 'Financial Astrology (Artha)', meta: 'Financial', url: 'courses.html?quickview=astrology-financial', icon: 'fas fa-om' },
+  { name: 'Lal Kitab Basics', meta: 'Lal', url: 'courses.html?quickview=lal-kitab-basics', icon: 'fas fa-book' },
+  { name: 'Medical Astrology', meta: 'Medical', url: 'courses.html?quickview=medical-astrology', icon: 'fas fa-heartbeat' },
+  { name: 'The BNN Intensive: A 14-Day Mastery', meta: 'The', url: 'courses.html?quickview=bnn-intensive', icon: 'fas fa-code-branch' },
+  { name: 'Modern Career Astrology', meta: 'Modern', url: 'courses.html?quickview=astrology-career', icon: 'fas fa-om' },
+  { name: 'Business Numerology', meta: 'Business', url: 'courses.html?quickview=numerology-business', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Vedic Numerology', meta: 'Vedic', url: 'courses.html?quickview=numerology-vedic', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Nadi Jyotish', meta: 'Nadi', url: 'courses.html?quickview=nadi-jyotish', icon: 'fas fa-scroll' },
+  { name: 'Healing', meta: 'Healing', url: 'courses.html?quickview=reiki', icon: 'fas fa-hand-holding-medical' },
+  { name: 'Feng Shui', meta: 'Feng', url: 'courses.html?quickview=feng-shui', icon: 'fas fa-yin-yang' },
+  { name: 'Gemini Jyotish', meta: 'Gemini', url: 'courses.html?quickview=gemini-jyotish', icon: 'fas fa-users' }
 ];
 const diplomaList = [
   { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'astrology.html', icon: 'fas fa-om' },
