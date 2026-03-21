@@ -53,13 +53,13 @@
             <div class="astro-toggle-badge">
                 <i class="fas fa-comment-dots"></i>
             </div>
-            <img src="assets/images/bot-namaste.png" class="bot-img-default" alt="Support Robot">
-            <img src="assets/images/bot-reading.png" class="bot-img-active" alt="Active Chat">
+            <img src="assets/images-optimized/bot-namaste.webp" class="bot-img-default" alt="Support Robot">
+            <img src="assets/images-optimized/bot-reading.webp" class="bot-img-active" alt="Active Chat">
         </div>
         <div class="astro-chat-container" id="astroChatContainer" role="dialog" aria-labelledby="chatHeaderTitle">
             <div class="astro-chat-header" id="astroChatHeader">
                 <div class="astro-chat-header-info">
-                    <img src="assets/images/parashari-header-logo.jpg" alt="Parashari Logo">
+                    <img src="assets/images-optimized/parashari-header-logo.webp" alt="Parashari Logo">
                     <h4 id="chatHeaderTitle">Parashari Support Assistant</h4>
                 </div>
                 <div class="astro-chat-header-actions">

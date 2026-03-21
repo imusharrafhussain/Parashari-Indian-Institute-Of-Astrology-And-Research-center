@@ -5,8 +5,8 @@
 The hero section on the home page (index.html) is now configured to use a zodiac wheel background image.
 
 ### Where to place the image:
-- **Path**: `assets/images/zodiac-wheel.jpg`
-- **Location**: Save the image file in the `assets/images/` directory
+- **Path**: `assets/images-optimized/zodiac-wheel.webp`
+- **Location**: Save the image file in the `assets/images-optimized/` directory
 
 ### Image Requirements:
 - **Filename**: zodiac-wheel.jpg (or update the CSS if using a different name)
@@ -25,5 +25,5 @@ The background image styling is defined in `assets/css/main.css` with the class 
 
 ### To use this:
 1. Download or save the zodiac wheel image
-2. Save it as `zodiac-wheel.jpg` in the `assets/images/` directory
+2. Save it as `zodiac-wheel.webp` in the `assets/images-optimized/` directory
 3. The home page will automatically display it behind the "Unlock Your Cosmic Destiny" heading

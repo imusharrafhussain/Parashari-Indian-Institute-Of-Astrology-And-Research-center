@@ -193,7 +193,7 @@ Simply edit the HTML files with a text editor:
 
 ### Custom Images
 - Replace placeholder URLs (unsplash.com) with real images
-- Add images to appropriate `assets/images/` subdirectory
+- Add images to appropriate `assets/images-optimized/` subdirectory
 - Update `src` attributes in HTML files
 
 ## 📦 CSS File Descriptions

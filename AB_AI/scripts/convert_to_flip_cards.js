@@ -37,7 +37,7 @@ zodiacData.forEach(zodiac => {
         <div class="hero-card zodiac-card">
           <div class="zodiac-card-inner">
             <div class="zodiac-card-front">
-              <img src="assets/images/${zodiac.image}" alt="${zodiac.name}">
+              <img src="assets/images-optimized/${zodiac.image}" alt="${zodiac.name}">
               <h3>${zodiac.name}</h3>
             </div>
             <div class="zodiac-card-back">
@@ -55,7 +55,7 @@ zodiacData.forEach(zodiac => {
     newSection += `<div class="hero-card zodiac-card">
           <div class="zodiac-card-inner">
             <div class="zodiac-card-front">
-              <img src="assets/images/${zodiac.image}" alt="${zodiac.name}">
+              <img src="assets/images-optimized/${zodiac.image}" alt="${zodiac.name}">
               <h3>${zodiac.name}</h3>
             </div>
             <div class="zodiac-card-back">
