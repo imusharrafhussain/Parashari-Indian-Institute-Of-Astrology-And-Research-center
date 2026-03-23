@@ -3061,4 +3061,13 @@ textarea.form-control {
     transform-origin: left center;
     margin-right: -25px; /* Offset the scaling visually if needed */
   }
+
+  /* Social Icons Mobile Fix */
+  .social-wrapper .icon,
+  .social-icon-link {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 12px !important;
+    margin: 5px 5px 5px 0 !important;
+  }
 }
