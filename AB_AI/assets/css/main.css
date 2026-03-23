@@ -2304,9 +2304,9 @@ textarea.form-control {
   background: var(--white);
   border-radius: 50%;
   margin: 10px 10px 10px 0;
-  width: 45px;
-  height: 45px;
-  font-size: 18px;
+  width: clamp(35px, 4vw, 45px);
+  height: clamp(35px, 4vw, 45px);
+  font-size: clamp(14px, 1.5vw, 18px);
   display: flex;
   justify-content: center;
   align-items: center;

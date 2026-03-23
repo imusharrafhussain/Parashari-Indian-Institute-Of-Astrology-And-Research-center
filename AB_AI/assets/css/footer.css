@@ -9,11 +9,11 @@ footer {
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 95%;
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
 }
