@@ -2,6 +2,14 @@
    NAVBAR JAVASCRIPT
    ============================================ */
 
+// Helper to check if a link is active based on current page
+function isPageActive(href, currentPage) {
+  if (!href || href === 'javascript:void(0)') return false;
+  const cleanHref = href.split('/').pop().replace('.html', '').toLowerCase();
+  const cleanCurrent = currentPage.replace('.html', '').toLowerCase();
+  return cleanHref === cleanCurrent || (cleanCurrent === '' && cleanHref === 'index');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
@@ -37,13 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Helper to check if a link is active based on current page
-  function isPageActive(href, currentPage) {
-    if (!href || href === 'javascript:void(0)') return false;
-    const cleanHref = href.split('/').pop().replace('.html', '').toLowerCase();
-    const cleanCurrent = currentPage.replace('.html', '').toLowerCase();
-    return cleanHref === cleanCurrent || (cleanCurrent === '' && cleanHref === 'index');
-  }
+
 
   // Set active nav link based on current page
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
