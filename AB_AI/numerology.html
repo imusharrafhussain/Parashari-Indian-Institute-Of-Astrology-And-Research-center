@@ -894,8 +894,7 @@
                     const targetTab = document.querySelector(`.filter-tab[data-program="${levelParam}"]`);
                     if (targetTab) {
                         targetTab.click();
-                        const section = targetTab.closest('.category-filter-container');
-                        window.scrollTo({ top: section ? section.getBoundingClientRect().top + window.scrollY - 100 : 0, behavior: 'smooth' });
+                        
                     }
                 }, 50);
             }

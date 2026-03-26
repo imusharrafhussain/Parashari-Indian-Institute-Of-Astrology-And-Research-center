@@ -836,11 +836,11 @@ header {
 
   .mobile-bottom-nav-item:hover,
   .mobile-bottom-nav-item.active {
-    color: var(--secondary-color, #D4AF37);
+    color: var(--primary-color, #591C21);
   }
 
   .mobile-bottom-nav-item.active i {
-    color: var(--secondary-color, #D4AF37);
+    color: var(--primary-color, #591C21);
     transform: translateY(-2px);
   }
 
@@ -852,7 +852,7 @@ header {
     transform: translateX(-50%);
     width: 20px;
     height: 3px;
-    background: var(--secondary-color, #D4AF37);
+    background: var(--primary-color, #591C21);
     border-radius: 0 0 3px 3px;
   }
 
@@ -900,8 +900,8 @@ header {
 
   .mobile-compact-links a:hover,
   .mobile-compact-links a.active {
-    color: var(--secondary-color, #D4AF37) !important;
-    background: rgba(212, 175, 55, 0.1);
+    color: var(--primary-color, #591C21) !important;
+    background: rgba(89, 28, 33, 0.1);
     font-weight: 700;
   }
 
