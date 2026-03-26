@@ -929,8 +929,8 @@ header {
     gap: 0;
   }
 
-  /* Add bottom padding to body so content isn't hidden behind the bar */
-  body {
+  /* Add bottom padding to footer so its background fills the space above bottom nav */
+  footer {
     padding-bottom: 70px !important;
   }
 }

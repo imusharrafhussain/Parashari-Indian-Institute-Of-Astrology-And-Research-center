@@ -401,7 +401,7 @@ function initMegaMenu() {
           scrollBtn.addEventListener('click', () => {
             const grid = contentArea.querySelector('.mega-courses-grid');
             if (grid) {
-              grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              contentArea.scrollTo({ top: grid.offsetTop - contentArea.offsetTop, behavior: 'smooth' });
             }
           });
         }
