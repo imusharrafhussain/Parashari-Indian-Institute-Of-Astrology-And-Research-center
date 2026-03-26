@@ -472,5 +472,37 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+});
 
+/* ============================================
+   URL HOVER OBFUSCATION
+   Hides native browser URL previews on hover
+   ============================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.innerHTML = `a[data-obfuscated-href] { cursor: pointer !important; }`;
+    document.head.appendChild(style);
+});
+
+document.addEventListener('mouseover', (e) => {
+    const a = e.target.closest('a');
+    if (a && a.href && !a.href.startsWith('javascript:')) {
+        a.dataset.obfuscatedHref = a.href;
+        a.removeAttribute('href');
+    }
+});
+
+document.addEventListener('mouseout', (e) => {
+    const a = e.target.closest('a');
+    if (a && a.dataset.obfuscatedHref) {
+        a.href = a.dataset.obfuscatedHref;
+    }
+});
+
+document.addEventListener('mousedown', (e) => {
+    const a = e.target.closest('a');
+    if (a && a.dataset.obfuscatedHref) {
+        // Restore href right before click so standard navigation/target=_blank works
+        a.href = a.dataset.obfuscatedHref;
+    }
 });

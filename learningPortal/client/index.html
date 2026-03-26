@@ -12,6 +12,35 @@
 <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const style = document.createElement('style');
+            style.innerHTML = `a[data-obfuscated-href] { cursor: pointer !important; }`;
+            document.head.appendChild(style);
+        });
+
+        document.addEventListener('mouseover', (e) => {
+            const a = e.target.closest('a');
+            if (a && a.href && !a.href.startsWith('javascript:')) {
+                a.dataset.obfuscatedHref = a.href;
+                a.removeAttribute('href');
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            const a = e.target.closest('a');
+            if (a && a.dataset.obfuscatedHref) {
+                a.href = a.dataset.obfuscatedHref;
+            }
+        });
+
+        document.addEventListener('mousedown', (e) => {
+            const a = e.target.closest('a');
+            if (a && a.dataset.obfuscatedHref) {
+                a.href = a.dataset.obfuscatedHref;
+            }
+        });
+    </script>
 </body>
 
 </html>
