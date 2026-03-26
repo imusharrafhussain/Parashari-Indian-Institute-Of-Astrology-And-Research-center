@@ -68,7 +68,7 @@ router.get('/access/:resourceId', authMiddleware, resourceLimiter, async (req, r
                 p => p.courseId.toString() === courseId.toString() && p.status === 'active'
             );
 
-            if (!hasPurchased && user.role !== 'admin') {
+            if (!hasPurchased) {
                 logAccess(userId, resourceId, userIp, 'DENIED_NO_ACCESS');
                 return res.status(403).json({ error: 'Access denied. You do not own this course.' });
             }

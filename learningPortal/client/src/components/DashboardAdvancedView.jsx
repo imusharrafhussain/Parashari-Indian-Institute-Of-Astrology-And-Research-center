@@ -35,22 +35,6 @@ export default function DashboardAdvancedView() {
         fetchSummary();
     }, []);
 
-    const handleUpgrade = async () => {
-        try {
-            const token = localStorage.getItem('token');
-            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/payment/create-order`, {}, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
-            // Simulate direct verify for dummy
-            await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/payment/verify`, { orderId: res.data.id }, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
-            window.location.reload();
-        } catch (err) {
-            alert('Upgrade failed. Please try again.');
-        }
-    };
-
     if (loading) {
         return (
             <DashboardLayout>
@@ -87,13 +71,6 @@ export default function DashboardAdvancedView() {
                         <h1>Welcome {summary.user?.name?.split(' ')[0] || 'User'}!</h1>
                         <p>Welcome back to your personalized learning dashboard.</p>
                     </div>
-                    {summary.user && !summary.user.isPremium && (
-                        <div className="upgrade-promo">
-                            <button className="premium-upgrade-btn" onClick={handleUpgrade}>
-                                Upgrade to Premium
-                            </button>
-                        </div>
-                    )}
                 </section>
 
                 {/* 2. Main Dashboard Grid */}

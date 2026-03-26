@@ -42,13 +42,11 @@ import authRoutes from './routes/auth.js';
 import courseRoutes from './routes/courses.js';
 import videoRoutes from './routes/video.js';
 import resourceRoutes from './routes/resource.js';
-import paymentRoutes from './routes/payment.js';
 
 app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/video', videoRoutes);
 app.use('/api/resource', resourceRoutes);
-app.use('/api/payment', paymentRoutes);
 
 // V2 API Routes
 import coursesV2Routes from './routes/v2/courses.js';

@@ -20,16 +20,9 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['student', 'admin', 'instructor'],
+    enum: ['student', 'instructor'],
     default: 'student',
     index: true
-  },
-  isPremium: {
-    type: Boolean,
-    default: false
-  },
-  premiumActivatedAt: {
-    type: Date
   },
   active: {
     type: Boolean,
