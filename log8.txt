@@ -1,0 +1,29 @@
+﻿commit 3783231fdc2d0e8628e3be40e392902dfc9f99f9
+Author: Parashari Bot <bot@parashari.com>
+Date:   Fri Mar 27 18:57:48 2026 +0530
+
+    fix(css): use auto-fit for responsive grid to center course cards
+
+commit d8e27dce2a8f14e3b15168a94fb6d60b9f7835c9
+Author: Parashari Bot <bot@parashari.com>
+Date:   Fri Mar 27 18:35:43 2026 +0530
+
+    Cleanup legacy face reading images and temporary scripts
+
+commit c4de60d0ca1e62a6293d69e04ad3c28eac61b8a3
+Author: Parashari Bot <bot@parashari.com>
+Date:   Fri Mar 27 18:33:01 2026 +0530
+
+    Update face reading image with correct provided asset
+
+commit cbb02825a76bb1a186ac14d7fdb05934baea623c
+Author: Parashari Bot <bot@parashari.com>
+Date:   Fri Mar 27 18:22:31 2026 +0530
+
+    Update face reading hero image to optimized webp format across all course categories
+
+commit 4adeb7e40d6dc6bcf1e33f9f0d7927f909230aae
+Author: Parashari Bot <bot@parashari.com>
+Date:   Fri Mar 27 18:12:57 2026 +0530
+
+    Optimize: Rename double-extension WebP files and update all code references globally

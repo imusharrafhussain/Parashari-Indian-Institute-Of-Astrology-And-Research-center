@@ -1,0 +1,27 @@
+﻿diff --git a/AB_AI/assets/css/main.css b/AB_AI/assets/css/main.css
+index 3caaf5e..f3d13a7 100644
+--- a/AB_AI/assets/css/main.css
++++ b/AB_AI/assets/css/main.css
+@@ -1155,7 +1155,8 @@ section.primary-bg h4 {
+ .grid-responsive {
+   display: grid;
+   gap: var(--spacing-lg);
+-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
++  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
++  justify-content: center;
+ }
+ 
+ /* ============ CARDS ============ */
+diff --git a/AB_AI/assets/css/responsive.css b/AB_AI/assets/css/responsive.css
+index 5aa3011..c002ba8 100644
+--- a/AB_AI/assets/css/responsive.css
++++ b/AB_AI/assets/css/responsive.css
+@@ -138,7 +138,7 @@
+ 
+   /* Compact Course Grid */
+   .grid-responsive {
+-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)) !important;
++    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)) !important;
+     gap: 0.75rem !important;
+   }
+ 

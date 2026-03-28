@@ -2672,6 +2672,39 @@ textarea.form-control {
   font-weight: 600;
 }
 
+/* --- Global Fix for Accreditation Logos (Match Reference Design) --- */
+.accreditation-grid {
+  justify-items: stretch !important;
+  gap: 1.5rem !important;
+}
+
+.accreditation-grid .faculty-card {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0;
+  height: 100% !important; /* Force cards in the same row to be equal height */
+}
+
+.accreditation-grid .faculty-img-wrapper {
+  background: #ffffff;
+  height: 200px !important; /* Fixed height for uniformity across all 4 cards */
+  width: 100%;
+  padding: 0 !important;
+  border-bottom: 1px solid #eaeaea; /* Divider line like the reference image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accreditation-grid .faculty-img {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 1.5rem !important; /* Creates equal white space margin on top, bottom, left, and right */
+  box-sizing: border-box !important;
+  display: block;
+}
+
 /* =============================================
    MOBILE FIXES — Accreditation & Benefits Cards
    (max-width: 600px only, desktop unchanged)
