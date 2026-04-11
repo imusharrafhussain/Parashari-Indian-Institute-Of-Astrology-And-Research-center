@@ -563,7 +563,31 @@
 .cvd-learn-grid { display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center; align-items: start; gap: 20px; margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; }
       .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(6, 1fr); }
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
-      .cvd-learn-item img { max-width: 100px; height: auto; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+      
+      .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+      .cvd-learn-item-img-wrapper {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 15px auto;
+          position: relative;
+          background: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border: 3px solid #c8960c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .cvd-learn-item-img-wrapper img {
+          max-width: none;
+          width: auto;
+          height: 140%;
+          object-fit: cover;
+          margin: 0;
+          display: block;
+      }
+
       .cvd-learn-item p { font-size: 0.95rem; color: #444; font-weight: 600; line-height: 1.4; }
 
       .cvd-sidebar-heading { font-family: 'Times New Roman', serif; font-size: 1.8rem; color: #591C21; font-weight: bold; margin-bottom: 25px; text-align: center; position: relative; }
@@ -725,7 +749,7 @@
     </style>
   
     <!-- START MAIN LAYOUT WITH SIDEBAR -->
-    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 1400px; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
+    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
 
@@ -812,27 +836,39 @@
       
       <div class="cvd-learn-grid cvd-learn-fullwidth">
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vedic-astrology/analyze your birth chart.webp" alt="Analyze Your Birth Chart">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vedic-astrology/analyze your birth chart.webp" alt="Analyze Your Birth Chart">
+          </div>
           <p>Analyze<br>Your Birth Chart</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vedic-astrology/predict major events.webp" alt="Predict Major Events">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vedic-astrology/predict major events.webp" alt="Predict Major Events">
+          </div>
           <p>Predict<br>Major Events</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vedic-astrology/understand career and money.webp" alt="Understand Career &amp; Money">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vedic-astrology/understand career and money.webp" alt="Understand Career &amp; Money">
+          </div>
           <p>Understand<br>Career &amp; Money</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vedic-astrology/improve relationships.webp" alt="Improve Relationships">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vedic-astrology/improve relationships.webp" alt="Improve Relationships">
+          </div>
           <p>Improve<br>Relationships</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vedic-astrology/enhance health and well beings.webp" alt="Enhance Health">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vedic-astrology/enhance health and well beings.webp" alt="Enhance Health">
+          </div>
           <p>Enhance<br>Health &amp; Well-Being</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vedic-astrology/auspicious dates and remedies.webp" alt="Auspicious Dates &amp; Remedies">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vedic-astrology/auspicious dates and remedies.webp" alt="Auspicious Dates &amp; Remedies">
+          </div>
           <p>Auspicious<br>Dates &amp; Remedies</p>
         </div>
       </div>

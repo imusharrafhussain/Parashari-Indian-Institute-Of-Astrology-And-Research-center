@@ -548,7 +548,31 @@
       .cvd-ba-right .cvd-ba-icon { color: #fff; font-size: 1.2rem; }
 .cvd-learn-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 25px; margin-top: 10px; max-width: 1200px; margin-left: auto; margin-right: auto; }
       .cvd-learn-item { width: 130px; text-align: center; }
-      .cvd-learn-item img { width: 100px; height: 100px; object-fit: cover; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2); border: 2px solid #D4AF37; }
+      
+      .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+      .cvd-learn-item-img-wrapper {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 15px auto;
+          position: relative;
+          background: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border: 3px solid #c8960c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .cvd-learn-item-img-wrapper img {
+          max-width: none;
+          width: auto;
+          height: 140%;
+          object-fit: cover;
+          margin: 0;
+          display: block;
+      }
+
       .cvd-learn-item p { font-size: 0.9rem; color: #444; font-weight: 600; line-height: 1.3; margin: 0; }
 
       .cvd-sidebar-heading { font-size: 1.8rem; color: #333; font-weight: bold; margin-bottom: 25px; text-align: center; position: relative; }
@@ -704,7 +728,7 @@
       }
     </style>
   
-    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 1400px; margin: 20px auto 20px auto; align-items: flex-start; padding: 0 20px;">
+    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 20px auto; align-items: flex-start; padding: 0 20px;">
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
 
@@ -847,31 +871,45 @@
       
       <div class="cvd-learn-grid">
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/vastu remedies.webp" alt="Apply Vastu Remedies">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/vastu remedies.webp" alt="Apply Vastu Remedies">
+          </div>
           <p>Apply Vastu<br>Remedies</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/attract wealth.webp" alt="Attract Wealth">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/attract wealth.webp" alt="Attract Wealth">
+          </div>
           <p>Attract<br>Wealth</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/improve health.webp" alt="Improve Health">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/improve health.webp" alt="Improve Health">
+          </div>
           <p>Improve<br>Health</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/heanre yantra.webp" alt="Heerne Mantra">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/heanre yantra.webp" alt="Heerne Mantra">
+          </div>
           <p>Heerne<br>Mantra</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/harmonize relationship.webp" alt="Harmonize Relationships">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/harmonize relationship.webp" alt="Harmonize Relationships">
+          </div>
           <p>Harmonize<br>Relationships</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/correct vastu dosahas.webp" alt="Correct Vastu Doshas">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/correct vastu dosahas.webp" alt="Correct Vastu Doshas">
+          </div>
           <p>Correct<br>Vastu Doshas</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/vastu-shastra/what you'll learn/powerful home rituals.webp" alt="Powerful Home Rituals">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/powerful home rituals.webp" alt="Powerful Home Rituals">
+          </div>
           <p>Powerful<br>Home Rituals</p>
         </div>
       </div>

@@ -532,7 +532,31 @@
 .cvd-learn-grid { display: grid; grid-template-columns: repeat(7, 1fr); justify-items: center; align-items: start; gap: 15px; margin-top: 10px; max-width: 1300px; margin-left: auto; margin-right: auto; }
       .cvd-learn-grid.cvd-learn-fullwidth { padding: 0 10px; }
       .cvd-learn-item { width: 100%; max-width: 120px; text-align: center; }
-      .cvd-learn-item img { max-width: 80px; height: auto; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
+      
+      .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+      .cvd-learn-item-img-wrapper {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 15px auto;
+          position: relative;
+          background: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border: 3px solid #c8960c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .cvd-learn-item-img-wrapper img {
+          max-width: none;
+          width: auto;
+          height: 140%;
+          object-fit: cover;
+          margin: 0;
+          display: block;
+      }
+
       .cvd-learn-item p { font-size: 0.85rem; color: #444; font-weight: 600; line-height: 1.3; margin: 0; }
 
       .cvd-sidebar-heading { font-family: "Times New Roman", serif; font-size: 1.6rem; color: #333; margin-bottom: 20px; font-weight: bold; border-bottom: 2px solid #D5CEBE; padding-bottom: 10px; }
@@ -635,7 +659,7 @@
     </style>
   
     <!-- START MAIN LAYOUT WITH SIDEBAR -->
-    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 1400px; margin: 20px auto 20px auto; align-items: flex-start; padding: 0 20px;">
+    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 20px auto; align-items: flex-start; padding: 0 20px;">
       
       <!-- Left Section Content -->
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
@@ -730,31 +754,45 @@
       
       <div class="cvd-learn-grid cvd-learn-fullwidth">
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/find-your-perfect-gemstone.webp" alt="Find Your Perfect Gemstone">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/find-your-perfect-gemstone.webp" alt="Find Your Perfect Gemstone">
+          </div>
           <p>Find Your<br>Perfect Gemstone</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/boost-health-and-energy.webp" alt="Boost Health &amp; Energy">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/boost-health-and-energy.webp" alt="Boost Health &amp; Energy">
+          </div>
           <p>Boost<br>Health &amp; Energy</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/attract wealth and success.webp" alt="Attract Wealth &amp; Success">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/attract wealth and success.webp" alt="Attract Wealth &amp; Success">
+          </div>
           <p>Attract<br>Wealth &amp; Success</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/benefir and perfect stones.webp" alt="Benefit &amp; Perfect Stones">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/benefir and perfect stones.webp" alt="Benefit &amp; Perfect Stones">
+          </div>
           <p>Benefit &amp;<br>Perfect Stones</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/improve love &amp; relationship.webp" alt="Improve Love &amp; Relationships">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/improve love &amp; relationship.webp" alt="Improve Love &amp; Relationships">
+          </div>
           <p>Improve Love<br>&amp; Relationships</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/cleanse-chakras-and-aura.webp" alt="Cleanse Chakras &amp; Aura">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/cleanse-chakras-and-aura.webp" alt="Cleanse Chakras &amp; Aura">
+          </div>
           <p>Cleanse<br>Chakras &amp; Aura</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/gemstone-science/what you'll learn/gemstone wearing rituals.webp" alt="Gemstone Wearing Rituals">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/gemstone-science/what you'll learn/gemstone wearing rituals.webp" alt="Gemstone Wearing Rituals">
+          </div>
           <p>Gemstone<br>Wearing Rituals</p>
         </div>
       </div>

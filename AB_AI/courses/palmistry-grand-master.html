@@ -446,7 +446,31 @@
 .cvd-learn-grid { display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center; align-items: start; gap: 20px; margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; }
       .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(6, 1fr); }
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
-      .cvd-learn-item img { max-width: 100px; height: auto; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+      
+      .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+      .cvd-learn-item-img-wrapper {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 15px auto;
+          position: relative;
+          background: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border: 3px solid #c8960c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .cvd-learn-item-img-wrapper img {
+          max-width: none;
+          width: auto;
+          height: 140%;
+          object-fit: cover;
+          margin: 0;
+          display: block;
+      }
+
       .cvd-learn-item p { font-size: 0.95rem; color: #444; font-weight: 600; line-height: 1.4; }
 
       .cvd-sidebar-heading { font-family: 'Times New Roman', serif; font-size: 1.8rem; color: #591C21; font-weight: bold; margin-bottom: 25px; text-align: center; position: relative; }
@@ -508,7 +532,7 @@
       }
     </style>
   
-    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 1400px; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
+    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
 
@@ -666,27 +690,39 @@
       
       <div class="cvd-learn-grid cvd-learn-fullwidth">
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/palmistry/what-youll-learn/read-your-own-palm.webp" alt="Read Your Own Palm">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/palmistry/what-youll-learn/read-your-own-palm.webp" alt="Read Your Own Palm">
+          </div>
           <p>Read Your<br>Own Palm</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/palmistry/what-youll-learn/1babc379-cbeb-4c1a-a5ec-75d0e28db96c.webp" alt="Love &amp; Relationships">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/palmistry/what-youll-learn/1babc379-cbeb-4c1a-a5ec-75d0e28db96c.webp" alt="Love &amp; Relationships">
+          </div>
           <p>Love &amp;<br>Relationships</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/palmistry/what-youll-learn/1d4f74b1-9b9f-4575-b98d-cb69ddad0f92.webp" alt="Career Path">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/palmistry/what-youll-learn/1d4f74b1-9b9f-4575-b98d-cb69ddad0f92.webp" alt="Career Path">
+          </div>
           <p>Career<br>Path</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/palmistry/what-youll-learn/385f23a0-08f3-4945-9856-c0d492a809d3.webp" alt="Health &amp; Wellbeing">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/palmistry/what-youll-learn/385f23a0-08f3-4945-9856-c0d492a809d3.webp" alt="Health &amp; Wellbeing">
+          </div>
           <p>Health &amp;<br>Wellbeing</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/palmistry/what-youll-learn/1d4f74b1-9b9f-4575-b98d-cb69ddad0f92.webp" alt="Money &amp; Fortune">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/palmistry/what-youll-learn/1d4f74b1-9b9f-4575-b98d-cb69ddad0f92.webp" alt="Money &amp; Fortune">
+          </div>
           <p>Money &amp;<br>Fortune</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/palmistry/what-youll-learn/1babc379-cbeb-4c1a-a5ec-75d0e28db96c.webp" alt="Palmistry Rituals">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/palmistry/what-youll-learn/1babc379-cbeb-4c1a-a5ec-75d0e28db96c.webp" alt="Palmistry Rituals">
+          </div>
           <p>Palmistry<br>Rituals</p>
         </div>
       </div>

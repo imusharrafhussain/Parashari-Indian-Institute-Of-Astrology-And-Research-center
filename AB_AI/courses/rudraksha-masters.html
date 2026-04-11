@@ -447,7 +447,31 @@
 .cvd-learn-grid { display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center; align-items: start; gap: 20px; margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; }
       .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(6, 1fr); }
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
-      .cvd-learn-item img { width: 100%; max-width: 140px; height: auto; object-fit: contain; display: block; margin: 0 auto 15px auto; }
+      
+      .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+      .cvd-learn-item-img-wrapper {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 15px auto;
+          position: relative;
+          background: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border: 3px solid #c8960c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .cvd-learn-item-img-wrapper img {
+          max-width: none;
+          width: auto;
+          height: 140%;
+          object-fit: cover;
+          margin: 0;
+          display: block;
+      }
+
       .cvd-learn-item p { font-size: 0.95rem; color: #444; font-weight: 600; line-height: 1.4; }
 
       .cvd-sidebar-heading { font-family: 'Times New Roman', serif; font-size: 1.8rem; color: #591C21; font-weight: bold; margin-bottom: 25px; text-align: center; position: relative; }
@@ -513,7 +537,7 @@
       .cvd-col-sub { font-size: 0.95rem; color: #555; margin: 0; line-height: 1.4; font-weight: 500; }
     </style>
   
-    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 1400px; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
+    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
 
@@ -674,27 +698,39 @@
       
       <div class="cvd-learn-grid cvd-learn-fullwidth">
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/rudraksha/what-youll-learn/ATTRACT PROSPERITY.webp" alt="Attract Prosperity">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/rudraksha/what-youll-learn/ATTRACT PROSPERITY.webp" alt="Attract Prosperity">
+          </div>
           <p>Attract<br>Prosperity</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/rudraksha/what-youll-learn/AWAKEN YOUR CHAKRAS.webp" alt="Awaken Your Chakras">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/rudraksha/what-youll-learn/AWAKEN YOUR CHAKRAS.webp" alt="Awaken Your Chakras">
+          </div>
           <p>Awaken<br>Your Chakras</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/rudraksha/what-youll-learn/ENHANCE INNER PEACE.webp" alt="Enhance Inner Peace">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/rudraksha/what-youll-learn/ENHANCE INNER PEACE.webp" alt="Enhance Inner Peace">
+          </div>
           <p>Enhance<br>Inner Peace</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/rudraksha/what-youll-learn/HISTORY OF RUDRAKSHA.webp" alt="History of Rudraksha">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/rudraksha/what-youll-learn/HISTORY OF RUDRAKSHA.webp" alt="History of Rudraksha">
+          </div>
           <p>History of<br>Rudraksha</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/rudraksha/what-youll-learn/IDENTIFY REAL RUDRAKSHA.webp" alt="Identify Real Rudraksha">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/rudraksha/what-youll-learn/IDENTIFY REAL RUDRAKSHA.webp" alt="Identify Real Rudraksha">
+          </div>
           <p>Identify Real<br>Rudraksha</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="../assets/images-optimized/rudraksha/what-youll-learn/WEAR RUDRAKSHA PROPERLY.webp" alt="Wear Rudraksha Properly">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/rudraksha/what-youll-learn/WEAR RUDRAKSHA PROPERLY.webp" alt="Wear Rudraksha Properly">
+          </div>
           <p>Wear Rudraksha<br>Properly</p>
         </div>
       </div>

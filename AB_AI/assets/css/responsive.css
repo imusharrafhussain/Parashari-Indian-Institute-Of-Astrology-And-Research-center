@@ -546,3 +546,162 @@
     page-break-inside: avoid;
   }
 }
+
+/* ============================================
+   COURSE PAGE MOBILE CENTERING
+   Only affects pages with .static-course-page
+   ============================================ */
+@media (max-width: 768px) {
+  /* Center the main layout container */
+  .static-course-page .cvd-layout-container {
+    padding: 0 12px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 20px !important;
+  }
+
+  /* Ensure main content doesn't overflow */
+  .static-course-page .cvd-main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  /* Center all sections */
+  .static-course-page .cvd-section {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    text-align: center;
+  }
+
+  /* Before/After table — stack vertically and center */
+  .static-course-page .cvd-ba-container {
+    padding: 0 5px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Hide the shared "Before ——> After" header row on mobile */
+  .static-course-page .cvd-ba-header {
+    display: none !important;
+  }
+
+  .static-course-page .cvd-ba-box {
+    flex-direction: column !important;
+  }
+
+  .static-course-page .cvd-ba-left,
+  .static-course-page .cvd-ba-right {
+    width: 100% !important;
+    padding: 15px 20px !important;
+    border-radius: 0 !important;
+    position: relative;
+  }
+
+  /* Add "Before" label above the Before section */
+  .static-course-page .cvd-ba-left {
+    border-radius: 4px 4px 0 0 !important;
+    padding-top: 50px !important;
+  }
+
+  .static-course-page .cvd-ba-left::before {
+    content: 'Before';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #444;
+    font-family: "Times New Roman", serif;
+  }
+
+  .static-course-page .cvd-ba-left::after {
+    display: none !important;
+  }
+
+  /* Add "After" label above the After section */
+  .static-course-page .cvd-ba-right {
+    border-radius: 0 0 4px 4px !important;
+    padding-left: 20px !important;
+    padding-top: 50px !important;
+  }
+
+  .static-course-page .cvd-ba-right::before {
+    content: 'After';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Times New Roman", serif;
+  }
+
+  .static-course-page .cvd-ba-item {
+    font-size: 1rem !important;
+    min-height: 50px !important;
+  }
+
+  /* ---- IMAGE FIX: Show full images without cropping ---- */
+  .static-course-page .cvd-3col-card img {
+    height: auto !important;
+    max-height: 280px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 8px;
+    background: #f5f5f5;
+  }
+
+  /* Center the strip CTA */
+  .static-course-page .cvd-strip {
+    padding: 20px 10px !important;
+  }
+
+  /* Module cards */
+  .static-course-page .cvd-module-card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* FAQ section */
+  .static-course-page .cvd-faq {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 5px !important;
+  }
+
+  /* Sidebar */
+  .static-course-page .cvd-sidebar {
+    padding: 0 10px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Progression ladder — center */
+  .static-course-page .course-progression-ladder {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .static-course-page .ld-journey-track {
+    justify-content: center !important;
+  }
+
+  /* 3-column cards */
+  .static-course-page .cvd-3col {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Learn grid */
+  .static-course-page .cvd-learn-grid {
+    justify-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 10px !important;
+  }
+}
