@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,6 +25,8 @@
       .program-tab-content { animation: fadeIn 0.4s ease-in-out; }
       @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       @media (max-width: 768px) {
+        html, body { overflow-x: hidden; max-width: 100%; padding: 0; margin: 0; }
+        .cvd-layout-container { padding: 0 !important; margin: 0 !important; width: 100%; max-width: 100%; }
           .category-filter-container { justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0 10px 10px; }
           
           .filter-tab { padding: 6px 14px; font-size: 0.82rem; }
@@ -89,6 +91,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -197,248 +200,170 @@
   </header>
 
   <!-- INTRO SECTION -->
-  <section style="padding-top: 60px;">
-    <div class="container text-center">
-      <h1 class="color-primary" style="font-size: 2.5rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-hands-holding-circle"></i> Reiki Healing</h1>
-      <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; font-weight: 500;">Channeling Universal Life Energy for Holistic Well-Being</p>
-    </div>
-    <div class="container" data-animate>
-      <img src="assets/images-optimized/Picture9.webp" alt="Reiki Healing" class="rounded-lg" style="width: 85%; max-width: 1000px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; display: block; margin-bottom: 2rem;">
-    </div>
-    <div class="container" data-animate>
-      <h2>What is Reiki Healing?</h2>
-      <p>Reiki Healing is a holistic healing practice that focuses on the idea of channeling universal life energy to promote physical, emotional, and mental well-being. The word Reiki comes from Japanese, where "Rei" means universal and "Ki" refers to life energy.</p>
-      <p>This healing technique was developed by Mikao Usui in the early 20th century in Japan. Reiki practitioners believe that by placing hands gently on or near the body, they can help balance the flow of energy within a person.</p>
-      <p>Reiki is commonly practiced as a complementary wellness method and is often associated with relaxation, meditation, and stress reduction.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Why Should You Study Reiki Healing?</h3>
-      <p>Studying Reiki Healing introduces learners to a traditional energy-based wellness practice that focuses on relaxation and personal well-being.</p>
-      <p>Through Reiki training, students learn techniques related to energy awareness, meditation, and hand placement methods used during Reiki sessions. The practice encourages mindfulness and self-awareness while promoting a calm and balanced state of mind.</p>
-      <p>Many individuals study Reiki not only to practice it personally but also to understand its role within holistic wellness traditions.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">What Are the Benefits of Studying Reiki Healing?</h3>
-      <p>Learning Reiki Healing may provide several personal and wellness-related benefits.</p>
-      <ul class="list-reset">
-        <li class="mb-0-75"><strong>1. Stress Reduction and Relaxation:</strong> Reiki practices are often associated with relaxation techniques that can help reduce stress and promote calmness.</li>
-        <li class="mb-0-75"><strong>2. Personal Well-Being Awareness:</strong> Students learn practices that encourage mindfulness and attention to physical and emotional balance.</li>
-        <li class="mb-0-75"><strong>3. Introduction to Energy Healing Concepts:</strong> Reiki provides a framework for understanding traditional ideas about life energy and its role in wellness practices.</li>
-        <li class="mb-0-75"><strong>4. Support for Meditation and Mindfulness:</strong> Reiki training often includes meditative practices that can enhance focus and inner awareness.</li>
-        <li><strong>5. Complementary Wellness Practice:</strong> Some individuals integrate Reiki with other holistic wellness or counseling approaches.</li>
-      </ul>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Can Someone Build a Career in Reiki Healing?</h3>
-      <p>Yes, some individuals choose to develop professional opportunities related to Reiki after training and practice. Possible career paths include:</p>
-      <ul class="list-reset">
-        <li class="mb-0-75">✓ Reiki practitioner offering healing sessions</li>
-        <li class="mb-0-75">✓ Reiki instructor or trainer</li>
-        <li class="mb-0-75">✓ Wellness consultant or holistic therapy practitioner</li>
-        <li class="mb-0-75">✓ Meditation and energy healing guide</li>
-        <li>✓ Content creator or educator in holistic healing practices</li>
-      </ul>
-      <p style="margin-top: 1rem;">However, building a professional practice generally requires dedicated training, certification, and responsible practice within wellness and complementary therapy contexts.</p>
-    </div>
-  </section>
-
-  <!-- PROGRAMS SECTION -->
-  <section class="light-bg">
+  <section class="premium-overview-section">
     <div class="container">
-      <h2 class="card-section-title">Our Reiki Healing Program</h2>
-
-      <div class="category-filter-container">
-        <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
-        <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
-        <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
-                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
-      </div>
-
-      <!-- DIPLOMA -->
-      <div id="diploma" class="program-tab-content" style="display: block;">
-        <div class="grid grid-2 grid-gap-3">
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Foundations of Reiki (Part 1)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 1: Level 1 (Shoden)</strong><br>Covers Reiki history, foundational self-healing techniques, and the 24 hand positions to channel life-force energy for physical and emotional wellness.</li>
-              <li class="mb-0-75"><strong>Module 2: Level 2 (Okuden)</strong><br>Introduces sacred symbols for power, harmony, and distant healing, alongside advanced techniques for deep mental and emotional subconscious cleansing.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Advanced &amp; Professional (Part 2)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 3: Anatomy &amp; Endocrine</strong><br>Explores the Chakra system's alignment with the endocrine glands, understanding how energy imbalances manifest as specific physical or hormonal ailments.</li>
-              <li class="mb-0-75"><strong>Module 4: Professional Practice</strong><br>Mastering aura scanning (Byosen), applying healing to animals, and maintaining high client ethics for a successful, professional Reiki practitioner career.</li>
-            </ul>
-          </div>
+      <div class="grid grid-2" style="align-items: center; gap: 40px;">
+        <div data-animate>
+          <h2 class="card-section-title" style="margin-bottom: 15px; font-size: 2.5rem; line-height: 1.2;"><i class="fa-solid fa-hands-holding-circle"></i> Master the Art of Reiki Healing</h2>
+          <p style="font-size: 1.2rem; color: #c8960c; font-weight: 700; margin-bottom: 25px;">Channeling Universal Life Energy for Holistic Well-Being.</p>
+          
+          <ul class="list-reset" style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Master Universal Channeling</strong>
+                <span style="color: #666; font-size: 0.95rem;">Tap into the infinite life force to heal physical and emotional blockages naturally.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Attune Your Subconscious</strong>
+                <span style="color: #666; font-size: 0.95rem;">Harness sacred symbols for power, harmony, and advanced distance healing treatments.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Ascend to Clinical Mastery</strong>
+                <span style="color: #666; font-size: 0.95rem;">Develop the capability to conduct professional sessions and highly guarded remedies.</span>
+              </div>
+            </li>
+          </ul>
         </div>
-
-        <div class="landscape-pricing-card" data-animate>
-          <div class="pricing-info-left">
-            <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 24% Today</span>
-            <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Diploma in Reiki Healing</h3>
-            <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-              <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 8 WEEKS comprehensive training
-            </p>
-          </div>
-          <div class="pricing-block">
-            <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹5,499</div>
-            <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹4,199</strong>
-          </div>
-          <div class="enroll-block">
-            <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-          </div>
+        
+        <div data-animate style="position: relative;">
+          <div style="position: absolute; top: -15px; right: -15px; width: 100px; height: 100px; background: rgba(200, 150, 12, 0.1); border-radius: 50%; z-index: 1;"></div>
+          <div style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; background: rgba(90, 30, 30, 0.05); border-radius: 50%; z-index: 1;"></div>
+          <img src="assets/images-optimized/Picture9.webp" alt="Palmistry Mastery" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.5);">
+          
+          
         </div>
       </div>
-
-      <!-- BACHELORS -->
-      <div id="bachelors" class="program-tab-content" style="display: none;">
-        <div class="grid grid-3 grid-gap-2">
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Energy &amp; Attunements (Part 1)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 1: Energy Anatomy</strong><br>A detailed study of the 7 Chakras and Nadis (energy channels), understanding how life force flows through the human body.</li>
-              <li class="mb-0-75"><strong>Module 2: Attunements &amp; Symbols</strong><br>Focuses on Level 1 and 2 attunements, mastering the primary symbols like Cho Ku Rei and Sei He Ki for healing.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Distance &amp; Mastery (Part 2)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 3: Distance &amp; Time Healing</strong><br>Teaches Distance Healing across space and Time-Travel Healing to clear past traumas, bridging the gap between past and present.</li>
-              <li class="mb-0-75"><strong>Module 4: Reiki Master Level (3A)</strong><br>The transition to Mastery, introducing the Dai Ko Myo symbol to access the highest frequencies of spiritual and physical healing.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Advanced &amp; Clinical (Part 3)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 5: Advanced Techniques</strong><br>Explores Psychic Surgery to remove deep energetic blockages and Aura Shielding to protect the practitioner and client from negative influences.</li>
-              <li class="mb-0-75"><strong>Module 6: Clinical Practice</strong><br>Guidelines for establishing a professional healing center, managing client records, and upholding the highest standards of practitioner ethics and conduct.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="landscape-pricing-card" data-animate>
-          <div class="pricing-info-left">
-            <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-            <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Bachelors in Reiki Healing</h3>
-            <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-              <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 12 WEEKS advanced program
-            </p>
-          </div>
-          <div class="pricing-block">
-            <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹11,999</div>
-            <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹8,999</strong>
-          </div>
-          <div class="enroll-block">
-            <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- MASTERS -->
-      <div id="masters" class="program-tab-content" style="display: none;">
-        <div class="grid grid-2 grid-gap-3">
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 1: Energy Anatomy</strong><br>Detailed study of the 7 Chakras and Nadis, understanding how life force flows through the human bio-field and aura.</li>
-              <li class="mb-0-75"><strong>Module 2: Level 1 &amp; 2 Attunements</strong><br>Mastering the primary healing symbols””Cho Ku Rei, Sei He Ki, and Hon Sha Ze Sho Nen””to channel energy.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Distance &amp; Mastery (Part 2)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 3: Distance &amp; Time Healing</strong><br>Techniques for Distance Healing across space and Time-Travel Healing to clear past traumas and future anxieties effectively.</li>
-              <li class="mb-0-75"><strong>Module 4: Reiki Master Level (3A)</strong><br>The transition to Mastery, introducing the Dai Ko Myo symbol to access the highest frequencies of spiritual and physical healing.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Advanced Healing (Part 3)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 5: Advanced Healing Techniques</strong><br>Explores Psychic Surgery to remove deep energetic blockages and Aura Shielding to protect both the practitioner and the client.</li>
-              <li class="mb-0-75"><strong>Module 6: Animal &amp; Nature Reiki</strong><br>Adapting healing frequencies for animals, plants, and environments, expanding the practitioner's ability to harmonize various life forms and spaces.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery &amp; Integration (Part 4)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 7: Crystal Reiki Integration</strong><br>Combining the vibrational power of Crystals with Reiki energy to amplify healing results and balance specific planetary deficiencies.</li>
-              <li class="mb-0-75"><strong>Module 8: Clinical Practice &amp; Ethics</strong><br>Guidelines for setting up a healing centre, managing professional client relationships, and maintaining high ethical standards in spiritual practice.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="landscape-pricing-card" data-animate>
-          <div class="pricing-info-left">
-            <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-            <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Masters in Reiki Healing</h3>
-            <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-              <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 16 WEEKS ultimate mastery
-            </p>
-          </div>
-          <div class="pricing-block">
-            <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹24,999</div>
-            <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹18,699</strong>
-          </div>
-          <div class="enroll-block">
-            <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-
-
-
-            <!-- GRAND MASTER TAB -->
-
-            <div id="grand-master" class="program-tab-content" style="display: none;">
-        <div class="grid grid-2 grid-gap-3">
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 1: Energy Anatomy <span class="gm-premium-badge">Advanced</span></strong><br>Detailed study of the 7 Chakras and Nadis, understanding how life force flows through the human bio-field and aura.</li>
-              <li class="mb-0-75"><strong>Module 2: Level 1 &amp; 2 Attunements <span class="gm-premium-badge">Advanced</span></strong><br>Mastering the primary healing symbols””Cho Ku Rei, Sei He Ki, and Hon Sha Ze Sho Nen””to channel energy.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Distance &amp; Mastery (Part 2)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 3: Distance &amp; Time Healing <span class="gm-premium-badge">Advanced</span></strong><br>Techniques for Distance Healing across space and Time-Travel Healing to clear past traumas and future anxieties effectively.</li>
-              <li class="mb-0-75"><strong>Module 4: Reiki Master Level (3A) <span class="gm-premium-badge">Advanced</span></strong><br>The transition to Mastery, introducing the Dai Ko Myo symbol to access the highest frequencies of spiritual and physical healing.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Advanced Healing (Part 3)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 5: Advanced Healing Techniques <span class="gm-premium-badge">Advanced</span></strong><br>Explores Psychic Surgery to remove deep energetic blockages and Aura Shielding to protect both the practitioner and the client.</li>
-              <li class="mb-0-75"><strong>Module 6: Animal &amp; Nature Reiki <span class="gm-premium-badge">Advanced</span></strong><br>Adapting healing frequencies for animals, plants, and environments, expanding the practitioner's ability to harmonize various life forms and spaces.</li>
-            </ul>
-          </div>
-          <div class="card card-auto p-4" data-animate>
-            <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery &amp; Integration (Part 4)</h3>
-            <ul class="list-reset" style="text-align: left;">
-              <li class="mb-2"><strong>Module 7: Crystal Reiki Integration <span class="gm-premium-badge">Advanced</span></strong><br>Combining the vibrational power of Crystals with Reiki energy to amplify healing results and balance specific planetary deficiencies.</li>
-              <li class="mb-0-75"><strong>Module 8: Clinical Practice &amp; Ethics <span class="gm-premium-badge">Advanced</span></strong><br>Guidelines for setting up a healing centre, managing professional client relationships, and maintaining high ethical standards in spiritual practice.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="landscape-pricing-card" data-animate>
-          <div class="pricing-info-left">
-            <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
-            <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Reiki Healing</h3>
-            <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-              <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
-            </p>
-          </div>
-          <div class="pricing-block">
-            <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
-            <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
-          </div>
-          <div class="enroll-block">
-            <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
+
+<section class="learning-tiers-section">
+    <div class="container text-center mb-3">
+      <h2 class="card-section-title">Choose Your Path to Mastery</h2>
+      <p style="color: #666; max-width: 600px; margin: 0 auto 40px;">Select the depth of knowledge that aligns with your goals. Upgrade at any time as your journey evolves.</p>
+    </div>
+
+    <div class="container">
+      <div class="tier-grid">
+      
+        <!-- DIPLOMA -->
+        <div class="tier-card tier-diploma" data-animate>
+          <div class="tier-header">
+            <h3 class="tier-name">Diploma</h3>
+            <span class="tier-position">The Foundation</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Master the 24 hand positions for self-healing</li>
+              <li><i class="fas fa-check"></i> Learn powerful Level 1 & 2 attunements</li>
+              <li><i class="fas fa-check"></i> Safely step into energetic wellness</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹5,499</span>
+              <strong class="tier-new-price">₹4,199</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 8 Weeks</div>
+            <a href="courses/reiki-diploma.html" class="btn btn-outline btn-block">Start Foundation</a>
+          </div>
+        </div>
+
+        <!-- BACHELORS -->
+        <div class="tier-card tier-bachelors" data-animate>
+          <div class="tier-badge">Smart Choice</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Bachelors</h3>
+            <span class="tier-position">The Practitioner</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Transition to Distance & Time healing</li>
+              <li><i class="fas fa-check"></i> Access the Dai Ko Myo mastery symbol</li>
+              <li><i class="fas fa-check"></i> Identify and clear deep energetic imbalances</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹11,999</span>
+              <strong class="tier-new-price">₹8,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 12 Weeks</div>
+            <a href="courses/reiki-bachelors.html" class="btn btn-outline btn-block" style="border-color: #8b0000; color: #8b0000;">Become a Practitioner</a>
+          </div>
+        </div>
+
+        <!-- MASTERS -->
+        <div class="tier-card tier-masters" data-animate>
+          <div class="tier-badge popular">Most Popular</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Masters</h3>
+            <span class="tier-position">The Advanced Guide</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-compass"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Perform highly guarded psychic surgery</li>
+              <li><i class="fas fa-check"></i> Adapt healing for animals and nature</li>
+              <li><i class="fas fa-check"></i> Master clinical practice & ethics</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹24,999</span>
+              <strong class="tier-new-price">₹18,699</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 16 Weeks</div>
+            <a href="courses/reiki-masters.html" class="btn btn-primary btn-block">Achieve Mastery</a>
+          </div>
+        </div>
+
+        <!-- GRAND MASTER -->
+        <div class="tier-card tier-grand-master" data-animate>
+          <div class="tier-badge elite">Elite Invitation</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Grand Master</h3>
+            <span class="tier-position">The Authority</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unrivaled mastery of crystal-infused Reiki</li>
+              <li><i class="fas fa-check"></i> Command premium authority as a Grand Master</li>
+              <li><i class="fas fa-check"></i> Highest spiritual frequencies unlocked</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹34,999</span>
+              <strong class="tier-new-price">₹24,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 48 Weeks</div>
+            <a href="courses/reiki-grand-master.html" class="btn btn-elite btn-block">Claim Authority</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- COMPARISON TABLE SECTION -->
   <section class="comparison-section">
@@ -530,7 +455,8 @@
               <td><strong>Government Approved E-Certificate</strong></td>
               <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
               <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-              <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+              <td class="col-ma
+sters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
             </tr>
                                   <tr>
@@ -590,7 +516,8 @@
   </section>
 
   <!-- TOP URGENCY MARQUEE -->
-  <div class="urgency-marquee-container">
+  
+<div class="urgency-marquee-container">
     <div class="urgency-marquee-content">
       <div class="marquee-item">
         <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats Available!

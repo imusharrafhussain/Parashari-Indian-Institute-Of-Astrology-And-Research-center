@@ -1,0 +1,765 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Master in Remedy Course — Parashari Institute</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/loader.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
+    <link rel="stylesheet" href="../assets/css/chatbot.css">
+    <link rel="stylesheet" href="../assets/css/urgency.css">
+    <style>
+        /* Modern Premium Template Styles */
+        .premium-hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, rgba(253, 251, 247, 1) 0%, rgba(245, 238, 220, 1) 100%);
+            border-bottom: 2px solid rgba(200, 150, 12, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(200,150,12,0.03) 0%, transparent 60%);
+            animation: rotateBg 60s linear infinite;
+        }
+
+        @keyframes rotateBg {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text-content {
+            flex: 1;
+        }
+
+        .hero-image-content {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-image-content img {
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 4px solid #fff;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge-item {
+            background: rgba(200, 150, 12, 0.1);
+            color: #5a1e1e;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(200, 150, 12, 0.3);
+        }
+
+        .course-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            color: #4a1a1a;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .course-subtitle {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Value Stack Grid */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .value-icon {
+            width: 35px;
+            height: 35px;
+            background: #c8960c;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .value-text h4 {
+            margin: 0 0 4px 0;
+            font-size: 1.05rem;
+            color: #4a1a1a;
+        }
+
+        .value-text p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Landscape Pricing Card Override */
+        .landscape-pricing-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #fdfbf7);
+            border: 1px solid rgba(200, 150, 12, 0.3);
+            border-left: 6px solid #c8960c;
+            border-radius: 12px;
+            padding: 25px 40px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            flex-wrap: nowrap;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 5;
+        }
+        
+        .pricing-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0 30px;
+            border-right: 1px solid #e0d5c8;
+        }
+
+        .save-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            border: 1px solid #c8e6c9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Syllabus Accordion */
+        .syllabus-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .module-item {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .module-item:hover {
+            border-color: #c8960c;
+            box-shadow: 0 5px 15px rgba(200, 150, 12, 0.1);
+        }
+
+        .module-header {
+            padding: 20px 25px;
+            background: #faf8f5;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .module-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .module-day {
+            background: #5a1e1e;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .module-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #4a1a1a;
+            margin: 0;
+        }
+
+        .module-content {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            background: #fff;
+        }
+
+        .module-item.active .module-content {
+            padding: 20px 25px;
+            max-height: 1500px;
+            border-top: 1px solid #eee;
+        }
+
+        .module-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .module-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .module-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #c8960c;
+            font-size: 0.85rem;
+        }
+
+        /* Instructor Profile */
+        .instructor-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: #fdfbf7;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(200, 150, 12, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .instructor-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Mini Testimonials */
+        .mini-testimonial {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border-top: 4px solid #c8960c;
+            height: 100%;
+        }
+
+        @media (max-width: 992px) {
+            .hero-content-wrapper {
+                flex-direction: column;
+            }
+            .hero-image-content {
+                text-align: center;
+            }
+            .landscape-pricing-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px;
+            }
+            .pricing-block {
+                border-right: none;
+                border-top: 1px solid #e0d5c8;
+                border-bottom: 1px solid #e0d5c8;
+                padding: 15px 0;
+                width: 100%;
+                align-items: flex-start;
+            }
+            .instructor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+            .course-title {
+                font-size: 2.2rem;
+            }
+        }
+
+
+        /* FAQ Specific & Accordion Enhancements */
+        .module-header i {
+            transition: transform 0.3s ease;
+        }
+
+        .module-item.active .module-header i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item {
+            border-color: transparent !important;
+            border-bottom: 1px solid #ddd !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            margin-bottom: 0 !important;
+        }
+
+        .faq-item .module-header {
+            background: transparent !important;
+            padding: 20px 0 !important;
+        }
+
+        .faq-item .module-content {
+            padding: 0 !important; 
+            background: transparent !important;
+            border-top: none !important;
+        }
+
+        .faq-item.active .module-content {
+            padding: 0 0 20px 0 !important;
+        }
+    </style>
+
+<style>
+/* === Progression Ladder === */
+.course-progression-ladder { padding: 60px 0 50px; background: linear-gradient(180deg, #fdfbf7 0%, #f5eedc 100%); }
+.ld-journey-track { display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; gap: 0; margin-top: 10px; }
+.ld-journey-node { display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 10px 22px; position: relative; transition: transform 0.3s ease; }
+.ld-journey-node:hover { transform: translateY(-4px); }
+.ld-journey-icon { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; background: #e8e3db; color: #999; transition: all 0.3s ease; border: 3px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.ld-journey-node.completed .ld-journey-icon { background: #4a1a1a; color: #fff; }
+.ld-journey-node.current .ld-journey-icon { background: #c8960c; color: #fff; transform: scale(1.2); box-shadow: 0 0 25px rgba(200,150,12,0.45); }
+.ld-journey-node.future .ld-journey-icon { background: #f0ece6; color: #bbb; }
+.ld-journey-label { margin-top: 10px; font-size: 0.9rem; font-weight: 800; color: #4a1a1a; letter-spacing: 0.3px; }
+.ld-journey-node.current .ld-journey-label { color: #c8960c; }
+.ld-journey-node.future .ld-journey-label { color: #999; }
+.ld-journey-subtitle { font-size: 0.65rem; color: #999; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 2px; }
+.ld-journey-node.current .ld-journey-subtitle { color: #c8960c; }
+.ld-journey-you { font-size: 0.6rem; color: #c8960c; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px; animation: pulseYou 2s ease-in-out infinite; }
+@keyframes pulseYou { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.ld-journey-connector { width: 55px; height: 3px; background: #ddd; margin-top: 32px; border-radius: 2px; }
+.ld-journey-connector.filled { background: linear-gradient(90deg, #4a1a1a, #c8960c); }
+@media (max-width: 768px) {
+  .ld-journey-connector { width: 25px; }
+  .ld-journey-node { padding: 8px 10px; }
+  .ld-journey-icon { width: 48px; height: 48px; font-size: 1rem; }
+  .ld-journey-label { font-size: 0.75rem; }
+  .ld-journey-subtitle { font-size: 0.55rem; }
+  .course-progression-ladder { padding: 40px 0 30px; }
+}
+</style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <div id="ld-main" class="static-course-page">
+  <style></style>
+  <section id="ld-hero" class="ld-hero">
+    <div class="container">
+      <div class="ld-hero-grid">
+        <div class="ld-hero-text">
+          <span class="ld-level-badge elite">Elite Invitation</span>
+          <span class="ld-level-tag"><i class="fas fa-fa-crown"></i> Grand Master · The Authority</span>
+          <h1 class="ld-headline">Command Unquestioned Authority in Remedy Course</h1>
+          <p class="ld-hook">This is not a course. It is an initiation into mastery.</p>
+          <div class="ld-hero-meta">
+            <span><i class="far fa-clock"></i> 48 Weeks Access</span>
+            <span><i class="fas fa-certificate"></i> Govt. Certified</span>
+            <span><i class="fas fa-users"></i> 5,000+ Enrolled</span>
+          </div>
+          <div class="ld-hero-pricing">
+            <del>₹34,999</del>
+            <strong>₹24,999</strong>
+          </div>
+          <a href="../remedy-course.html" class="btn btn-elite btn-lg ld-hero-cta"><i class="fas fa-bolt"></i> Claim Authority</a>
+          <div style="margin-top: 15px;">
+            <a href="../remedy-course.html" style="color: #D4AF37; font-weight: 600; text-decoration: underline; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 5px; transition: color 0.3s ease;">
+              For price comparison follow this <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ld-hero-visual">
+          <img src="../assets/images-optimized/remedy.webp" alt="Remedy Course">
+          <div class="ld-hero-overlay-badge">
+            <i class="fas fa-fa-crown"></i>
+            <span>Grand Master</span>
+          </div>
+        </div>
+      </div>
+    </div></section>
+  <section id="ld-outcomes" class="ld-outcomes">
+    <div class="container">
+      <h2 class="card-section-title text-center">What You Will Be Able To Do</h2>
+      <p class="text-center" style="color:#666;max-width:600px;margin:0 auto 40px">These are not topics. These are capabilities you will walk away with.</p>
+      <div class="ld-outcomes-grid">
+        
+          <div class="ld-outcome-card" data-animate="">
+            <div class="ld-outcome-number">01</div>
+            <p>Deliver masterful, multi-system consultations that stun clients</p>
+          </div>
+        
+          <div class="ld-outcome-card" data-animate="">
+            <div class="ld-outcome-number">02</div>
+            <p>Handle complex charts (Balarishta, Kemadruma, Kala Sarpa) with authority</p>
+          </div>
+        
+          <div class="ld-outcome-card" data-animate="">
+            <div class="ld-outcome-number">03</div>
+            <p>Build and scale a premium astrology consulting practice</p>
+          </div>
+        
+          <div class="ld-outcome-card" data-animate="">
+            <div class="ld-outcome-number">04</div>
+            <p>Develop your own research methodology and unique interpretive voice</p>
+          </div>
+        
+          <div class="ld-outcome-card" data-animate="">
+            <div class="ld-outcome-number">05</div>
+            <p>Mentor and certify other aspiring astrologers</p>
+          </div>
+        
+      </div>
+    </div></section>
+  <section id="ld-modules" class="ld-modules">
+    <div class="container">
+      <h2 class="card-section-title text-center">Inside the Course</h2>
+      <p class="text-center" style="color:#666;max-width:600px;margin:0 auto 40px">A structured, progressive journey — not random lessons.</p>
+      <div class="ld-modules-timeline">
+        
+          <div class="ld-module-block active" data-animate="">
+            <div class="ld-module-header" onclick="this.parentElement.classList.toggle('active')">
+              <div class="ld-module-meta">
+                <span class="ld-module-num">Module 1</span>
+                <span class="ld-module-weeks">Week 1–6</span>
+              </div>
+              <h3 class="ld-module-title">Foundation (Advanced)</h3>
+              <i class="fas fa-chevron-down ld-module-chevron"></i>
+            </div>
+            <div class="ld-module-body">
+              <ul><li><i class="fas fa-play-circle"></i> Advanced Siddhanta &amp; Astronomy</li><li><i class="fas fa-play-circle"></i> Elite Graha &amp; Rashi Analysis</li><li><i class="fas fa-play-circle"></i> Mathematical Precision Training</li></ul>
+            </div>
+          </div>
+        
+          <div class="ld-module-block " data-animate="">
+            <div class="ld-module-header" onclick="this.parentElement.classList.toggle('active')">
+              <div class="ld-module-meta">
+                <span class="ld-module-num">Module 2</span>
+                <span class="ld-module-weeks">Week 7–14</span>
+              </div>
+              <h3 class="ld-module-title">Analysis &amp; Timing (Advanced)</h3>
+              <i class="fas fa-chevron-down ld-module-chevron"></i>
+            </div>
+            <div class="ld-module-body">
+              <ul><li><i class="fas fa-play-circle"></i> Advanced Bhava &amp; House Lord Mastery</li><li><i class="fas fa-play-circle"></i> Elite Dasha System Integration</li><li><i class="fas fa-play-circle"></i> Multi-System Timing Protocols</li></ul>
+            </div>
+          </div>
+        
+          <div class="ld-module-block " data-animate="">
+            <div class="ld-module-header" onclick="this.parentElement.classList.toggle('active')">
+              <div class="ld-module-meta">
+                <span class="ld-module-num">Module 3</span>
+                <span class="ld-module-weeks">Week 15–24</span>
+              </div>
+              <h3 class="ld-module-title">Divisional &amp; Transits (Advanced)</h3>
+              <i class="fas fa-chevron-down ld-module-chevron"></i>
+            </div>
+            <div class="ld-module-body">
+              <ul><li><i class="fas fa-play-circle"></i> Complete 16-Varga Synthesis Mastery</li><li><i class="fas fa-play-circle"></i> Advanced Ashtakvarga Applications</li><li><i class="fas fa-play-circle"></i> Predictive Transit Frameworks</li></ul>
+            </div>
+          </div>
+        
+          <div class="ld-module-block " data-animate="">
+            <div class="ld-module-header" onclick="this.parentElement.classList.toggle('active')">
+              <div class="ld-module-meta">
+                <span class="ld-module-num">Module 4</span>
+                <span class="ld-module-weeks">Week 25–36</span>
+              </div>
+              <h3 class="ld-module-title">Practice &amp; Ethics (Advanced)</h3>
+              <i class="fas fa-chevron-down ld-module-chevron"></i>
+            </div>
+            <div class="ld-module-body">
+              <ul><li><i class="fas fa-play-circle"></i> Elite Muhurta &amp; Panchanga Selection</li><li><i class="fas fa-play-circle"></i> Advanced Remedial Jyotish</li><li><i class="fas fa-play-circle"></i> Professional Practice Building</li></ul>
+            </div>
+          </div>
+        
+          <div class="ld-module-block " data-animate="">
+            <div class="ld-module-header" onclick="this.parentElement.classList.toggle('active')">
+              <div class="ld-module-meta">
+                <span class="ld-module-num">Module 5</span>
+                <span class="ld-module-weeks">Week 37–48</span>
+              </div>
+              <h3 class="ld-module-title">Authority Building</h3>
+              <i class="fas fa-chevron-down ld-module-chevron"></i>
+            </div>
+            <div class="ld-module-body">
+              <ul><li><i class="fas fa-play-circle"></i> Client Acquisition &amp; Premium Pricing</li><li><i class="fas fa-play-circle"></i> Research Methodology Development</li><li><i class="fas fa-play-circle"></i> Mentorship &amp; Teaching Certification</li><li><i class="fas fa-play-circle"></i> Personal Brand Building in Astrology</li></ul>
+            </div>
+          </div>
+        
+      </div>
+    </div></section>
+  <section id="ld-case" class="ld-case">
+      <div class="container">
+        <h2 class="card-section-title text-center">Experience Preview</h2>
+        <p class="text-center" style="color:#666;max-width:600px;margin:0 auto 40px">See how you'd approach a real scenario at this level.</p>
+        <div class="ld-case-card" data-animate="">
+          <div class="ld-case-scenario">
+            <i class="fas fa-quote-left"></i>
+            <p>A high-profile client with Kala Sarpa Yoga asks: 'Is my life truly cursed?'</p>
+          </div>
+          <div class="ld-case-steps">
+            <h4>Your Approach:</h4>
+            
+              <div class="ld-case-step">
+                <span class="ld-step-num">1</span>
+                <p>Deep-analyze the Kala Sarpa configuration — is it actually present or misdiagnosed?</p>
+              </div>
+            
+              <div class="ld-case-step">
+                <span class="ld-step-num">2</span>
+                <p>Evaluate compensating yogas that can neutralize the perceived affliction</p>
+              </div>
+            
+              <div class="ld-case-step">
+                <span class="ld-step-num">3</span>
+                <p>Cross-reference across Navamsha and other Varga charts for confirmation</p>
+              </div>
+            
+              <div class="ld-case-step">
+                <span class="ld-step-num">4</span>
+                <p>Design a comprehensive, multi-layered remedial protocol</p>
+              </div>
+            
+              <div class="ld-case-step">
+                <span class="ld-step-num">5</span>
+                <p>Structure the consultation to educate, reassure, and guide — not frighten</p>
+              </div>
+            
+          </div>
+          <div class="ld-case-insight">
+            <i class="fas fa-lightbulb"></i>
+            <p>At the Grand Master level, you don't just interpret — you counsel, heal, and transform. Your authority comes from depth that no shortcut can replicate.</p>
+          </div>
+        </div>
+      </div></section>
+  <section id="ld-diff" class="ld-diff">
+    <div class="container">
+      <h2 class="card-section-title text-center">What Makes This Level Different?</h2>
+      <p class="text-center" style="color:#666;max-width:600px;margin:0 auto 40px">What Masters Doesn't Cover</p>
+      <div class="ld-diff-grid">
+        
+          <div class="ld-diff-item" data-animate="">
+            <i class="fas fa-arrow-up" style="color:#c8960c;font-size:1.2rem;flex-shrink:0;margin-top:3px"></i>
+            <span>48 weeks of deep, mentored immersion (not just modules)</span>
+          </div>
+        
+          <div class="ld-diff-item" data-animate="">
+            <i class="fas fa-arrow-up" style="color:#c8960c;font-size:1.2rem;flex-shrink:0;margin-top:3px"></i>
+            <span>Professional practice building — client acquisition, pricing, branding</span>
+          </div>
+        
+          <div class="ld-diff-item" data-animate="">
+            <i class="fas fa-arrow-up" style="color:#c8960c;font-size:1.2rem;flex-shrink:0;margin-top:3px"></i>
+            <span>Research methodology — develop your own unique astrological voice</span>
+          </div>
+        
+          <div class="ld-diff-item" data-animate="">
+            <i class="fas fa-arrow-up" style="color:#c8960c;font-size:1.2rem;flex-shrink:0;margin-top:3px"></i>
+            <span>Free 6 Spiritual Stairs Pathway (exclusive Grand Master benefit)</span>
+          </div>
+        
+          <div class="ld-diff-item" data-animate="">
+            <i class="fas fa-arrow-up" style="color:#c8960c;font-size:1.2rem;flex-shrink:0;margin-top:3px"></i>
+            <span>Teaching &amp; mentorship certification</span>
+          </div>
+        
+          <div class="ld-diff-item" data-animate="">
+            <i class="fas fa-arrow-up" style="color:#c8960c;font-size:1.2rem;flex-shrink:0;margin-top:3px"></i>
+            <span>Access to secret, faculty-only Nadi combinations</span>
+          </div>
+        
+      </div>
+    </div></section>
+  <section id="ld-applications" class="ld-applications">
+    <div class="container">
+      <h2 class="card-section-title text-center">How You Will Use This Skill</h2>
+      <p class="text-center" style="color:#666;max-width:600px;margin:0 auto 40px">Practical, real-world applications — not just theory.</p>
+      <div class="ld-apps-grid">
+        
+          <div class="ld-app-item" data-animate="">
+            <i class="fas fa-check-circle" style="color:#4CAF50"></i>
+            <span>Run a full-time premium astrology consulting practice</span>
+          </div>
+        
+          <div class="ld-app-item" data-animate="">
+            <i class="fas fa-check-circle" style="color:#4CAF50"></i>
+            <span>Charge high-ticket consultation fees with confidence</span>
+          </div>
+        
+          <div class="ld-app-item" data-animate="">
+            <i class="fas fa-check-circle" style="color:#4CAF50"></i>
+            <span>Mentor and certify the next generation of astrologers</span>
+          </div>
+        
+          <div class="ld-app-item" data-animate="">
+            <i class="fas fa-check-circle" style="color:#4CAF50"></i>
+            <span>Publish original research and build thought leadership</span>
+          </div>
+        
+          <div class="ld-app-item" data-animate="">
+            <i class="fas fa-check-circle" style="color:#4CAF50"></i>
+            <span>Be recognized as a true authority in the astrological community</span>
+          </div>
+        
+      </div>
+    </div></section>
+  
+  <section id="ld-locked" class="ld-locked" style="display: block;">
+      <div class="container">
+        <h2 class="card-section-title text-center">Exclusive Content — Unlocked at This Level</h2>
+        <p class="text-center" style="color:#666;max-width:600px;margin:0 auto 40px">Advanced topics reserved only for Grand Master students.</p>
+        <div class="ld-locked-grid">
+          
+            <div class="ld-locked-item" data-animate="">
+              <i class="fas fa-lock-open" style="color:#c8960c"></i>
+              <span>Secret Bhrigu Nandi Nadi Combinations</span>
+            </div>
+          
+            <div class="ld-locked-item" data-animate="">
+              <i class="fas fa-lock-open" style="color:#c8960c"></i>
+              <span>Advanced Kala Sarpa &amp; Balarishta Resolution Protocols</span>
+            </div>
+          
+            <div class="ld-locked-item" data-animate="">
+              <i class="fas fa-lock-open" style="color:#c8960c"></i>
+              <span>Premium Client Psychology &amp; Consultation Choreography</span>
+            </div>
+          
+            <div class="ld-locked-item" data-animate="">
+              <i class="fas fa-lock-open" style="color:#c8960c"></i>
+              <span>Research Methodology for Original Astrological Discoveries</span>
+            </div>
+          
+            <div class="ld-locked-item" data-animate="">
+              <i class="fas fa-lock-open" style="color:#c8960c"></i>
+              <span>Personal Mentorship with Senior Faculty</span>
+            </div>
+          
+            <div class="ld-locked-item" data-animate="">
+              <i class="fas fa-lock-open" style="color:#c8960c"></i>
+              <span>Practice Building: From Zero to Premium Authority</span>
+            </div>
+          
+        </div>
+      </div></section>
+  <section id="ld-final-cta" class="ld-final-cta-section">
+    <div class="container text-center">
+      <h2 style="color:#4a1a1a;font-size:2.5rem;margin-bottom:15px">Ready to Begin?</h2>
+      <p style="color:#666;max-width:600px;margin:0 auto 25px;font-size:1.1rem">Enroll now and start your transformation with the Grand Master in Remedy Course.</p>
+      <div class="ld-final-pricing">
+        <del>₹34,999</del>
+        <strong>₹24,999</strong>
+      </div>
+      <a href="../remedy-course.html" class="btn btn-elite btn-lg" style="padding:16px 50px;font-size:1.15rem;border-radius:50px;box-shadow:0 10px 30px rgba(200,150,12,0.3)"><i class="fas fa-bolt"></i> Claim Authority</a>
+      
+      <div style="margin-top: 25px;">
+        <a href="../remedy-course.html" class="btn" style="border: 2px solid #591C21; color: #591C21; padding: 12px 35px; font-weight: bold; border-radius: 50px; transition: all 0.3s ease; background: transparent;">
+           For price comparison follow this
+        </a>
+      </div>
+
+      <p style="margin-top:25px;font-size:0.85rem;color:#999"><i class="fas fa-shield-alt"></i> Govt. Approved · ISO Certified · Lifetime Access</p>
+    </div></section>
+</div>
+    
+<!-- PROGRESSION LADDER -->
+<section class="course-progression-ladder">
+  <div class="container text-center">
+    <h2 class="card-section-title" style="margin-bottom: 8px;">Your Learning Journey</h2>
+    <p style="color:#666;max-width:600px;margin:0 auto 35px;font-size:1rem;">A clear path from foundation to authority. Upgrade at any time.</p>
+    <div class="ld-journey-track">
+      
+          <a href="remedy-course-diploma.html" class="ld-journey-node completed">
+            <div class="ld-journey-icon"><i class="fas fa-book-open"></i></div>
+            <span class="ld-journey-label">Diploma</span>
+            <span class="ld-journey-subtitle">THE FOUNDATION</span>
+            
+          </a>
+          <div class="ld-journey-connector filled"></div>
+
+          <a href="remedy-course-bachelors.html" class="ld-journey-node completed">
+            <div class="ld-journey-icon"><i class="fas fa-chart-pie"></i></div>
+            <span class="ld-journey-label">Bachelors</span>
+            <span class="ld-journey-subtitle">THE PRACTITIONER</span>
+            
+          </a>
+          <div class="ld-journey-connector filled"></div>
+
+          <a href="remedy-course-masters.html" class="ld-journey-node completed">
+            <div class="ld-journey-icon"><i class="fas fa-compass"></i></div>
+            <span class="ld-journey-label">Masters</span>
+            <span class="ld-journey-subtitle">THE ADVANCED GUIDE</span>
+            
+          </a>
+          <div class="ld-journey-connector filled"></div>
+
+          <a href="remedy-course-grand-master.html" class="ld-journey-node current">
+            <div class="ld-journey-icon"><i class="fas fa-crown"></i></div>
+            <span class="ld-journey-label">Grand Master</span>
+            <span class="ld-journey-subtitle">THE AUTHORITY</span>
+            <span class="ld-journey-you">YOU ARE HERE</span>
+          </a>
+          
+    </div>
+  </div>
+</section>
+<!-- END PROGRESSION LADDER -->
+<div id="marquee-placeholder"></div>
+    <div id="footer-placeholder"></div>
+<script src="../assets/js/navbar.js"></script><script src="../assets/js/main.js"></script><script src="../assets/js/loader.js"></script><script src="../assets/js/search.js"></script><script src="../assets/js/chatbot.js"></script><script src="../assets/js/layout-balancer.js"></script><script src="../assets/js/load-components.js" defer=""></script></body></html>

@@ -1,0 +1,18 @@
+Total @media: 17
+Line 554: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 559: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 1052: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 1057: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 1528: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 1533: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 1931: @media(max-width: 991px) {         .cvd-hero-container { flex-direction: column;
+Line 2438: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 2443: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 2950: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 2955: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 3429: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 3433: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 3925: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 3931: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column
+Line 4401: @media (max-width: 991px) {         .cvd-layout-container { flex-direction: colu
+Line 4407: @media (max-width: 768px) {         .cvd-hero-container { flex-direction: column

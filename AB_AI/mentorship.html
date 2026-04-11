@@ -84,6 +84,8 @@
     }
 
     @media (max-width: 768px) {
+        html, body { overflow-x: hidden; max-width: 100%; padding: 0; margin: 0; }
+        .cvd-layout-container { padding: 0 !important; margin: 0 !important; width: 100%; max-width: 100%; }
       .category-filter-container {
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -864,6 +866,11 @@
 
         const category = card.getAttribute('data-category');
         if (category === 'Crash Course') {
+          const href = btn.getAttribute('href');
+          if (href && (href.includes('plrt.html') || href.includes('cc-'))) {
+            return; // let dedicated pages navigate naturally
+          }
+
           e.preventDefault();
 
           let imgEl = card.querySelector('.card-image');

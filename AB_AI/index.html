@@ -83,7 +83,7 @@
             <li class="dropdown-item"><a href="mentorship.html"
                 style="color: #D4AF37; font-weight: 800; background: rgba(212,175,55,0.05); border-left: 3px solid #D4AF37; padding-left: 12px; display: flex; align-items: center; justify-content: space-between;">1-on-1
                 Mentorship <i class="fa-solid fa-star" style="font-size: 0.75rem; color: #D4AF37;"></i></a></li>
-            <li class="dropdown-item"><a href="gemini-jyotish.html">Gemini Jyotish</a></li>
+            <li class="dropdown-item"><a href="cc-jaimini-astrology.html">Jaimini Astrology</a></li>
           </ul>
         </li>
         <li class="nav-item"><a href="fee-structure.html">Fee Structure</a></li>
@@ -859,7 +859,7 @@
               style="text-decoration: line-through; color: #999; font-size: 0.7em; margin-right: 10px;">₹9,999</span>₹8,999
           </div>
           <p class="card-small-text" style="color: #d32f2f !important; font-weight: bold;">Discounted Price</p>
-          <p class="card-small-text">12 Weeks</p>
+          <p class="card-small-text">8 Weeks</p>
           <a href="fee-structure.html" class="btn btn-primary btn-full">View Details</a>
         </div>
         <div class="premium-gold-card p-3" data-animate>
@@ -1391,6 +1391,11 @@
 
         const category = card.getAttribute('data-category');
         if (category === 'Crash Course') {
+          const href = btn.getAttribute('href');
+          if (href && (href.includes('plrt.html') || href.includes('cc-'))) {
+            return; // let dedicated pages navigate naturally
+          }
+
           e.preventDefault();
 
           let imgEl = card.querySelector('.card-image');

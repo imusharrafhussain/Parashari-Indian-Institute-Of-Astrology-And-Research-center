@@ -27,6 +27,8 @@
         .program-tab-content { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
+        html, body { overflow-x: hidden; max-width: 100%; padding: 0; margin: 0; }
+        .cvd-layout-container { padding: 0 !important; margin: 0 !important; width: 100%; max-width: 100%; }
             .category-filter-container { justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0 10px 10px; }
             .filter-tab { padding: 6px 14px; font-size: 0.82rem; }
         }
@@ -194,6 +196,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -316,257 +319,170 @@
     
 
     <!-- HERO & INTRO -->
-    <section style="padding-top: 60px;">
-    <div class="container text-center">
-      <h1 class="color-primary" style="font-size: 2.5rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-star-half-stroke"></i> Nakshatra Astrology</h1>
-      <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; font-weight: 500;">Unlock the Mysteries of the 27 Lunar Mansions</p>
-    </div>
-    <div class="container" data-animate>
-      <img src="assets/images-optimized/Picture11.webp" alt="Nakshatra Astrology" class="rounded-lg" style="width: 85%; max-width: 1000px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; display: block; margin-bottom: 2rem;">
-    </div>
-    <div class="container" data-animate>
-      <h2>What is Nakshatra Astrology?</h2>
-      <p>Nakshatra Astrology is a specialized branch of Vedic astrology that focuses on the 27 lunar constellations, known as Nakshatras. These constellations represent the path through which the Moon travels during its monthly cycle.</p>
-      <p>In Vedic astrology, Nakshatras are considered highly important because they provide deeper insight into a person's personality, emotions, and life tendencies. Each Nakshatra has its own ruling planet, symbol, deity, and set of characteristics that influence different aspects of life.</p>
-      <p>By studying Nakshatras, astrologers can gain more detailed understanding of planetary placements and refine interpretations of a birth chart.</p>
-      
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Why Should You Study Nakshatra Astrology?</h3>
-      <p>Studying Nakshatra Astrology helps learners explore a deeper level of astrological analysis beyond the basic zodiac signs. While zodiac signs provide broad interpretations, Nakshatras offer more specific and detailed insights into planetary influences.</p>
-      <p>Students learn how the Moon's position in a particular Nakshatra at the time of birth can influence emotional patterns, behavior, talents, and life direction. This study helps develop a more refined approach to chart interpretation.</p>
-      <p>For those interested in advanced astrology, Nakshatra knowledge is considered an important step toward deeper astrological understanding.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">What Are the Benefits of Studying Nakshatra Astrology?</h3>
-      <p>Learning Nakshatra Astrology provides several benefits for students of astrology and traditional knowledge systems:</p>
-      <ul class="list-reset">
-        <li class="mb-0-75"><strong>1. Deeper Birth Chart Analysis:</strong> Nakshatras allow astrologers to interpret planetary positions with greater detail and nuance.</li>
-        <li class="mb-0-75"><strong>2. Better Understanding of Personality Traits:</strong> Each Nakshatra is associated with particular characteristics that can help describe individual tendencies and behaviors.</li>
-        <li class="mb-0-75"><strong>3. Insight into Emotional Patterns:</strong> Because the Moon is closely connected with Nakshatras, studying them can provide insights into emotional responses and inner nature.</li>
-        <li class="mb-0-75"><strong>4. Advanced Astrological Knowledge:</strong> Nakshatra study expands understanding beyond the twelve zodiac signs, offering a more advanced framework for analysis.</li>
-        <li><strong>5. Improved Predictive Techniques:</strong> Astrologers often use Nakshatras to refine predictions and better understand planetary influences in specific life areas.</li>
-      </ul>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Can Someone Build a Career in Nakshatra Astrology?</h3>
-      <p>Yes, individuals who study Nakshatra Astrology in depth and gain practical experience may explore professional opportunities in astrology. Possible career paths include:</p>
-      <ul class="list-reset">
-        <li class="mb-0-75">✓ Astrological consultant specializing in Nakshatra analysis</li>
-        <li class="mb-0-75">✓ Astrology teacher or trainer</li>
-        <li class="mb-0-75">✓ Researcher in Vedic astrology techniques</li>
-        <li class="mb-0-75">✓ Author or content creator on astrology topics</li>
-        <li>✓ Online astrology consultation services</li>
-      </ul>
-      <p style="margin-top: 1rem;">Developing a professional career in astrology generally requires serious study, practice, and responsible interpretation when offering guidance to others.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Five Key Reasons to Study Nakshatra Astrology</h3>
-      <ul class="list-reset">
-        <li class="mb-0-75">✓ Gain deeper knowledge of Vedic astrology ”” Nakshatras are an essential component providing a deeper layer of interpretation beyond zodiac signs</li>
-        <li class="mb-0-75">✓ Understand lunar influences on personality ”” studying Nakshatras helps explore emotional tendencies and inner behavioral patterns</li>
-        <li class="mb-0-75">✓ Improve birth chart interpretation skills ”” Nakshatra analysis helps interpret planetary placements more precisely</li>
-        <li class="mb-0-75">✓ Expand astrological analytical ability ”” learn to analyze symbols, planetary rulerships, and Nakshatra characteristics</li>
-        <li>✓ Develop specialized expertise in astrology ”” Nakshatra knowledge becomes a specialized skill useful for advanced learners and professionals</li>
-      </ul>
+    <section class="premium-overview-section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 40px;">
+        <div data-animate>
+          <h2 class="card-section-title" style="margin-bottom: 15px; font-size: 2.5rem; line-height: 1.2;"><i class="fa-solid fa-star-half-stroke"></i> Master Nakshatra Astrology</h2>
+          <p style="font-size: 1.2rem; color: #c8960c; font-weight: 700; margin-bottom: 25px;">Unlock the Mysteries of the 27 Lunar Mansions.</p>
+          
+          <ul class="list-reset" style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Command the Lunar Mansions</strong>
+                <span style="color: #666; font-size: 0.95rem;">Move beyond basic zodiac signs and identify the true psychological patterns mapped by 27 Nakshatras.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Pinpoint Predictive Timing</strong>
+                <span style="color: #666; font-size: 0.95rem;">Utilize advanced Navatara and Chakra systems to determine exact timing of life-altering events.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Prescribe Star-Specific Remedies</strong>
+                <span style="color: #666; font-size: 0.95rem;">Prescribe exact Nakshatra-based mantras and remedies to alleviate specific karmic blockages.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div data-animate style="position: relative;">
+          <div style="position: absolute; top: -15px; right: -15px; width: 100px; height: 100px; background: rgba(200, 150, 12, 0.1); border-radius: 50%; z-index: 1;"></div>
+          <div style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; background: rgba(90, 30, 30, 0.05); border-radius: 50%; z-index: 1;"></div>
+          <img src="assets/images-optimized/Picture11.webp" alt="Palmistry Mastery" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.5);">
+          
+          
+        </div>
+      </div>
     </div>
   </section>
 
-    <!-- TABBED PROGRAM SECTION -->
-    <section class="light-bg">
-        <div class="container">
-            <h2 class="card-section-title">Our Nakshatra Astrology Program</h2>
-            
-            <div class="category-filter-container">
-                <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
-                <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
-                <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
-                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
+<section class="learning-tiers-section">
+    <div class="container text-center mb-3">
+      <h2 class="card-section-title">Choose Your Path to Mastery</h2>
+      <p style="color: #666; max-width: 600px; margin: 0 auto 40px;">Select the depth of knowledge that aligns with your goals. Upgrade at any time as your journey evolves.</p>
+    </div>
+
+    <div class="container">
+      <div class="tier-grid">
+      
+        <!-- DIPLOMA -->
+        <div class="tier-card tier-diploma" data-animate>
+          <div class="tier-header">
+            <h3 class="tier-name">Diploma</h3>
+            <span class="tier-position">The Foundation</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Master mythology, symbols & deities of 27 stars</li>
+              <li><i class="fas fa-check"></i> Explore the 108 Padas and Navamsha correlation</li>
+              <li><i class="fas fa-check"></i> Gain absolute clarity on planetary strength</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹5,499</span>
+              <strong class="tier-new-price">₹4,199</strong>
             </div>
-
-            <!-- DIPLOMA TAB -->
-            <div id="diploma" class="program-tab-content" style="display: block;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Certification Modules (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Mythology &amp; Symbols</strong><br>Explores the 27 Nakshatras, their unique mythological stories, sacred symbols, and the specific ruling deities that govern their cosmic energies.</li>
-                            <li class="mb-0-75"><strong>Module 2: Padas &amp; Navamsha</strong><br>Delves into the four Padas (quarters) of each Nakshatra, explaining how they determine planetary placements within the critical Navamsha (D9) chart.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Certification Modules (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Muhurta &amp; Personality</strong><br>Utilizes Nakshatras to identify auspicious timing (Muhurta) for life events and decodes deep-seated personality traits based on the Moon's mansion.</li>
-                            <li class="mb-0-75"><strong>Module 4: Advanced Chakras</strong><br>Mastering complex predictive tools like the Sarvatobhadra Chakra for worldly events and the Navatara Chakra for personal transit results.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="landscape-pricing-card" data-animate>
-                    <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 24% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Diploma in Nakshatra Astrology</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 8 WEEKS comprehensive training
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹5,499</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹4,199</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BACHELORS TAB -->
-            <div id="bachelors" class="program-tab-content" style="display: none;">
-                <div class="grid grid-3 grid-gap-2">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Foundations (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Gana Classification</strong><br>Categorizes the 27 Nakshatras into Deva, Manushya, and Rakshasa Ganas, revealing fundamental temperament, spiritual nature, and social compatibility.</li>
-                            <li class="mb-0-75"><strong>Module 2: Padas &amp; Navamsha</strong><br>Explores the 108 quarters (Padas), teaching how these micro-divisions shape the Navamsha (D9) chart and determine a planet's true strength.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Predictive (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Predictive Power</strong><br>Analyses the specific results of planets residing in different stars, uncovering hidden destiny patterns that traditional sign-based astrology often misses.</li>
-                            <li class="mb-0-75"><strong>Module 4: Muhurta &amp; Compatibility</strong><br>Utilizes stars for Auspicious Timing (Muhurta) and Ashta-Koot matching, ensuring harmony in marriage and success in new ventures.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Application (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Nadi Nakshatras</strong><br>Mastering the Navatara (9-star) system””Janma, Sampat, Vipat, etc.””to identify which transiting planets will bring wealth, danger, or success.</li>
-                            <li class="mb-0-75"><strong>Module 6: Remedial Science</strong><br>Teaches holistic remedies including specific mantras, planetary deities, and the planting of sacred trees associated with each individual star.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Bachelors in Nakshatra Astrology</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 12 WEEKS advanced program
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹11,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹8,999</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MASTERS TAB -->
-            <div id="masters" class="program-tab-content" style="display: none;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Gana Classification</strong><br>Categorizes the 27 Nakshatras into Deva, Manushya, and Rakshasa Ganas, revealing fundamental temperament, spiritual nature, and social compatibility.</li>
-                            <li class="mb-0-75"><strong>Module 2: Padas &amp; Navamsha</strong><br>Explores the 108 quarters (Padas), teaching how these micro-divisions shape the Navamsha (D9) chart and determine a planet's true strength.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Predictive &amp; Timing (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Predictive Power</strong><br>Analyses the specific results of planets residing in different stars, uncovering hidden destiny patterns that traditional sign-based astrology often misses.</li>
-                            <li class="mb-0-75"><strong>Module 4: Muhurta &amp; Compatibility</strong><br>Utilizes stars for Auspicious Timing (Muhurta) and Ashta-Koot matching, ensuring harmony in marriage and success in new ventures.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Nadi &amp; Special Stars (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Nadi Nakshatras</strong><br>Mastering the Navatara (9-star) system””Janma, Sampat, Vipat, etc.””to identify which transiting planets will bring wealth, danger, or success.</li>
-                            <li class="mb-0-75"><strong>Module 6: Special Nakshatras</strong><br>Study of Abhijit, the hidden 28th star, and sensitive points like Sarpa and Gandanta for identifying life-altering karmic breakthroughs.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Remedies &amp; Ethics (Part 4)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 7: Remedial Nakshatra Science</strong><br>Teaches holistic remedies including specific mantras, planetary deities, and the planting of sacred trees associated with each individual star.</li>
-                            <li class="mb-0-75"><strong>Module 8: Professional Integration</strong><br>Synthesizing Nakshatra insights with Vedic and KP systems for high-precision predictions and ethical consultation in a professional practice.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Masters in Nakshatra Astrology</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 16 WEEKS ultimate mastery
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹24,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹18,699</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- GRAND MASTER TAB -->
-
-            <div id="grand-master" class="program-tab-content" style="display: none;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Gana Classification <span class="gm-premium-badge">Advanced</span></strong><br>Categorizes the 27 Nakshatras into Deva, Manushya, and Rakshasa Ganas, revealing fundamental temperament, spiritual nature, and social compatibility.</li>
-                            <li class="mb-0-75"><strong>Module 2: Padas &amp; Navamsha <span class="gm-premium-badge">Advanced</span></strong><br>Explores the 108 quarters (Padas), teaching how these micro-divisions shape the Navamsha (D9) chart and determine a planet's true strength.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Predictive &amp; Timing (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Predictive Power <span class="gm-premium-badge">Advanced</span></strong><br>Analyses the specific results of planets residing in different stars, uncovering hidden destiny patterns that traditional sign-based astrology often misses.</li>
-                            <li class="mb-0-75"><strong>Module 4: Muhurta &amp; Compatibility <span class="gm-premium-badge">Advanced</span></strong><br>Utilizes stars for Auspicious Timing (Muhurta) and Ashta-Koot matching, ensuring harmony in marriage and success in new ventures.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Nadi &amp; Special Stars (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Nadi Nakshatras <span class="gm-premium-badge">Advanced</span></strong><br>Mastering the Navatara (9-star) system””Janma, Sampat, Vipat, etc.””to identify which transiting planets will bring wealth, danger, or success.</li>
-                            <li class="mb-0-75"><strong>Module 6: Special Nakshatras <span class="gm-premium-badge">Advanced</span></strong><br>Study of Abhijit, the hidden 28th star, and sensitive points like Sarpa and Gandanta for identifying life-altering karmic breakthroughs.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Remedies &amp; Ethics (Part 4)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 7: Remedial Nakshatra Science <span class="gm-premium-badge">Advanced</span></strong><br>Teaches holistic remedies including specific mantras, planetary deities, and the planting of sacred trees associated with each individual star.</li>
-                            <li class="mb-0-75"><strong>Module 8: Professional Integration <span class="gm-premium-badge">Advanced</span></strong><br>Synthesizing Nakshatra insights with Vedic and KP systems for high-precision predictions and ethical consultation in a professional practice.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Nakshatra Astrology</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-            
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 8 Weeks</div>
+            <a href="courses/nakshatra-diploma.html" class="btn btn-outline btn-block">Start Foundation</a>
+          </div>
         </div>
-    </section>
+
+        <!-- BACHELORS -->
+        <div class="tier-card tier-bachelors" data-animate>
+          <div class="tier-badge">Smart Choice</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Bachelors</h3>
+            <span class="tier-position">The Practitioner</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Transition to Nadi Nakshatras and Navatara</li>
+              <li><i class="fas fa-check"></i> Calculate highly precise Muhurta timings</li>
+              <li><i class="fas fa-check"></i> Evaluate intense relationship compatibility</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹11,999</span>
+              <strong class="tier-new-price">₹8,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 12 Weeks</div>
+            <a href="courses/nakshatra-bachelors.html" class="btn btn-outline btn-block" style="border-color: #8b0000; color: #8b0000;">Become a Practitioner</a>
+          </div>
+        </div>
+
+        <!-- MASTERS -->
+        <div class="tier-card tier-masters" data-animate>
+          <div class="tier-badge popular">Most Popular</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Masters</h3>
+            <span class="tier-position">The Advanced Guide</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-compass"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unlock the secrets of Abhijit and Gandanta points</li>
+              <li><i class="fas fa-check"></i> Master Advanced Chakras like Sarvatobhadra</li>
+              <li><i class="fas fa-check"></i> Prescribe potent star-specific remedies safely</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹24,999</span>
+              <strong class="tier-new-price">₹18,699</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 16 Weeks</div>
+            <a href="courses/nakshatra-masters.html" class="btn btn-primary btn-block">Achieve Mastery</a>
+          </div>
+        </div>
+
+        <!-- GRAND MASTER -->
+        <div class="tier-card tier-grand-master" data-animate>
+          <div class="tier-badge elite">Elite Invitation</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Grand Master</h3>
+            <span class="tier-position">The Authority</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unrivaled mastery of secretive Vedic formulas</li>
+              <li><i class="fas fa-check"></i> Synthesize Nakshatra with KP and traditional Vedic</li>
+              <li><i class="fas fa-check"></i> Command premium authority in consultations</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹34,999</span>
+              <strong class="tier-new-price">₹24,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 48 Weeks</div>
+            <a href="courses/nakshatra-grand-master.html" class="btn btn-elite btn-block">Claim Authority</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
     <!-- COMPARISON TABLE SECTION -->
     <section class="comparison-section">
@@ -651,7 +567,8 @@
                             <td>Professional Integration (Vedic + KP)</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-masters"><i c
+lass="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>                        <tr>
                             <td>Ultimate 48 Weeks of Access</td>
@@ -690,7 +607,8 @@
     </section>
 
     <!-- TOP URGENCY MARQUEE -->
-    <div class="urgency-marquee-container">
+    
+<div class="urgency-marquee-container">
         <div class="urgency-marquee-content">
             <div class="marquee-item">
                 <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats

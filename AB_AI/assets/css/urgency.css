@@ -19,7 +19,7 @@
 .urgency-marquee-content {
     display: flex;
     white-space: nowrap;
-    animation: marquee-scroll 25s linear infinite;
+    animation: marquee-scroll 20s linear infinite;
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
@@ -87,7 +87,7 @@
 @media (max-width: 768px) {
     .urgency-marquee-content {
         font-size: 0.85rem;
-        animation-duration: 20s;
+        animation-duration: 35s;
     }
 
     .marquee-item {

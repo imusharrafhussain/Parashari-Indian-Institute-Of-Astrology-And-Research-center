@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -9,20 +8,31 @@ const compression = require('compression');
 
 const authRoutes = require('./routes/auth'); // Placeholder
 const videoRoutes = require('./routes/video');
+const astroAiRoutes = require('./routes/astroAi');
 
 const app = express();
 
 // Middleware
 app.use(compression());
+const allowedOrigins = new Set([
+    'https://parashariindia.vercel.app',
+    'https://parashariindian-learning.vercel.app',
+    'https://parashariindia.com',
+    'https://www.parashariindia.com'
+]);
+
 app.use(cors({
-    origin: [
-        'http://localhost:3000',
-        'http://localhost:5173',
-        'https://parashariindia.vercel.app',
-        'https://parashariindian-learning.vercel.app',
-        'https://parashariindia.com',
-        'https://www.parashariindia.com'
-    ],
+    origin: (origin, cb) => {
+        // Allow same-origin / server-to-server / curl (no Origin header)
+        if (!origin) return cb(null, true);
+
+        // Allow any localhost dev server port (5173, 5500, etc.)
+        if (/^https?:\/\/localhost:\d+$/.test(origin)) return cb(null, true);
+
+        if (allowedOrigins.has(origin)) return cb(null, true);
+
+        return cb(new Error(`CORS blocked for origin: ${origin}`));
+    },
     credentials: true
 }));
 
@@ -50,12 +60,16 @@ app.use(
 );
 
 // Regular Middleware
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static('.')); // Serve static files from root
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/video', videoRoutes);
+// app.use('/api/admin', require('./routes/admin'));
+app.use('/api/chat', require('./routes/chat'));
+app.use('/api/astro-ai', astroAiRoutes);
 
 
 // Database Connection — start server ONLY after MongoDB is ready

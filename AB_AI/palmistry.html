@@ -27,6 +27,8 @@
         .program-tab-content { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
+        html, body { overflow-x: hidden; max-width: 100%; padding: 0; margin: 0; }
+        .cvd-layout-container { padding: 0 !important; margin: 0 !important; width: 100%; max-width: 100%; }
             .category-filter-container { justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0 10px 10px; }
             .filter-tab { padding: 6px 14px; font-size: 0.82rem; }
         }
@@ -194,6 +196,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -316,381 +319,316 @@
     
 
     <!-- HERO & INTRO -->
-    <section style="padding-top: 60px;">
-    <div class="container text-center">
-      <h1 class="color-primary" style="font-size: 2.5rem; margin-bottom: 0.5rem;">🖐️ Palmistry (Hasta Shastra)</h1>
-      <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; font-weight: 500;">Read the Secrets Hidden in Your Palm</p>
-    </div>
-    <div class="container" data-animate>
-      <img src="assets/images-optimized/Picture13.webp" alt="Palmistry" class="rounded-lg" style="width: 85%; max-width: 1000px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; display: block; margin-bottom: 2rem;">
-    </div>
-    <div class="container" data-animate>
-      <h2>What is Palmistry?</h2>
-      <p>Palmistry, also known as Chiromancy, is the traditional practice of analyzing the lines, shapes, and features of the human hand to understand personality traits and life tendencies.</p>
-      <p>Palmistry examines elements such as the major lines of the palm, the shape of the hand, finger lengths, mounts, and skin texture. Practitioners interpret these features to explore aspects of an individual's character, strengths, emotional tendencies, and possible life patterns.</p>
-      <p>This practice has been studied in different cultures for centuries and is often connected with traditional systems of personality interpretation.</p>
-      
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Why Should You Study Palmistry?</h3>
-      <p>Studying palmistry helps learners understand how hand features and palm lines have traditionally been interpreted to analyze personality and behavioral tendencies.</p>
-      <p>Students learn to observe the structure of the hand, the major and minor lines of the palm, and the symbolic meanings associated with different hand characteristics. This subject also encourages strong observation skills and attention to detail.</p>
-      <p>Palmistry is often studied alongside astrology and other traditional systems to gain a broader perspective on personality analysis.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">What Are the Benefits of Studying Palmistry?</h3>
-      <p>Learning palmistry offers several personal and intellectual benefits:</p>
-      <ul class="list-reset">
-        <li class="mb-0-75"><strong>1. Improved Observation Skills:</strong> Students learn to carefully observe details such as palm lines, hand shape, and finger structure.</li>
-        <li class="mb-0-75"><strong>2. Understanding Personality Traits:</strong> Palmistry explores how different hand features have traditionally been associated with personality characteristics.</li>
-        <li class="mb-0-75"><strong>3. Better Awareness of Human Behavior:</strong> Studying palmistry encourages curiosity about how physical traits may reflect emotional tendencies and behavioral patterns.</li>
-        <li class="mb-0-75"><strong>4. Complementary Knowledge for Astrology:</strong> Palmistry is often studied along with astrology and other traditional practices related to personality analysis.</li>
-        <li><strong>5. Development of Analytical Thinking:</strong> Interpreting palm features requires careful analysis and interpretation of multiple details.</li>
-      </ul>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Can Someone Build a Career in Palmistry?</h3>
-      <p>Yes, individuals who study palmistry seriously and gain practical experience may explore professional opportunities in this field. Possible career paths include:</p>
-      <ul class="list-reset">
-        <li class="mb-0-75">✓ Palmistry consultant</li>
-        <li class="mb-0-75">✓ Personality analysis advisor</li>
-        <li class="mb-0-75">✓ Trainer or educator in palmistry techniques</li>
-        <li class="mb-0-75">✓ Author or content creator on palmistry topics</li>
-        <li>✓ Consultant working with astrology or personal guidance services</li>
-      </ul>
-      <p style="margin-top: 1rem;">Developing credibility in this field requires dedicated study, practical experience, and responsible interpretation when offering guidance to others.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Five Key Reasons to Study Palmistry</h3>
-      <ul class="list-reset">
-        <li class="mb-0-75">✓ Learn the traditional art of hand analysis ”” interpreting hand features and palm lines to understand personality traits</li>
-        <li class="mb-0-75">✓ Improve observation and analytical skills ”” train to notice subtle details in the structure and lines of the hand</li>
-        <li class="mb-0-75">✓ Understand personality through physical features ”” explore how hand shapes, mounts, and lines relate to personality tendencies</li>
-        <li class="mb-0-75">✓ Expand knowledge of traditional practices ”” palmistry has been practiced in various cultures for centuries</li>
-        <li>✓ Develop a skill for personal guidance ”” with proper study, palmistry can be used in consultation, teaching, or personality analysis</li>
-      </ul>
+    
+  <section class="premium-overview-section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 40px;">
+        <div data-animate>
+          <h2 class="card-section-title" style="margin-bottom: 15px; font-size: 2.8rem; line-height: 1.2;">Master the Science of Palmistry</h2>
+          <p style="font-size: 1.2rem; color: #c8960c; font-weight: 700; margin-bottom: 25px;">Decode patterns that shape real lives.</p>
+          
+          <ul class="list-reset" style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Move from Curiosity to Confidence</strong>
+                <span style="color: #666; font-size: 0.95rem;">Translate abstract cosmic symbols into precise, actionable life readings for yourself and others.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Understand Systems, Not Just Symbols</strong>
+                <span style="color: #666; font-size: 0.95rem;">Master the underlying mathematical and spiritual framework that makes this discipline devastatingly accurate.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Real-World Remedial Power</strong>
+                <span style="color: #666; font-size: 0.95rem;">Learn highly guarded remedies to actively mitigate difficult periods and enhance auspicious ones.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div data-animate style="position: relative;">
+          <div style="position: absolute; top: -15px; right: -15px; width: 100px; height: 100px; background: rgba(200, 150, 12, 0.1); border-radius: 50%; z-index: 1;"></div>
+          <div style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; background: rgba(90, 30, 30, 0.05); border-radius: 50%; z-index: 1;"></div>
+          <img src="assets/images-optimized/Picture13.webp" alt="Palmistry Mastery" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.5);">
+          
+          
+        </div>
+      </div>
     </div>
   </section>
 
-    <!-- TABBED PROGRAM SECTION -->
-    <section class="light-bg">
-        <div class="container">
-            <h2 class="card-section-title">Our Palmistry Program</h2>
-            
-            <div class="category-filter-container">
-                <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
-                <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
-                <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
-                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
+  <section class="learning-tiers-section">
+    <div class="container text-center mb-3">
+      <h2 class="card-section-title">Choose Your Path to Mastery</h2>
+      <p style="color: #666; max-width: 600px; margin: 0 auto 40px;">Select the depth of knowledge that aligns with your goals. Upgrade at any time as your journey evolves.</p>
+    </div>
+
+    <div class="container">
+      <div class="tier-grid">
+      
+        <!-- DIPLOMA -->
+        <div class="tier-card tier-diploma" data-animate>
+          <div class="tier-header">
+            <h3 class="tier-name">Diploma</h3>
+            <span class="tier-position">The Foundation</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Master the core mechanics of the signs and houses.</li>
+              <li><i class="fas fa-check"></i> Gain absolute clarity on foundational chart reading.</li>
+              <li><i class="fas fa-check"></i> Safely step into Palmistry without feeling overwhelmed.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹5,499</span>
+              <strong class="tier-new-price">₹4,199</strong>
             </div>
-
-            <!-- DIPLOMA TAB -->
-            <div id="diploma" class="program-tab-content" style="display: block;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Certification Modules (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Hand Types &amp; Texture</strong><br>Analyses elementary, spatulate, and psychic hand shapes alongside skin texture and colour to determine a person's temperament and energy.</li>
-                            <li class="mb-0-75"><strong>Module 2: The Three Major Lines</strong><br>Mastering the Heart, Head, and Life lines to decode an individual's emotional capacity, intellectual style, and physical vitality levels.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Certification Modules (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Mounts &amp; Minor Lines</strong><br>Explores the planetary mounts and secondary lines like Fate, Sun, and Mercury, revealing career success, fame, and health indicators.</li>
-                            <li class="mb-0-75"><strong>Module 4: Signs &amp; Timing</strong><br>Interprets special markings like crosses, squares, and stars while applying precise techniques to time significant life events on the lines.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="landscape-pricing-card" data-animate>
-                    <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 24% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Diploma in Palmistry</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 8 WEEKS comprehensive training
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹5,499</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹4,199</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BACHELORS TAB -->
-            <div id="bachelors" class="program-tab-content" style="display: none;">
-                <div class="grid grid-3 grid-gap-2">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Foundations (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Chirognomy &amp; Flexibility</strong><br>Analyses hand shapes, finger lengths, and thumb flexibility to decode fundamental personality traits, willpower, and an individual's natural temperament.</li>
-                            <li class="mb-0-75"><strong>Module 2: Chiromancy &amp; Lines</strong><br>Mastering the 3 Primary lines (Life, Head, Heart) and 8 Secondary lines to map out emotional and physical life paths.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Analysis (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Mount Analysis</strong><br>Explores how planetary mounts like Jupiter and Venus influence human behaviour, ambition, and the capacity for love and leadership.</li>
-                            <li class="mb-0-75"><strong>Module 4: Rare Sacred Marks</strong><br>Interprets auspicious signs like the Fish, Trident, Lotus, and Temple, which signify unique spiritual gifts, wealth, and divine protection.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Application (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Timing &amp; Biological Clock</strong><br>Teaches precise techniques for timing life events by using the Life Line and Fate Line as a chronological biological clock.</li>
-                            <li class="mb-0-75"><strong>Module 6: Forensic &amp; Health</strong><br>Identifies health risks and deep-seated psychological patterns through skin ridges and nail analysis, bridging palmistry with modern holistic wellness.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Bachelors in Palmistry</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 12 WEEKS advanced program
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹11,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹8,999</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MASTERS TAB -->
-            <div id="masters" class="program-tab-content" style="display: none;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Chirognomy &amp; Hand Types</strong><br>Analyses hand shapes, finger lengths, and thumb flexibility to decode fundamental personality traits, willpower, and an individual's natural temperament.</li>
-                            <li class="mb-0-75"><strong>Module 2: Chiromancy &amp; Primary Lines</strong><br>Mastering the 3 Primary lines (Life, Head, Heart) to map out physical vitality, mental capacity, and emotional life paths.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Lines &amp; Mounts (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Secondary &amp; Minor Lines</strong><br>Explores the 8 Secondary lines, including the Fate, Sun, and Mercury lines, to predict career success, fame, and health.</li>
-                            <li class="mb-0-75"><strong>Module 4: Mount Analysis</strong><br>Analyses how planetary mounts like Jupiter and Venus influence human behaviour, ambition, and the capacity for love and leadership.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Marks &amp; Timing (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Rare Sacred Marks</strong><br>Interprets auspicious signs like the Fish, Trident, Lotus, and Temple, which signify unique spiritual gifts, wealth, and divine protection.</li>
-                            <li class="mb-0-75"><strong>Module 6: Timing &amp; Chronology</strong><br>Teaches precise techniques for timing life events by using the Life Line and Fate Line as a chronological biological clock.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Health &amp; Ethics (Part 4)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 7: Forensic &amp; Health Palmistry</strong><br>Identifies health risks and deep-seated psychological patterns through skin ridges and nail analysis, bridging palmistry with modern holistic wellness.</li>
-                            <li class="mb-0-75"><strong>Module 8: Professional Consultation</strong><br>Focuses on the ethics of palm reading, hand-printing techniques, and integrating palmistry with astrological charts for a comprehensive client analysis.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Masters in Palmistry</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 16 WEEKS ultimate mastery
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹24,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹18,699</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- GRAND MASTER TAB -->
-
-            <div id="grand-master" class="program-tab-content" style="display: none;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Chirognomy &amp; Hand Types <span class="gm-premium-badge">Advanced</span></strong><br>Analyses hand shapes, finger lengths, and thumb flexibility to decode fundamental personality traits, willpower, and an individual's natural temperament.</li>
-                            <li class="mb-0-75"><strong>Module 2: Chiromancy &amp; Primary Lines <span class="gm-premium-badge">Advanced</span></strong><br>Mastering the 3 Primary lines (Life, Head, Heart) to map out physical vitality, mental capacity, and emotional life paths.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Lines &amp; Mounts (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Secondary &amp; Minor Lines <span class="gm-premium-badge">Advanced</span></strong><br>Explores the 8 Secondary lines, including the Fate, Sun, and Mercury lines, to predict career success, fame, and health.</li>
-                            <li class="mb-0-75"><strong>Module 4: Mount Analysis <span class="gm-premium-badge">Advanced</span></strong><br>Analyses how planetary mounts like Jupiter and Venus influence human behaviour, ambition, and the capacity for love and leadership.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Marks &amp; Timing (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Rare Sacred Marks <span class="gm-premium-badge">Advanced</span></strong><br>Interprets auspicious signs like the Fish, Trident, Lotus, and Temple, which signify unique spiritual gifts, wealth, and divine protection.</li>
-                            <li class="mb-0-75"><strong>Module 6: Timing &amp; Chronology <span class="gm-premium-badge">Advanced</span></strong><br>Teaches precise techniques for timing life events by using the Life Line and Fate Line as a chronological biological clock.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Health &amp; Ethics (Part 4)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 7: Forensic &amp; Health Palmistry <span class="gm-premium-badge">Advanced</span></strong><br>Identifies health risks and deep-seated psychological patterns through skin ridges and nail analysis, bridging palmistry with modern holistic wellness.</li>
-                            <li class="mb-0-75"><strong>Module 8: Professional Consultation <span class="gm-premium-badge">Advanced</span></strong><br>Focuses on the ethics of palm reading, hand-printing techniques, and integrating palmistry with astrological charts for a comprehensive client analysis.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Palmistry</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-            
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 8 Weeks</div>
+            <a href="courses/-.html" class="btn btn-outline btn-block">Start Foundation</a>
+          </div>
         </div>
-    </section>
 
-    <!-- COMPARISON TABLE SECTION -->
+        <!-- BACHELORS -->
+        <div class="tier-card tier-bachelors" data-animate>
+          <div class="tier-badge">Smart Choice</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Bachelors</h3>
+            <span class="tier-position">The Practitioner</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Transition from theory to practical life-event prediction.</li>
+              <li><i class="fas fa-check"></i> Deep-dive into case studies and tracking methods.</li>
+              <li><i class="fas fa-check"></i> Develop the capability to offer accurate readings to family and friends.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹11,999</span>
+              <strong class="tier-new-price">₹8,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 12 Weeks</div>
+            <a href="courses/-.html" class="btn btn-outline btn-block" style="border-color: #8b0000; color: #8b0000;">Become a Practitioner</a>
+          </div>
+        </div>
+
+        <!-- MASTERS -->
+        <div class="tier-card tier-masters" data-animate>
+          <div class="tier-badge popular">Most Popular</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Masters</h3>
+            <span class="tier-position">The Advanced Guide</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-compass"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unlock complex, multi-layered predictive synergies.</li>
+              <li><i class="fas fa-check"></i> Read charts with unshakeable confidence in all situations.</li>
+              <li><i class="fas fa-check"></i> Prescribe potent remedial measures safely.</li>
+              <li><i class="fas fa-check"></i> True mentorship feel with guided interpretations.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹24,999</span>
+              <strong class="tier-new-price">₹18,699</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 16 Weeks</div>
+            <a href="courses/-.html" class="btn btn-primary btn-block">Achieve Mastery</a>
+          </div>
+        </div>
+
+        <!-- GRAND MASTER -->
+        <div class="tier-card tier-grand-master" data-animate>
+          <div class="tier-badge elite">Elite Invitation</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Grand Master</h3>
+            <span class="tier-position">The Authority</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unrivaled mastery of profound, secretive spiritual formulas.</li>
+              <li><i class="fas fa-check"></i> Master the art of professional client handling and consultation dynamics.</li>
+              <li><i class="fas fa-check"></i> Command premium authority in the professional spiritual marketplace.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹34,999</span>
+              <strong class="tier-new-price">₹24,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 48 Weeks</div>
+            <a href="courses/-.html" class="btn btn-elite btn-block">Claim Authority</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
     <section class="comparison-section">
-        <div class="container text-center">
-            <h2 class="card-section-title" style="margin-bottom: 10px;">Program Comparison</h2>
-            <p class="color-light-text mb-2">Find the right Palmistry certification path for your goals.</p>
-            
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th style="background: #fff; border-right: 2px solid #f0f0f0;"></th>
-                            <th class="tier-diploma">
-                                <span class="tier-title">Diploma</span>
-                                <span class="tier-price">₹4,199</span>
-                            </th>
-                            <th class="tier-bachelors">
-                                <span class="tier-title">Bachelors</span>
-                                <span class="tier-price">₹8,999</span>
-                            </th>
-                            <th class="tier-masters">
-                                <span class="tier-title">Masters</span>
-                                <span class="tier-price">₹18,699</span>
-                            </th>
+      <div class="container text-center">
+          <h2 class="card-section-title" style="margin-bottom: 10px;">Program Comparison</h2>
+          <p class="color-light-text mb-2">Find the right Vedic Astrology certification path for your goals.</p>
+          
+          <div class="comparison-table-wrapper">
+              <table class="comparison-table">
+                  <thead>
+                      <tr>
+                          <th style="background: #fff; border-right: 2px solid #f0f0f0;"></th>
+                          <th class="tier-diploma">
+                              <span class="tier-title">Diploma</span>
+                              <span class="tier-price">₹4,199</span>
+                          </th>
+                          <th class="tier-bachelors">
+                              <span class="tier-title">Bachelors</span>
+                              <span class="tier-price">₹8,999</span>
+                          </th>
+                          <th class="tier-masters">
+                              <span class="tier-title">Masters</span>
+                              <span class="tier-price">₹18,699</span>
+                          </th>
                             <th class="tier-grand-master">
                                 <span class="tier-title">Grand Master</span>
                                 <span class="tier-price">₹24,999</span>
                             </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hand Types / Chirognomy</td>
-                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Module 1: Cosmic Mechanics / Math</td>
+                          <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Major Lines / Chiromancy</td>
-                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 2: Planetary Dynamics</td>
+                          <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Mounts &amp; Minor Lines</td>
-                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 3: Temporal Timing & Dashas</td>
+                          <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Signs &amp; Timing / Sacred Marks</td>
-                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 4: Chart Synthesis / Varga Charts</td>
+                          <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Timing &amp; Biological Clock</td>
-                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 5: Ashtakvarga & Transits</td>
+                          <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Forensic &amp; Health Palmistry</td>
-                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 6: Remedial Jyotish</td>
+                          <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Secondary &amp; Minor Lines <span class="gm-premium-badge">Advanced</span></td>
-                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 7: Muhurta & Panchanga</td>
+                          <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Professional Consultation &amp; Ethics</td>
-                            <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                      <tr>
+                          <td>Module 8: Advanced Ethics & Practice</td>
+                          <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>                        <tr>
+                      </tr>
+             
+         <tr>
+                          <td><strong>Government Approved E-Certificate</strong></td>
+                          <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+                      </tr>
+                                          <tr>
+
                             <td>Ultimate 48 Weeks of Access</td>
+
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+
                             <td class="col-masters"><i class="fas fa-times c-icon cross"></i></td>
+
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+
                         </tr>
+
                         <tr>
+
                             <td>Free 6 Spiritual Stairs Pathway</td>
+
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
+
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
+
                             <td class="col-masters"><i class="fas fa-times c-icon cross"></i></td>
+
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+
                         </tr>
 
                         <tr>
-                            <td><strong>Digital Badge / E-Certificate</strong></td>
-                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
-                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
 
-    <section class="light-bg">
-        <div class="container text-center">
-            <h2 class="mb-1-5">Ready to Master Palmistry?</h2>
-            <p class="mb-2">Join our Palmistry program and unlock the secrets hidden in the palm.</p>
-            <a href="register.html" class="btn btn-primary btn-lg">Start Learning Today</a>
-        </div>
-    </section>
+                            <td><strong>Digital Badge / E-Certificate</strong></td>
+
+                            <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
+
+                            <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
+
+                            <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+
+                            <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
+
+                        </tr>
+
+</tbody>
+              </table>
+          </div>
+      </div>
+  </section>
 
     <!-- TOP URGENCY MARQUEE -->
-    <div class="urgency-marquee-container">
+    
+<div class="urgency-marquee-container">
         <div class="urgency-marquee-content">
             <div class="marquee-item">
                 <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats

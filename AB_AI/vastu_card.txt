@@ -1,0 +1,25 @@
+data-course-id="vastu">
+          <span class="discount-tag" data-discount="25% Discount"></span>
+          <div class="card-image-container">
+            <img src="assets/images-optimized/vastu-new.webp" alt="Bhoomi Vastu & Prasada Vastu" class="card-image">
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <div class="card-header-icon"><i class="fa-solid fa-house-chimney"></i></div>
+              <h3 class="card-title">Bhoomi Vastu & Prasada Vastu</h3>
+            </div>
+            <p class="course-desc-text">Master the ancient science of architecture. Transform spaces to attract positive
+              energy, prosperity, and lasting harmony into your life.</p>
+            <div class="mb-1">
+              <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
+              <span class="certification-badge">✓ Certification</span>
+            </div>
+            <h4 class="color-secondary mb-1 text-center"><del
+                style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong
+                style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+            <div class="course-footer">
+              <a href="cc-bhoomi-vastu.html" class="learn-more">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text"

@@ -25,6 +25,8 @@
         .program-tab-content { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
+        html, body { overflow-x: hidden; max-width: 100%; padding: 0; margin: 0; }
+        .cvd-layout-container { padding: 0 !important; margin: 0 !important; width: 100%; max-width: 100%; }
             .category-filter-container { justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0 10px 10px; }
             
             .filter-tab { padding: 6px 14px; font-size: 0.82rem; }
@@ -91,6 +93,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -208,243 +211,171 @@
         </div>
     </header>
 
-    <section style="padding-top: 60px;">
-        <div class="container text-center">
-            <h1 class="color-primary" style="font-size: 2.5rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-book-journal-whills"></i> Lal Kitab</h1>
-            <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; font-weight: 500;">The Red Book of Simple &amp; Effective Astrological Solutions</p>
+    
+  <section class="premium-overview-section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 40px;">
+        <div data-animate>
+          <h2 class="card-section-title" style="margin-bottom: 15px; font-size: 2.8rem; line-height: 1.2;">Master the Science of Lal Kitab</h2>
+          <p style="font-size: 1.2rem; color: #c8960c; font-weight: 700; margin-bottom: 25px;">Decode patterns that shape real lives.</p>
+          
+          <ul class="list-reset" style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Move from Curiosity to Confidence</strong>
+                <span style="color: #666; font-size: 0.95rem;">Translate abstract cosmic symbols into precise, actionable life readings for yourself and others.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Understand Systems, Not Just Symbols</strong>
+                <span style="color: #666; font-size: 0.95rem;">Master the underlying mathematical and spiritual framework that makes this discipline devastatingly accurate.</span>
+              </div>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Real-World Remedial Power</strong>
+                <span style="color: #666; font-size: 0.95rem;">Learn highly guarded remedies to actively mitigate difficult periods and enhance auspicious ones.</span>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="container" data-animate>
-            <img src="assets/images-optimized/Picture7.webp" alt="Lal Kitab" class="rounded-lg" style="width: 85%; max-width: 1000px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; display: block; margin-bottom: 2rem;">
+        
+        <div data-animate style="position: relative;">
+          <div style="position: absolute; top: -15px; right: -15px; width: 100px; height: 100px; background: rgba(200, 150, 12, 0.1); border-radius: 50%; z-index: 1;"></div>
+          <div style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; background: rgba(90, 30, 30, 0.05); border-radius: 50%; z-index: 1;"></div>
+          <img src="assets/images-optimized/Picture7.webp" alt="Lal Kitab Mastery" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.5);">
+          
+          
         </div>
-        <div class="container" data-animate>
-            <h2>What is Lal Kitab?</h2>
-            <p>Lal Kitab is a distinctive system of astrology known for its practical approach and unique remedial methods. The term "Lal Kitab" literally means "Red Book", referring to a series of astrological texts written in the early 20th century.</p>
-            <p>Lal Kitab combines principles of traditional astrology with simplified rules for interpreting planetary positions and houses in a birth chart. One of the most notable features of Lal Kitab is its focus on simple remedies and practical guidance that are believed to help balance planetary influences in a person's life.</p>
-            <p>Unlike many classical astrology systems, Lal Kitab often uses straightforward interpretations and symbolic remedies, making it accessible for learners who want to understand astrology in a more practical way.</p>
+      </div>
+    </div>
+  </section>
 
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Why Should You Study Lal Kitab?</h3>
-            <p>Studying Lal Kitab allows learners to explore a unique branch of astrology that emphasizes practical solutions and simplified chart interpretation.</p>
-            <p>Students learn how planetary placements in different houses are interpreted according to Lal Kitab principles and how traditional remedies are suggested based on those interpretations. The system provides a different perspective compared to classical astrological methods.</p>
+  <section class="learning-tiers-section">
+    <div class="container text-center mb-3">
+      <h2 class="card-section-title">Choose Your Path to Mastery</h2>
+      <p style="color: #666; max-width: 600px; margin: 0 auto 40px;">Select the depth of knowledge that aligns with your goals. Upgrade at any time as your journey evolves.</p>
+    </div>
 
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">What Are the Benefits of Studying Lal Kitab?</h3>
-            <p>Learning Lal Kitab provides several benefits for students interested in astrology and traditional knowledge systems.</p>
-            <ul class="list-reset">
-                <li class="mb-0-75"><strong>1. Understanding a Unique Astrological System:</strong> Lal Kitab offers a different framework for analyzing planetary positions and houses compared to many other astrology methods.</li>
-                <li class="mb-0-75"><strong>2. Practical Interpretation Techniques:</strong> The system focuses on straightforward rules that can help students interpret birth charts in a clear and organized way.</li>
-                <li class="mb-0-75"><strong>3. Knowledge of Traditional Remedies:</strong> One of the defining aspects of Lal Kitab is its emphasis on symbolic remedies believed to help balance planetary influences.</li>
-                <li class="mb-0-75"><strong>4. Expanded Astrological Perspective:</strong> Studying Lal Kitab alongside other astrology systems allows learners to explore multiple approaches to chart interpretation.</li>
-                <li><strong>5. Application in Personal Guidance:</strong> Students gain insight into how astrological interpretations and remedies are traditionally used to guide individuals in different areas of life.</li>
+    <div class="container">
+      <div class="tier-grid">
+      
+        <!-- DIPLOMA -->
+        <div class="tier-card tier-diploma" data-animate>
+          <div class="tier-header">
+            <h3 class="tier-name">Diploma</h3>
+            <span class="tier-position">The Foundation</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Master the core mechanics of the signs and houses.</li>
+              <li><i class="fas fa-check"></i> Gain absolute clarity on foundational chart reading.</li>
+              <li><i class="fas fa-check"></i> Safely step into Lal Kitab without feeling overwhelmed.</li>
             </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹5,499</span>
+              <strong class="tier-new-price">₹4,199</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 8 Weeks</div>
+            <a href="courses/-.html" class="btn btn-outline btn-block">Start Foundation</a>
+          </div>
+        </div>
 
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Can Someone Build a Career in Lal Kitab Astrology?</h3>
-            <p>Yes, individuals who study Lal Kitab astrology seriously and gain practical experience may pursue professional opportunities in this field. Possible career paths include:</p>
-            <ul class="list-reset">
-                <li class="mb-0-75">✓ Lal Kitab astrology consultant</li>
-                <li class="mb-0-75">✓ Astrology teacher or trainer</li>
-                <li class="mb-0-75">✓ Author or content creator on astrology topics</li>
-                <li class="mb-0-75">✓ Online astrology consultation services</li>
-                <li>✓ Researcher in astrology and traditional practices</li>
+        <!-- BACHELORS -->
+        <div class="tier-card tier-bachelors" data-animate>
+          <div class="tier-badge">Smart Choice</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Bachelors</h3>
+            <span class="tier-position">The Practitioner</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Transition from theory to practical life-event prediction.</li>
+              <li><i class="fas fa-check"></i> Deep-dive into case studies and tracking methods.</li>
+              <li><i class="fas fa-check"></i> Develop the capability to offer accurate readings to family and friends.</li>
             </ul>
-            <p style="margin-top: 1rem;">As with any specialized subject, developing a professional career requires continuous study, practical experience, and ethical responsibility when offering astrological guidance.</p>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹11,999</span>
+              <strong class="tier-new-price">₹8,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 12 Weeks</div>
+            <a href="courses/-.html" class="btn btn-outline btn-block" style="border-color: #8b0000; color: #8b0000;">Become a Practitioner</a>
+          </div>
         </div>
-    </section>
 
-    <section class="light-bg">
-        <div class="container">
-            <h2 class="card-section-title">Our Lal Kitab Program</h2>
-
-            <div class="category-filter-container">
-                <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
-                <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
-                <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
-                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
+        <!-- MASTERS -->
+        <div class="tier-card tier-masters" data-animate>
+          <div class="tier-badge popular">Most Popular</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Masters</h3>
+            <span class="tier-position">The Advanced Guide</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-compass"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unlock complex, multi-layered predictive synergies.</li>
+              <li><i class="fas fa-check"></i> Read charts with unshakeable confidence in all situations.</li>
+              <li><i class="fas fa-check"></i> Prescribe potent remedial measures safely.</li>
+              <li><i class="fas fa-check"></i> True mentorship feel with guided interpretations.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹24,999</span>
+              <strong class="tier-new-price">₹18,699</strong>
             </div>
-
-            <div id="diploma" class="program-tab-content" style="display: block;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Grammar &amp; Foundations (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Lal Kitab Grammar</strong><br>A unique system mapping palmistry lines to the horoscope, treating houses as fixed signs regardless of the rising ascendant.</li>
-                            <li class="mb-0-75"><strong>Module 2: Aspects &amp; Planetary States</strong><br>Redefines planetary aspects and identifies "Blind" (Andha Teva) or "Dormant" (Soya) planets that fail to manifest their natural results.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Debts &amp; Remedies (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Debts &amp; Kayam Planets</strong><br>Analyzes ancestral curses through Pitra Rin (karmic debts) and identifies "Kayam" planets ”” those standing firm and unaffected by malefic influences.</li>
-                            <li class="mb-0-75"><strong>Module 4: The Art of Remedies</strong><br>Focuses on Upay (remedies) using logic and precautions, emphasizing practical actions like donations or flow of items in water.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                    <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 24% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Diploma in Lal Kitab</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 8 WEEKS comprehensive training
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹5,499</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹4,199</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="bachelors" class="program-tab-content" style="display: none;">
-                <div class="grid grid-3 grid-gap-2">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Grammar &amp; Aspects (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Lal Kitab Grammar</strong><br>Introduces unique terminology like Dharmi Teva (pious chart) and Andha Teva (blind chart), defining how planets behave in specific houses.</li>
-                            <li class="mb-0-75"><strong>Module 2: House Swaps &amp; Aspects</strong><br>Mastering Lal Kitab's unique planetary aspects and house swaps, where planets exchange influences differently than in traditional Vedic astrology.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Debts &amp; Annual Charts (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Pitra Rin &amp; Remedies</strong><br>Identifying Pitra Rin (ancestral curses) through specific planetary combinations and applying targeted remedies to clear deep-seated karmic debts.</li>
-                            <li class="mb-0-75"><strong>Module 4: Annual Charts (Varshphal)</strong><br>Learning to construct and interpret the Lal Kitab Varshphal, predicting year-by-year events by rotating planets within the annual chart.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Modern Integration (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: Logic of Remedies</strong><br>Explaining the symbolic logic of Upay, such as why specific objects are submerged in water or buried in earth.</li>
-                            <li class="mb-0-75"><strong>Module 6: Modern Integration</strong><br>Combining ancient Lal Kitab wisdom with modern lifestyle adjustments, ensuring remedies remain practical and effective in today's urban environments.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Bachelors in Lal Kitab</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 12 WEEKS advanced program
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹11,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹8,999</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="masters" class="program-tab-content" style="display: none;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Grammar of Lal Kitab</strong><br>Introduces unique terminology like Dharmi Teva (pious chart) and Andha Teva (blind chart), defining how planets behave in specific houses.</li>
-                            <li class="mb-0-75"><strong>Module 2: House Swaps &amp; Aspects</strong><br>Mastering Lal Kitab's unique planetary aspects and house swaps, where planets exchange influences differently than in traditional Vedic astrology.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Karmic Analysis (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Analysing Pitra Rin</strong><br>Identifying Pitra Rin (ancestral curses) through specific planetary combinations and applying targeted remedies to clear deep-seated family karmic debts.</li>
-                            <li class="mb-0-75"><strong>Module 4: Annual Charts (Varshphal)</strong><br>Learning to construct and interpret the Lal Kitab Varshphal, predicting year-by-year events by rotating planets within the annual chart.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Advanced Remedies (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: The Logic of Remedies</strong><br>Explaining the symbolic logic of Upay, such as why specific objects are submerged in water or buried in earth.</li>
-                            <li class="mb-0-75"><strong>Module 6: Debt &amp; Sacrifice (Bali)</strong><br>Studying the concept of sacrificial planets (Bali ka Bakra), where one planet's negative influence is transferred to another for protection.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery (Part 4)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 7: Blind &amp; Half-Blind Charts</strong><br>Advanced analysis of Andha and Dharmi Tevas, focusing on how to "awaken" dormant houses and planets through specific rituals.</li>
-                            <li class="mb-0-75"><strong>Module 8: Professional Integration</strong><br>Combining ancient Lal Kitab wisdom with modern lifestyle adjustments, ensuring remedies remain practical and effective in today's urban environments.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Masters in Lal Kitab</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 16 WEEKS ultimate mastery
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹24,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹18,699</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- GRAND MASTER TAB -->
-
-            <div id="grand-master" class="program-tab-content" style="display: none;">
-                <div class="grid grid-2 grid-gap-3">
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 1: Grammar of Lal Kitab <span class="gm-premium-badge">Advanced</span></strong><br>Introduces unique terminology like Dharmi Teva (pious chart) and Andha Teva (blind chart), defining how planets behave in specific houses.</li>
-                            <li class="mb-0-75"><strong>Module 2: House Swaps &amp; Aspects <span class="gm-premium-badge">Advanced</span></strong><br>Mastering Lal Kitab's unique planetary aspects and house swaps, where planets exchange influences differently than in traditional Vedic astrology.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Karmic Analysis (Part 2)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 3: Analysing Pitra Rin <span class="gm-premium-badge">Advanced</span></strong><br>Identifying Pitra Rin (ancestral curses) through specific planetary combinations and applying targeted remedies to clear deep-seated family karmic debts.</li>
-                            <li class="mb-0-75"><strong>Module 4: Annual Charts (Varshphal) <span class="gm-premium-badge">Advanced</span></strong><br>Learning to construct and interpret the Lal Kitab Varshphal, predicting year-by-year events by rotating planets within the annual chart.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Advanced Remedies (Part 3)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 5: The Logic of Remedies <span class="gm-premium-badge">Advanced</span></strong><br>Explaining the symbolic logic of Upay, such as why specific objects are submerged in water or buried in earth.</li>
-                            <li class="mb-0-75"><strong>Module 6: Debt &amp; Sacrifice (Bali) <span class="gm-premium-badge">Advanced</span></strong><br>Studying the concept of sacrificial planets (Bali ka Bakra), where one planet's negative influence is transferred to another for protection.</li>
-                        </ul>
-                    </div>
-                    <div class="card card-auto p-4" data-animate>
-                        <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery (Part 4)</h3>
-                        <ul class="list-reset" style="text-align: left;">
-                            <li class="mb-2"><strong>Module 7: Blind &amp; Half-Blind Charts <span class="gm-premium-badge">Advanced</span></strong><br>Advanced analysis of Andha and Dharmi Tevas, focusing on how to "awaken" dormant houses and planets through specific rituals.</li>
-                            <li class="mb-0-75"><strong>Module 8: Professional Integration <span class="gm-premium-badge">Advanced</span></strong><br>Combining ancient Lal Kitab wisdom with modern lifestyle adjustments, ensuring remedies remain practical and effective in today's urban environments.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="landscape-pricing-card" data-animate>
-                   <div class="pricing-info-left">
-                        <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
-                        <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Lal Kitab</h3>
-                        <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                            <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
-                        </p>
-                    </div>
-                    <div class="pricing-block">
-                        <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
-                        <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
-                    </div>
-                    <div class="enroll-block">
-                        <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 16 Weeks</div>
+            <a href="courses/-.html" class="btn btn-primary btn-block">Achieve Mastery</a>
+          </div>
         </div>
-    </section>
+
+        <!-- GRAND MASTER -->
+        <div class="tier-card tier-grand-master" data-animate>
+          <div class="tier-badge elite">Elite Invitation</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Grand Master</h3>
+            <span class="tier-position">The Authority</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unrivaled mastery of profound, secretive spiritual formulas.</li>
+              <li><i class="fas fa-check"></i> Master the art of professional client handling and consultation dynamics.</li>
+              <li><i class="fas fa-check"></i> Command premium authority in the professional spiritual marketplace.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹34,999</span>
+              <strong class="tier-new-price">₹24,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 48 Weeks</div>
+            <a href="courses/-.html" class="btn btn-elite btn-block">Claim Authority</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
     <!-- COMPARISON TABLE SECTION -->
     <section class="comparison-section">
@@ -525,7 +456,8 @@
                             <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                         </tr>
-                        <tr>
+                   
+     <tr>
                             <td>Module 8: Professional Integration</td>
                             <td class="col-diploma"><i class="fas fa-times c-icon cross"></i></td>
                             <td class="col-bachelors"><i class="fas fa-times c-icon cross"></i></td>
@@ -581,7 +513,8 @@
     </section>
 
     <!-- TOP URGENCY MARQUEE -->
-    <div class="urgency-marquee-container">
+    
+<div class="urgency-marquee-container">
         <div class="urgency-marquee-content">
             <div class="marquee-item">
                 <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats

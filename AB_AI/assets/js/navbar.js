@@ -10,7 +10,13 @@ function isPageActive(href, currentPage) {
   return cleanHref === cleanCurrent || (cleanCurrent === '' && cleanHref === 'index');
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+// Path prefix for pages in subdirectories (e.g., /courses/)
+const _navBasePath = (function() {
+  const p = window.location.pathname.replace(/\\/g, '/');
+  return p.includes('/courses/') ? '../' : '';
+})();
+
+window.initNavbar = function () {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
   const navLinks = document.querySelectorAll('.nav-item a');
@@ -66,71 +72,71 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-});
+};
 
 /* ============ MEGA MENU LOGIC ============ */
 const crashCourseList = [
-  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'courses.html?quickview=plrt', icon: 'fas fa-hourglass-half' },
-  { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'courses.html?quickview=vastu', icon: 'fas fa-home' },
-  { name: 'Modern Western Palmistry', meta: 'Modern', url: 'courses.html?quickview=palmistry', icon: 'fas fa-hand-paper' },
-  { name: 'Mobile Numerology', meta: 'Mobile', url: 'courses.html?quickview=numerology-mobile', icon: 'fas fa-sort-numeric-up' },
-  { name: '(Face Reading) Western Physiognomy', meta: '(Face', url: 'courses.html?quickview=face-reading', icon: 'fas fa-user' },
-  { name: 'Financial Astrology (Artha)', meta: 'Financial', url: 'courses.html?quickview=astrology-financial', icon: 'fas fa-om' },
-  { name: 'Lal Kitab Basics', meta: 'Lal', url: 'courses.html?quickview=lal-kitab-basics', icon: 'fas fa-book' },
-  { name: 'Medical Astrology', meta: 'Medical', url: 'courses.html?quickview=medical-astrology', icon: 'fas fa-heartbeat' },
-  { name: 'The BNN Intensive', meta: 'The', url: 'courses.html?quickview=bnn-intensive', icon: 'fas fa-code-branch' },
-  { name: 'Modern Career Astrology', meta: 'Modern', url: 'courses.html?quickview=astrology-career', icon: 'fas fa-om' },
-  { name: 'Business Numerology', meta: 'Business', url: 'courses.html?quickview=numerology-business', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Vedic Numerology', meta: 'Vedic', url: 'courses.html?quickview=numerology-vedic', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Nadi Jyotish', meta: 'Nadi', url: 'courses.html?quickview=nadi-jyotish', icon: 'fas fa-scroll' },
-  { name: 'Healing', meta: 'Healing', url: 'courses.html?quickview=reiki', icon: 'fas fa-hand-holding-medical' },
-  { name: 'Feng Shui', meta: 'Feng', url: 'courses.html?quickview=feng-shui', icon: 'fas fa-yin-yang' },
-  { name: 'Gemini Jyotish', meta: 'Gemini', url: 'courses.html?quickview=gemini-jyotish', icon: 'fas fa-users' }
+  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'plrt.html', icon: 'fas fa-hourglass-half' },
+  { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'cc-bhoomi-vastu.html', icon: 'fas fa-home' },
+  { name: 'Palmistry', meta: 'Palmistry', url: 'cc-modern-western-palmistry.html', icon: 'fas fa-hand-paper' },
+  { name: 'Mobile Numerology', meta: 'Mobile', url: 'cc-mobile-numerology.html', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Face Reading', meta: 'Face Reading', url: 'cc-face-reading.html', icon: 'fas fa-user' },
+  { name: 'Financial Astrology (Artha)', meta: 'Financial', url: 'cc-financial-astrology.html', icon: 'fas fa-om' },
+  { name: 'Lal Kitab Basics', meta: 'Lal', url: 'cc-lal-kitab.html', icon: 'fas fa-book' },
+  { name: 'Medical Astrology', meta: 'Medical', url: 'cc-medical-astrology.html', icon: 'fas fa-heartbeat' },
+  { name: 'The BNN Intensive', meta: 'The', url: 'cc-bnn-intensive.html', icon: 'fas fa-code-branch' },
+  { name: 'Modern Career Astrology', meta: 'Modern', url: 'cc-modern-career-astrology.html', icon: 'fas fa-om' },
+  { name: 'Business Numerology', meta: 'Business', url: 'cc-business-numerology.html', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Vedic Numerology', meta: 'Vedic', url: 'cc-vedic-numerology.html', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Nadi Jyotish', meta: 'Nadi', url: 'cc-nadi-astrology.html', icon: 'fas fa-scroll' },
+  { name: 'Healing', meta: 'Healing', url: 'cc-healing.html', icon: 'fas fa-hand-holding-medical' },
+  { name: 'Feng Shui', meta: 'Feng', url: 'cc-feng-shui.html', icon: 'fas fa-yin-yang' },
+  { name: 'Jaimini Astrology', meta: 'Jaimini Jyotishi', url: 'cc-jaimini-astrology.html', icon: 'fas fa-users' }
 ];
 const diplomaList = [
-  { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'astrology.html', icon: 'fas fa-om' },
-  { name: 'Numerology (Pythagorean & Chaldean)', meta: 'Numerology', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'KP Astrology (Krishnamurti Padhdhati)', meta: 'KP', url: 'kp-astrology.html', icon: 'fas fa-star' },
-  { name: 'Gemstone Science (Ratna Vigyan)', meta: 'Gemstone', url: 'gemstone.html', icon: 'fas fa-gem' },
-  { name: 'Vastu Shastra', meta: 'Vastu', url: 'vastu.html', icon: 'fas fa-home' },
-  { name: 'Lal Kitab', meta: 'Lal', url: 'lal-kitab.html', icon: 'fas fa-book' },
-  { name: 'Face Reading (Physiognomy)', meta: 'Face', url: 'face-reading.html', icon: 'fas fa-user' },
-  { name: 'Reiki Healing', meta: 'Reiki', url: 'reiki.html', icon: 'fas fa-hand-holding-medical' },
-  { name: 'Tarot Reading', meta: 'Tarot', url: 'tarot.html', icon: 'fas fa-clone' },
-  { name: 'Nakshatra (Lunar Mansions)', meta: 'Nakshatra', url: 'nakshatra.html', icon: 'fas fa-moon' },
-  { name: 'Crystal Healing', meta: 'Crystal', url: 'crystal-healing.html', icon: 'fas fa-gem' },
-  { name: 'Rudraksha', meta: 'Rudraksha', url: 'rudraksha.html', icon: 'fas fa-seedling' },
-  { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'palmistry.html', icon: 'fas fa-hand-paper' }
+  { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'level-detail.html?course=vedic-astrology&level=diploma', icon: 'fas fa-om' },
+  { name: 'Numerology (Pythagorean & Chaldean)', meta: 'Numerology', url: 'level-detail.html?course=numerology&level=diploma', icon: 'fas fa-sort-numeric-up' },
+  { name: 'KP Astrology (Krishnamurti Padhdhati)', meta: 'KP', url: 'level-detail.html?course=kp-astrology&level=diploma', icon: 'fas fa-star' },
+  { name: 'Gemstone Science (Ratna Vigyan)', meta: 'Gemstone', url: 'level-detail.html?course=gemstone&level=diploma', icon: 'fas fa-gem' },
+  { name: 'Vastu Shastra', meta: 'Vastu', url: 'level-detail.html?course=vastu&level=diploma', icon: 'fas fa-home' },
+  { name: 'Lal Kitab', meta: 'Lal', url: 'level-detail.html?course=lal-kitab&level=diploma', icon: 'fas fa-book' },
+  { name: 'Face Reading (Physiognomy)', meta: 'Face', url: 'level-detail.html?course=face-reading&level=diploma', icon: 'fas fa-user' },
+  { name: 'Reiki Healing', meta: 'Reiki', url: 'level-detail.html?course=reiki&level=diploma', icon: 'fas fa-hand-holding-medical' },
+  { name: 'Tarot Reading', meta: 'Tarot', url: 'level-detail.html?course=tarot&level=diploma', icon: 'fas fa-clone' },
+  { name: 'Nakshatra (Lunar Mansions)', meta: 'Nakshatra', url: 'level-detail.html?course=nakshatra&level=diploma', icon: 'fas fa-moon' },
+  { name: 'Crystal Healing', meta: 'Crystal', url: 'level-detail.html?course=crystal-healing&level=diploma', icon: 'fas fa-gem' },
+  { name: 'Rudraksha', meta: 'Rudraksha', url: 'level-detail.html?course=rudraksha&level=diploma', icon: 'fas fa-seedling' },
+  { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'level-detail.html?course=palmistry&level=diploma', icon: 'fas fa-hand-paper' }
 ];
 const bachelorList = [
-  { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'astrology.html', icon: 'fas fa-om' },
-  { name: 'Numerology (Pythagorean & Chaldean)', meta: 'Numerology', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'KP Astrology (Krishnamurti Padhdhati)', meta: 'KP', url: 'kp-astrology.html', icon: 'fas fa-star' },
-  { name: 'Gemstone Science (Ratna Vigyan)', meta: 'Gemstone', url: 'gemstone.html', icon: 'fas fa-gem' },
-  { name: 'Vastu Shastra', meta: 'Vastu', url: 'vastu.html', icon: 'fas fa-home' },
-  { name: 'Lal Kitab', meta: 'Lal', url: 'lal-kitab.html', icon: 'fas fa-book' },
-  { name: 'Face Reading (Physiognomy)', meta: 'Face', url: 'face-reading.html', icon: 'fas fa-user' },
-  { name: 'Reiki Healing', meta: 'Reiki', url: 'reiki.html', icon: 'fas fa-hand-holding-medical' },
-  { name: 'Tarot Reading', meta: 'Tarot', url: 'tarot.html', icon: 'fas fa-clone' },
-  { name: 'Nakshatra (Lunar Mansions) 1', meta: 'Nakshatra', url: 'nakshatra.html', icon: 'fas fa-moon' },
-  { name: 'Crystal Healing', meta: 'Crystal', url: 'crystal-healing.html', icon: 'fas fa-gem' },
-  { name: 'Rudraksha', meta: 'Rudraksha', url: 'rudraksha.html', icon: 'fas fa-seedling' },
-  { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'palmistry.html', icon: 'fas fa-hand-paper' }
+  { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'level-detail.html?course=vedic-astrology&level=bachelors', icon: 'fas fa-om' },
+  { name: 'Numerology (Pythagorean & Chaldean)', meta: 'Numerology', url: 'level-detail.html?course=numerology&level=bachelors', icon: 'fas fa-sort-numeric-up' },
+  { name: 'KP Astrology (Krishnamurti Padhdhati)', meta: 'KP', url: 'level-detail.html?course=kp-astrology&level=bachelors', icon: 'fas fa-star' },
+  { name: 'Gemstone Science (Ratna Vigyan)', meta: 'Gemstone', url: 'level-detail.html?course=gemstone&level=bachelors', icon: 'fas fa-gem' },
+  { name: 'Vastu Shastra', meta: 'Vastu', url: 'level-detail.html?course=vastu&level=bachelors', icon: 'fas fa-home' },
+  { name: 'Lal Kitab', meta: 'Lal', url: 'level-detail.html?course=lal-kitab&level=bachelors', icon: 'fas fa-book' },
+  { name: 'Face Reading (Physiognomy)', meta: 'Face', url: 'level-detail.html?course=face-reading&level=bachelors', icon: 'fas fa-user' },
+  { name: 'Reiki Healing', meta: 'Reiki', url: 'level-detail.html?course=reiki&level=bachelors', icon: 'fas fa-hand-holding-medical' },
+  { name: 'Tarot Reading', meta: 'Tarot', url: 'level-detail.html?course=tarot&level=bachelors', icon: 'fas fa-clone' },
+  { name: 'Nakshatra (Lunar Mansions) 1', meta: 'Nakshatra', url: 'level-detail.html?course=nakshatra&level=bachelors', icon: 'fas fa-moon' },
+  { name: 'Crystal Healing', meta: 'Crystal', url: 'level-detail.html?course=crystal-healing&level=bachelors', icon: 'fas fa-gem' },
+  { name: 'Rudraksha', meta: 'Rudraksha', url: 'level-detail.html?course=rudraksha&level=bachelors', icon: 'fas fa-seedling' },
+  { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'level-detail.html?course=palmistry&level=bachelors', icon: 'fas fa-hand-paper' }
 ];
 const masterList = [
-  { name: 'Numerology (Pythagorean & Chaldean)', meta: 'Numerology', url: 'numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'astrology.html', icon: 'fas fa-om' },
-  { name: 'KP Astrology (Krishnamurti Padhdhati)', meta: 'KP', url: 'kp-astrology.html', icon: 'fas fa-star' },
-  { name: 'Gemstone Science (Ratna Vigyan)', meta: 'Gemstone', url: 'gemstone.html', icon: 'fas fa-gem' },
-  { name: 'Vastu Shastra', meta: 'Vastu', url: 'vastu.html', icon: 'fas fa-home' },
-  { name: 'Lal Kitab', meta: 'Lal', url: 'lal-kitab.html', icon: 'fas fa-book' },
-  { name: 'Face Reading (Physiognomy)', meta: 'Face', url: 'face-reading.html', icon: 'fas fa-user' },
-  { name: 'Reiki Healing', meta: 'Reiki', url: 'reiki.html', icon: 'fas fa-hand-holding-medical' },
-  { name: 'Tarot Reading', meta: 'Tarot', url: 'tarot.html', icon: 'fas fa-clone' },
-  { name: 'Nakshatra (Lunar Mansions)', meta: 'Nakshatra', url: 'nakshatra.html', icon: 'fas fa-moon' },
-  { name: 'Crystal Healing', meta: 'Crystal', url: 'crystal-healing.html', icon: 'fas fa-gem' },
-  { name: 'Rudraksha', meta: 'Rudraksha', url: 'rudraksha.html', icon: 'fas fa-seedling' },
-  { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'palmistry.html', icon: 'fas fa-hand-paper' }
+  { name: 'Numerology (Pythagorean & Chaldean)', meta: 'Numerology', url: 'level-detail.html?course=numerology&level=masters', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'level-detail.html?course=vedic-astrology&level=masters', icon: 'fas fa-om' },
+  { name: 'KP Astrology (Krishnamurti Padhdhati)', meta: 'KP', url: 'level-detail.html?course=kp-astrology&level=masters', icon: 'fas fa-star' },
+  { name: 'Gemstone Science (Ratna Vigyan)', meta: 'Gemstone', url: 'level-detail.html?course=gemstone&level=masters', icon: 'fas fa-gem' },
+  { name: 'Vastu Shastra', meta: 'Vastu', url: 'level-detail.html?course=vastu&level=masters', icon: 'fas fa-home' },
+  { name: 'Lal Kitab', meta: 'Lal', url: 'level-detail.html?course=lal-kitab&level=masters', icon: 'fas fa-book' },
+  { name: 'Face Reading (Physiognomy)', meta: 'Face', url: 'level-detail.html?course=face-reading&level=masters', icon: 'fas fa-user' },
+  { name: 'Reiki Healing', meta: 'Reiki', url: 'level-detail.html?course=reiki&level=masters', icon: 'fas fa-hand-holding-medical' },
+  { name: 'Tarot Reading', meta: 'Tarot', url: 'level-detail.html?course=tarot&level=masters', icon: 'fas fa-clone' },
+  { name: 'Nakshatra (Lunar Mansions)', meta: 'Nakshatra', url: 'level-detail.html?course=nakshatra&level=masters', icon: 'fas fa-moon' },
+  { name: 'Crystal Healing', meta: 'Crystal', url: 'level-detail.html?course=crystal-healing&level=masters', icon: 'fas fa-gem' },
+  { name: 'Rudraksha', meta: 'Rudraksha', url: 'level-detail.html?course=rudraksha&level=masters', icon: 'fas fa-seedling' },
+  { name: 'Palmistry (Chirognomy & Chiromancy)', meta: 'Palmistry', url: 'level-detail.html?course=palmistry&level=masters', icon: 'fas fa-hand-paper' }
 ];
 const grandMasterList = [
   { name: 'Grand Master Program', meta: 'Lifetime Mastery', url: 'courses.html#grand-master-section', icon: 'fas fa-crown' }
@@ -314,9 +320,19 @@ const courseDomains = [
   }
 ];
 
+// Let's also attach initMegaMenu and initMobileBottomNav inside initNavbar
+const originalInitNavbar = window.initNavbar;
+window.initNavbar = function() {
+    originalInitNavbar();
+    initMegaMenu();
+    initMobileBottomNav();
+};
+
 document.addEventListener('DOMContentLoaded', function () {
-  initMegaMenu();
-  initMobileBottomNav();
+    // Only run if the navbar is already in the DOM (not dynamically loaded)
+    if (document.querySelector('.navbar')) {
+        window.initNavbar();
+    }
 });
 
 function initMegaMenu() {
@@ -326,7 +342,7 @@ function initMegaMenu() {
 
   navItems.forEach(item => {
     const link = item.querySelector('a');
-    if (link && link.innerText.includes('Courses')) {
+    if (link && link.textContent.includes('Courses')) {
       coursesNavItem = item;
       // Update Text to "All Courses"
       link.childNodes[0].nodeValue = "All Courses ";
@@ -416,8 +432,12 @@ function initMegaMenu() {
     if (domain.courses) {
       html += `
                 <div class="mega-courses-grid">
-                    ${domain.courses.map(course => `
-                        <a href="${course.url || '#'}" class="mega-course-card">
+                    ${domain.courses.map(course => {
+                        const courseUrl = (course.url && !course.url.startsWith('http') && !course.url.startsWith('#')) 
+                            ? _navBasePath + course.url 
+                            : (course.url || '#');
+                        return `
+                        <a href="${courseUrl}" class="mega-course-card">
                             <div class="mega-course-icon">
                                 <i class="${course.icon || domain.icon}"></i>
                             </div>
@@ -426,7 +446,7 @@ function initMegaMenu() {
                                 <div class="mega-course-meta">${course.meta}</div>
                             </div>
                         </a>
-                    `).join('')}
+                    `; }).join('')}
                 </div>
             `;
     }
@@ -533,7 +553,7 @@ function initMobileMegaMenu() {
     if (domain.courses) {
       domain.courses.forEach(course => {
         const courseLink = document.createElement('a');
-        courseLink.href = course.url;
+        courseLink.href = (course.url && !course.url.startsWith('http') && !course.url.startsWith('#')) ? _navBasePath + course.url : (course.url || '#');
         courseLink.className = 'mobile-course-link';
         courseLink.innerHTML = `<i class="${course.icon || domain.icon}"></i> <span>${course.name}</span>`;
         courseList.appendChild(courseLink);
@@ -605,7 +625,7 @@ function initMobileBottomNav() {
 
   bottomNavItems.forEach(item => {
     const link = document.createElement('a');
-    link.href = item.href;
+    link.href = _navBasePath + item.href;
     link.className = 'mobile-bottom-nav-item';
 
     // Mark active based on current page
@@ -649,7 +669,7 @@ function initMobileBottomNav() {
           }
         });
       } else {
-        link.href = item.href;
+        link.href = _navBasePath + item.href;
         link.textContent = item.label;
       }
 
@@ -667,8 +687,8 @@ function initMobileBottomNav() {
     const ctaDiv = document.createElement('div');
     ctaDiv.className = 'mobile-compact-cta';
     ctaDiv.innerHTML = `
-      <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-      <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      <a href="${_navBasePath}login.html" class="btn btn-outline btn-sm">Login</a>
+      <a href="${_navBasePath}register.html" class="btn btn-primary btn-sm">Register</a>
     `;
     compactNav.appendChild(ctaDiv);
 
@@ -706,7 +726,7 @@ function initMobileBottomNav() {
       if (domain.courses && domain.courses.length > 0) {
         domain.courses.forEach(course => {
           const courseLink = document.createElement('a');
-          courseLink.href = course.url;
+          courseLink.href = (course.url && !course.url.startsWith('http') && !course.url.startsWith('#')) ? _navBasePath + course.url : (course.url || '#');
           courseLink.className = 'mcp-course-link';
           courseLink.innerHTML = `<i class="${course.icon || domain.icon}"></i> <span>${course.name}</span>`;
           courseList.appendChild(courseLink);

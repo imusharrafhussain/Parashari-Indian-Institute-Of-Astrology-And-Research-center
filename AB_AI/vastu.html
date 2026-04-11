@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,6 +25,8 @@
       .program-tab-content { animation: fadeIn 0.4s ease-in-out; }
       @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       @media (max-width: 768px) {
+        html, body { overflow-x: hidden; max-width: 100%; padding: 0; margin: 0; }
+        .cvd-layout-container { padding: 0 !important; margin: 0 !important; width: 100%; max-width: 100%; }
           .category-filter-container { justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0 10px 10px; }
           
           .filter-tab { padding: 6px 14px; font-size: 0.82rem; }
@@ -91,6 +93,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -219,253 +222,171 @@
 
   
 
-  <section style="padding-top: 60px;">
-    <div class="container text-center">
-      <h1 class="color-primary" style="font-size: 2.5rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-house-chimney"></i> Vastu Shastra</h1>
-      <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; font-weight: 500;">The Science of Living Spaces</p>
-    </div>
-    <div class="container" data-animate>
-      <img src="assets/images-optimized/Vastu.webp" alt="Vastu Shastra" class="rounded-lg" style="width: 85%; max-width: 1000px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; display: block; margin-bottom: 2rem;">
-    </div>
-    <div class="container" data-animate>
-      <h2>What is Vastu Shastra?</h2>
-      <p>Vastu Shastra is a traditional Indian system of architecture and spatial design that focuses on creating harmony between human living spaces and natural energies. The term comes from Sanskrit, where “Vastu” means dwelling or structure and “Shastra” means science or knowledge.</p>
-      <p>This ancient discipline draws from classical texts such as the Vastu Shastra and principles found within the Vedas. Vastu Shastra provides guidelines for designing homes, buildings, temples, and workplaces in alignment with natural elements like earth, water, fire, air, and space.</p>
-      <p>The purpose of Vastu is to create environments that promote balance, harmony, and well-being by aligning structures with directional energies and natural forces.</p>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Why Should You Study Vastu Shastra?</h3>
-      <p>Here are five key reasons people choose to learn this subject.</p>
-      <ul class="list-reset">
-          <li class="mb-0-75"><strong>1. Learn Ancient Architectural Wisdom:</strong> Vastu Shastra preserves centuries of traditional knowledge about planning buildings and living spaces according to natural principles.</li>
-          <li class="mb-0-75"><strong>2. Understand the Relationship Between Space and Human Well-Being:</strong> The study of Vastu explores how the layout and orientation of spaces may influence comfort, productivity, and harmony.</li>
-          <li class="mb-0-75"><strong>3. Develop Knowledge of Spatial Planning:</strong> Students learn how different rooms, entrances, and structural elements are traditionally placed in relation to directions and natural elements.</li>
-          <li class="mb-0-75"><strong>4. Combine Tradition with Modern Design:</strong> Many learners explore how Vastu principles can complement modern architectural and interior design practices.</li>
-          <li><strong>5. Build Expertise in a Specialized Field:</strong> With proper training and practical experience, knowledge of Vastu Shastra can lead to opportunities in consultation, teaching, or research related to traditional architecture.</li>
-      </ul>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">What Are the Benefits of Studying Vastu Shastra?</h3>
-      <p>Learning Vastu Shastra provides several intellectual and practical advantages.</p>
-      <ul class="list-reset">
-          <li class="mb-0-75"><strong>1. Understanding Traditional Architectural Principles:</strong> Students learn how ancient Indian architecture approached spatial planning and building orientation.</li>
-          <li class="mb-0-75"><strong>2. Improved Space Planning Skills:</strong> The study of Vastu helps learners understand how different areas of a building can be arranged for better functionality and balance.</li>
-          <li class="mb-0-75"><strong>3. Knowledge of Directional Energies:</strong> Vastu emphasizes the role of directions (north, south, east, west) and natural elements in designing living and working spaces.</li>
-          <li class="mb-0-75"><strong>4. Integration with Modern Architecture:</strong> Many modern architects and consultants explore Vastu principles alongside contemporary architectural practices.</li>
-          <li><strong>5. Personal Awareness of Living Spaces:</strong> Understanding Vastu can help individuals analyze and improve the arrangement of their homes or workplaces.</li>
-      </ul>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Can Someone Build a Career in Vastu Shastra?</h3>
-      <p>Yes, individuals who study Vastu Shastra in depth and gain practical experience may develop professional opportunities in this field. Possible career paths include:</p>
-      <ul class="list-reset">
-          <li class="mb-0-75">✓ Vastu consultant for homes and offices</li>
-          <li class="mb-0-75">✓ Advisor for architectural and interior design projects</li>
-          <li class="mb-0-75">✓ Vastu trainer or educator</li>
-          <li class="mb-0-75">✓ Researcher in traditional architecture</li>
-          <li>✓ Consultant working with builders or property developers</li>
-      </ul>
-      <p style="margin-top: 1rem;">However, building credibility in this field requires serious study, practical knowledge, and responsible application of Vastu principles.</p>
-
-    </div>
-  </section>
-
-  <section class="light-bg">
+  
+  <section class="premium-overview-section">
     <div class="container">
-      <h2 class="card-section-title">Our Vastu Shastra Program</h2>
-      
-      <div class="category-filter-container">
-          <button class="filter-tab active" data-program="diploma">Diploma <span class="filter-badge popular">Popular</span></button>
-          <button class="filter-tab" data-program="bachelors">Bachelors <span class="filter-badge pro">Pro</span></button>
-          <button class="filter-tab" data-program="masters">Masters <span class="filter-badge advanced">Advanced</span></button>
-                <button class="filter-tab" data-program="grand-master">Grand Master <span class="filter-badge elite">Elite</span></button>
-      </div>
-
-      <!-- DIPLOMA -->
-      <div id="diploma" class="program-tab-content" style="display: block;">
-          <div class="grid grid-2 grid-gap-3">
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Foundation & Direction (Part 1)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 1: The Five Elements & Mandala</strong><br>Explores the Pancha Bhootas and the Vastu Purusha Mandala, aligning human structures with cosmic energy and the sacred grid.</li>
-                      <li class="mb-0-75"><strong>Module 2: Directional Analysis</strong><br>Mastering the placement of the kitchen (Agni), bedrooms (Nairutya), and entrances to harmonize household energy flow and ensure resident well-being.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.5rem;">Application & Remedies (Part 2)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 3: Commercial Vastu</strong><br>Strategic spatial planning for offices, factories, and retail, focusing on productivity, financial growth, and the optimal flow of customers.</li>
-                      <li class="mb-0-75"><strong>Module 4: Remedial Vastu</strong><br>Learning non-invasive corrections using colours, pyramids, and sacred symbols to balance energy flaws (Vastu Doshas) without requiring structural demolition.</li>
-                  </ul>
-              </div>
-          </div>
+      <div class="grid grid-2" style="align-items: center; gap: 40px;">
+        <div data-animate>
+          <h2 class="card-section-title" style="margin-bottom: 15px; font-size: 2.8rem; line-height: 1.2;">Master the Science of Vastu Shastra</h2>
+          <p style="font-size: 1.2rem; color: #c8960c; font-weight: 700; margin-bottom: 25px;">Decode patterns that shape real lives.</p>
           
-          <div class="landscape-pricing-card" data-animate>
-              <div class="pricing-info-left">
-                  <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 24% Today</span>
-                  <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Diploma in Vastu Shastra</h3>
-                  <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                      <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 8 WEEKS comprehensive training
-                  </p>
+          <ul class="list-reset" style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Move from Curiosity to Confidence</strong>
+                <span style="color: #666; font-size: 0.95rem;">Translate abstract cosmic symbols into precise, actionable life readings for yourself and others.</span>
               </div>
-              <div class="pricing-block">
-                  <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹5,499</div>
-                  <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹4,199</strong>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Understand Systems, Not Just Symbols</strong>
+                <span style="color: #666; font-size: 0.95rem;">Master the underlying mathematical and spiritual framework that makes this discipline devastatingly accurate.</span>
               </div>
-              <div class="enroll-block">
-                  <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 3px;"></i>
+              <div>
+                <strong style="color: #4a1a1a; display: block; font-size: 1.05rem;">Real-World Remedial Power</strong>
+                <span style="color: #666; font-size: 0.95rem;">Learn highly guarded remedies to actively mitigate difficult periods and enhance auspicious ones.</span>
               </div>
-          </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div data-animate style="position: relative;">
+          <div style="position: absolute; top: -15px; right: -15px; width: 100px; height: 100px; background: rgba(200, 150, 12, 0.1); border-radius: 50%; z-index: 1;"></div>
+          <div style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; background: rgba(90, 30, 30, 0.05); border-radius: 50%; z-index: 1;"></div>
+          <img src="assets/images-optimized/Vastu.webp" alt="Vastu Shastra Mastery" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.5);">
+          
+          
+        </div>
       </div>
-
-      <!-- BACHELORS -->
-      <div id="bachelors" class="program-tab-content" style="display: none;">
-          <div class="grid grid-3 grid-gap-2">
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Grid & Residentials (Part 1)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 1: Vastu Purusha Mandala</strong><br>Analyses the 85 energy points and 45 deities within the sacred grid to align human structures with cosmic resonance.</li>
-                      <li class="mb-0-75"><strong>Module 2: Residential Vastu</strong><br>Focuses on room-by-room planning to optimize internal energy flow, ensuring the health, prosperity, and harmony of all household residents.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Commercial & Earth (Part 2)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 3: Commercial & Industrial</strong><br>Strategies for offices and factories to enhance profitability, maintain labour harmony, and ensure the efficient flow of raw materials.</li>
-                      <li class="mb-0-75"><strong>Module 4: Geo-biology & Earth Energies</strong><br>Identifies invisible threats like Geopathic Stress and Hartmann Grids, teaching techniques to neutralize harmful earth radiations within a building.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.3rem;">Remedies & Landscaping (Part 3)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 5: Advanced Remedial Vastu</strong><br>Utilizes Colour Therapy, Pyramids, and Virtual Partitioning to correct structural flaws (Vastu Doshas) without requiring any physical or costly demolition.</li>
-                      <li class="mb-0-75"><strong>Module 6: Town Planning & Landscape</strong><br>Covers plot selection, external environments, and landscaping principles to ensure the surrounding land supports the building's overall energetic quality.</li>
-                  </ul>
-              </div>
-          </div>
-
-          <div class="landscape-pricing-card" data-animate>
-             <div class="pricing-info-left">
-                  <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                  <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Bachelors in Vastu Shastra</h3>
-                  <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                      <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 12 WEEKS advanced program
-                  </p>
-              </div>
-              <div class="pricing-block">
-                  <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹11,999</div>
-                  <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹8,999</strong>
-              </div>
-              <div class="enroll-block">
-                  <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-              </div>
-          </div>
-      </div>
-
-      <!-- MASTERS -->
-      <div id="masters" class="program-tab-content" style="display: none;">
-          <div class="grid grid-2 grid-gap-3">
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 1: Vastu Purusha Mandala</strong><br>Analyses the 85 energy points and 45 deities within the sacred grid to align human structures with cosmic resonance.</li>
-                      <li class="mb-0-75"><strong>Module 2: Residential Vastu</strong><br>Focuses on room-by-room planning to optimize internal energy flow, ensuring the health, prosperity, and harmony of all household residents.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Expansion (Part 2)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 3: Commercial & Industrial</strong><br>Strategies for offices and factories to enhance profitability, maintain labour harmony, and ensure the efficient flow of raw materials.</li>
-                      <li class="mb-0-75"><strong>Module 4: Geo-biology & Earth Energies</strong><br>Identifies invisible threats like Geopathic Stress and Hartmann Grids, teaching techniques to neutralize harmful earth radiations within a building.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Corrections (Part 3)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 5: Advanced Remedial Vastu</strong><br>Utilizes Color Therapy, Pyramids, and Virtual Partitioning to correct structural flaws (Vastu Doshas) without requiring any physical or costly demolition.</li>
-                      <li class="mb-0-75"><strong>Module 6: Town Planning & Landscape</strong><br>Covers plot selection, external environments, and landscaping principles to ensure the surrounding land supports the building's overall energetic quality.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery (Part 4)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 7: Directions & Five Elements</strong><br>Mastering the Pancha Bhootas (Five Elements) and their relationship with the eight cardinal directions to balance the home’s energy.</li>
-                      <li class="mb-0-75"><strong>Module 8: Professional Consultation</strong><br>Focuses on site visit protocols, reading architectural maps, and providing ethical, practical Vastu advice to clients in modern urban settings.</li>
-                  </ul>
-              </div>
-          </div>
-
-          <div class="landscape-pricing-card" data-animate>
-             <div class="pricing-info-left">
-                  <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 25% Today</span>
-                  <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Masters in Vastu Shastra</h3>
-                  <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                      <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> 16 WEEKS ultimate mastery
-                  </p>
-              </div>
-              <div class="pricing-block">
-                  <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹24,999</div>
-                  <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹18,699</strong>
-              </div>
-              <div class="enroll-block">
-                  <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-              </div>
-          </div>
-      </div>
-
-
-
-            <!-- GRAND MASTER TAB -->
-
-            <div id="grand-master" class="program-tab-content" style="display: none;">
-          <div class="grid grid-2 grid-gap-3">
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Foundation (Part 1)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 1: Vastu Purusha Mandala <span class="gm-premium-badge">Advanced</span></strong><br>Analyses the 85 energy points and 45 deities within the sacred grid to align human structures with cosmic resonance.</li>
-                      <li class="mb-0-75"><strong>Module 2: Residential Vastu <span class="gm-premium-badge">Advanced</span></strong><br>Focuses on room-by-room planning to optimize internal energy flow, ensuring the health, prosperity, and harmony of all household residents.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Expansion (Part 2)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 3: Commercial & Industrial <span class="gm-premium-badge">Advanced</span></strong><br>Strategies for offices and factories to enhance profitability, maintain labour harmony, and ensure the efficient flow of raw materials.</li>
-                      <li class="mb-0-75"><strong>Module 4: Geo-biology & Earth Energies <span class="gm-premium-badge">Advanced</span></strong><br>Identifies invisible threats like Geopathic Stress and Hartmann Grids, teaching techniques to neutralize harmful earth radiations within a building.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Corrections (Part 3)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 5: Advanced Remedial Vastu <span class="gm-premium-badge">Advanced</span></strong><br>Utilizes Color Therapy, Pyramids, and Virtual Partitioning to correct structural flaws (Vastu Doshas) without requiring any physical or costly demolition.</li>
-                      <li class="mb-0-75"><strong>Module 6: Town Planning & Landscape <span class="gm-premium-badge">Advanced</span></strong><br>Covers plot selection, external environments, and landscaping principles to ensure the surrounding land supports the building's overall energetic quality.</li>
-                  </ul>
-              </div>
-              <div class="card card-auto p-4" data-animate>
-                  <h3 class="color-primary mb-1 text-center" style="font-size: 1.4rem;">Mastery (Part 4)</h3>
-                  <ul class="list-reset" style="text-align: left;">
-                      <li class="mb-2"><strong>Module 7: Directions & Five Elements <span class="gm-premium-badge">Advanced</span></strong><br>Mastering the Pancha Bhootas (Five Elements) and their relationship with the eight cardinal directions to balance the home’s energy.</li>
-                      <li class="mb-0-75"><strong>Module 8: Professional Consultation <span class="gm-premium-badge">Advanced</span></strong><br>Focuses on site visit protocols, reading architectural maps, and providing ethical, practical Vastu advice to clients in modern urban settings.</li>
-                  </ul>
-              </div>
-          </div>
-
-          <div class="landscape-pricing-card" data-animate>
-             <div class="pricing-info-left">
-                  <span class="save-badge"><i class="fas fa-tag" style="margin-right: 4px;"></i> Save 29% Today</span>
-                  <h3 class="color-primary" style="font-size: 1.8rem; margin: 5px 0 10px 0;">Grand Master Vastu Shastra</h3>
-                  <p class="mb-0" style="font-size: 1rem; color: #555; display: flex; align-items: center; gap: 8px;">
-                      <i class="far fa-clock" style="color: #c8960c; font-size: 1.1rem;"></i> <strong>Duration:</strong> Ultimate 48 Weeks of Access
-                  </p>
-              </div>
-              <div class="pricing-block">
-                  <div style="text-decoration: line-through; color: #999; font-size: 1.1rem; margin-bottom: 2px;">Regular Price: ₹34,999</div>
-                  <strong style="color: #c8960c; font-size: 2.5rem; line-height: 1; font-weight: 800;">₹24,999</strong>
-              </div>
-              <div class="enroll-block">
-                  <a href="register.html" class="btn btn-primary" style="padding: 14px 35px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(200, 150, 12, 0.3);">Enroll Now</a>
-              </div>
-          </div>
-      </div>
-      
     </div>
   </section>
+
+  <section class="learning-tiers-section">
+    <div class="container text-center mb-3">
+      <h2 class="card-section-title">Choose Your Path to Mastery</h2>
+      <p style="color: #666; max-width: 600px; margin: 0 auto 40px;">Select the depth of knowledge that aligns with your goals. Upgrade at any time as your journey evolves.</p>
+    </div>
+
+    <div class="container">
+      <div class="tier-grid">
+      
+        <!-- DIPLOMA -->
+        <div class="tier-card tier-diploma" data-animate>
+          <div class="tier-header">
+            <h3 class="tier-name">Diploma</h3>
+            <span class="tier-position">The Foundation</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Master the core mechanics of the signs and houses.</li>
+              <li><i class="fas fa-check"></i> Gain absolute clarity on foundational chart reading.</li>
+              <li><i class="fas fa-check"></i> Safely step into Vastu Shastra without feeling overwhelmed.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹5,499</span>
+              <strong class="tier-new-price">₹4,199</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 8 Weeks</div>
+            <a href="courses/-.html" class="btn btn-outline btn-block">Start Foundation</a>
+          </div>
+        </div>
+
+        <!-- BACHELORS -->
+        <div class="tier-card tier-bachelors" data-animate>
+          <div class="tier-badge">Smart Choice</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Bachelors</h3>
+            <span class="tier-position">The Practitioner</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Transition from theory to practical life-event prediction.</li>
+              <li><i class="fas fa-check"></i> Deep-dive into case studies and tracking methods.</li>
+              <li><i class="fas fa-check"></i> Develop the capability to offer accurate readings to family and friends.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹11,999</span>
+              <strong class="tier-new-price">₹8,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 12 Weeks</div>
+            <a href="courses/-.html" class="btn btn-outline btn-block" style="border-color: #8b0000; color: #8b0000;">Become a Practitioner</a>
+          </div>
+        </div>
+
+        <!-- MASTERS -->
+        <div class="tier-card tier-masters" data-animate>
+          <div class="tier-badge popular">Most Popular</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Masters</h3>
+            <span class="tier-position">The Advanced Guide</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-compass"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unlock complex, multi-layered predictive synergies.</li>
+              <li><i class="fas fa-check"></i> Read charts with unshakeable confidence in all situations.</li>
+              <li><i class="fas fa-check"></i> Prescribe potent remedial measures safely.</li>
+              <li><i class="fas fa-check"></i> True mentorship feel with guided interpretations.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹24,999</span>
+              <strong class="tier-new-price">₹18,699</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 16 Weeks</div>
+            <a href="courses/-.html" class="btn btn-primary btn-block">Achieve Mastery</a>
+          </div>
+        </div>
+
+        <!-- GRAND MASTER -->
+        <div class="tier-card tier-grand-master" data-animate>
+          <div class="tier-badge elite">Elite Invitation</div>
+          <div class="tier-header">
+            <h3 class="tier-name">Grand Master</h3>
+            <span class="tier-position">The Authority</span>
+          </div>
+          <div class="tier-visual">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="tier-body">
+            <ul class="tier-benefits">
+              <li><i class="fas fa-check"></i> Unrivaled mastery of profound, secretive spiritual formulas.</li>
+              <li><i class="fas fa-check"></i> Master the art of professional client handling and consultation dynamics.</li>
+              <li><i class="fas fa-check"></i> Command premium authority in the professional spiritual marketplace.</li>
+            </ul>
+          </div>
+          <div class="tier-footer">
+            <div class="tier-pricing">
+              <span class="tier-old-price">₹34,999</span>
+              <strong class="tier-new-price">₹24,999</strong>
+            </div>
+            <div style="font-size: 0.95rem; color: #6B8E23; font-weight: 700; margin: 8px 0;"><i class="fas fa-clock"></i> 48 Weeks</div>
+            <a href="courses/-.html" class="btn btn-elite btn-block">Claim Authority</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
   <!-- COMPARISON TABLE SECTION -->
   <section class="comparison-section">
@@ -557,7 +478,8 @@
                           <td><strong>Government Approved E-Certificate</strong></td>
                           <td class="col-diploma"><i class="fas fa-check c-icon check"></i></td>
                           <td class="col-bachelors"><i class="fas fa-check c-icon check"></i></td>
-                          <td class="col-masters"><i class="fas fa-check c-icon check"></i></td>
+                          <td class="col-masters"><i class="fas fa-check c
+-icon check"></i></td>
                             <td class="col-grand-master"><i class="fas fa-check c-icon check"></i></td>
                       </tr>
                                           <tr>
@@ -617,7 +539,8 @@
   </section>
 
   <!-- TOP URGENCY MARQUEE -->
-  <div class="urgency-marquee-container">
+  
+<div class="urgency-marquee-container">
     <div class="urgency-marquee-content">
       <div class="marquee-item">
         <span class="marquee-icon">🎓</span> Admissions Open! Register Now for Upcoming Batches ”” Limited Seats
