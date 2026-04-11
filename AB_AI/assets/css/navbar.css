@@ -2,11 +2,19 @@
    NAVBAR CSS
    ============================================ */
 
+/* Make the placeholder sticky so the entire navbar block sticks on scroll.
+   The header element lives INSIDE #navbar-placeholder (injected by load-components.js),
+   so putting sticky on header alone doesn't work — a sticky child can't escape its parent. */
+#navbar-placeholder {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 header {
   background-color: transparent;
   box-shadow: none;
-  position: sticky;
-  top: 0;
+  position: relative; /* changed from sticky — placeholder handles stickiness */
   z-index: 1000;
   pointer-events: none;
   /* Allow clicks to pass through empty parts */
