@@ -227,7 +227,7 @@ const COURSE_REGISTRY = {
   "palmistry":            { name: "Palmistry",             file: "palmistry.html",           image: "palmistry.webp" },
   "face-reading":         { name: "Face Reading",          file: "face-reading.html",        image: "face-reading.webp" },
   "tarot":                { name: "Tarot Reading",         file: "tarot.html",               image: "tarot-card.webp" },
-  "numerology":           { name: "Numerology",            file: "numerology.html",          image: "Vedic%20Numerology.webp" },
+  "numerology":           { name: "Numerology",            file: "numerology.html",          image: "Vedic Numerology.webp" },
   "reiki":                { name: "Reiki Healing",         file: "reiki.html",               image: "healing.webp" },
   "nakshatra":            { name: "Nakshatra",             file: "nakshatra.html",           image: "nakshatra_diploma_1775113764359.webp" }
 };
@@ -595,7 +595,7 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
               </div>
             </div>
             <div class="cvd-hero-img-wrap">
-              <img src="assets/images-optimized/vedic-astrology/header%20image.webp" alt="Master Vedic Astrology" />
+              <img src="assets/images-optimized/vedic-astrology/header image.webp" alt="Master Vedic Astrology" />
             </div>
           </div>
         </section>
@@ -606,15 +606,15 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
           
           <div class="cvd-3col">
             <div class="cvd-3col-card">
-              <img src="assets/images-optimized/vedic-astrology/img%201.webp" alt="Relationship Issues">
+              <img src="assets/images-optimized/vedic-astrology/img 1.webp" alt="Relationship Issues">
               <p>Relationship Issues</p>
             </div>
             <div class="cvd-3col-card">
-              <img src="assets/images-optimized/vedic-astrology/img%202.webp" alt="Career Decisions">
+              <img src="assets/images-optimized/vedic-astrology/img 2.webp" alt="Career Decisions">
               <p>Career Decisions</p>
             </div>
             <div class="cvd-3col-card">
-              <img src="assets/images-optimized/vedic-astrology/img%203.webp" alt="Health Concerns">
+              <img src="assets/images-optimized/vedic-astrology/img 3.webp" alt="Health Concerns">
               <p>Health Concerns</p>
             </div>
           </div>
@@ -670,27 +670,27 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
       
       <div class="cvd-learn-grid cvd-learn-fullwidth">
         <div class="cvd-learn-item">
-          <img src="assets/images-optimized/vedic-astrology/analyze%20your%20birth%20chart.webp" alt="Analyze Your Birth Chart">
+          <img src="assets/images-optimized/vedic-astrology/analyze your birth chart.webp" alt="Analyze Your Birth Chart">
           <p>Analyze<br>Your Birth Chart</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="assets/images-optimized/vedic-astrology/predict%20major%20events.webp" alt="Predict Major Events">
+          <img src="assets/images-optimized/vedic-astrology/predict major events.webp" alt="Predict Major Events">
           <p>Predict<br>Major Events</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="assets/images-optimized/vedic-astrology/understand%20career%20and%20money.webp" alt="Understand Career & Money">
+          <img src="assets/images-optimized/vedic-astrology/understand career and money.webp" alt="Understand Career & Money">
           <p>Understand<br>Career & Money</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="assets/images-optimized/vedic-astrology/improve%20relationships.webp" alt="Improve Relationships">
+          <img src="assets/images-optimized/vedic-astrology/improve relationships.webp" alt="Improve Relationships">
           <p>Improve<br>Relationships</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="assets/images-optimized/vedic-astrology/enhance%20health%20and%20well%20beings.webp" alt="Enhance Health">
+          <img src="assets/images-optimized/vedic-astrology/enhance health and well beings.webp" alt="Enhance Health">
           <p>Enhance<br>Health & Well-Being</p>
         </div>
         <div class="cvd-learn-item">
-          <img src="assets/images-optimized/vedic-astrology/auspicious%20dates%20and%20remedies.webp" alt="Auspicious Dates & Remedies">
+          <img src="assets/images-optimized/vedic-astrology/auspicious dates and remedies.webp" alt="Auspicious Dates & Remedies">
           <p>Auspicious<br>Dates & Remedies</p>
         </div>
       </div>
