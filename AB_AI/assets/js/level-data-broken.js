@@ -322,7 +322,7 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
       }
       .cvd-hero-text {
         flex: 1;
-        max-width: 480px;
+        max-width: 650px;
         padding-bottom: 0px;
         z-index: 2;
       }
@@ -815,7 +815,7 @@ function renderCustomNumerologyPage(courseSlug, levelSlug) {
       }
       .cvd-hero-text {
         flex: 1;
-        max-width: 480px;
+        max-width: 650px;
         padding-bottom: 0px;
         z-index: 2;
       }

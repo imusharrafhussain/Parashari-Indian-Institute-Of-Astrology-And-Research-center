@@ -85,10 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-    }
-
         const safeLadder = document.querySelector('.course-progression-ladder');
         if (safeLadder && marquee) {
             marquee.parentNode.insertBefore(safeLadder, marquee);
         }
+    }
+
+
 });
