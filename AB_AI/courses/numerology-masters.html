@@ -552,16 +552,23 @@
       .cvd-3col-card { width: 100%; }
       .cvd-3col-card img { width: 100%; height: 200px; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
       .cvd-3col-card p { font-size: 1.2rem; margin-top: 15px; color: #444; }
-
-              .cvd-ba-container { padding: 0 5px; }
-        .cvd-ba-header { display: none; }
-        .cvd-ba-box { flex-direction: column; }
-        .cvd-ba-left { width: 100%; border-radius: 4px 4px 0 0; padding: 15px 20px; }
-        .cvd-ba-left::after { display: none; }
-        .cvd-ba-left::before { content: 'Before'; display: block; text-align: center; font-size: 1.5rem; color: #555; font-family: "Times New Roman", serif; font-weight: bold; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid rgba(0,0,0,0.1); }
-        .cvd-ba-right::before { content: 'After'; display: block; text-align: center; font-size: 1.5rem; color: #A82C2C; font-family: "Times New Roman", serif; font-weight: bold; margin-bottom: 15px; padding-top: 15px; border-top: 2px solid rgba(168,44,44,0.2); }
-        .cvd-ba-right { width: 100%; border-radius: 0 0 4px 4px; padding: 15px 20px; }
-        .cvd-ba-item { font-size: 1rem; min-height: 50px; gap: 10px; }
+      .cvd-ba-container { max-width: 1050px; margin: 10px auto 40px auto; }
+      .cvd-ba-header { display: flex; align-items: center; padding: 0 10px; }
+      .cvd-ba-header h3 { font-size: 1.8rem; color: #444; font-family: "Times New Roman", serif; margin: 0 40px; font-weight: bold; }
+      .cvd-ba-header h3.after-title { color: #A82C2C; }
+      .cvd-ba-box { display: flex; margin-top: 15px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; }
+      
+      .cvd-ba-left { width: 50%; padding: 20px 40px 20px 40px; background: #EEE9DC; border-radius: 4px 0 0 4px; position: relative; z-index: 2; }
+      .cvd-ba-left::after { content: ''; position: absolute; right: -30px; top: 0; bottom: 0; width: 30px; background: #EEE9DC; clip-path: polygon(0 0, 0 100%, 100% 50%); z-index: 3; }
+      .cvd-ba-right { width: 50%; padding: 20px 40px 20px 60px; background: #C69429; border-radius: 0 4px 4px 0; position: relative; }
+      
+      .cvd-ba-item { display: flex; align-items: center; gap: 15px; font-size: 1.2rem; min-height: 65px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+      .cvd-ba-left .cvd-ba-item:last-child { border-bottom: none; min-height: 55px; }
+      .cvd-ba-right .cvd-ba-item:last-child { border-bottom: none; min-height: 55px; }
+      .cvd-ba-left .cvd-ba-item { color: #555; }
+      .cvd-ba-left .cvd-ba-icon { color: #BBA072; font-size: 0.6rem; }
+      .cvd-ba-right .cvd-ba-item { color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.25); text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+      .cvd-ba-right .cvd-ba-icon { color: #fff; font-size: 1.2rem; }
 .cvd-learn-grid { display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center; align-items: start; gap: 20px; margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; }
       .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(6, 1fr); }
       .cvd-learn-item { width: 100%; max-width: 180px; text-align: center; }
@@ -682,15 +689,23 @@
         .cvd-3col-card p { font-size: 1.05rem; }
         
         /* Before/After section - stack vertically */
-        .cvd-ba-container { padding: 0 5px; }
-        .cvd-ba-header { display: none; }
-        .cvd-ba-box { flex-direction: column; }
-        .cvd-ba-left { width: 100%; border-radius: 4px 4px 0 0; padding: 15px 20px; }
-        .cvd-ba-left::after { display: none; }
-        .cvd-ba-left::before { content: 'Before'; display: block; text-align: center; font-size: 1.5rem; color: #555; font-family: "Times New Roman", serif; font-weight: bold; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid rgba(0,0,0,0.1); }
-        .cvd-ba-right::before { content: 'After'; display: block; text-align: center; font-size: 1.5rem; color: #A82C2C; font-family: "Times New Roman", serif; font-weight: bold; margin-bottom: 15px; padding-top: 15px; border-top: 2px solid rgba(168,44,44,0.2); }
-        .cvd-ba-right { width: 100%; border-radius: 0 0 4px 4px; padding: 15px 20px; }
-        .cvd-ba-item { font-size: 1rem; min-height: 50px; gap: 10px; }
+      .cvd-ba-container { max-width: 1050px; margin: 10px auto 40px auto; }
+      .cvd-ba-header { display: flex; align-items: center; padding: 0 10px; }
+      .cvd-ba-header h3 { font-size: 1.8rem; color: #444; font-family: "Times New Roman", serif; margin: 0 40px; font-weight: bold; }
+      .cvd-ba-header h3.after-title { color: #A82C2C; }
+      .cvd-ba-box { display: flex; margin-top: 15px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; }
+      
+      .cvd-ba-left { width: 50%; padding: 20px 40px 20px 40px; background: #EEE9DC; border-radius: 4px 0 0 4px; position: relative; z-index: 2; }
+      .cvd-ba-left::after { content: ''; position: absolute; right: -30px; top: 0; bottom: 0; width: 30px; background: #EEE9DC; clip-path: polygon(0 0, 0 100%, 100% 50%); z-index: 3; }
+      .cvd-ba-right { width: 50%; padding: 20px 40px 20px 60px; background: #C69429; border-radius: 0 4px 4px 0; position: relative; }
+      
+      .cvd-ba-item { display: flex; align-items: center; gap: 15px; font-size: 1.2rem; min-height: 65px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+      .cvd-ba-left .cvd-ba-item:last-child { border-bottom: none; min-height: 55px; }
+      .cvd-ba-right .cvd-ba-item:last-child { border-bottom: none; min-height: 55px; }
+      .cvd-ba-left .cvd-ba-item { color: #555; }
+      .cvd-ba-left .cvd-ba-icon { color: #BBA072; font-size: 0.6rem; }
+      .cvd-ba-right .cvd-ba-item { color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.25); text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+      .cvd-ba-right .cvd-ba-icon { color: #fff; font-size: 1.2rem; }
         .cvd-learn-grid, .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .cvd-learn-item { max-width: 140px; }
         .cvd-learn-item img { max-width: 90px; height: 90px; object-fit: cover; }
