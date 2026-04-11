@@ -324,7 +324,7 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
       }
       .cvd-hero-text {
         flex: 1;
-        max-width: 650px;
+        max-width: 100%;
         padding-bottom: 0px;
         z-index: 2;
       }
@@ -389,10 +389,8 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
         font-size: 1.05rem;
       }
       .cvd-hero-img-wrap {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
+        position: relative;
+        align-self: stretch;
         width: 45%;
         z-index: 1;
         display: flex;
@@ -881,7 +879,7 @@ function renderCustomNumerologyPage(courseSlug, levelSlug) {
       }
       .cvd-hero-text {
         flex: 1;
-        max-width: 650px;
+        max-width: 100%;
         padding-bottom: 0px;
         z-index: 2;
       }
@@ -946,10 +944,8 @@ function renderCustomNumerologyPage(courseSlug, levelSlug) {
         font-size: 1.05rem;
       }
       .cvd-hero-img-wrap {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
+        position: relative;
+        align-self: stretch;
         width: 45%;
         z-index: 1;
         display: flex;
