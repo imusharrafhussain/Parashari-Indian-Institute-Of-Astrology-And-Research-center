@@ -478,26 +478,25 @@
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
             .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
       .cvd-learn-item-img-wrapper {
-          width: 110px;
-          height: 110px;
-          border-radius: 50%;
-          overflow: hidden;
+          width: 130px;
+          height: 130px;
           margin: 0 auto 15px auto;
           position: relative;
-          background: #fff;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-          border: 3px solid #c8960c;
+          background: transparent;
           display: flex;
           align-items: center;
           justify-content: center;
       }
       .cvd-learn-item-img-wrapper img {
-          max-width: none;
+          max-width: 100%;
           width: auto;
-          height: 140%;
-          object-fit: cover;
+          height: 100%;
+          object-fit: contain;
           margin: 0;
           display: block;
+          border-radius: 0;
+          box-shadow: none;
+          transform: none;
       }
 
       .cvd-learn-item p { font-size: 1.1rem; color: #444; font-weight: bold; line-height: 1.4; margin-bottom: 5px;}
@@ -836,24 +835,22 @@
     <!-- START MAIN LAYOUT WITH SIDEBAR -->
 
     <!-- START MAIN LAYOUT WITH SIDEBAR -->
-    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 60px auto; align-items: flex-start; padding: 0 20px;">
+    <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 0 auto; align-items: flex-start; padding: 0 20px;">
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
 
-                <section class="cvd-hero">
-          <div class="cvd-hero-container">
-            <div class="cvd-hero-text">
-              <div class="cvd-hero-badge"><i class="fas fa-award"></i> Masters Certification</div>
-              <div class="cvd-hero-title">Grah Nakshatra:</div>
-              <div class="cvd-hero-subtitle">Unlock Your Destiny Through Vedic Astrology</div>
-              <div class="cvd-hero-hook" style="font-weight: 500; font-size: 1.15rem; line-height: 1.6; color: #333;"><b>Your life is not random.</b><br>Every success, delay, relationship, and struggle is influenced by your Grah (Planets) &amp; Nakshatras (Stars).<br><b>Discover your true life path, hidden blockages, and future opportunities through ancient Vedic wisdom.</b></div>
-              <a href="../nakshatra.html" class="cvd-hero-btn">Enroll Now – <span style="text-decoration: line-through; opacity: 0.7; font-size: 0.85em; margin-right: 6px;">₹24,999</span> ₹18,699</a>
-              <div class="cvd-hero-save"><i class="fas fa-check" style="color: #6B8E23;"></i> One-time Payment - Lifetime Access</div>
-            </div>
-            <div class="cvd-hero-img-wrap">
-              <img src="../assets/images-optimized/nakshatra/header1.webp" alt="Grah Nakshatra" style="border-radius: 50%; box-shadow: 0 0 20px rgba(0,0,0,0.1); width: 100%; height: 380px; max-width:380px; object-fit: cover;">
-            </div>
-          </div>
+                <section style="width: 100%; border-bottom: 1px solid #e0d5c8;">
+            <img src="../assets/images-optimized/nakshatra/header1.webp" alt="Grah Nakshatra" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <section class="cvd-section" style="padding: 40px 20px; background: #fdfbf7; text-align: center;">
+            <h2 style="font-family: 'Times New Roman', serif; font-size: 2.2rem; color: #591C21; font-weight: bold; margin-bottom: 15px;">How Do the Stars Influence Your Life?</h2>
+            <p style="font-size: 1.15rem; color: #444; max-width: 800px; margin: 0 auto 25px auto; line-height: 1.6;">
+                Discover how <strong>Grah Nakshatras</strong> influence your relationships, career, health, and spiritual growth.<br>
+                Unlock the secrets of your birth chart and find clarity in your life's path.
+            </p>
+            <a href="../nakshatra.html" style="background: linear-gradient(to right, #B22222, #8b0000); color: #fff; padding: 12px 35px; font-size: 1.35rem; font-weight: bold; border-radius: 6px; display: inline-block; text-decoration: none; box-shadow: 0 6px 15px rgba(139,0,0,0.25); margin-bottom: 10px;">Enroll Now - ₹<span class="nakshatra-price-val">2999</span></a>
+            <div style="color: #B27C31; font-style: italic; font-weight: 600; font-size: 1.05rem;">One-time Payment - Lifetime Access</div>
         </section>
 
         <section class="cvd-section" style="padding-top: 20px;">
