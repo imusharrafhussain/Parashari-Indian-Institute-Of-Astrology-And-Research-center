@@ -4,6 +4,7 @@
     position: relative;
     width: 100%;
     min-height: 600px;
+    align-self: center;
     background-color: #020510;
     /* Deep cosmic blue */
     overflow: hidden;
