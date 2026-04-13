@@ -14,10 +14,17 @@
 header {
   background-color: transparent;
   box-shadow: none;
-  position: relative; /* changed from sticky — placeholder handles stickiness */
+  position: sticky; /* Restored for pages without #navbar-placeholder */
+  top: 0;
   z-index: 1000;
   pointer-events: none;
   /* Allow clicks to pass through empty parts */
+}
+
+/* Prevent double-sticking behavior when header is loaded via component injector */
+#navbar-placeholder header {
+  position: relative;
+  top: auto;
 }
 
 .navbar {

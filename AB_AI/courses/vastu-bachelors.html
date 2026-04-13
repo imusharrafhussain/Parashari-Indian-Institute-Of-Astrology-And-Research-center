@@ -550,6 +550,7 @@
       .cvd-learn-item { width: 130px; text-align: center; }
       
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+            .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
       .cvd-learn-item-img-wrapper {
           width: 110px;
           height: 110px;
@@ -648,6 +649,16 @@
       .cvd-faq-item.active .cvd-faq-answer { display: block; }
       .cvd-faq-icon { font-weight: bold; background: #666; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 
+      @media (max-width: 1300px) {
+        .cvd-hero-container { flex-direction: column-reverse; text-align: center; padding: 0 15px; min-height: auto; margin-top: 30px; }
+        .cvd-hero-text { max-width: 100%; padding: 10px 5px 20px 5px; }
+        .cvd-hero-btn { margin-bottom: 20px; }
+        .cvd-hero-img-wrap { display: flex; align-items: center; justify-content: center; position: relative; width: 100%; height: auto; transform: none; margin-top: 0; pointer-events: auto; }
+        .cvd-hero-img-wrap img { width: 100%; max-width: 400px; height: 300px; margin: 0 auto; object-fit: cover; object-position: 85% center; display: block; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2)); }
+        .cvd-ba-container { padding: 0 15px; }
+        .cvd-learn-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      }
+
       @media (max-width: 991px) {
         .cvd-layout-container { flex-direction: column; overflow-x: hidden; }
         .cvd-sidebar { width: 100% !important; position: static !important; margin-top: 40px; }
@@ -660,7 +671,7 @@
       }
       @media (max-width: 768px) {
         /* Global overflow fix */
-        .cvd-main-content, .cvd-layout-container { overflow-x: hidden; max-width: 100vw; box-sizing: border-box; }
+        .cvd-main-content, .cvd-layout-container { overflow-x: hidden; max-width: 100%; box-sizing: border-box; }
         
         /* Hero Section - image on top, text below */
         .cvd-hero { padding: 20px 0 30px 0; }
@@ -703,7 +714,8 @@
       .cvd-ba-right .cvd-ba-icon { color: #fff; font-size: 1.2rem; }
         .cvd-learn-grid, .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .cvd-learn-item { max-width: 140px; }
-        .cvd-learn-item img { max-width: 90px; height: 90px; object-fit: cover; }
+        .cvd-learn-item-img-wrapper { width: 90px; height: 90px; }
+        .cvd-learn-item-img-wrapper img { max-width: none; width: auto; height: 140%; }
         .cvd-learn-item p { font-size: 0.85rem; }
         
         /* Strip / CTA section */
@@ -726,8 +738,79 @@
         .cvd-faq { padding: 0 5px; }
         .cvd-faq-question { font-size: 0.95rem; padding: 12px 15px; }
       }
+    
+      @media (min-width: 992px) {
+        .cvd-main-content, .cvd-sidebar {
+          height: calc(100vh - 120px);
+          overflow-y: scroll;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+        .cvd-main-content::-webkit-scrollbar, .cvd-sidebar::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+        .cvd-sidebar {
+          position: sticky;
+          top: 100px;
+          border-radius: 8px;
+          padding: 15px;
+        }
+        #onboarding-overlay {
+          display: block;
+        }
+      }
+      
+      @media (max-width: 991px) {
+        #onboarding-overlay { display: none !important; }
+      }
+      
+      @keyframes tourSlideRight {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(20px); }
+      }
+    
     </style>
   
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Show onboarding tour unconditionally on desktop
+    if (window.innerWidth >= 992) {
+      document.getElementById('onboarding-overlay').style.display = 'block';
+    }
+    
+    // Auto-dismiss tour immediately on any scroll action
+    function dismissOnScroll() {
+      var tour = document.getElementById('onboarding-overlay');
+      if (tour && tour.style.display !== 'none') {
+        tour.style.display = 'none';
+      }
+    }
+    
+    window.addEventListener('scroll', dismissOnScroll, { passive: true });
+    
+    var mainContent = document.querySelector('.cvd-main-content');
+    if (mainContent) mainContent.addEventListener('scroll', dismissOnScroll, { passive: true });
+    
+    var sidebar = document.querySelector('.cvd-sidebar');
+    if (sidebar) sidebar.addEventListener('scroll', dismissOnScroll, { passive: true });
+  });
+  
+  function closeTour() {
+    document.getElementById('onboarding-overlay').style.display = 'none';
+  }
+</script>
+<!-- Onboarding Tour Overlay -->
+<div id="onboarding-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 9999; cursor: pointer;" onclick="closeTour()">
+  <div style="position: absolute; right: 400px; top: 180px; color: white; display: flex; flex-direction: column; align-items: flex-end; gap: 15px;">
+    <h2 style="font-family: serif; font-size: 2.2rem; color: #D4AF37; margin:0; line-height: 1;">Onboarding Tour</h2>
+    <p style="font-size: 1.15rem; margin:0; text-align: right; max-width: 320px; line-height: 1.5; color: #f0f0f0;">Scroll down within this sidebar to view all curriculum modules.</p>
+    <i class="fas fa-arrow-right" style="font-size: 2.5rem; color: #D4AF37; animation: tourSlideRight 1.5s infinite ease-in-out;"></i>
+    <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">(Tap anywhere to dismiss)</p>
+  </div>
+</div>
+  
+    <!-- START MAIN LAYOUT WITH SIDEBAR -->
+
     <div class="cvd-layout-container" style="display: flex; flex-wrap: wrap; gap: 50px; max-width: 100%; margin: 20px auto 20px auto; align-items: flex-start; padding: 0 20px;">
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
@@ -805,7 +888,95 @@
           </div>
         </section>
 
+      
+
+<!-- MOVED COMPONENTS -->
+<section id="cvd-learn-section" class="cvd-section cvd-section-bg" style="padding-top: 0px; margin-bottom: 20px;">
+      <div style="display:flex; justify-content:center; align-items:center; margin: 10px auto 30px auto; max-width:800px;">
+        <hr style="flex:1; border:none; border-top:1px solid #ccc;">
+        <h2 class="cvd-title" style="margin: 0 30px;">What You'll Learn</h2>
+        <hr style="flex:1; border:none; border-top:1px solid #ccc;">
       </div>
+      
+      <div class="cvd-learn-grid">
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/vastu remedies.webp" alt="Apply Vastu Remedies">
+          </div>
+          <p>Apply Vastu<br>Remedies</p>
+        </div>
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/attract wealth.webp" alt="Attract Wealth">
+          </div>
+          <p>Attract<br>Wealth</p>
+        </div>
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/improve health.webp" alt="Improve Health">
+          </div>
+          <p>Improve<br>Health</p>
+        </div>
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/heanre yantra.webp" alt="Heerne Mantra">
+          </div>
+          <p>Heerne<br>Mantra</p>
+        </div>
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/harmonize relationship.webp" alt="Harmonize Relationships">
+          </div>
+          <p>Harmonize<br>Relationships</p>
+        </div>
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/correct vastu dosahas.webp" alt="Correct Vastu Doshas">
+          </div>
+          <p>Correct<br>Vastu Doshas</p>
+        </div>
+        <div class="cvd-learn-item">
+          <div class="cvd-learn-item-img-wrapper">
+            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/powerful home rituals.webp" alt="Powerful Home Rituals">
+          </div>
+          <p>Powerful<br>Home Rituals</p>
+        </div>
+      </div>
+    </section><div class="cvd-strip">
+      <div class="cvd-strip-inner">
+        <div class="cvd-strip-text">
+          Limited Offer: Only ₹8,999 
+          <span style="font-size:1.1rem; color:#444; font-weight:normal; display:inline-block;">(Save 25% – Regular Price ₹11,999)</span>
+        </div>
+        <div>
+          <a href="../vastu.html" class="cvd-strip-btn"><i class="far fa-file-alt"></i> Get Started Now!</a>
+        </div>
+          <a href="../vastu.html" class="cvd-strip-link">For price comparison follow this</a>
+      </div>
+    </div>
+
+    <section class="cvd-section">
+      <div class="cvd-faq">
+        <div class="cvd-faq-item">
+          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">Do I need to make structural changes to my house to fix Vastu issues? <span class="cvd-faq-icon">+</span></div>
+          <div class="cvd-faq-answer">Not necessarily. This course teaches powerful non-structural remedies using color therapy, crystal placement, pyramid tools, and element balancing — so you can correct Vastu doshas without breaking a single wall.</div>
+        </div>
+        <div class="cvd-faq-item">
+          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">Can Vastu principles be applied to rented apartments and flats? <span class="cvd-faq-icon">+</span></div>
+          <div class="cvd-faq-answer">Yes. Most Vastu corrections can be implemented through furniture rearrangement, color changes, and placement of remedial objects — all of which are perfectly feasible in rented spaces without any permanent modifications.</div>
+        </div>
+        <div class="cvd-faq-item">
+          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">Is Vastu Shastra relevant for modern high-rise buildings? <span class="cvd-faq-icon">+</span></div>
+          <div class="cvd-faq-answer">Absolutely. While the principles originated for individual houses, this course specifically covers multi-storey buildings, apartments, and office spaces — adapting ancient directional science to modern urban architecture.</div>
+        </div>
+        <div class="cvd-faq-item">
+          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">How quickly can I expect to see results after applying Vastu corrections? <span class="cvd-faq-icon">+</span></div>
+          <div class="cvd-faq-answer">Many students and their clients report noticeable shifts in energy, mood, and even financial flow within 2–4 weeks of implementing proper Vastu corrections. However, deeper changes may take a few months to fully manifest.</div>
+        </div>
+      </div>
+    </section>
+
+</div>
       
       <aside class="cvd-sidebar" id="cvd-dynamic-sidebar" style="width: 380px; flex-shrink: 0; padding-top: 20px;">
         <h3 class="cvd-sidebar-heading">Bachelors Course Curriculum</h3>
@@ -862,135 +1033,13 @@
 
     </div>
 
-    <section id="cvd-learn-section" class="cvd-section cvd-section-bg" style="padding-top: 0px; margin-bottom: 20px;">
-      <div style="display:flex; justify-content:center; align-items:center; margin: 10px auto 30px auto; max-width:800px;">
-        <hr style="flex:1; border:none; border-top:1px solid #ccc;">
-        <h2 class="cvd-title" style="margin: 0 30px;">What You'll Learn</h2>
-        <hr style="flex:1; border:none; border-top:1px solid #ccc;">
-      </div>
-      
-      <div class="cvd-learn-grid">
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/vastu remedies.webp" alt="Apply Vastu Remedies">
-          </div>
-          <p>Apply Vastu<br>Remedies</p>
-        </div>
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/attract wealth.webp" alt="Attract Wealth">
-          </div>
-          <p>Attract<br>Wealth</p>
-        </div>
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/improve health.webp" alt="Improve Health">
-          </div>
-          <p>Improve<br>Health</p>
-        </div>
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/heanre yantra.webp" alt="Heerne Mantra">
-          </div>
-          <p>Heerne<br>Mantra</p>
-        </div>
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/harmonize relationship.webp" alt="Harmonize Relationships">
-          </div>
-          <p>Harmonize<br>Relationships</p>
-        </div>
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/correct vastu dosahas.webp" alt="Correct Vastu Doshas">
-          </div>
-          <p>Correct<br>Vastu Doshas</p>
-        </div>
-        <div class="cvd-learn-item">
-          <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/vastu-shastra/what you'll learn/powerful home rituals.webp" alt="Powerful Home Rituals">
-          </div>
-          <p>Powerful<br>Home Rituals</p>
-        </div>
-      </div>
-    </section>
+    
 
-    <div class="cvd-strip">
-      <div class="cvd-strip-inner">
-        <div class="cvd-strip-text">
-          Limited Offer: Only ₹8,999 
-          <span style="font-size:1.1rem; color:#444; font-weight:normal; display:inline-block;">(Save 25% – Regular Price ₹11,999)</span>
-        </div>
-        <div>
-          <a href="../vastu.html" class="cvd-strip-btn"><i class="far fa-file-alt"></i> Get Started Now!</a>
-        </div>
-          <a href="../vastu.html" class="cvd-strip-link">For price comparison follow this</a>
-      </div>
-    </div>
-
-    <section class="cvd-section">
-      <div class="cvd-faq">
-        <div class="cvd-faq-item">
-          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">Do I need to make structural changes to my house to fix Vastu issues? <span class="cvd-faq-icon">+</span></div>
-          <div class="cvd-faq-answer">Not necessarily. This course teaches powerful non-structural remedies using color therapy, crystal placement, pyramid tools, and element balancing — so you can correct Vastu doshas without breaking a single wall.</div>
-        </div>
-        <div class="cvd-faq-item">
-          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">Can Vastu principles be applied to rented apartments and flats? <span class="cvd-faq-icon">+</span></div>
-          <div class="cvd-faq-answer">Yes. Most Vastu corrections can be implemented through furniture rearrangement, color changes, and placement of remedial objects — all of which are perfectly feasible in rented spaces without any permanent modifications.</div>
-        </div>
-        <div class="cvd-faq-item">
-          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">Is Vastu Shastra relevant for modern high-rise buildings? <span class="cvd-faq-icon">+</span></div>
-          <div class="cvd-faq-answer">Absolutely. While the principles originated for individual houses, this course specifically covers multi-storey buildings, apartments, and office spaces — adapting ancient directional science to modern urban architecture.</div>
-        </div>
-        <div class="cvd-faq-item">
-          <div class="cvd-faq-question" onclick="this.parentElement.classList.toggle('active')">How quickly can I expect to see results after applying Vastu corrections? <span class="cvd-faq-icon">+</span></div>
-          <div class="cvd-faq-answer">Many students and their clients report noticeable shifts in energy, mood, and even financial flow within 2–4 weeks of implementing proper Vastu corrections. However, deeper changes may take a few months to fully manifest.</div>
-        </div>
-      </div>
-    </section>
+    
   </div>
     
 <!-- PROGRESSION LADDER -->
-<section class="course-progression-ladder">
-  <div class="container text-center">
-    <h2 class="card-section-title" style="margin-bottom: 8px;">Your Learning Journey</h2>
-    <p style="color:#666;max-width:600px;margin:0 auto 35px;font-size:1rem;">A clear path from foundation to authority. Upgrade at any time.</p>
-    <div class="ld-journey-track">
-      
-          <a href="vastu-diploma.html" class="ld-journey-node completed">
-            <div class="ld-journey-icon"><i class="fas fa-book-open"></i></div>
-            <span class="ld-journey-label">Diploma</span>
-            <span class="ld-journey-subtitle">THE FOUNDATION</span>
-            
-          </a>
-          <div class="ld-journey-connector filled"></div>
 
-          <a href="vastu-bachelors.html" class="ld-journey-node current">
-            <div class="ld-journey-icon"><i class="fas fa-chart-pie"></i></div>
-            <span class="ld-journey-label">Bachelors</span>
-            <span class="ld-journey-subtitle">THE PRACTITIONER</span>
-            <span class="ld-journey-you">YOU ARE HERE</span>
-          </a>
-          <div class="ld-journey-connector "></div>
-
-          <a href="vastu-masters.html" class="ld-journey-node future">
-            <div class="ld-journey-icon"><i class="fas fa-compass"></i></div>
-            <span class="ld-journey-label">Masters</span>
-            <span class="ld-journey-subtitle">THE ADVANCED GUIDE</span>
-            
-          </a>
-          <div class="ld-journey-connector "></div>
-
-          <a href="vastu-grand-master.html" class="ld-journey-node future">
-            <div class="ld-journey-icon"><i class="fas fa-crown"></i></div>
-            <span class="ld-journey-label">Grand Master</span>
-            <span class="ld-journey-subtitle">THE AUTHORITY</span>
-            
-          </a>
-          
-    </div>
-  </div>
-</section>
 <!-- END PROGRESSION LADDER -->
 <div id="marquee-placeholder"></div>
     <div id="footer-placeholder"></div>

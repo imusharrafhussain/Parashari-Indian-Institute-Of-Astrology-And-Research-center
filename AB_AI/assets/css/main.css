@@ -27,7 +27,6 @@ textarea {
 
 html,
 body {
-  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }

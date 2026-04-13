@@ -565,6 +565,7 @@
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
       
       .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
+            .cvd-learn-item { width: 100%; max-width: 160px; text-align: center; }
       .cvd-learn-item-img-wrapper {
           width: 110px;
           height: 110px;
@@ -572,16 +573,18 @@
           overflow: hidden;
           margin: 0 auto 15px auto;
           position: relative;
-          background: transparent;
+          background: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border: 3px solid #c8960c;
           display: flex;
           align-items: center;
           justify-content: center;
       }
       .cvd-learn-item-img-wrapper img {
           max-width: none;
-          width: 100%;
-          height: auto;
-          object-fit: contain;
+          width: auto;
+          height: 140%;
+          object-fit: cover;
           margin: 0;
           display: block;
       }
@@ -731,7 +734,8 @@
       .cvd-ba-right .cvd-ba-icon { color: #fff; font-size: 1.2rem; }
         .cvd-learn-grid, .cvd-learn-grid.cvd-learn-fullwidth { grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .cvd-learn-item { max-width: 140px; }
-        .cvd-learn-item img { max-width: 90px; height: 90px; object-fit: cover; }
+        .cvd-learn-item-img-wrapper { width: 90px; height: 90px; }
+        .cvd-learn-item-img-wrapper img { max-width: none; width: auto; height: 140%; }
         .cvd-learn-item p { font-size: 0.85rem; }
         
         /* Strip / CTA section */
