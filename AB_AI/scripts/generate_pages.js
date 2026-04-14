@@ -22,6 +22,12 @@ const renderHtml = `<!DOCTYPE html><html><head></head><body>
 </div>
 </body></html>`;
 
+// Read level-data.js for data
+const levelDataCode = fs.readFileSync(path.join(__dirname, '../assets/js/level-data.js'), 'utf8');
+const overridesCode = fs.existsSync(path.join(__dirname, '../assets/js/course-overrides.js')) 
+    ? fs.readFileSync(path.join(__dirname, '../assets/js/course-overrides.js'), 'utf8') 
+    : '';
+
 // Then just use the layout from an existing generated file as the shell
 const existingPage = fs.readFileSync(path.join(__dirname, '../crash-course-template.html'), 'utf8');
 const templateDom = new JSDOM(existingPage);
@@ -40,9 +46,6 @@ if (footer) {
     ph.id = 'footer-placeholder';
     footer.parentNode.replaceChild(ph, footer);
 }
-        s.remove();
-    }
-});
 
 // Rewrite assets paths
 tDoc.querySelectorAll('link[href^="assets/"]').forEach(el => {
@@ -63,101 +66,96 @@ const loadComp = tDoc.createElement('script');
 loadComp.src = '../assets/js/load-components.js';
 tDoc.body.appendChild(loadComp);
 
-// Add custom style for body to prevent clipping since search bar css might be removed
-// We don't need to add anything special, it's just a refactor.
-
 const finalTemplateHTML = templateDom.serialize();
 
-setTimeout(() => {
-    const window = dom.window;
-    // Execute scripts by appending script elements
-    const script1 = window.document.createElement('script');
-    script1.textContent = levelDataCode.replace('const LEVEL_DATA', 'window.LEVEL_DATA'); // ensure global
-    
-    // Also patch COURSE_REGISTRY inside levelDataCode
-    script1.textContent = script1.textContent.replace('const COURSE_REGISTRY', 'window.COURSE_REGISTRY');
-    const script2 = window.document.createElement('script');
-    script2.textContent = overridesCode;
-    window.document.head.appendChild(script2);
+// Extract registry safely using a temporary JSDOM
+let slugs = [];
+try {
+    const tempDom = new JSDOM(renderHtml, { runScripts: "dangerously" });
+    const s1 = tempDom.window.document.createElement('script');
+        s1.textContent = levelDataCode
+        .replace('const LEVEL_DATA', 'var LEVEL_DATA')
+        .replace('const COURSE_REGISTRY', 'var COURSE_REGISTRY');
+    tempDom.window.document.head.appendChild(s1);
+    const registry = tempDom.window.COURSE_REGISTRY || {};
+    slugs = Object.keys(registry);
+} catch (e) {
+    console.warn("Could not extract slugs from registry:", e);
+}
 
- // Use JSDOM to load the scripts and execute the environments
-const dom = new JSDOM(renderHtml, {
-    url: "http://localhost/level-detail.html",
-    runScripts: "dangerously",
-    resources: "usable"
-});
-    
-    // Some courses defined in COURSE_REGISTRY inside level-data.js
-    const registry = window.COURSE_REGISTRY;
-    if (!registry) {
-        console.error("COURSE_REGISTRY not found! Scripts failed to load properly.");
-        return;
-    }
+if (!slugs.length) {
+    console.error("COURSE_REGISTRY not found or empty! Scripts failed to load properly.");
+    process.exit(1);
+}
 
-    const slugs = Object.keys(registry);
-    console.log(`Found ${slugs.length} courses to generate.`);
-    
-    let generatedCount = 0;
-    
-    // Original template for resetting ld-main innerHTML
-    const originalLdMainHtml = `
-    <section id="ld-hero" class="ld-hero"></section>
-    <section id="ld-outcomes" class="ld-outcomes"></section>
-    <section id="ld-modules" class="ld-modules"></section>
-    <section id="ld-case" class="ld-case"></section>
-    <section id="ld-diff" class="ld-diff"></section>
-    <section id="ld-applications" class="ld-applications"></section>
-    <section id="ld-journey" class="ld-journey"></section>
-    <section id="ld-locked" class="ld-locked" style="display:none"></section>
-    <section id="ld-final-cta" class="ld-final-cta-section"></section>
-    `;
+const levels = ['diploma', 'bachelors', 'masters', 'grand-master'];
 
-    for (const slug of slugs) {
-        for (const level of levels) {
-            // Push URL state so initLevelDetailPage reads it correctly
-            window.history.pushState({}, '', `?course=${slug}&level=${level}`);
-            
-            // RESET the DOM first!
-            const mainContainer = window.document.getElementById('ld-main');
-            if (mainContainer) {
-                mainContainer.innerHTML = originalLdMainHtml;
-            }
-            
-            // Re-run the main generation function
-            if (typeof window.initLevelDetailPage === 'function') {
-                window.initLevelDetailPage();
-            } else {
-                console.error("initLevelDetailPage not found!");
+console.log(`Found ${slugs.length} courses to generate.`);
+
+let generatedCount = 0;
+
+for (const slug of slugs) {
+    for (const level of levels) {
+        
+        const dom = new JSDOM(renderHtml, {
+            url: `http://localhost/level-detail.html?course=${slug}&level=${level}`,
+            runScripts: "dangerously",
+            resources: "usable"
+        });
+        
+        const win = dom.window;
+        
+        // Execute scripts by appending script elements
+        const script1 = win.document.createElement('script');
+        script1.textContent = levelDataCode
+            .replace('const LEVEL_DATA', 'var LEVEL_DATA')
+            .replace('const COURSE_REGISTRY', 'var COURSE_REGISTRY');
+        win.document.head.appendChild(script1);
+        
+        if (overridesCode) {
+            const script2 = win.document.createElement('script');
+            script2.textContent = overridesCode;
+            win.document.head.appendChild(script2);
+        }
+
+        // Run extraction
+        if (typeof win.initLevelDetailPage === 'function') {
+            try {
+                win.initLevelDetailPage();
+            } catch (e) {
+                console.error(`Error generating ${slug}-${level}:`, e.message);
                 continue;
             }
+        } else {
+            console.error(`initLevelDetailPage not found in ${slug}-${level}!`);
+            continue;
+        }
 
-            // Get generated content
-            const ldMain = window.document.getElementById('ld-main');
-            if (ldMain) {
-                let innerContent = ldMain.innerHTML;
-                
-                // Rewrite asset paths in innerContent
-                innerContent = innerContent.replace(/(src|href)="assets\//g, '$1="../assets/');
-                
-                // Combine with template
-                const pageDom = new JSDOM(finalTemplateHTML);
-                const pMain = pageDom.window.document.getElementById('ld-main');
-                pMain.innerHTML = innerContent;
-                pMain.className = 'static-course-page';
+        // Get generated content
+        const ldMain = win.document.getElementById('ld-main');
+        if (ldMain) {
+            let innerContent = ldMain.innerHTML;
+            
+            // Rewrite asset paths in innerContent
+            innerContent = innerContent.replace(/(src|href)="assets\//g, '$1="../assets/');
+            innerContent = innerContent.replace(/url\(['"]?assets\//g, "url('../assets/");
+            
+            // Combine with template
+            const pageDom = new JSDOM(finalTemplateHTML);
+            const pMain = pageDom.window.document.getElementById('ld-main');
+            pMain.innerHTML = innerContent;
+            pMain.className = 'static-course-page';
 
-                // update title
-                pageDom.window.document.title = window.document.title;
+            // update title
+            pageDom.window.document.title = win.document.title || `${slug}-${level}`;
 
-                const outPath = path.join(outputDir, `${slug}-${level}.html`);
-                
-                // Also fix background url in inline styles if any (like url('assets/...'))
-                const pageHtml = pageDom.serialize().replace(/url\(['"]?assets\//g, "url('../assets/");
-                
-                fs.writeFileSync(outPath, pageHtml, 'utf8');
-                generatedCount++;
-            }
+            const outPath = path.join(outputDir, `${slug}-${level}.html`);
+            
+            const pageHtml = pageDom.serialize();
+            
+            fs.writeFileSync(outPath, pageHtml, 'utf8');
+            generatedCount++;
         }
     }
-    console.log(`Successfully generated ${generatedCount} pages!`);
-    }, 500);
-}, 1500); // 1.5s wait for JSDOM initial loads just in case
+}
+console.log(`Successfully generated ${generatedCount} pages!`);

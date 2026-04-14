@@ -40,7 +40,7 @@ router.post('/ask', async (req, res) => {
 
         // Initialize model with the system instructions
         const model = genAI.getGenerativeModel({
-            model: "gemini-2.0-flash",
+            model: "gemini-2.5-flash",
             systemInstruction: SYSTEM_INSTRUCTION,
         });
 

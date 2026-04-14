@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             '.cvd-ba-container',
             '#cvd-learn-section',
             '.cvd-strip',
-            '.cvd-faq',
-            '.course-progression-ladder'
+            '.cvd-faq'
         ];
 
         // We wrap standalone elements like cvd-faq in its section if necessary
@@ -85,10 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-        const safeLadder = document.querySelector('.course-progression-ladder');
-        if (safeLadder && marquee) {
-            marquee.parentNode.insertBefore(safeLadder, marquee);
-        }
+        // Progression ladder remains in its natural position.
     }
 
 

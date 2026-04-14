@@ -426,6 +426,7 @@
         margin-bottom: 20px;
         background: linear-gradient(to right, #800000, #B27C31, #800000);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: hookGlow 2.5s infinite alternate ease-in-out;
       }
@@ -439,6 +440,7 @@
         letter-spacing: 0.5px;
         background: linear-gradient(to right, #555, #B27C31, #555);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: hookGlow 2.5s infinite alternate ease-in-out; 
         animation-delay: 1.25s; 
@@ -494,7 +496,7 @@
           object-fit: contain;
           margin: 0;
           display: block;
-          border-radius: 0;
+          border-radius: 50%;
           box-shadow: none;
           transform: none;
       }
@@ -839,8 +841,12 @@
       
       <div class="cvd-main-content" style="flex: 1; min-width: 0;">
 
-                <section style="width: 100%; border-bottom: 1px solid #e0d5c8;">
+                <section style="position: relative; width: 100%; border-bottom: 1px solid #e0d5c8;">
             <img src="../assets/images-optimized/nakshatra/header1.webp" alt="Grah Nakshatra" style="width: 100%; height: auto; display: block;">
+            <div style="position: absolute; bottom: 12%; left: 8%; z-index: 10; text-align: left;">
+                <h1 style="font-family: 'Times New Roman', serif; font-size: clamp(1.6rem, 4.5vw, 4rem); color: #FFF2D1; font-weight: bold; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 25px rgba(0,0,0,0.5);">Grah Nakshatra</h1>
+                <p style="font-family: Arial, sans-serif; font-size: clamp(0.65rem, 1.6vw, 1.4rem); color: #FFDF80; margin: 6px 0 0 2px; font-weight: 500; text-shadow: 1px 1px 6px rgba(0,0,0,0.9); letter-spacing: 0.5px;">Unlock Your Destiny Through Vedic Astrology</p>
+            </div>
         </section>
 
         <section class="cvd-section" style="padding: 40px 20px; background: #fdfbf7; text-align: center;">
@@ -922,7 +928,7 @@
         </div>
         <div class="cvd-learn-item">
           <div class="cvd-learn-item-img-wrapper">
-            <img src="../assets/images-optimized/nakshatra/what-it-offers/understand-planetary-effects.webp" alt="Understand Planetary Effects">
+            <img src="../assets/images-optimized/nakshatra/what-it-offers/understand-planetary-effects.jpeg" alt="Understand Planetary Effects">
           </div>
           <p>Understand Planetary Effects</p>
           <div class="sub-p">Learn how Grah Nakshatras shape your life</div>
@@ -1033,6 +1039,10 @@
   </div>
 </section>
 
+<!-- PROGRESSION LADDER -->
+
+<!-- END PROGRESSION LADDER -->
+
 </div> <!-- end cvd-main-content -->
 
       
@@ -1111,9 +1121,7 @@
 
     </div> <!-- end cvd-layout-container --></div>
     
-<!-- PROGRESSION LADDER -->
 
-<!-- END PROGRESSION LADDER -->
 <div id="marquee-placeholder"></div>
     <div id="footer-placeholder"></div>
 <script src="../assets/js/navbar.js"></script><script src="../assets/js/main.js"></script><script src="../assets/js/loader.js"></script><script src="../assets/js/search.js"></script><script src="../assets/js/chatbot.js"></script><script src="../assets/js/layout-balancer.js"></script><script src="../assets/js/load-components.js" defer=""></script></body></html>
