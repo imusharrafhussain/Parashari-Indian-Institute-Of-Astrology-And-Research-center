@@ -1562,9 +1562,14 @@
         }
 
         .cc-palmistry-landing .wyg-grid {
-            grid-template-columns: 1fr 1fr !important;
+            grid-template-columns: 1fr !important; /* Stack vertically on mobile */
             gap: 3rem;
             align-items: start;
+        }
+        @media (min-width: 992px) {
+            .cc-palmistry-landing .wyg-grid {
+                grid-template-columns: 1fr 1fr !important; /* Side-by-side on desktop */
+            }
         }
 
         @media (min-width: 1200px) {
