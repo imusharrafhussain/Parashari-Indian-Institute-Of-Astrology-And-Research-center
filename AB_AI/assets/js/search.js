@@ -6,22 +6,22 @@
     // Course Data – Complete list across all tiers
     const courses = [
         // === CRASH COURSES ===
-        { title: "Past Life Regression Theory (PLRT)", url: "plrt.html", icon: "🕰️", aliases: ["plrt", "past life"] },
-        { title: "Bhoomi Vastu & Prasada Vastu", url: "cc-bhoomi-vastu.html", icon: "🏠", aliases: ["bhoomi", "prasada"] },
-        { title: "Palmistry (Crash Course)", url: "cc-modern-western-palmistry.html", icon: "✋", aliases: ["palmistry", "western palmistry", "hand reading"] },
-        { title: "Mobile Numerology", url: "cc-mobile-numerology.html", icon: "📱", aliases: ["mobile number"] },
-        { title: "Face Reading (Crash Course)", url: "cc-face-reading.html", icon: "👤", aliases: ["face reading", "physiognomy", "character analysis"] },
-        { title: "Financial Astrology (Artha)", url: "cc-financial-astrology.html", icon: "📈", aliases: ["artha", "financial"] },
-        { title: "Lal Kitab Basics", url: "cc-lal-kitab.html", icon: "📕", aliases: ["lal kitab basics"] },
-        { title: "Medical Astrology", url: "cc-medical-astrology.html", icon: "⚕️", aliases: ["medical"] },
-        { title: "The BNN Intensive", url: "cc-bnn-intensive.html", icon: "🔍", aliases: ["bnn", "bhrigu nandi nadi"] },
-        { title: "Modern Career Astrology", url: "cc-modern-career-astrology.html", icon: "💼", aliases: ["career astrology"] },
-        { title: "Business Numerology", url: "cc-business-numerology.html", icon: "🏢", aliases: ["business number"] },
-        { title: "Vedic Numerology (Crash Course)", url: "cc-vedic-numerology.html", icon: "🔢", aliases: ["vedic number"] },
-        { title: "Nadi Jyotish (Crash Course)", url: "cc-nadi-astrology.html", icon: "📜", aliases: ["nadi", "nadi jyotish"] },
-        { title: "Healing (Crash Course)", url: "cc-healing.html", icon: "🙌", aliases: ["healing"] },
-        { title: "Feng Shui", url: "cc-feng-shui.html", icon: "⛩️", aliases: ["feng shui"] },
-        { title: "Jaimini Astrology", url: "cc-jaimini-astrology.html", icon: "🔮", aliases: ["jaimini", "jamini", "jaimini jyotish", "jamini jyotishi", "jaimini jyotishi", "gemini jyotishi"] },
+        { title: "Past Life Regression Theory (PLRT)", url: "archive/plrt.html", icon: "🕰️", aliases: ["plrt", "past life"] },
+        { title: "Bhoomi Vastu & Prasada Vastu", url: "crash-courses/cc-bhoomi-vastu.html", icon: "🏠", aliases: ["bhoomi", "prasada"] },
+        { title: "Palmistry (Crash Course)", url: "crash-courses/cc-modern-western-palmistry.html", icon: "✋", aliases: ["palmistry", "western palmistry", "hand reading"] },
+        { title: "Mobile Numerology", url: "crash-courses/cc-mobile-numerology.html", icon: "📱", aliases: ["mobile number"] },
+        { title: "Face Reading (Crash Course)", url: "crash-courses/cc-face-reading.html", icon: "👤", aliases: ["face reading", "physiognomy", "character analysis"] },
+        { title: "Financial Astrology (Artha)", url: "crash-courses/cc-financial-astrology.html", icon: "📈", aliases: ["artha", "financial"] },
+        { title: "Lal Kitab Basics", url: "crash-courses/cc-lal-kitab.html", icon: "📕", aliases: ["lal kitab basics"] },
+        { title: "Medical Astrology", url: "crash-courses/cc-medical-astrology.html", icon: "⚕️", aliases: ["medical"] },
+        { title: "The BNN Intensive", url: "crash-courses/cc-bnn-intensive.html", icon: "🔍", aliases: ["bnn", "bhrigu nandi nadi"] },
+        { title: "Modern Career Astrology", url: "crash-courses/cc-modern-career-astrology.html", icon: "💼", aliases: ["career astrology"] },
+        { title: "Business Numerology", url: "crash-courses/cc-business-numerology.html", icon: "🏢", aliases: ["business number"] },
+        { title: "Vedic Numerology (Crash Course)", url: "crash-courses/cc-vedic-numerology.html", icon: "🔢", aliases: ["vedic number"] },
+        { title: "Nadi Jyotish (Crash Course)", url: "crash-courses/cc-nadi-astrology.html", icon: "📜", aliases: ["nadi", "nadi jyotish"] },
+        { title: "Healing (Crash Course)", url: "crash-courses/cc-healing.html", icon: "🙌", aliases: ["healing"] },
+        { title: "Feng Shui", url: "crash-courses/cc-feng-shui.html", icon: "⛩️", aliases: ["feng shui"] },
+        { title: "Jaimini Astrology", url: "crash-courses/cc-jaimini-astrology.html", icon: "🔮", aliases: ["jaimini", "jamini", "jaimini jyotish", "jamini jyotishi", "jaimini jyotishi", "gemini jyotishi"] },
 
         // === DIPLOMA COURSES ===
         { title: "Vedic Astrology (Jyotish) (Diploma)", url: "astrology.html", icon: "♈", aliases: ["vedic astrology", "jyotish"] },
@@ -135,7 +135,10 @@
                 results.forEach(course => {
                     const item = document.createElement('a');
                     // Detect if we're in a subdirectory like /courses/
-                    const _searchBasePath = window.location.pathname.replace(/\\\\/g, '/').includes('/courses/') ? '../' : '';
+                    const p = window.location.pathname.replace(/\\\\/g, '/');
+                    const parts = p.split('/').filter(Boolean);
+                    const depth = Math.max(0, parts.length - 1);
+                    const _searchBasePath = '../'.repeat(depth);
                     item.href = _searchBasePath + course.url;
                     item.className = 'search-result-item';
                     item.innerHTML = `

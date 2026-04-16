@@ -37,7 +37,7 @@ const coursesData = [
         description: "Learn precise prediction techniques using Nadi astrology principles and leaf reading concepts.",
         price: "₹2,999",
         badges: ["✓ Certification"],
-        link: "cc-nadi-astrology.html"
+        link: "crash-courses/cc-nadi-astrology.html"
     },
     {
         id: 3,
@@ -332,7 +332,7 @@ const coursesData = [
         description: "Learn the art of placement and flow of energy (Qi) to improve life harmony.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-feng-shui.html"
+        link: "crash-courses/cc-feng-shui.html"
     },
     {
         id: 29,
@@ -420,7 +420,7 @@ const coursesData = [
         description: "Foundational course on energy healing, chakra balancing and spiritual wellness.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-healing.html"
+        link: "crash-courses/cc-healing.html"
     },
     {
         id: 37,
@@ -476,7 +476,7 @@ const coursesData = [
         description: "Explore the theoretical foundations of past life regression and soul journey principles.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "plrt.html"
+        link: "archive/plrt.html"
     },
     {
         id: 42,
@@ -487,7 +487,7 @@ const coursesData = [
         description: "Learn site energetics and architectural integration principles for harmonic living.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-bhoomi-vastu.html"
+        link: "crash-courses/cc-bhoomi-vastu.html"
     },
     {
         id: 43,
@@ -498,7 +498,7 @@ const coursesData = [
         description: "Understanding personality and character analysis through palmistry techniques.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-modern-western-palmistry.html"
+        link: "crash-courses/cc-modern-western-palmistry.html"
     },
     {
         id: 44,
@@ -509,7 +509,7 @@ const coursesData = [
         description: "Decode the impact of mobile numbers on luck, professional success and personal life.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-mobile-numerology.html"
+        link: "crash-courses/cc-mobile-numerology.html"
     },
     {
         id: 45,
@@ -520,7 +520,7 @@ const coursesData = [
         description: "Learn systematic character analysis and behavioral profiling through facial features.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-face-reading.html"
+        link: "crash-courses/cc-face-reading.html"
     },
     {
         id: 46,
@@ -531,7 +531,7 @@ const coursesData = [
         description: "Introductory course on identifying financial potential and wealth cycles in birth charts.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-financial-astrology.html"
+        link: "crash-courses/cc-financial-astrology.html"
     },
     {
         id: 47,
@@ -542,7 +542,7 @@ const coursesData = [
         description: "Foundational principles of Lal Kitab and its unique approach to astrological remedies.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-lal-kitab.html"
+        link: "crash-courses/cc-lal-kitab.html"
     },
     {
         id: 48,
@@ -553,7 +553,7 @@ const coursesData = [
         description: "Intensive training on the Bhrigu Nandi Nadi system for rapid and accurate predictions.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-bnn-intensive.html"
+        link: "crash-courses/cc-bnn-intensive.html"
     },
     {
         id: 49,
@@ -564,7 +564,7 @@ const coursesData = [
         description: "Astrological guidance for modern professions, career planning, and timing of success.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-modern-career-astrology.html"
+        link: "crash-courses/cc-modern-career-astrology.html"
     },
     {
         id: 50,
@@ -575,7 +575,7 @@ const coursesData = [
         description: "Optimizing business names, brand identities and timing for commercial success.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-business-numerology.html"
+        link: "crash-courses/cc-business-numerology.html"
     },
     {
         id: 51,
@@ -586,7 +586,7 @@ const coursesData = [
         description: "Traditional Indian numerological systems for understanding destiny and life path.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-vedic-numerology.html"
+        link: "crash-courses/cc-vedic-numerology.html"
     },
     {
         id: 52,
@@ -597,7 +597,7 @@ const coursesData = [
         description: "Analyze health alignments and chart-based disease predictions using Medical Astrology.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-medical-astrology.html"
+        link: "crash-courses/cc-medical-astrology.html"
     },
     {
         id: 53,
@@ -608,7 +608,7 @@ const coursesData = [
         description: "Master the principles of Jaimini Astrology, karakas, and distinct predictive dashas.",
         price: "₹2,999",
         badges: ["✓ Certification", "Beginner Tier"],
-        link: "cc-jaimini-astrology.html"
+        link: "crash-courses/cc-jaimini-astrology.html"
     }
 ];
 

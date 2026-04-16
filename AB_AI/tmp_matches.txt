@@ -1,1 +1,0 @@
-ck" style="color: #6B8E23;"></i> Save ${Math.round((parseInt(prices.old.replace(/[^0-9]/g, '')) - parseInt((prices.save || prices.newPrice).replace(/[

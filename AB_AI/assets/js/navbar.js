@@ -10,10 +10,13 @@ function isPageActive(href, currentPage) {
   return cleanHref === cleanCurrent || (cleanCurrent === '' && cleanHref === 'index');
 }
 
-// Path prefix for pages in subdirectories (e.g., /courses/)
-const _navBasePath = (function() {
+// Path prefix for pages in subdirectories (e.g., /courses/, /categories/, /blogs/, /crash-courses/)
+// This keeps mega-menu links working no matter which folder the current page is in.
+const _navBasePath = (function () {
   const p = window.location.pathname.replace(/\\/g, '/');
-  return p.includes('/courses/') ? '../' : '';
+  const parts = p.split('/').filter(Boolean);
+  const depth = Math.max(0, parts.length - 1); // ignore the current file
+  return '../'.repeat(depth);
 })();
 
 window.initNavbar = function () {
@@ -76,22 +79,22 @@ window.initNavbar = function () {
 
 /* ============ MEGA MENU LOGIC ============ */
 const crashCourseList = [
-  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'plrt.html', icon: 'fas fa-hourglass-half' },
-  { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'cc-bhoomi-vastu.html', icon: 'fas fa-home' },
-  { name: 'Palmistry', meta: 'Palmistry', url: 'cc-modern-western-palmistry.html', icon: 'fas fa-hand-paper' },
-  { name: 'Mobile Numerology', meta: 'Mobile', url: 'cc-mobile-numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Face Reading', meta: 'Face Reading', url: 'cc-face-reading.html', icon: 'fas fa-user' },
-  { name: 'Financial Astrology (Artha)', meta: 'Financial', url: 'cc-financial-astrology.html', icon: 'fas fa-om' },
-  { name: 'Lal Kitab Basics', meta: 'Lal', url: 'cc-lal-kitab.html', icon: 'fas fa-book' },
-  { name: 'Medical Astrology', meta: 'Medical', url: 'cc-medical-astrology.html', icon: 'fas fa-heartbeat' },
-  { name: 'The BNN Intensive', meta: 'The', url: 'cc-bnn-intensive.html', icon: 'fas fa-code-branch' },
-  { name: 'Modern Career Astrology', meta: 'Modern', url: 'cc-modern-career-astrology.html', icon: 'fas fa-om' },
-  { name: 'Business Numerology', meta: 'Business', url: 'cc-business-numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Vedic Numerology', meta: 'Vedic', url: 'cc-vedic-numerology.html', icon: 'fas fa-sort-numeric-up' },
-  { name: 'Nadi Jyotish', meta: 'Nadi', url: 'cc-nadi-astrology.html', icon: 'fas fa-scroll' },
-  { name: 'Healing', meta: 'Healing', url: 'cc-healing.html', icon: 'fas fa-hand-holding-medical' },
-  { name: 'Feng Shui', meta: 'Feng', url: 'cc-feng-shui.html', icon: 'fas fa-yin-yang' },
-  { name: 'Jaimini Astrology', meta: 'Jaimini Jyotishi', url: 'cc-jaimini-astrology.html', icon: 'fas fa-users' }
+  { name: 'Past Life Regression Theory (PLRT)', meta: 'Past', url: 'archive/plrt.html', icon: 'fas fa-hourglass-half' },
+  { name: 'Bhoomi Vastu & Prasada Vastu', meta: 'Bhoomi', url: 'crash-courses/cc-bhoomi-vastu.html', icon: 'fas fa-home' },
+  { name: 'Palmistry', meta: 'Palmistry', url: 'crash-courses/cc-modern-western-palmistry.html', icon: 'fas fa-hand-paper' },
+  { name: 'Mobile Numerology', meta: 'Mobile', url: 'crash-courses/cc-mobile-numerology.html', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Face Reading', meta: 'Face Reading', url: 'crash-courses/cc-face-reading.html', icon: 'fas fa-user' },
+  { name: 'Financial Astrology (Artha)', meta: 'Financial', url: 'crash-courses/cc-financial-astrology.html', icon: 'fas fa-om' },
+  { name: 'Lal Kitab Basics', meta: 'Lal', url: 'crash-courses/cc-lal-kitab.html', icon: 'fas fa-book' },
+  { name: 'Medical Astrology', meta: 'Medical', url: 'crash-courses/cc-medical-astrology.html', icon: 'fas fa-heartbeat' },
+  { name: 'The BNN Intensive', meta: 'The', url: 'crash-courses/cc-bnn-intensive.html', icon: 'fas fa-code-branch' },
+  { name: 'Modern Career Astrology', meta: 'Modern', url: 'crash-courses/cc-modern-career-astrology.html', icon: 'fas fa-om' },
+  { name: 'Business Numerology', meta: 'Business', url: 'crash-courses/cc-business-numerology.html', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Vedic Numerology', meta: 'Vedic', url: 'crash-courses/cc-vedic-numerology.html', icon: 'fas fa-sort-numeric-up' },
+  { name: 'Nadi Jyotish', meta: 'Nadi', url: 'crash-courses/cc-nadi-astrology.html', icon: 'fas fa-scroll' },
+  { name: 'Healing', meta: 'Healing', url: 'crash-courses/cc-healing.html', icon: 'fas fa-hand-holding-medical' },
+  { name: 'Feng Shui', meta: 'Feng', url: 'crash-courses/cc-feng-shui.html', icon: 'fas fa-yin-yang' },
+  { name: 'Jaimini Astrology', meta: 'Jaimini Jyotishi', url: 'crash-courses/cc-jaimini-astrology.html', icon: 'fas fa-users' }
 ];
 const diplomaList = [
   { name: 'Vedic Astrology (Jyotish)', meta: 'Vedic', url: 'level-detail.html?course=vedic-astrology&level=diploma', icon: 'fas fa-om' },
