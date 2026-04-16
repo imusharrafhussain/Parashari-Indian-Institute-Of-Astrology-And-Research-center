@@ -2521,10 +2521,10 @@ textarea.form-control {
   align-items: center !important;
   justify-content: flex-start !important;
   gap: 0.5rem !important;
-  margin-bottom: 0.4rem !important;
+  margin: 0 0 0.4rem 0 !important;
   background: transparent !important;
   padding: 0 !important;
-  min-height: 4rem !important;
+  min-height: auto !important;
 }
 
 .grid-responsive .premium-gold-card .card-header-icon {
