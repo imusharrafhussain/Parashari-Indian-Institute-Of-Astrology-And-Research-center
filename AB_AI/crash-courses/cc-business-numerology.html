@@ -1451,6 +1451,41 @@
             }
         }
 
+    
+        /* Horizontal Pricing Card for Desktop added automatically */
+        @media (min-width: 992px) {
+            .cc-palmistry-landing .pricing-card-wrap {
+                max-width: 1050px;
+            }
+            .cc-palmistry-landing .pricing-card {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+            }
+            .cc-palmistry-landing .pricing-header {
+                flex: 0 0 28%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-right: 1px solid rgba(255,255,255,0.1);
+                border-radius: 1rem 0 0 1rem;
+            }
+            .cc-palmistry-landing .pricing-body {
+                flex: 0 0 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-right: 1px solid var(--border);
+            }
+            .cc-palmistry-landing .pricing-includes {
+                flex: 1;
+                border-top: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
     </style>
 </head>
 
@@ -1642,7 +1677,10 @@
             </div>
         </section>
 
-        <section class="expert"><div class="ccp-container"><div class="expert-card"><div class="expert-inner"><div class="expert-img-wrap"><img src="../circle faculty images.jpg.jpeg" alt="Expert Faculty Panel" class="expert-img"></div><div><h2>Guided by an Elite Panel of Experts</h2><p style="font-size:0.875rem;font-weight:600;color:var(--gold-dark);margin-top:0.25rem">Unmatched Mentorship & Support</p><p style="margin-top:1rem;color:var(--muted);line-height:1.7">This crash course is designed and delivered by a curated group of seasoned professionals. Every module is taught with practical examples and real guidance.</p><div class="expert-tags"><span class="expert-tag"><span class="expert-dot" style="background:hsl(40,80%,55%)"></span> Active Practitioners</span><span class="expert-tag"><span class="expert-dot" style="background:var(--gold)"></span> Proven Methods</span><span class="expert-tag"><span class="expert-dot" style="background:var(--primary)"></span> Guided Practice Focus</span></div></div></div></div></div></section>
+        <section class="expert"><div class="ccp-container"><div class="expert-card"><div class="expert-inner"><div class="expert-img-wrap" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <img src="../circle faculty images.jpg.jpeg" alt="Expert Faculty Panel" class="expert-img">
+    <div style="margin-top: 15px; font-weight: 900; font-size: 1.35rem; color: #c8960c; text-shadow: 0 0 12px rgba(200, 150, 12, 0.6), 0 0 24px rgba(200, 150, 12, 0.4); text-transform: uppercase; letter-spacing: 2px;">India's Top Educators</div>
+</div><div><h2>Guided by an Elite Panel of Experts</h2><p style="font-size:0.875rem;font-weight:600;color:var(--gold-dark);margin-top:0.25rem">Unmatched Mentorship & Support</p><p style="margin-top:1rem;color:var(--muted);line-height:1.7">This crash course is designed and delivered by a curated group of seasoned professionals. Every module is taught with practical examples and real guidance.</p><div class="expert-tags"><span class="expert-tag"><span class="expert-dot" style="background:hsl(40,80%,55%)"></span> Active Practitioners</span><span class="expert-tag"><span class="expert-dot" style="background:var(--gold)"></span> Proven Methods</span><span class="expert-tag"><span class="expert-dot" style="background:var(--primary)"></span> Guided Practice Focus</span></div></div></div></div></div></section>
 
         <section class="testimonials"><div class="ccp-container"><div class="section-header"><h2>Student <span class="text-gold">Transformations</span></h2><p>Real experiences from learners who took this course</p></div><div class="test-grid" id="testimonials"></div></div></section>
 
