@@ -97,14 +97,14 @@
     }
 
     .course-grid-3col .premium-gold-card .card-image-container {
-      height: 260px !important;
+      height: auto !important;
+      aspect-ratio: auto !important;
+      line-height: 0;
+      display: block;
+      background: transparent !important;
     }
 
-    .course-grid-3col .premium-gold-card .card-image {
-      object-fit: contain !important;
-      width: 100% !important;
-      height: 100% !important;
-    }
+    .course-grid-3col .premium-gold-card .card-image { object-fit: cover !important; width: 100% !important; height: auto !important; padding: 0 !important; margin: 0 !important; border: none !important; display: block; min-height: 0 !important; }
 
     .course-grid-3col .premium-gold-card .card-body {
       padding: 0.9rem 1rem 0.8rem !important;
@@ -262,8 +262,12 @@
       }
 
       .course-grid-3col .premium-gold-card .card-image-container {
-        height: 220px !important;
-      }
+      height: auto !important;
+      aspect-ratio: auto !important;
+      line-height: 0;
+      display: block;
+      background: transparent !important;
+    }
       
       .courses-pagination .page-info {
         flex-basis: 100%;
@@ -447,7 +451,6 @@
 </nav>
 <div class="search-results">
 </div>
-
 <div class="mobile-menu">
 <ul class="nav-menu mobile-menu-nav">
 <li class="nav-item w-full">
@@ -481,7 +484,6 @@
 <a class="btn btn-primary btn-sm" href="register.html">Register</a>
 </div>
 </div>
-
 <div class="tablet-search-container">
 <div class="search-container">
 <div class="container-input">
@@ -518,9 +520,9 @@
 <div class="grid-responsive grid-gap-2 course-grid-3col all-courses-active" id="courseGrid">
 <!-- 15 CRASH COURSES (Grouped at top) -->
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="plrt" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Past Life" class="card-image" src="assets/images-optimized/crash-courses/PAST LIFE-1.jpg.jpeg" style="object-fit: contain !important;"/>
+<img alt="Past Life" class="card-image" src="assets/images-optimized/crash-courses/PAST LIFE-1.jpg.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -533,7 +535,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="archive/plrt.html">
 <span aria-hidden="true" class="circle">
@@ -545,7 +547,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="vastu" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Bhoomi Vastu &amp; Prasada Vastu" class="card-image" src="assets/images-optimized/vastu-new.webp"/>
 </div>
@@ -560,7 +562,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-bhoomi-vastu.html">
 <span aria-hidden="true" class="circle">
@@ -572,9 +574,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="palmistry" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" style="object-fit: contain !important;"/>
+<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -587,7 +589,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-modern-western-palmistry.html">
 <span aria-hidden="true" class="circle">
@@ -599,9 +601,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="numerology-mobile" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Mobile Numerology" class="card-image" src="assets/images-optimized/crash-courses/mobile numerology.jpeg" style="object-fit: contain !important;"/>
+<img alt="Mobile Numerology" class="card-image" src="assets/images-optimized/crash-courses/mobile numerology.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -614,7 +616,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-mobile-numerology.html">
 <span aria-hidden="true" class="circle">
@@ -626,9 +628,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="face-reading" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" style="object-fit: contain !important;"/>
+<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -641,7 +643,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-face-reading.html">
 <span aria-hidden="true" class="circle">
@@ -653,9 +655,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="astrology-financial" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Financial Astrology" class="card-image" src="assets/images-optimized/crash-courses/financial astrology.jpeg" style="object-fit: contain !important;"/>
+<img alt="Financial Astrology" class="card-image" src="assets/images-optimized/crash-courses/financial astrology.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -668,7 +670,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-financial-astrology.html">
 <span aria-hidden="true" class="circle">
@@ -680,9 +682,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="lal-kitab-basics" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" style="object-fit: contain !important;"/>
+<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -695,7 +697,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-lal-kitab.html">
 <span aria-hidden="true" class="circle">
@@ -707,9 +709,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="medical-astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Medical Astrology" class="card-image" src="assets/images-optimized/crash-courses/medical astrology.jpeg" style="object-fit: contain !important;"/>
+<img alt="Medical Astrology" class="card-image" src="assets/images-optimized/crash-courses/medical astrology.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -722,7 +724,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-medical-astrology.html">
 <span aria-hidden="true" class="circle">
@@ -734,9 +736,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="bnn-intensive" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="BNN" class="card-image" src="assets/images-optimized/crash-courses/bnn.jpeg" style="object-fit: contain !important;"/>
+<img alt="BNN" class="card-image" src="assets/images-optimized/crash-courses/bnn.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -749,7 +751,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-bnn-intensive.html">
 <span aria-hidden="true" class="circle">
@@ -761,9 +763,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="astrology-career" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Modern Career Astrology" class="card-image" src="assets/images-optimized/crash-courses/modern career astro.jpeg" style="object-fit: contain !important;"/>
+<img alt="Modern Career Astrology" class="card-image" src="assets/images-optimized/crash-courses/modern career astro.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -776,7 +778,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-modern-career-astrology.html">
 <span aria-hidden="true" class="circle">
@@ -788,7 +790,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="numerology-business" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Business Numerology" class="card-image" src="assets/images-optimized/Business Numerology.webp"/>
 </div>
@@ -803,7 +805,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-business-numerology.html">
 <span aria-hidden="true" class="circle">
@@ -815,7 +817,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="numerology-vedic" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vedic Numerology" class="card-image" src="assets/images-optimized/Vedic Numerology.webp"/>
 </div>
@@ -830,7 +832,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-vedic-numerology.html">
 <span aria-hidden="true" class="circle">
@@ -842,7 +844,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="nadi-jyotish" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Nadi Jyotish" class="card-image" src="assets/images-optimized/Nadi Jyotish.webp"/>
 </div>
@@ -857,7 +859,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-nadi-astrology.html">
 <span aria-hidden="true" class="circle">
@@ -869,9 +871,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="reiki" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -884,7 +886,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-healing.html">
 <span aria-hidden="true" class="circle">
@@ -896,9 +898,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="feng-shui" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Feng Shui" class="card-image" src="assets/images-optimized/crash-courses/feng shui.jpeg" style="object-fit: contain !important;"/>
+<img alt="Feng Shui" class="card-image" src="assets/images-optimized/crash-courses/feng shui.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -911,7 +913,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-feng-shui.html">
 <span aria-hidden="true" class="circle">
@@ -923,7 +925,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Crash Course" data-course-id="gemini-jyotish" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Jaimini Astrology" class="card-image" src="assets/images-optimized/gemini jyotishi.webp"/>
 </div>
@@ -938,7 +940,7 @@
 <span class="category-badge" style="background:#4CAF50">Crash Course · Beginner</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹3,499</del><strong style="color:#FFD700;font-size:1.1em;">₹2,499</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
 <a class="learn-more" href="crash-courses/cc-jaimini-astrology.html">
 <span aria-hidden="true" class="circle">
@@ -952,7 +954,7 @@
 </div>
 <!-- END OF CRASH COURSES -->
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vedic Astrology" class="card-image" src="assets/images-optimized/vedic-astrology-new.webp"/>
 </div>
@@ -967,9 +969,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=vedic-astrology&level=diploma">
+<a class="learn-more" href="level-detail.html?course=vedic-astrology&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -980,7 +982,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="numerology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Numerology" class="card-image" src="assets/images-optimized/numerology_diploma_1775112244292.webp"/>
 </div>
@@ -995,9 +997,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=numerology&level=diploma">
+<a class="learn-more" href="level-detail.html?course=numerology&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1008,7 +1010,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="kp-astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="KP Astrology" class="card-image" src="assets/images-optimized/kp_astrology_diploma_1775112393591.webp"/>
 </div>
@@ -1023,9 +1025,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=kp-astrology&level=diploma">
+<a class="learn-more" href="level-detail.html?course=kp-astrology&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1036,7 +1038,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="gemstone" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Gemstone Science" class="card-image" src="assets/images-optimized/gemstone.webp"/>
 </div>
@@ -1051,9 +1053,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=gemstone&level=diploma">
+<a class="learn-more" href="level-detail.html?course=gemstone&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1064,7 +1066,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="vastu" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vastu Shastra" class="card-image" src="assets/images-optimized/vastu_diploma_test_1775113206637.webp"/>
 </div>
@@ -1079,9 +1081,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=vastu&level=diploma">
+<a class="learn-more" href="level-detail.html?course=vastu&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1092,9 +1094,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="lal-kitab" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" style="object-fit: contain !important;"/>
+<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1107,9 +1109,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=lal-kitab&level=diploma">
+<a class="learn-more" href="level-detail.html?course=lal-kitab&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1120,9 +1122,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="face-reading" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" style="object-fit: contain !important;"/>
+<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1135,9 +1137,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=face-reading&level=diploma">
+<a class="learn-more" href="level-detail.html?course=face-reading&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1148,9 +1150,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="reiki" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1163,9 +1165,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=reiki&level=diploma">
+<a class="learn-more" href="level-detail.html?course=reiki&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1176,7 +1178,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="tarot" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Tarot Reading" class="card-image" src="assets/images-optimized/tarot_diploma_1775113519285.webp"/>
 </div>
@@ -1191,9 +1193,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=tarot&level=diploma">
+<a class="learn-more" href="level-detail.html?course=tarot&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1204,7 +1206,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="nakshatra" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Nakshatra" class="card-image" src="assets/images-optimized/nakshatra_diploma_1775113764359.webp"/>
 </div>
@@ -1219,9 +1221,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=nakshatra&level=diploma">
+<a class="learn-more" href="level-detail.html?course=nakshatra&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1232,9 +1234,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="crystal-healing" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1247,9 +1249,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=crystal-healing&level=diploma">
+<a class="learn-more" href="level-detail.html?course=crystal-healing&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1260,7 +1262,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="rudraksha" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Rudraksha" class="card-image" src="assets/images-optimized/rudraksha_diploma_1775116460324.webp"/>
 </div>
@@ -1275,9 +1277,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=rudraksha&level=diploma">
+<a class="learn-more" href="level-detail.html?course=rudraksha&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1288,9 +1290,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Diploma" data-course-id="palmistry" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="24% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" style="object-fit: contain !important;"/>
+<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1303,9 +1305,9 @@
 <span class="category-badge" style="background:#2196F3">Diploma · Popular</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹5,499</del><strong style="color:#FFD700;font-size:1.1em;">₹4,199</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">24% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=palmistry&level=diploma">
+<a class="learn-more" href="level-detail.html?course=palmistry&amp;level=diploma">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1316,7 +1318,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vedic Astrology" class="card-image" src="assets/images-optimized/vedic-astrology-new.webp"/>
 </div>
@@ -1331,9 +1333,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=vedic-astrology&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=vedic-astrology&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1344,7 +1346,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="numerology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Numerology" class="card-image" src="assets/images-optimized/numerology_bachelors_1775112261213.webp"/>
 </div>
@@ -1359,9 +1361,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=numerology&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=numerology&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1372,7 +1374,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="kp-astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="KP Astrology" class="card-image" src="assets/images-optimized/kp_astrology_bachelors_1775112409788.webp"/>
 </div>
@@ -1387,9 +1389,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=kp-astrology&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=kp-astrology&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1400,7 +1402,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="gemstone" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Gemstone Science" class="card-image" src="assets/images-optimized/gemstone.webp"/>
 </div>
@@ -1415,9 +1417,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=gemstone&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=gemstone&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1428,7 +1430,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="vastu" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vastu Shastra" class="card-image" src="assets/images-optimized/vastu_bachelors_1775113232823.webp"/>
 </div>
@@ -1443,9 +1445,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=vastu&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=vastu&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1456,9 +1458,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="lal-kitab" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" style="object-fit: contain !important;"/>
+<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1471,9 +1473,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=lal-kitab&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=lal-kitab&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1484,9 +1486,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="face-reading" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" style="object-fit: contain !important;"/>
+<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1499,9 +1501,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=face-reading&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=face-reading&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1512,9 +1514,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="reiki" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1527,9 +1529,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=reiki&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=reiki&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1540,7 +1542,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="tarot" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Tarot Reading" class="card-image" src="assets/images-optimized/tarot_bachelors_1775113703786.webp"/>
 </div>
@@ -1555,9 +1557,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=tarot&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=tarot&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1568,7 +1570,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="nakshatra" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Nakshatra" class="card-image" src="assets/images-optimized/nakshatra_bachelors_1775114177428.webp"/>
 </div>
@@ -1583,9 +1585,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=nakshatra&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=nakshatra&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1596,9 +1598,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="crystal-healing" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1611,9 +1613,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=crystal-healing&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=crystal-healing&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1624,7 +1626,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="rudraksha" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Rudraksha" class="card-image" src="assets/images-optimized/rudraksha_bachelors_1775116528689.webp"/>
 </div>
@@ -1639,9 +1641,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=rudraksha&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=rudraksha&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1652,9 +1654,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Bachelor" data-course-id="palmistry" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" style="object-fit: contain !important;"/>
+<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1667,9 +1669,9 @@
 <span class="category-badge" style="background:#9C27B0">Bachelor · Advanced</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹11,999</del><strong style="color:#FFD700;font-size:1.1em;">₹8,999</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=palmistry&level=bachelors">
+<a class="learn-more" href="level-detail.html?course=palmistry&amp;level=bachelors">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1680,7 +1682,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="numerology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Numerology" class="card-image" src="assets/images-optimized/numerology_masters_1775112279723.webp"/>
 </div>
@@ -1695,9 +1697,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=numerology&level=masters">
+<a class="learn-more" href="level-detail.html?course=numerology&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1708,7 +1710,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vedic Astrology" class="card-image" src="assets/images-optimized/vedic_astrology_masters_1775112355449.webp"/>
 </div>
@@ -1723,9 +1725,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=vedic-astrology&level=masters">
+<a class="learn-more" href="level-detail.html?course=vedic-astrology&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1736,7 +1738,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="kp-astrology" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="KP Astrology" class="card-image" src="assets/images-optimized/kp_astrology_masters_1775112426837.webp"/>
 </div>
@@ -1751,9 +1753,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=kp-astrology&level=masters">
+<a class="learn-more" href="level-detail.html?course=kp-astrology&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1764,7 +1766,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="gemstone" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Gemstone Science" class="card-image" src="assets/images-optimized/gemstone_masters_1775112531219.webp"/>
 </div>
@@ -1779,9 +1781,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=gemstone&level=masters">
+<a class="learn-more" href="level-detail.html?course=gemstone&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1792,7 +1794,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="vastu" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Vastu Shastra" class="card-image" src="assets/images-optimized/vastu_masters_1775113257202.webp"/>
 </div>
@@ -1807,9 +1809,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=vastu&level=masters">
+<a class="learn-more" href="level-detail.html?course=vastu&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1820,9 +1822,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="lal-kitab" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" style="object-fit: contain !important;"/>
+<img alt="Lal Kitab" class="card-image" src="assets/images-optimized/crash-courses/lal kitab.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1835,9 +1837,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=lal-kitab&level=masters">
+<a class="learn-more" href="level-detail.html?course=lal-kitab&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1848,9 +1850,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="face-reading" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" style="object-fit: contain !important;"/>
+<img alt="Face Reading" class="card-image" src="assets/images-optimized/crash-courses/face reading.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1863,9 +1865,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=face-reading&level=masters">
+<a class="learn-more" href="level-detail.html?course=face-reading&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1876,9 +1878,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="reiki" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1891,9 +1893,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=reiki&level=masters">
+<a class="learn-more" href="level-detail.html?course=reiki&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1904,7 +1906,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="tarot" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Tarot Reading" class="card-image" src="assets/images-optimized/tarot_masters_1775113719113.webp"/>
 </div>
@@ -1919,9 +1921,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=tarot&level=masters">
+<a class="learn-more" href="level-detail.html?course=tarot&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1932,7 +1934,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="nakshatra" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Nakshatra" class="card-image" src="assets/images-optimized/nakshatra_bachelors_1775113784685.webp"/>
 </div>
@@ -1947,9 +1949,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=nakshatra&level=masters">
+<a class="learn-more" href="level-detail.html?course=nakshatra&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1960,9 +1962,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="crystal-healing" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" style="object-fit: contain !important;"/>
+<img alt="Healing" class="card-image" src="assets/images-optimized/crash-courses/healing.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -1975,9 +1977,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=crystal-healing&level=masters">
+<a class="learn-more" href="level-detail.html?course=crystal-healing&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -1988,7 +1990,7 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="rudraksha" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
 <img alt="Rudraksha" class="card-image" src="assets/images-optimized/rudraksha-new.webp"/>
 </div>
@@ -2003,9 +2005,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=rudraksha&level=masters">
+<a class="learn-more" href="level-detail.html?course=rudraksha&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -2016,9 +2018,9 @@
 </div>
 </div>
 <div class="premium-gold-card" data-animate="" data-category="Master" data-course-id="palmistry" style="padding: 0 !important;">
-<span class="discount-tag" data-discount="25% Discount"></span>
+
 <div class="card-image-container">
-<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" style="object-fit: contain !important;"/>
+<img alt="Palmistry" class="card-image" src="assets/images-optimized/crash-courses/PALMSTRY.jpg.jpeg" />
 </div>
 <div class="card-body">
 <div class="card-header">
@@ -2031,9 +2033,9 @@
 <span class="category-badge" style="background:#E91E63">Master · Expert</span>
 <span class="certification-badge">✓ Certification</span>
 </div>
-<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong></h4>
+<h4 class="color-secondary mb-1 text-center"><del style="color:#999;font-size:0.65em;margin-right:8px;vertical-align:middle;">₹24,999</del><strong style="color:#FFD700;font-size:1.1em;">₹18,699</strong><span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 2px 8px; border-radius: 99px; font-size: 0.65em; font-weight: 800; margin-left: 6px; vertical-align: middle;">25% OFF</span></h4>
 <div class="course-footer">
-<a class="learn-more" href="level-detail.html?course=palmistry&level=masters">
+<a class="learn-more" href="level-detail.html?course=palmistry&amp;level=masters">
 <span aria-hidden="true" class="circle">
 <span class="icon arrow">
 </span>
@@ -2254,7 +2256,6 @@
 </div>
 </div>
 </div>
-
 </section>
 <section class="how-it-works-section" style="background-color: #fdfaf6; padding: 4rem 0;">
 <div class="container-wide">

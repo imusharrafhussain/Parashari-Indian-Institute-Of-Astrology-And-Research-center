@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Astrology - Parashari Indian Institute</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/loader.css">
-    <link rel="stylesheet" href="../assets/css/search.css">
-    <link rel="stylesheet" href="../assets/css/chatbot.css">
-    <link rel="stylesheet" href="../assets/css/urgency.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Financial Astrology - Parashari Indian Institute</title>
+<link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../assets/css/navbar.css" rel="stylesheet"/>
+<link href="../assets/css/footer.css" rel="stylesheet"/>
+<link href="../assets/css/responsive.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="../assets/css/loader.css" rel="stylesheet"/>
+<link href="../assets/css/search.css" rel="stylesheet"/>
+<link href="../assets/css/chatbot.css" rel="stylesheet"/>
+<link href="../assets/css/urgency.css" rel="stylesheet"/>
+<style>
 /* Modern Premium Template Styles */
         .premium-hero {
             padding: 80px 0 60px;
@@ -1494,20 +1494,31 @@
         }
 
     
-        /* Sticky image and Glass Value Card CSS */
-        @media (min-width: 1024px) {
+                                        /* Static Centered Image and Glass Value Card CSS */
+        @media (min-width: 992px) {
             .cc-palmistry-landing .wyg-grid {
-                align-items: flex-start;
+                grid-template-columns: 1fr 1fr !important; /* Restored to standard 50/50 split for normal laptops */
+                gap: 5rem;
+            }
+        }
+        @media (min-width: 1600px) {
+            .cc-palmistry-landing .wyg-grid {
+                grid-template-columns: 1.2fr 1fr !important; /* Expands ONLY when the screen size gets massive */
             }
         }
         .cc-palmistry-landing .wyg-img-wrap {
-            position: sticky;
-            top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transform: none; /* REMOVED FAKE SCALING WHICH DEGRADES QUALITY! */
+            margin-bottom: 2rem;
+            padding: 1rem;
         }
         .cc-palmistry-landing .glass-value-card {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
+            position: relative;
+            margin-top: 2rem;
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -1516,37 +1527,16 @@
             padding: 1.25rem;
             box-sizing: border-box;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 15px rgba(204, 163, 56, 0.2);
-            width: 240px;
+            width: 100%;
+            max-width: 380px; 
             z-index: 10;
-            animation: ccp-float 5s ease-in-out infinite;
-        }
-        @media (max-width: 991px) {
-            .cc-palmistry-landing .wyg-img-wrap {
-                position: relative;
-                top: 0;
-                margin-bottom: 2rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .cc-palmistry-landing .glass-value-card {
-                position: relative;
-                right: auto;
-                left: auto;
-                bottom: auto;
-                transform: none;
-                margin-top: -1.5rem;
-                width: 90%;
-                max-width: 320px;
-                z-index: 10;
-            }
         }
         .cc-palmistry-landing .gvc-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0.5rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
         }
         .cc-palmistry-landing .gvc-strike {
@@ -1555,7 +1545,7 @@
         }
         .cc-palmistry-landing .gvc-offer {
             color: var(--primary);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 800;
         }
         .cc-palmistry-landing .gvc-divider {
@@ -1565,13 +1555,11 @@
         }
         .cc-palmistry-landing .gvc-save {
             color: hsl(125, 60%, 25%);
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 800;
             margin-bottom: 0;
         }
-
-    
-        /* Nuke horizontal sliders specifically on mobile viewports without destroying desktop sticky interactions */
+/* Nuke horizontal sliders specifically on mobile viewports without destroying desktop sticky interactions */
         @media (max-width: 991px) {
             html, body {
                 overflow-x: hidden !important;
@@ -1583,329 +1571,456 @@
             }
         }
 
-    </style>
+    
+        
+        /* Extra Hero Image Sizing Override */
+        @media (min-width: 1600px) {
+            .cc-palmistry-landing .hero-grid {
+                grid-template-columns: 1fr 1.1fr !important; 
+                align-items: center;
+            }
+            .cc-palmistry-landing .hero-img {
+                max-width: 36rem !important; /* Cap explicitly to prevent pixel distortion on zoomed out screens */
+                width: 100%;
+            }
+            .cc-palmistry-landing .wyg-img {
+                max-width: 32rem !important; /* Cap pricing image natively */
+                width: 100%;
+            }
+        }
+        /* Keep native size and clarity for standard laptops (1366px - 1599px) */
+
+
+    
+
+        /* Vertically styled Premium Faculty Card for WYG Left Column */
+        .cc-palmistry-landing .wyg-img-wrap .expert-card {
+            border: 1px solid rgba(204, 163, 56, 0.4);
+            background: linear-gradient(145deg, var(--card), var(--cream-dark));
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 20px rgba(204,163,56,0.15);
+            width: 100%;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cc-palmistry-landing .wyg-grid {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        @media (min-width: 1200px) {
+            .cc-palmistry-landing .wyg-grid {
+                grid-template-columns: 0.9fr 1.1fr !important; /* give pills more room, card slightly less */
+            }
+        }
+        
+        /* Subtle top gold accent bar */
+        .cc-palmistry-landing .wyg-img-wrap .expert-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: var(--gradient-gold);
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap .expert-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 3rem 2.5rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap .expert-img-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap .expert-img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            border: 4px solid var(--cream-dark);
+            box-shadow: 0 0 0 2px var(--gold), 0 8px 16px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+
+        /* "India's Top Educators" text */
+        .cc-palmistry-landing .wyg-img-wrap .expert-img-wrap div {
+            font-size: 1.05rem !important;
+            margin-top: 1.2rem !important;
+            letter-spacing: 1.5px !important;
+            color: var(--gold-dark) !important;
+            font-weight: 800;
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap h2 {
+            font-size: 1.7rem;
+            line-height: 1.35;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        /* "Unmatched Mentorship & Support" subtitle */
+        .cc-palmistry-landing .wyg-img-wrap p:nth-of-type(1) {
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gold-dark);
+            margin-bottom: 1.25rem;
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap .expert-tags {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .cc-palmistry-landing .wyg-img-wrap .expert-tag {
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .cc-palmistry-landing .glass-value-card {
+            max-width: 100% !important;
+        }
+</style>
 </head>
-
 <body>
-
-    <div class="header-top">
-        <div class="header-top-content">
-            <div class="header-top-left">
-                <div class="header-top-item"><span class="header-top-icon"><i class="fa-solid fa-phone"></i></span><a href="tel:+919621051159">+91 9621051159</a></div>
-                <div class="header-top-item"><span class="header-top-icon"><i class="fa-solid fa-envelope"></i></span><a href="mailto:info@astrobharatai.com">info@astrobharatai.com</a></div>
-            </div>
-            <div class="header-top-right">Online Classes | ISO Certified</div>
-        </div>
-    </div>
-
-    <header>
-            <nav class="navbar">
-                <ul class="nav-menu">
-    
-                    <li class="nav-item search-nav-item">
-                        <div class="search-container">
-                            <div class="container-input">
-                                <input type="text" placeholder="Search all courses" name="text" class="input"
-                                    id="courseSearchInput">
-                                <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
-                                        fill-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <div id="searchResults" class="search-results"></div>
-                        </div>
-                    </li>
-    
-                    <li class="nav-item"><a href="../index.html">Home</a></li>
-                    <li class="nav-item"><a href="../profile.html">About Us</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="javascript:void(0)" class="active">Courses <i class="fas fa-chevron-down"
-                                style="font-size: 0.8em; margin-left: 4px;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a href="../astrology.html">Vedic Astrology</a></li>
-                            <li class="dropdown-item"><a href="../nadi-jyotish.html">Nadi Jyotish</a></li>
-                            <li class="dropdown-item"><a href="../lal-kitab.html">Lal Kitab Remedies</a></li>
-                            <li class="dropdown-item"><a href="../remedy-course.html">Remedy Course (Upaay Gyaan)</a></li>
-                            <li class="dropdown-item"><a href="../kp-astrology.html">KP Astrology</a></li>
-                            <li class="dropdown-item"><a href="../bnn-astrology.html">BNN (Advanced Techniques)</a></li>
-                            <li class="dropdown-item"><a href="../crystal-healing.html">Crystal Healing</a></li>
-                            <li class="dropdown-item"><a href="../medical-astrology.html">Medical Astrology</a></li>
-                            <li class="dropdown-item"><a href="../complete-astrology.html">Complete Astrology Course</a></li>
-                            <li class="dropdown-item"><a href="../rudraksha.html">Rudraksha Remedies</a></li>
-                            <li class="dropdown-item"><a href="../vastu.html">Vastu Shastra</a></li>
-                            <li class="dropdown-item"><a href="../palmistry.html">Palmistry</a></li>
-                            <li class="dropdown-item"><a href="../face-reading.html">Face Reading</a></li>
-                            <li class="dropdown-item"><a href="../tarot.html">Tarot Reading</a></li>
-                            <li class="dropdown-item"><a href="../numerology.html">Numerology</a></li>
-                            <li class="dropdown-item"><a href="../mentorship.html">1-on-1 Mentorship</a></li>
-                <li class="dropdown-item"><a href="../gemini-jyotish.html">Gemini Jyotish</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="../fee-structure.html">Fee Structure</a></li>
-                    <li class="nav-item"><a href="../courses.html">Explore</a></li>
-                    <li class="nav-item"><a href="../blog.html">Blog</a></li>
-                    <li class="nav-item"><a href="../6-stairs.html">6 Stairs</a></li>
-                    <li class="nav-item"><a href="../gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a href="../contact.html">Contact</a></li>
-                </ul>
-    
-                <div class="navbar-cta">
-                    <a href="../login.html" class="btn btn-outline btn-sm">Login</a>
-                    <a href="../register.html" class="btn btn-primary btn-sm">Register</a>
-                </div>
-                
-    <button class="hamburger" title="Toggle navigation menu" aria-label="Toggle navigation menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </nav>
-            <div class="mobile-menu">
-                <ul class="nav-menu mobile-menu-nav">
-                    <li class="nav-item w-full"><a href="../index.html">Home</a></li>
-                    <li class="nav-item w-full"><a href="../profile.html">About Us</a></li>
-                    <li class="nav-item w-full"><a href="../courses.html">Courses</a></li>
-                    <li class="nav-item w-full"><a href="../fee-structure.html">Fee Structure</a></li>
-                    <li class="nav-item w-full"><a href="../courses.html">Explore</a></li>
-                    <li class="nav-item w-full"><a href="../blog.html">Blog</a></li>
-                    <li class="nav-item w-full"><a href="../6-stairs.html">6 Stairs</a></li>
-                    <li class="nav-item w-full"><a href="../gallery.html">Gallery</a></li>
-                    <li class="nav-item w-full"><a href="../contact.html">Contact</a></li>
-                </ul>
-    
-                <div class="navbar-cta">
-                    <a href="../login.html" class="btn btn-outline btn-sm">Login</a>
-                    <a href="../register.html" class="btn btn-primary btn-sm">Register</a>
-                </div>
-            </div>
-    
-            <div class="search-results"></div>
-            </div>
-            </div>
-            <div class="tablet-search-container">
-                <div class="search-container">
-                    <div class="container-input">
-                        <input type="text" placeholder="Search all courses" name="text" class="input">
-                        <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
-                                fill-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <div class="search-results"></div>
-                </div>
-            </div>
-        </header>
-
-        <main class="cc-palmistry-landing">
-        <section class="hero">
-            <div class="particles" id="particles"></div>
-            <div class="ccp-container hero-content">
-                <div class="badges animate-fade-in">
-                    <span class="badge">🛡️ Govt. Approved</span>
-                </div>
-                <div class="hero-grid">
-                    <div class="animate-slide-up">
-                        <h1>Financial Astrology <span class="text-gold">Masterclass</span>: Decode Wealth</h1>
-                        <p class="desc">Crack the astrological code to financial freedom. This beginner-friendly course guides you in detail to identify wealth-creating yogas, favorable investment cycles, and hidden financial potential directly from a birth chart.</p>
-                        <p class="hindi"><b>हिंदी में:</b> ज्योतिष के माध्यम से अपनी आर्थिक स्थिति और धन कमाने के मौकों को पहचानें। इस कोर्स में बिल्कुल आसान भाषा में सिखाया गया है कि जन्म कुंडली देखकर कैसे पता करें कि पैसा कब आएगा, निवेश का सही समय क्या है और धन लाभ के कौन से योग हैं।</p>
-                        <div class="feature-pills">
-                            <div class="pill"><span class="pill-icon">🎥</span><div><p class="pill-title">Intensive Sessions</p><p class="pill-desc">Live classes with limited-time recording access for revision</p></div></div>
-                            <div class="pill"><span class="pill-icon">📚</span><div><p class="pill-title">Guided Study Material</p><p class="pill-desc">Guided practice tasks and in-class examples</p></div></div>
-                            <div class="pill"><span class="pill-icon">🏆</span><div><p class="pill-title">Institute Certification</p><p class="pill-desc">Recognized certificate on completion</p></div></div>
-                            <div class="pill"><span class="pill-icon">💬</span><div><p class="pill-title">VIP Doubt Support</p><p class="pill-desc">Private support group and guidance</p></div></div>
-                        </div>
-                        <button class="btn-gold" style="margin-top:2rem" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">⚡ Claim Your Spot Now</button>
-                    </div>
-                    <div class="hero-img-wrap">
-                        <div class="hero-img-inner">
-                            <div class="hero-img-glow"></div>
-                            <img src="../assets/images-optimized/crash-courses/financial astrology.jpeg" alt="Financial Astrology Masterclass" class="hero-img" style="object-fit: contain; width: 100%; height: 100%; background: var(--bg);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-wave"><svg viewBox="0 0 1440 120" fill="none"><path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z" fill="hsl(40,33%,97%)" /></svg></div>
-        </section>
-
-        <section class="pricing-banner">
-            <div class="ccp-container">
-                <div class="banner-card">
-                    <div class="banner-left">
-                        <div class="banner-icon">⚡</div>
-                        <div>
-                            <p style="font-size:0.875rem;font-weight:600;color:var(--gold-dark)">⚡ VERY LIMITED SEATS</p>
-                            <h3 class="banner-title">Start Your Transformation Today</h3>
-                            <p class="banner-sub">Get complete access to all modules, materials, and support immediately upon enrollment.</p>
-                        </div>
-                    </div>
-                    <div class="banner-right">
-                        <div class="countdown"><span class="countdown-label">🕐 Offer ends in:</span><span class="countdown-box" id="cd-h">23H</span><span class="countdown-box" id="cd-m">45M</span><span class="countdown-box" id="cd-s">12S</span></div>
-                        <div class="price-box"><p class="price-old">Total Value ₹3,499</p><p class="price-new">₹2,499</p></div>
-                        <button class="btn-cta" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats"><div class="ccp-container"><div class="stats-grid"><div class="stat"><p class="stat-value text-gold">Beginner Friendly</p><p class="stat-label">No Prior Knowledge</p></div><div class="stat"><p class="stat-value text-gold">Step-by-Step</p><p class="stat-label">Guided Learning</p></div><div class="stat"><p class="stat-value text-gold">Live + Recorded</p><p class="stat-label">Flexible Access</p></div><div class="stat"><p class="stat-value text-gold">4 Weeks</p><p class="stat-label">Course Duration</p></div></div></div></section>
-
-        <section class="curriculum">
-            <div class="ccp-container">
-                <div class="section-header">
-                    <h2>What You Will <span class="text-gold">Master</span></h2>
-                    <p>A structured crash course designed to take you from curiosity to practical application and confidence.</p>
-                </div>
-                <div class="modules" id="modules"></div>
-            </div>
-        </section>
-
-        <section class="what-you-get">
-            <div class="ccp-container">
-                <div class="wyg-grid">
-                    <div class="wyg-img-wrap"><div class="wyg-img-glow"></div><img src="../assets/images-optimized/crash-courses/financial astrology.jpeg" alt="Financial Astrology Visual" class="wyg-img" style="object-fit: contain; width: 100%; height: auto; border-radius: 1.5rem;">
-    <div class="glass-value-card">
-        <div class="gvc-row gvc-strike"><span>Total Value:</span><span class="gvc-price">₹3,499</span></div>
-        <div class="gvc-row gvc-offer"><span>Today's Offer:</span><span class="gvc-price">₹2,499</span></div>
-        <div class="gvc-divider"></div>
-        <div class="gvc-row gvc-save"><span>🎉 You Save:</span><span class="gvc-price">₹1,000</span></div>
-    </div>
+<div class="header-top">
+<div class="header-top-content">
+<div class="header-top-left">
+<div class="header-top-item"><span class="header-top-icon"><i class="fa-solid fa-phone"></i></span><a href="tel:+919621051159">+91 9621051159</a></div>
+<div class="header-top-item"><span class="header-top-icon"><i class="fa-solid fa-envelope"></i></span><a href="mailto:info@astrobharatai.com">info@astrobharatai.com</a></div>
 </div>
-                    <div>
-                        <h2>Everything You Get for <span class="text-gold">Just ₹2,499</span></h2>
-                        <p style="margin-top:1rem;color:var(--muted)">Total value worth ₹3,499 — but you pay only a fraction of that.</p>
-                        <div class="wyg-items" id="wyg-items"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="header-top-right">Online Classes | ISO Certified</div>
+</div>
+</div>
+<header>
+<nav class="navbar">
+<ul class="nav-menu">
+<li class="nav-item search-nav-item">
+<div class="search-container">
+<div class="container-input">
+<input class="input" id="courseSearchInput" name="text" placeholder="Search all courses" type="text"/>
+<svg fill="#000000" height="20px" viewbox="0 0 1920 1920" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="search-results" id="searchResults"></div>
+</div>
+</li>
+<li class="nav-item"><a href="../index.html">Home</a></li>
+<li class="nav-item"><a href="../profile.html">About Us</a></li>
+<li class="nav-item dropdown">
+<a class="active" href="javascript:void(0)">Courses <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+<ul class="dropdown-menu">
+<li class="dropdown-item"><a href="../astrology.html">Vedic Astrology</a></li>
+<li class="dropdown-item"><a href="../nadi-jyotish.html">Nadi Jyotish</a></li>
+<li class="dropdown-item"><a href="../lal-kitab.html">Lal Kitab Remedies</a></li>
+<li class="dropdown-item"><a href="../remedy-course.html">Remedy Course (Upaay Gyaan)</a></li>
+<li class="dropdown-item"><a href="../kp-astrology.html">KP Astrology</a></li>
+<li class="dropdown-item"><a href="../bnn-astrology.html">BNN (Advanced Techniques)</a></li>
+<li class="dropdown-item"><a href="../crystal-healing.html">Crystal Healing</a></li>
+<li class="dropdown-item"><a href="../medical-astrology.html">Medical Astrology</a></li>
+<li class="dropdown-item"><a href="../complete-astrology.html">Complete Astrology Course</a></li>
+<li class="dropdown-item"><a href="../rudraksha.html">Rudraksha Remedies</a></li>
+<li class="dropdown-item"><a href="../vastu.html">Vastu Shastra</a></li>
+<li class="dropdown-item"><a href="../palmistry.html">Palmistry</a></li>
+<li class="dropdown-item"><a href="../face-reading.html">Face Reading</a></li>
+<li class="dropdown-item"><a href="../tarot.html">Tarot Reading</a></li>
+<li class="dropdown-item"><a href="../numerology.html">Numerology</a></li>
+<li class="dropdown-item"><a href="../mentorship.html">1-on-1 Mentorship</a></li>
+<li class="dropdown-item"><a href="../gemini-jyotish.html">Gemini Jyotish</a></li>
+</ul>
+</li>
+<li class="nav-item"><a href="../fee-structure.html">Fee Structure</a></li>
+<li class="nav-item"><a href="../courses.html">Explore</a></li>
+<li class="nav-item"><a href="../blog.html">Blog</a></li>
+<li class="nav-item"><a href="../6-stairs.html">6 Stairs</a></li>
+<li class="nav-item"><a href="../gallery.html">Gallery</a></li>
+<li class="nav-item"><a href="../contact.html">Contact</a></li>
+</ul>
+<div class="navbar-cta">
+<a class="btn btn-outline btn-sm" href="../login.html">Login</a>
+<a class="btn btn-primary btn-sm" href="../register.html">Register</a>
+</div>
+<button aria-label="Toggle navigation menu" class="hamburger" title="Toggle navigation menu">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div class="mobile-menu">
+<ul class="nav-menu mobile-menu-nav">
+<li class="nav-item w-full"><a href="../index.html">Home</a></li>
+<li class="nav-item w-full"><a href="../profile.html">About Us</a></li>
+<li class="nav-item w-full"><a href="../courses.html">Courses</a></li>
+<li class="nav-item w-full"><a href="../fee-structure.html">Fee Structure</a></li>
+<li class="nav-item w-full"><a href="../courses.html">Explore</a></li>
+<li class="nav-item w-full"><a href="../blog.html">Blog</a></li>
+<li class="nav-item w-full"><a href="../6-stairs.html">6 Stairs</a></li>
+<li class="nav-item w-full"><a href="../gallery.html">Gallery</a></li>
+<li class="nav-item w-full"><a href="../contact.html">Contact</a></li>
+</ul>
+<div class="navbar-cta">
+<a class="btn btn-outline btn-sm" href="../login.html">Login</a>
+<a class="btn btn-primary btn-sm" href="../register.html">Register</a>
+</div>
+</div>
+<div class="search-results"></div>
 
-        <section class="expert"><div class="ccp-container"><div class="expert-card"><div class="expert-inner"><div class="expert-img-wrap" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <img src="../circle faculty images.jpg.jpeg" alt="Expert Faculty Panel" class="expert-img">
-    <div style="margin-top: 15px; font-weight: 900; font-size: 1.35rem; color: #c8960c; text-shadow: 0 0 12px rgba(200, 150, 12, 0.6), 0 0 24px rgba(200, 150, 12, 0.4); text-transform: uppercase; letter-spacing: 2px;">India's Top Educators</div>
-</div><div><h2>Guided by an Elite Panel of Experts</h2><p style="font-size:0.875rem;font-weight:600;color:var(--gold-dark);margin-top:0.25rem">Unmatched Mentorship & Support</p><p style="margin-top:1rem;color:var(--muted);line-height:1.7">This crash course is designed and delivered by a curated group of seasoned professionals. Every module is taught with practical examples and real guidance.</p><div class="expert-tags"><span class="expert-tag"><span class="expert-dot" style="background:hsl(40,80%,55%)"></span> Active Practitioners</span><span class="expert-tag"><span class="expert-dot" style="background:var(--gold)"></span> Proven Methods</span><span class="expert-tag"><span class="expert-dot" style="background:var(--primary)"></span> Guided Practice Focus</span></div></div></div></div></div></section>
 
-        <section class="testimonials"><div class="ccp-container"><div class="section-header"><h2>Student <span class="text-gold">Transformations</span></h2><p>Real experiences from learners who took this course</p></div><div class="test-grid" id="testimonials"></div></div></section>
+<div class="tablet-search-container">
+<div class="search-container">
+<div class="container-input">
+<input class="input" name="text" placeholder="Search all courses" type="text"/>
+<svg fill="#000000" height="20px" viewbox="0 0 1920 1920" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="search-results"></div>
+</div>
+</div>
+</header>
+<main class="cc-palmistry-landing">
+<section class="hero">
+<div class="particles" id="particles"></div>
+<div class="ccp-container hero-content">
+<div class="badges animate-fade-in" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+<span class="badge">🛡️ Govt. Approved</span>
+<span class="badge">👶 Beginner Friendly</span>
+<span class="badge">🔥 Most Demanding</span>
+</div>
+<div class="hero-grid">
+<div class="animate-slide-up">
+<h1>Financial Astrology <span class="text-gold">Masterclass</span>: Decode Wealth</h1>
+<p class="desc">Crack the astrological code to financial freedom. This beginner-friendly course guides you in detail to identify wealth-creating yogas, favorable investment cycles, and hidden financial potential directly from a birth chart.</p>
+<p class="hindi"><b>हिंदी में:</b> ज्योतिष के माध्यम से अपनी आर्थिक स्थिति और धन कमाने के मौकों को पहचानें। इस कोर्स में बिल्कुल आसान भाषा में सिखाया गया है कि जन्म कुंडली देखकर कैसे पता करें कि पैसा कब आएगा, निवेश का सही समय क्या है और धन लाभ के कौन से योग हैं।</p>
+<div class="feature-pills">
+<div class="pill"><span class="pill-icon">🎥</span><div><p class="pill-title">Intensive Sessions</p><p class="pill-desc">Live classes with limited-time recording access for revision</p></div></div>
+<div class="pill"><span class="pill-icon">📚</span><div><p class="pill-title">Guided Study Material</p><p class="pill-desc">Guided practice tasks and in-class examples</p></div></div>
+<div class="pill"><span class="pill-icon">🏆</span><div><p class="pill-title">Institute Certification</p><p class="pill-desc">Recognized certificate on completion</p></div></div>
+<div class="pill"><span class="pill-icon">💬</span><div><p class="pill-title">VIP Doubt Support</p><p class="pill-desc">Private support group and guidance</p></div></div>
+</div>
+<button class="btn-gold" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" style="margin-top:2rem">⚡ Claim Your Spot Now</button>
+</div>
+<div class="hero-img-wrap">
+<div class="hero-img-inner">
+<div class="hero-img-glow"></div>
+<img alt="Financial Astrology Masterclass" class="hero-img" src="../assets/images-optimized/crash-courses/financial astrology.jpeg" style="object-fit: contain; width: 100%; height: 100%; background: var(--bg);"/></div>
+</div>
+</div>
+</div>
 
-        <section class="pricing" id="pricing">
-            <div class="ccp-container">
-                <div class="section-header"><h2>Enroll Now & Start Your Journey</h2><p>Join learners building practical confidence with structured training</p></div>
-                <div class="pricing-card-wrap">
-                    <div class="pricing-glow"></div>
-                    <div class="pricing-card">
-                        <div class="pricing-header"><small>CRASH COURSE</small><h3>Financial Astrology Masterclass: Decode Wealth</h3><span>4 weeks • Complete Program</span></div>
-                        <div class="pricing-body"><span class="pricing-old">₹3,499</span><span class="pricing-off">Limited Offer</span><p class="pricing-amount text-gold">₹2,499</p><p class="pricing-note">One-time payment • No hidden charges</p><button class="btn-enroll" onclick="window.location.href='../register.html'">🎓 Enroll Now — Start Learning Today</button><p class="pricing-secure">🔒 100% Secure Payment • Instant Access</p></div>
-                        <div class="pricing-includes"><p>Everything included:</p><ul><li><span class="check">✓</span> Structured modules and practice topics</li><li><span class="check">✓</span> Session recordings (limited duration) and guided practice</li><li><span class="check">✓</span> Private support and doubt handling</li><li><span class="check">✓</span> Institute completion certificate</li><li><span class="check">✓</span> Bonus learning resources</li></ul></div>
-                    </div>
-                </div>
-                <div class="trust-signals"><span>🛡️ Govt. Approved</span><span>🔒 Secure Payment</span></div>
-            </div>
-        </section>
+<div class="hero-wave"><svg fill="none" viewbox="0 0 1440 120"><path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z" fill="hsl(40,33%,97%)"></path></svg></div>
+</section>
+<section class="pricing-banner">
+<div class="ccp-container">
+<div class="banner-card">
+<div class="banner-left">
+<div class="banner-icon">⚡</div>
+<div>
+<p style="font-size:0.875rem;font-weight:600;color:var(--gold-dark)">⚡ VERY LIMITED SEATS</p>
+<h3 class="banner-title">Start Your Transformation Today</h3>
+<p class="banner-sub">Get complete access to all modules, materials, and support immediately upon enrollment.</p>
+</div>
+</div>
+<div class="banner-right">
+<div class="countdown"><span class="countdown-label">🕐 Offer ends in:</span><span class="countdown-box" id="cd-h">23H</span><span class="countdown-box" id="cd-m">45M</span><span class="countdown-box" id="cd-s">12S</span></div>
+<div class="price-box"><p class="price-old">Total Value ₹3,499</p><p class="price-new">₹2,499</p></div>
+<button class="btn-cta" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
+</div>
+</div>
+</div>
+</section>
+<section class="stats"><div class="ccp-container"><div class="stats-grid"><div class="stat"><p class="stat-value text-gold">Beginner Friendly</p><p class="stat-label">No Prior Knowledge</p></div><div class="stat"><p class="stat-value text-gold">Step-by-Step</p><p class="stat-label">Guided Learning</p></div><div class="stat"><p class="stat-value text-gold">Live + Recorded</p><p class="stat-label">Flexible Access</p></div><div class="stat"><p class="stat-value text-gold">4 Weeks</p><p class="stat-label">Course Duration</p></div></div></div></section>
+<section class="curriculum">
+<div class="ccp-container">
+<div class="section-header">
+<h2>What You Will <span class="text-gold">Master</span></h2>
+<p>A structured crash course designed to take you from curiosity to practical application and confidence.</p>
+</div>
+<div class="modules" id="modules"></div>
+</div>
+</section>
+<section class="what-you-get">
+<div class="ccp-container">
+<div class="wyg-grid">
+<div class="wyg-img-wrap"><div class="glass-value-card">
+<div class="gvc-row gvc-strike"><span>Total Value:</span><span class="gvc-price">₹3,499</span></div>
+<div class="gvc-row gvc-offer"><span>Today's Offer:</span><span class="gvc-price">₹2,499</span></div>
+<div class="gvc-divider"></div>
+<div class="gvc-row gvc-save"><span>🎉 You Save:</span><span class="gvc-price">₹1,000</span></div>
+</div><div class="expert-card" style="margin-top: 2rem;">
+<div class="expert-inner">
+<div class="expert-img-wrap">
+<img alt="Expert Faculty Panel" class="expert-img" src="../circle faculty images.jpg.jpeg"/>
+<div>INDIA'S TOP EDUCATORS</div>
+</div>
+<div>
+<h2>Guided by an Elite Panel of Experts</h2>
+<p>UNMATCHED MENTORSHIP &amp; SUPPORT</p>
+<p>This crash course is designed and delivered by a curated group of seasoned professionals. Every module is taught with practical examples and real guidance.</p>
+<div class="expert-tags">
+<span class="expert-tag"><span class="expert-dot" style="background:hsl(40,80%,55%); width:8px; height:8px; border-radius:50%; display:inline-block;"></span> Active Practitioners</span>
+<span class="expert-tag"><span class="expert-dot" style="background:var(--gold); width:8px; height:8px; border-radius:50%; display:inline-block;"></span> Proven Methods</span>
+<span class="expert-tag"><span class="expert-dot" style="background:var(--primary); width:8px; height:8px; border-radius:50%; display:inline-block;"></span> Guided Practice</span>
+</div>
+</div>
+</div>
+</div></div>
+<div>
+<h2>Everything You Get for <span class="text-gold">Just ₹2,499</span></h2>
+<p style="margin-top:1rem;color:var(--muted)">Total value worth ₹3,499 — but you pay only a fraction of that.</p>
+<div class="wyg-items" id="wyg-items"></div>
+</div>
+</div>
+</div>
+</section>
 
-        <section class="faq"><div class="ccp-container"><div class="section-header"><h2>Frequently Asked <span class="text-gold">Questions</span></h2></div><div class="faq-list" id="faq-list"></div></div></section>
-        <section class="final-cta" aria-label="Final call to action"><div class="ccp-container"><div class="final-cta-inner"><h2>Still Thinking? Your Future Self Will Thank You.</h2><p>This is a practical skill-building course designed for real implementation.</p><div class="final-cta-actions"><button class="btn-cta" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">⚡ Enroll Now for ₹2,499</button></div></div></div></section>
-
-        <script>
+<section class="testimonials"><div class="ccp-container"><div class="section-header"><h2>Student <span class="text-gold">Transformations</span></h2><p>Real experiences from learners who took this course</p></div><div class="test-grid" id="testimonials"></div></div></section>
+<section class="pricing" id="pricing">
+<div class="ccp-container">
+<div class="section-header"><h2>Enroll Now &amp; Start Your Journey</h2><p>Join learners building practical confidence with structured training</p></div>
+<div class="pricing-card-wrap">
+<div class="pricing-glow"></div>
+<div class="pricing-card">
+<div class="pricing-header"><small>CRASH COURSE</small><h3>Financial Astrology Masterclass: Decode Wealth</h3><span>4 weeks • Complete Program</span></div>
+<div class="pricing-body"><span class="pricing-old">₹3,499</span><span class="pricing-off">Limited Offer</span><p class="pricing-amount text-gold">₹2,499</p><p class="pricing-note">One-time payment • No hidden charges</p><button class="btn-enroll" onclick="window.location.href='../register.html'">🎓 Enroll Now — Start Learning Today</button><p class="pricing-secure">🔒 100% Secure Payment • Instant Access</p></div>
+<div class="pricing-includes"><p>Everything included:</p><ul><li><span class="check">✓</span> Structured modules and practice topics</li><li><span class="check">✓</span> Session recordings (limited duration) and guided practice</li><li><span class="check">✓</span> Private support and doubt handling</li><li><span class="check">✓</span> Institute completion certificate</li><li><span class="check">✓</span> Bonus learning resources</li></ul></div>
+</div>
+</div>
+<div class="trust-signals"><span>🛡️ Govt. Approved</span><span>🔒 Secure Payment</span></div>
+</div>
+</section>
+<section class="faq"><div class="ccp-container"><div class="section-header"><h2>Frequently Asked <span class="text-gold">Questions</span></h2></div><div class="faq-list" id="faq-list"></div></div></section>
+<section aria-label="Final call to action" class="final-cta"><div class="ccp-container"><div class="final-cta-inner"><h2>Still Thinking? Your Future Self Will Thank You.</h2><p>This is a practical skill-building course designed for real implementation.</p><div class="final-cta-actions"><button class="btn-cta" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">⚡ Enroll Now for ₹2,499</button></div></div></div></section>
+<script>
             (function () { var c = document.getElementById('particles'); if (!c) return; for (var i = 0; i < 20; i++) { var d = document.createElement('div'); d.className = 'particle'; var s = Math.random() * 6 + 2; d.style.width = s + 'px'; d.style.height = s + 'px'; d.style.left = Math.random() * 100 + '%'; d.style.top = Math.random() * 100 + '%'; d.style.animation = 'ccp-float ' + (Math.random() * 4 + 4) + 's ease-in-out ' + (Math.random() * 2) + 's infinite'; c.appendChild(d); } })();
             (function () { var h = 23, m = 45, s = 12; setInterval(function () { s--; if (s < 0) { s = 59; m--; } if (m < 0) { m = 59; h--; } if (h < 0) { h = 23; m = 59; s = 59; } var eh = document.getElementById('cd-h'), em = document.getElementById('cd-m'), es = document.getElementById('cd-s'); if (!eh || !em || !es) return; eh.textContent = String(h).padStart(2, '0') + 'H'; em.textContent = String(m).padStart(2, '0') + 'M'; es.textContent = String(s).padStart(2, '0') + 'S'; }, 1000); })();
             (function () { var modules = [{"id": 1, "title": "Foundation of Financial Astrology and Wealth Analysis", "topics": ["Introduction and importance of financial astrology", "Wealth indications and Dhan Yogas in a birth chart", "Houses related to wealth (2nd, 5th, 9th, 10th, and 11th houses)", "Houses related to debt and expenses", "Wealth-giving planets and their influence", "Major wealth yogas (Lakshmi Yoga, Gajakesari Yoga, Raj Yoga)", "Astrological indications for career and business"]}, {"id": 2, "title": "Investment, Remedies, and Financial Growth", "topics": ["Investment astrology (stocks, real estate, gold)", "Analysis of debt and financial problems", "Effect of transits (Gochar) and planetary periods (Dasha) on wealth", "Astrological remedies for financial growth", "Relationship of Vastu and Feng Shui with wealth", "Modern financial astrology (digital business, AI, freelancing)", "Financial planning and economic independence"]}]; var el = document.getElementById('modules'); if (!el) return; el.innerHTML = modules.map(function (mod) { return '<div class="module' + (mod.id === 1 ? ' open' : '') + '" id="mod-' + mod.id + '"><button class="module-header" onclick="toggleModule(' + mod.id + ')"><div style="display:flex;align-items:center"><span class="module-num">M' + mod.id + '</span><span class="module-title">' + mod.title + '</span></div><svg class="module-chevron chevron-svg" viewBox="0 0 24 24" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg></button><div class="module-body"><div class="module-body-inner">' + mod.topics.map(function (t) { return '<div class="topic"><span class="topic-check">✓</span><span>' + t + '</span></div>'; }).join('') + '</div></div></div>'; }).join(''); })();
             function toggleModule(id) { document.querySelectorAll('.cc-palmistry-landing .module').forEach(function (m) { var mid = parseInt(m.id.split('-')[1]); if (mid === id) m.classList.toggle('open'); else m.classList.remove('open'); }); }
-            (function () { var items = [{icon:"🎥",title:"Guided Sessions",desc:"Structured topic-by-topic training",value:"<span class='wyg-inc'>Included</span>"},{icon:"📚",title:"Guided Practice",desc:"Classwork-based exercises and examples",value:"<span class='wyg-inc'>Included</span>"},{icon:"🧠",title:"Practical Training",desc:"Implementation-focused approach",value:"<span class='wyg-inc'>Included</span>"},{icon:"👥",title:"Support Community",desc:"Doubt support and group assistance",value:"<span class='wyg-inc'>Included</span>"},{icon:"🏆",title:"Completion Certificate",desc:"Institute-recognized certification",value:"<span class='wyg-inc'>Included</span>"}]; var target = document.getElementById('wyg-items'); if (!target) return; target.innerHTML = items.map(function (i) { return '<div class="wyg-item"><div class="wyg-icon">' + i.icon + '</div><div class="wyg-text"><strong>' + i.title + '</strong><small>' + i.desc + '</small></div><span class="wyg-value">' + i.value + '</span></div>'; }).join(''); })();
+            (function () { var items = [
+    {icon:"🎥",title:"4-week Guided Sessions",desc:"Structured topic-by-topic training with replay access",value: "<span style='text-decoration:line-through;color:#9ca3af;margin-right:8px'>₹1,200</span><span class='wyg-inc'>Included</span>"},
+    {icon:"📓",title:"Complete Curriculum",desc:"PDF notes, checklists, and reference charts",value: "<span style='text-decoration:line-through;color:#9ca3af;margin-right:8px'>₹900</span><span class='wyg-inc'>Included</span>"},
+    {icon:"💬",title:"VIP Support Group",desc:"Private chat group to resolve all practical doubts",value: "<span style='text-decoration:line-through;color:#9ca3af;margin-right:8px'>₹500</span><span class='wyg-inc'>Included</span>"},
+    {icon:"🏆",title:"Official Certificate",desc:"Reputed Parashari Institute certification",value: "<span style='text-decoration:line-through;color:#9ca3af;margin-right:8px'>₹499</span><span class='wyg-inc'>Included</span>"},
+    {icon:"🧩",title:"Live Case Studies",desc:"Real-world chart analysis during masterclasses",value: "<span style='text-decoration:line-through;color:#9ca3af;margin-right:8px'>₹400</span><span class='wyg-inc'>Included</span>"},
+    {icon:"🎁",title:"Bonus Material",desc:"Exclusive techniques not available publicly",value: "<span class='wyg-inc'>Included</span>"},
+    {icon:"⏱️",title:"Watch Anytime",desc:"Access class recordings conveniently",value:"<span class='wyg-inc'>Included</span>"},
+    {icon:"🌟",title:"Next-Step Discounts",desc:"Special price on advanced diploma programs",value:"<span class='wyg-inc'>Included</span>"}
+]; var target = document.getElementById('wyg-items'); if (!target) return; target.innerHTML = items.map(function (i) { return '<div class="wyg-item"><div class="wyg-icon">' + i.icon + '</div><div class="wyg-text"><strong>' + i.title + '</strong><small>' + i.desc + '</small></div><span class="wyg-value">' + i.value + '</span></div>'; }).join(''); })();
             (function () { var t = [{"name": "Harsh D.", "text": "I joined Financial Astrology to strengthen my basics, and the class format made application easier for money-cycle and planning awareness. I can now explain concepts clearly to others."}, {"name": "Kavya J.", "text": "The sessions were clear and practical. In Financial Astrology, every module had examples that helped me understand where and how to apply each method."}, {"name": "Sanya C.", "text": "I started as a beginner, but by course end I could independently practice key methods from Financial Astrology. Mentor doubt support stayed consistent throughout."}]; var target = document.getElementById('testimonials'); if (!target) return; target.innerHTML = t.map(function (r) { return '<div class="test-card"><div class="test-stars">★★★★★</div><p class="test-text">"' + r.text + '"</p><p class="test-name">— ' + r.name + '</p></div>'; }).join(''); })();
             (function () { var faqs = [{"q": "Is this Financial Astrology course suitable for beginners?", "a": "Yes. The teaching starts from basics and moves step-by-step, so first-time learners can follow comfortably."}, {"q": "What practical outcome can I expect after completing Financial Astrology?", "a": "You will gain a clear foundational workflow and confidence to apply core concepts of Financial Astrology in guided practice scenarios."}, {"q": "Will this help identify favorable financial periods?", "a": "Yes. The course teaches practical interpretation of financial tendencies and timing signals for planning decisions."}, {"q": "How are classes conducted and how are doubts handled?", "a": "Training is delivered in structured sessions with practical examples, and doubts are addressed through guided support."}]; var target = document.getElementById('faq-list'); if (!target) return; target.innerHTML = faqs.map(function (f, i) { return '<div class="faq-item' + (i === 0 ? ' open' : '') + '" id="faq-' + i + '"><button class="faq-q" onclick="toggleFaq(' + i + ')"><span>' + f.q + '</span><svg class="faq-chevron chevron-svg" viewBox="0 0 24 24" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><p>' + f.a + '</p></div></div>'; }).join(''); })();
             function toggleFaq(i) { document.querySelectorAll('.cc-palmistry-landing .faq-item').forEach(function (el) { var fid = parseInt(el.id.split('-')[1]); if (fid === i) el.classList.toggle('open'); else el.classList.remove('open'); }); }
         </script>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>About Parashari</h4>
-        <p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
-        <div class="social-wrapper">
-          <a href="https://www.instagram.com/astrobharatai?igsh=Z2M2ZW82OXBxaGNr" target="_blank"
-            rel="noopener noreferrer" class="icon instagram">
-            <span class="tooltip">Instagram</span>
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/@astrobharatai" target="_blank" rel="noopener noreferrer"
-            class="icon youtube">
-            <span class="tooltip">YouTube</span>
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://x.com/AstroBharatAI" target="_blank" rel="noopener noreferrer" class="icon twitter">
-            <span class="tooltip">Twitter</span>
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/astrobharatai/" target="_blank" rel="noopener noreferrer"
-            class="icon linkedin">
-            <span class="tooltip">LinkedIn</span>
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../profile.html">About Us</a></li>
-          <li><a href="../fee-structure.html">Fee Structure</a></li>
-          <li><a href="../courses.html">Explore</a></li>
-          <li><a href="../6-stairs.html">6 Stairs</a></li>
-          <li><a href="../gallery.html">Gallery</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Programs</h4>
-        <ul class="footer-links">
-          <li><a href="../courses.html">Crash Course</a></li>
-          <li><a href="../courses.html">Diploma</a></li>
-          <li><a href="../courses.html">Bachelor</a></li>
-          <li><a href="../courses.html">Master</a></li>
-          <!-- <li><a href="../courses.html">Grand Master</a></li> -->
-          <li><a href="../6-stairs.html">6 Stairs</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <div class="contact-info">
-          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="contact-text">
-            <p class="p-reset">1/344, near Kathauta Chauraha Road, Vinamra Khand, Gomti Nagar, Lucknow, Uttar Pradesh
-              226010</p>
-          </div>
-        </div>
-                  <div class="contact-info">
-            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div class="contact-text">
-              <p class="p-reset"><a href="mailto:info@astrobharatai.com">info@astrobharatai.com</a></p>
-            </div>
-          </div>
+</main>
+<!-- FOOTER -->
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>About Parashari</h4>
+<p>Preserving and promoting authentic Vedic wisdom since 1998.</p>
+<div class="social-wrapper">
+<a class="icon instagram" href="https://www.instagram.com/astrobharatai?igsh=Z2M2ZW82OXBxaGNr" rel="noopener noreferrer" target="_blank">
+<span class="tooltip">Instagram</span>
+<i class="fab fa-instagram"></i>
+</a>
+<a class="icon youtube" href="https://www.youtube.com/@astrobharatai" rel="noopener noreferrer" target="_blank">
+<span class="tooltip">YouTube</span>
+<i class="fab fa-youtube"></i>
+</a>
+<a class="icon twitter" href="https://x.com/AstroBharatAI" rel="noopener noreferrer" target="_blank">
+<span class="tooltip">Twitter</span>
+<i class="fab fa-twitter"></i>
+</a>
+<a class="icon linkedin" href="https://www.linkedin.com/company/astrobharatai/" rel="noopener noreferrer" target="_blank">
+<span class="tooltip">LinkedIn</span>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</div>
+</div>
+<div class="footer-section">
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../profile.html">About Us</a></li>
+<li><a href="../fee-structure.html">Fee Structure</a></li>
+<li><a href="../courses.html">Explore</a></li>
+<li><a href="../6-stairs.html">6 Stairs</a></li>
+<li><a href="../gallery.html">Gallery</a></li>
+<li><a href="../blog.html">Blog</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Programs</h4>
+<ul class="footer-links">
+<li><a href="../courses.html">Crash Course</a></li>
+<li><a href="../courses.html">Diploma</a></li>
+<li><a href="../courses.html">Bachelor</a></li>
+<li><a href="../courses.html">Master</a></li>
+<!-- <li><a href="../courses.html">Grand Master</a></li> -->
+<li><a href="../6-stairs.html">6 Stairs</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Contact</h4>
 <div class="contact-info">
-          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="contact-text">
-            <p class="p-reset"><a href="tel:+919621051159">+91 9621051159</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-content">
-        <div class="copyright">
-          <p class="p-reset">&copy; 2024 Parashari Institute. All Rights Reserved.</p>
-        </div>
-        <div class="developer-credit">Designed By <a href="#">Parashari Developers</a></div>
-      </div>
-    </div>
-  </footer>
-
-    <!-- SCRIPTS -->
-    <script src="../assets/js/navbar.js"></script>
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/loader.js"></script>
+<div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+<div class="contact-text">
+<p class="p-reset">1/344, near Kathauta Chauraha Road, Vinamra Khand, Gomti Nagar, Lucknow, Uttar Pradesh
+              226010</p>
+</div>
+</div>
+<div class="contact-info">
+<div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+<div class="contact-text">
+<p class="p-reset"><a href="mailto:info@astrobharatai.com">info@astrobharatai.com</a></p>
+</div>
+</div>
+<div class="contact-info">
+<div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+<div class="contact-text">
+<p class="p-reset"><a href="tel:+919621051159">+91 9621051159</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-content">
+<div class="copyright">
+<p class="p-reset">© 2024 Parashari Institute. All Rights Reserved.</p>
+</div>
+<div class="developer-credit">Designed By <a href="#">Parashari Developers</a></div>
+</div>
+</div>
+</footer>
+<!-- SCRIPTS -->
+<script src="../assets/js/navbar.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/loader.js"></script>
 </body>
 </html>
