@@ -54,7 +54,8 @@
     // --- Path prefix for assets (supports pages in subdirectories like /courses/) ---
     const _chatbotBasePath = (function() {
         const p = window.location.pathname.replace(/\\/g, '/');
-        return p.includes('/courses/') ? '../' : '';
+        const rootDirs = ['/courses/', '/categories/', '/crash-courses/', '/archive/', '/pujas/'];
+        return rootDirs.some(dir => p.includes(dir)) ? '../' : '';
     })();
 
     // --- DOM Injection ---
