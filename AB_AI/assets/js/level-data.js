@@ -674,7 +674,7 @@ function renderCustomVedicPage(courseSlug, levelSlug) {
           
           <div class="cvd-3col">
             <div class="cvd-3col-card">
-              <img src="assets/images-optimized/vedic-astrology/Emotional distance in troubled times.png" alt="Relationship Issues">
+              <img src="assets/images-optimized/vedic-astrology/Emotional distance in troubled times.webp" alt="Relationship Issues">
               <p>Relationship Issues</p>
             </div>
             <div class="cvd-3col-card">
